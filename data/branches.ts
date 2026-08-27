@@ -69,28 +69,28 @@ export const BRANCHES: Branch[] = [
     ]
   },
   {
-    id: "branch-02",
-    name: "Dr Pilates – Branch 02",
-    shortName: "Branch 02",
-    tagline: "Upcoming Studio Location",
+    id: "doddagubbi",
+    name: "Dr Pilates – Doddagubbi",
+    shortName: "Doddagubbi",
+    tagline: "Premier Studio Opp. Medi Derma Hospital",
     isMainBranch: false,
     address: {
-      building: "[Add Branch 02 Building / Floor]",
-      street: "[Add Street Name & Block]",
-      landmark: "[Add Landmark]",
-      area: "[Add Location / Area]",
+      building: "ANR Arcade, 2nd Floor",
+      street: "Doddagubbi Main Road",
+      landmark: "Opposite Medi Derma Hospital, Near Legacy School",
+      area: "Doddagubbi",
       city: "Bengaluru, Karnataka",
-      pincode: "[Pincode]",
-      fullText: "[Add Branch 02 Address - Bengaluru, Karnataka]"
+      pincode: "560077",
+      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Doddagubbi, Bengaluru, Karnataka 560077"
     },
-    phone: "[Add Branch 02 Phone]",
+    phone: "088922 36442",
     rawPhone: "+918892236442",
     whatsapp: "918892236442",
-    email: "branch02@drpilates.in",
-    hours: "[Add Branch 02 Opening Hours]",
+    email: "doddagubbi@drpilates.in",
+    hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM, Sun: 7:00 AM – 1:00 PM)",
     rating: 4.9,
-    reviewCount: 0,
-    mapUrl: "https://maps.google.com",
+    reviewCount: 45,
+    mapUrl: "https://maps.google.com/?q=ANR+Arcade+Doddagubbi+Main+Road+Bengaluru+560077",
     image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200",
     services: [
       "Reformer Pilates",
@@ -102,9 +102,10 @@ export const BRANCHES: Branch[] = [
       "Modern Reformer Equipment",
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
-      "Customized Wellness Plans"
+      "Customized Movement Plans",
+      "Opposite Medi Derma Hospital (Parking Available)"
     ],
-    statusText: "Branch information coming soon. Accepting advance slot enquiries via WhatsApp and Phone."
+    statusText: "Now Open! Accepting bookings for Reformer Pilates, EMS Training & Physiotherapy."
   }
 ];
 
