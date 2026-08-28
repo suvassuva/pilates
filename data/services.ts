@@ -29,7 +29,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "Dr Pilates Reformer Pilates combines precision resistance training with mindful movement principles. Utilizing custom spring-loaded reformer beds, our sessions isolate micro-muscles, enhance core stability, align joint articulation, and build lean, functional strength without high-impact stress on your joints.",
     heroHeadline: "Reformer Pilates in Bengaluru",
     tagline: "Transform your posture, core strength, and body alignment with specialized Reformer machinery.",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/Pilates_reformer_machine_in_studio_202608281428.jpeg",
     iconName: "Activity",
     benefits: [
       "Deep Core & Pelvic Floor Activation",
@@ -77,7 +77,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "EMS (Electrical Muscle Stimulation) Training delivers a high-efficiency full-body workout in just 20 minutes. By sending low-frequency impulse bio-signals to deep muscle layers while performing functional exercises, EMS activates over 90% of muscle fibers simultaneously—delivering the results of a 90-minute conventional gym workout.",
     heroHeadline: "Power Up Your Workout with EMS Training",
     tagline: "Achieve maximum muscle activation, fat burn, and conditioning in just 20 minutes.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/EMS_suits_displayed_in_studio_202608281431.jpeg",
     iconName: "Zap",
     benefits: [
       "20-Minute Ultra-Efficient Full Body Workout",
@@ -125,7 +125,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "Our Physiotherapy service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
     heroHeadline: "Move Better. Recover Stronger.",
     tagline: "Evidence-based physiotherapy and movement rehabilitation tailored to your body's needs.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/woman_stretching_at_desk.jpeg",
     iconName: "HeartPulse",
     benefits: [
       "Targeted Relief from Back, Neck, Knee & Joint Pain",
@@ -169,7 +169,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "Dr Pilates Personal Training provides bespoke 1-on-1 fitness coaching tailored specifically to your physiological profile. Whether your goal is body sculpting, athletic conditioning, functional strength, or weight management, our expert trainers build structured programs that evolve with your progress.",
     heroHeadline: "Personal Training Built Around You",
     tagline: "Custom fitness coaching and accountability to achieve sustainable strength, agility, and vitality.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/professional_woman_stretching.jpeg",
     iconName: "Dumbbell",
     benefits: [
       "100% Customized Training Routines",

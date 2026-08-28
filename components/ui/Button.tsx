@@ -42,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
     gold:
       "bg-[#C5A059] text-white hover:bg-[#B08D46] shadow-md hover:shadow-xl border border-[#C5A059]",
     whatsapp:
-      "bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-md border-none",
+      "bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-md border-none !text-white font-semibold",
     outline:
       "bg-transparent text-[#121417] border-2 border-[#121417] hover:bg-[#121417] hover:text-[#FAF8F5]",
     ghost:

@@ -75,10 +75,9 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
               <Button
                 href="https://wa.me/918892236442?text=Hi%20Dr%20Pilates%2C%20I%20would%20like%20to%20enquire%20about%20a%20session."
                 external
-                variant="secondary"
+                variant="whatsapp"
                 size="lg"
-                className="bg-[#25D366] hover:bg-[#20bd5a] text-white border-none"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<MessageSquare className="w-5 h-5 text-white fill-white/20" />}
               >
                 WhatsApp Enquiry
               </Button>

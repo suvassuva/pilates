@@ -83,11 +83,10 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch, onSelect }) => {
           <Button
             href={generateWhatsAppUrl(branch.id)}
             external
-            variant="primary"
+            variant="whatsapp"
             size="sm"
             fullWidth
-            className="bg-[#25D366] hover:bg-[#20bd5a] border-none text-white"
-            icon={<MessageSquare className="w-4 h-4" />}
+            icon={<MessageSquare className="w-4 h-4 text-white" />}
           >
             WhatsApp
           </Button>

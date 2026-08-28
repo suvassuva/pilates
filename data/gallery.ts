@@ -3,6 +3,7 @@ export interface GalleryItem {
   title: string;
   category: "Studio" | "Reformer Pilates" | "EMS" | "Physiotherapy" | "Training";
   image: string;
+  video?: string;
   alt: string;
 }
 
@@ -18,58 +19,83 @@ export const GALLERY_CATEGORIES = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "Premium Reformer Studio Bay",
+    title: "Reformer Pilates Training Session",
     category: "Reformer Pilates",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/woman_performing_reformer.jpeg",
     alt: "Dr Pilates Reformer Pilates Studio Equipment in Kalyan Nagar Bengaluru"
   },
   {
     id: "gal-2",
-    title: "Modern EMS Bio-Suite Equipment",
-    category: "EMS",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1200",
-    alt: "EMS Electrical Muscle Stimulation Workout at Dr Pilates Studio"
+    title: "Entering Dr Pilates Studio",
+    category: "Studio",
+    image: "/videos/woman_walking_outside.jpeg",
+    video: "/videos/woman_enters_studio.mp4",
+    alt: "Client entering Dr Pilates studio in Kalyan Nagar"
   },
   {
     id: "gal-3",
-    title: "Physiotherapy & Rehab Assessment Area",
+    title: "Physiotherapy & Ergonomic Stretching",
     category: "Physiotherapy",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200",
-    alt: "Physiotherapy joint assessment and movement therapy at Dr Pilates"
+    image: "/videos/woman_stretching_at_desk.jpeg",
+    alt: "Physiotherapy posture assessment and desk stretch guidance"
   },
   {
     id: "gal-4",
-    title: "1-on-1 Personal Training Bay",
+    title: "1-on-1 Personal Training Session",
     category: "Training",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/professional_woman_stretching.jpeg",
     alt: "Personal Fitness Training Session with Coach at Dr Pilates"
   },
   {
     id: "gal-5",
-    title: "Studio Lounge & Reception Aesthetics",
+    title: "Studio Welcome & Reception",
     category: "Studio",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200",
-    alt: "Dr Pilates Kalyan Nagar Reception Lounge Atmosphere"
+    image: "/videos/instructor_welcoming_woman.jpeg",
+    alt: "Dr Pilates Kalyan Nagar Reception Welcome Atmosphere"
   },
   {
     id: "gal-6",
-    title: "Core Alignment Reformer Carriage Work",
+    title: "Wellness & Transformation Training",
     category: "Reformer Pilates",
-    image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200",
-    alt: "Client carrying out Reformer Pilates movement under instructor supervision"
+    image: "/videos/woman_performing_reformer.jpeg",
+    video: "/videos/woman_performing_wellness.mp4",
+    alt: "Wellness transformation Reformer Pilates workout video"
   },
   {
     id: "gal-7",
-    title: "High-Efficiency EMS Muscle Activation",
+    title: "Post-Workout Hydration & EMS Recovery",
     category: "EMS",
-    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=1200",
-    alt: "20 Minute EMS Full Body Workout Session"
+    image: "/videos/woman_holding_water_bottle.jpeg",
+    video: "/videos/woman_drinking_water.mp4",
+    alt: "Post-workout hydration and EMS recovery session"
   },
   {
     id: "gal-8",
-    title: "Postural Spine Alignment & Manual Therapy",
+    title: "Spine & Desk Mobility Stretch",
     category: "Physiotherapy",
-    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=1200",
-    alt: "Manual therapy and postural realignment session by Physiotherapist"
+    image: "/videos/woman_stretching_at_desk.jpeg",
+    video: "/videos/woman_closes_laptop.mp4",
+    alt: "Spinal stretch and desk mobility realignment video"
+  },
+  {
+    id: "gal-9",
+    title: "Precision Reformer Studio Bed",
+    category: "Reformer Pilates",
+    image: "/videos/pilates_reformer_machine.jpeg",
+    alt: "State-of-the-art Reformer Pilates machine at Dr Pilates studio"
+  },
+  {
+    id: "gal-10",
+    title: "German EMS Bio-Suit Suite",
+    category: "EMS",
+    image: "/videos/ems_suits_displayed.jpeg",
+    alt: "Advanced EMS Wireless Bio-Suits displayed inside Dr Pilates studio"
+  },
+  {
+    id: "gal-11",
+    title: "Dr Pilates Studio Interior Bay",
+    category: "Studio",
+    image: "/videos/pilates_studio_interior.jpeg",
+    alt: "Spacious luxury interior view of Dr Pilates studio"
   }
 ];

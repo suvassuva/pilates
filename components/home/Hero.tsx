@@ -97,17 +97,20 @@ export const Hero: React.FC = () => {
           {/* Right Visual Hero Feature */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Image */}
+              {/* Main Video Feature */}
               <div className="relative h-56 sm:h-[550px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-[#C5A059]/30">
-                <Image
-                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200"
-                  alt="Dr Pilates Reformer Pilates Studio in Bengaluru"
-                  fill
-                  priority
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F12]/80 via-transparent to-transparent" />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/videos/woman_performing_reformer.jpeg"
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/videos/woman_enters_studio.mp4" type="video/mp4" />
+                  Your browser does not support video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F12]/80 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating Card Badge 1: Kalyan Nagar Branch */}

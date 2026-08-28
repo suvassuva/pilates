@@ -15,77 +15,77 @@ export const AboutPreview: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-20 bg-[#121417] text-[#FAF8F5] relative overflow-hidden">
+    <section className="py-8 sm:py-12 bg-[#121417] text-[#FAF8F5] relative overflow-hidden">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           {/* Left Image Collage */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative h-64 sm:h-[500px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#C5A059]/30">
+          <div className="lg:col-span-5 relative">
+            <div className="relative h-56 sm:h-72 lg:h-[350px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#C5A059]/30">
               <Image
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1200"
+                src="/videos/pilates_studio_interior.jpeg"
                 alt="Dr Pilates Studio Interior and Atmosphere"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F12]/90 via-transparent to-transparent flex items-end p-4 sm:p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0F12]/90 via-transparent to-transparent flex items-end p-4 sm:p-5">
                 <div className="text-white">
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#C5A059]">
+                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#C5A059]">
                     Bengaluru Wellness Benchmark
                   </span>
-                  <h3 className="text-base sm:text-2xl font-bold font-display text-white">
+                  <h3 className="text-sm sm:text-lg font-bold font-display text-white">
                     Dr Pilates Studio Atmosphere
                   </h3>
-                  <p className="text-[10px] sm:text-xs text-[#949BA6] mt-0.5 sm:mt-1">
-                    Located at Y4 Heights, 6th Main Rd, Kalyan Nagar (Above Starbucks)
+                  <p className="text-[9px] sm:text-[10px] text-[#949BA6] mt-0.5">
+                    Located at Y4 Heights, Kalyan Nagar (Above Starbucks)
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Overlapping Badge (Made Compact) */}
-            <div className="absolute -bottom-3 right-2 sm:right-6 bg-[#0D0F12] text-[#FAF8F5] p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-2xl border border-[#C5A059]/40 max-w-[170px] sm:max-w-[220px]">
-              <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-[#C5A059] mb-0.5 sm:mb-1">
-                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-[#C5A059] shrink-0" />
+            {/* Overlapping Badge */}
+            <div className="absolute -bottom-2 right-2 sm:right-4 bg-[#0D0F12] text-[#FAF8F5] p-2.5 sm:p-3 rounded-xl shadow-xl border border-[#C5A059]/40 max-w-[150px] sm:max-w-[180px]">
+              <div className="flex items-center gap-1 text-[9px] sm:text-[10px] font-bold text-[#C5A059] mb-0.5">
+                <Sparkles className="w-3 h-3 text-[#C5A059] shrink-0" />
                 <span>Clinical Precision</span>
               </div>
-              <p className="text-[9px] sm:text-xs text-[#949BA6] leading-tight sm:leading-snug">
+              <p className="text-[8px] sm:text-[10px] text-[#949BA6] leading-tight">
                 Where clinical physiotherapy meets luxury Reformer conditioning.
               </p>
             </div>
           </div>
 
           {/* Right Text Content */}
-          <div className="lg:col-span-6 space-y-4 sm:space-y-6 mt-4 lg:mt-0">
-            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#C5A059] bg-[#1A1D20] px-3 py-1 rounded-full border border-[#C5A059]/30 inline-block">
+          <div className="lg:col-span-7 space-y-3 sm:space-y-4 mt-2 lg:mt-0">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#C5A059] bg-[#1A1D20] px-2.5 py-0.5 rounded-full border border-[#C5A059]/30 inline-block">
               Why Dr Pilates?
             </span>
 
-            <h2 className="text-xl sm:text-4xl lg:text-5xl font-bold font-display text-[#FAF8F5] leading-tight">
+            <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold font-display text-[#FAF8F5] leading-snug">
               A Refined Approach to Physical Strength & Recovery
             </h2>
 
-            <p className="text-xs sm:text-base text-[#949BA6] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#949BA6] leading-relaxed">
               At Dr Pilates, we believe true physical transformation requires more than generic workouts. Our Bengaluru studios fuse evidence-based physiotherapy diagnostics with specialized Reformer Pilates and EMS technology to deliver individualized care for your body.
             </p>
 
-            <div className="space-y-2 sm:space-y-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
               {highlights.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-medium text-[#FAF8F5] leading-snug">
+                <div key={idx} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
+                  <span className="text-xs font-medium text-[#FAF8F5] leading-tight">
                     {item}
                   </span>
                 </div>
               ))}
             </div>
 
-            <div className="pt-2 sm:pt-4">
+            <div className="pt-2">
               <Button
                 href="/about"
                 variant="gold"
-                size="md"
-                icon={<ArrowRight className="w-4 h-4" />}
+                size="sm"
+                icon={<ArrowRight className="w-3.5 h-3.5" />}
               >
                 About Dr Pilates
               </Button>

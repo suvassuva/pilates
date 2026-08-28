@@ -53,7 +53,7 @@ export const BRANCHES: Branch[] = [
     reviewCount: 129,
     mapUrl: "https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru",
     embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.214436577884!2d77.6436663!3d13.0220677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae173b9e4a3b7d%3A0x6b4f74cf5a0f2b3e!2sHRBR%20Layout%2C%20Kalyan%20Nagar%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/instructor_welcoming_woman.jpeg",
     services: [
       "Reformer Pilates",
       "EMS Training",
@@ -91,7 +91,7 @@ export const BRANCHES: Branch[] = [
     rating: 4.9,
     reviewCount: 45,
     mapUrl: "https://maps.google.com/?q=ANR+Arcade+Doddagubbi+Main+Road+Bengaluru+560077",
-    image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200",
+    image: "/videos/woman_walking_outside.jpeg",
     services: [
       "Reformer Pilates",
       "EMS Training",
