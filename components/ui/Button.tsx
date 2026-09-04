@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover-lift active:scale-95 whitespace-nowrap";
+    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B59C7D] focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover-lift active:scale-95 whitespace-nowrap";
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-[11px] sm:text-xs tracking-wide",
@@ -36,17 +36,17 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-[#121417] text-[#FAF8F5] hover:bg-[#1A1D20] hover:shadow-lg border border-[#282C32]",
+      "bg-[#111111] text-[#FAF8F5] hover:bg-[#262524] hover:shadow-md border border-[#111111]",
     secondary:
-      "bg-[#F3EEE7] text-[#121417] hover:bg-[#E8E0D5] border border-[#121417]/10",
+      "bg-[#EEEDE8] text-[#111111] hover:bg-[#E2DFD7] border border-[#E5E0D8]",
     gold:
-      "bg-[#C5A059] text-white hover:bg-[#B08D46] shadow-md hover:shadow-xl border border-[#C5A059]",
+      "bg-[#B59C7D] text-white hover:bg-[#9E8364] shadow-sm hover:shadow-md border border-[#B59C7D]",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-md border-none !text-white font-semibold",
     outline:
-      "bg-transparent text-[#121417] border-2 border-[#121417] hover:bg-[#121417] hover:text-[#FAF8F5]",
+      "bg-transparent text-[#111111] border border-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]",
     ghost:
-      "bg-transparent text-[#121417] hover:bg-[#F3EEE7] hover:text-[#C5A059]"
+      "bg-transparent text-[#111111] hover:bg-[#EEEDE8] hover:text-[#B59C7D]"
   };
 
   const widthClass = fullWidth ? "w-full" : "";

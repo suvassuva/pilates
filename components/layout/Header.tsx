@@ -42,12 +42,12 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0D0F12]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-xl border-b border-[#C5A059]/25"
-            : "bg-[#0D0F12]/90 backdrop-blur-md py-3 sm:py-4 border-b border-[#C5A059]/15 shadow-md"
+            ? "bg-[#FAF8F5]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-xs border-b border-[#E5E0D8]"
+            : "bg-[#FAF8F5]/90 backdrop-blur-md py-3 sm:py-4 border-b border-[#E5E0D8]/70 shadow-xs"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Official Logo (Enlarged for Prominence) */}
+          {/* Official Logo */}
           <Link href="/" className="group flex items-center py-0.5">
             <Image
               src="/logo.png"
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-1 bg-[#1A1D22] px-4 py-1.5 rounded-full border border-[#C5A059]/25 shadow-xs">
+          <nav className="hidden xl:flex items-center gap-1 bg-[#EEEDE8] px-3 py-1.5 rounded-full border border-[#E5E0D8] shadow-xs">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -69,8 +69,8 @@ export const Header: React.FC = () => {
                   href={link.href}
                   className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
                     isActive
-                      ? "bg-[#C5A059] text-white shadow-xs"
-                      : "text-[#FAF8F5]/80 hover:text-[#C5A059] hover:bg-[#22262C]"
+                      ? "bg-[#111111] text-white shadow-xs"
+                      : "text-[#4A4641] hover:text-[#111111] hover:bg-[#FAF8F5]"
                   }`}
                 >
                   {link.label}
@@ -83,9 +83,9 @@ export const Header: React.FC = () => {
           <div className="hidden sm:flex items-center gap-3">
             <a
               href="tel:+918892236442"
-              className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-[#FAF8F5] hover:text-[#C5A059] px-3 py-2 rounded-full hover:bg-[#1A1D22] transition-colors"
+              className="hidden md:flex items-center gap-1.5 text-xs font-semibold text-[#111111] hover:text-[#8E7557] px-3 py-2 rounded-full hover:bg-[#EEEDE8] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
+              <Phone className="w-3.5 h-3.5 text-[#B59C7D]" />
               <span>088922 36442</span>
             </a>
 
@@ -103,7 +103,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center xl:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-full text-[#FAF8F5] bg-[#1A1D22] border border-[#C5A059]/30 hover:bg-[#C5A059] hover:text-white transition-colors focus:outline-none cursor-pointer"
+              className="p-2 rounded-full text-[#111111] bg-[#EEEDE8] border border-[#E5E0D8] hover:bg-[#B59C7D] hover:text-white transition-colors focus:outline-none cursor-pointer"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />

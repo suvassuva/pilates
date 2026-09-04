@@ -12,10 +12,10 @@ export const Badge: React.FC<BadgeProps> = ({
   className = ""
 }) => {
   const variantClasses = {
-    gold: "bg-[#C5A059]/10 text-[#C5A059] border border-[#C5A059]/30",
-    dark: "bg-[#121417] text-[#FAF8F5]",
-    light: "bg-[#F3EEE7] text-[#121417]",
-    outline: "bg-transparent text-[#5C626D] border border-[#121417]/15"
+    gold: "bg-[#B59C7D]/15 text-[#8E7557] border border-[#B59C7D]/35",
+    dark: "bg-[#111111] text-[#FAF8F5]",
+    light: "bg-[#EEEDE8] text-[#111111] border border-[#E5E0D8]",
+    outline: "bg-transparent text-[#7A756D] border border-[#111111]/15"
   };
 
   return (

@@ -33,9 +33,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const defaultBranch = BRANCHES[0];
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#0D0F12]/98 text-[#FAF8F5] backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FAF8F5]/98 text-[#111111] backdrop-blur-xl animate-in fade-in duration-200">
       {/* Top Header inside Drawer */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#C5A059]/20">
+      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#E5E0D8]">
         <Link href="/" onClick={onClose} className="flex items-center">
           <Image
             src="/logo.png"
@@ -49,10 +49,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
         <button
           onClick={onClose}
-          className="p-1.5 rounded-full text-[#FAF8F5] hover:bg-[#1A1D22] focus:outline-none cursor-pointer"
+          className="p-1.5 rounded-full text-[#111111] hover:bg-[#EEEDE8] focus:outline-none cursor-pointer"
           aria-label="Close menu"
         >
-          <X className="w-5 h-5 text-[#C5A059]" />
+          <X className="w-5 h-5 text-[#B59C7D]" />
         </button>
       </div>
 
@@ -67,8 +67,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive
-                  ? "bg-[#C5A059] text-white font-semibold shadow-xs"
-                  : "text-[#FAF8F5]/90 hover:bg-[#1A1D22] hover:text-[#C5A059]"
+                  ? "bg-[#111111] text-white font-semibold shadow-xs"
+                  : "text-[#3A3A3A] hover:bg-[#EEEDE8] hover:text-[#111111]"
               }`}
             >
               {link.label}
@@ -78,7 +78,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       </div>
 
       {/* Compact Drawer Footer Actions */}
-      <div className="p-4 border-t border-[#C5A059]/20 bg-[#14171C] space-y-2">
+      <div className="p-4 border-t border-[#E5E0D8] bg-[#EEEDE8] space-y-2">
         <Button
           href="/appointment?branch=kalyan-nagar"
           variant="gold"
@@ -93,9 +93,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         <div className="grid grid-cols-2 gap-2">
           <a
             href={`tel:${defaultBranch.rawPhone}`}
-            className="flex items-center justify-center gap-1.5 py-2 px-3 bg-[#1A1D22] rounded-lg text-xs font-semibold text-[#FAF8F5] border border-[#C5A059]/20 hover:bg-[#22262C]"
+            className="flex items-center justify-center gap-1.5 py-2 px-3 bg-[#FAF8F5] rounded-lg text-xs font-semibold text-[#111111] border border-[#E5E0D8] hover:bg-[#E2DFD7]"
           >
-            <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
+            <Phone className="w-3.5 h-3.5 text-[#B59C7D]" />
             Call Studio
           </a>
           <a
@@ -109,8 +109,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </a>
         </div>
 
-        <div className="pt-1 text-center text-[10px] text-[#949BA6] flex items-center justify-center gap-1">
-          <MapPin className="w-3 h-3 text-[#C5A059]" />
+        <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
+          <MapPin className="w-3 h-3 text-[#B59C7D]" />
           <span>Kalyan Nagar & Doddagubbi • Bengaluru</span>
         </div>
       </div>

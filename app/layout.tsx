@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -14,6 +14,14 @@ const outfit = Outfit({
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap"
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
   display: "swap"
 });
 
@@ -47,8 +55,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable}`}>
-      <body className="font-body antialiased min-h-screen flex flex-col justify-between">
+    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} ${cormorant.variable}`}>
+      <body className="font-body antialiased min-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#111111]">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

@@ -50,41 +50,41 @@ export const TestimonialsPreview: React.FC = () => {
   };
 
   return (
-    <section className="py-10 sm:py-20 bg-[#121417] text-[#FAF8F5] relative overflow-hidden">
-      {/* Glow background accent */}
-      <div className="absolute top-1/3 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-12 sm:py-20 bg-[#FAF8F5] text-[#111111] relative overflow-hidden">
+      {/* Subtle warm background accent */}
+      <div className="absolute top-1/3 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-[#B59C7D]/10 rounded-full blur-3xl pointer-events-none" />
 
       <Container>
         <SectionTitle
-          subtitle="Google Reviews & Feedback"
+          subtitle="Client Reviews"
           title="Loved by Clients Across Bengaluru"
           description="Read real experiences from desk professionals, physicians, and fitness enthusiasts who train at Dr Pilates."
-          theme="dark"
+          theme="light"
           align="center"
           className="mb-6 sm:mb-8"
         />
 
         {/* Rating Banner */}
-        <div className="mb-8 max-w-xl mx-auto p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#1A1D20] border border-[#C5A059]/30 text-center flex flex-col sm:flex-row items-center justify-around gap-3 shadow-lg">
+        <div className="mb-8 max-w-xl mx-auto p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#E5E0D8] text-center flex flex-col sm:flex-row items-center justify-around gap-3 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#C5A059] text-white flex items-center justify-center font-bold text-base sm:text-lg">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#B59C7D] text-white flex items-center justify-center font-bold text-base sm:text-lg shadow-xs">
               4.9
             </div>
             <div className="text-left">
-              <div className="flex text-[#C5A059] text-xs sm:text-sm">
+              <div className="flex text-[#B59C7D] text-xs sm:text-sm">
                 {"★".repeat(5)}
               </div>
-              <span className="text-[10px] sm:text-xs text-[#8C929D] font-medium">Google Rating</span>
+              <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Google Rating</span>
             </div>
           </div>
 
-          <div className="h-6 w-px bg-[#282C32] hidden sm:block" />
+          <div className="h-6 w-px bg-[#E5E0D8] hidden sm:block" />
 
           <div className="text-left">
-            <span className="text-lg sm:text-2xl font-bold text-[#FAF8F5] block">
+            <span className="text-lg sm:text-2xl font-bold text-[#111111] block">
               129+ Reviews
             </span>
-            <span className="text-[10px] sm:text-xs text-[#8C929D]">Verified Client Ratings</span>
+            <span className="text-[10px] sm:text-xs text-[#7A756D]">Verified Client Ratings</span>
           </div>
         </div>
 
@@ -102,33 +102,33 @@ export const TestimonialsPreview: React.FC = () => {
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="snap-start shrink-0 w-[82vw] md:w-auto bg-[#1A1D20] p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#282C32] hover:border-[#C5A059]/40 transition-colors flex flex-col justify-between"
+              className="snap-start shrink-0 w-[82vw] md:w-auto bg-[#FFFFFF] p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D]/50 shadow-sm transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="flex text-[#C5A059] text-xs sm:text-sm">
+                  <div className="flex text-[#B59C7D] text-xs sm:text-sm">
                     {"★".repeat(item.rating)}
                   </div>
-                  <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded-full border border-[#C5A059]/20">
+                  <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-[#8E7557] bg-[#EEEDE8] px-2.5 py-0.5 rounded-full border border-[#B59C7D]/20">
                     {item.source}
                   </span>
                 </div>
 
-                <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-[#C5A059]/40 mb-2" />
+                <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]/40 mb-2" />
 
-                <p className="text-xs sm:text-sm text-[#FAF8F5]/90 leading-relaxed italic mb-4">
+                <p className="text-xs sm:text-sm text-[#111111] font-serif italic leading-relaxed mb-4">
                   "{item.content}"
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#282C32] flex items-center justify-between">
+              <div className="pt-3 border-t border-[#E5E0D8] flex items-center justify-between">
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#FAF8F5]">
+                  <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
                     {item.author}
                   </h4>
-                  <span className="text-[10px] sm:text-xs text-[#8C929D]">{item.role}</span>
+                  <span className="text-[10px] sm:text-xs text-[#7A756D]">{item.role}</span>
                 </div>
-                <span className="text-[10px] sm:text-xs text-[#C5A059] font-medium">
+                <span className="text-[10px] sm:text-xs text-[#8E7557] font-medium">
                   {item.branch}
                 </span>
               </div>
@@ -144,8 +144,8 @@ export const TestimonialsPreview: React.FC = () => {
               onClick={() => scrollToIndex(idx)}
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
-                  ? "w-7 bg-[#C5A059]"
-                  : "w-2 bg-white/20 hover:bg-[#C5A059]/50"
+                  ? "w-7 bg-[#B59C7D]"
+                  : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
               }`}
               aria-label={`Go to testimonial ${idx + 1}`}
             />

@@ -9,13 +9,13 @@ export const MobileStickyCTA: React.FC = () => {
   const mainBranch = BRANCHES[0];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden p-2 bg-[#FAF8F5]/98 backdrop-blur-xl border-t border-[#121417]/10 shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden p-2 bg-[#FAF8F5]/98 backdrop-blur-xl border-t border-[#E5E0D8] shadow-2xl">
       <div className="grid grid-cols-3 gap-1.5 max-w-sm mx-auto">
         <a
           href={`tel:${mainBranch.rawPhone}`}
-          className="flex items-center justify-center gap-1.5 py-2 px-2 bg-[#121417] text-[#FAF8F5] rounded-xl text-[11px] font-semibold hover:bg-[#1A1D20] active:scale-95 transition-all shadow-xs"
+          className="flex items-center justify-center gap-1.5 py-2 px-2 bg-[#111111] text-[#FAF8F5] rounded-xl text-[11px] font-semibold hover:bg-[#262524] active:scale-95 transition-all shadow-xs"
         >
-          <Phone className="w-3.5 h-3.5 text-[#C5A059] shrink-0" />
+          <Phone className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
           <span>Call</span>
         </a>
 
@@ -31,7 +31,7 @@ export const MobileStickyCTA: React.FC = () => {
 
         <Link
           href="/appointment?branch=kalyan-nagar"
-          className="flex items-center justify-center gap-1.5 py-2 px-2 bg-[#C5A059] text-white rounded-xl text-[11px] font-semibold hover:bg-[#B08D46] active:scale-95 transition-all shadow-xs"
+          className="flex items-center justify-center gap-1.5 py-2 px-2 bg-[#B59C7D] text-white rounded-xl text-[11px] font-semibold hover:bg-[#9E8364] active:scale-95 transition-all shadow-xs"
         >
           <Calendar className="w-3.5 h-3.5 shrink-0" />
           <span>Book Now</span>

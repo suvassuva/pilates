@@ -2,24 +2,25 @@
 
 @layer base {
   :root {
-    --bg-main: #0D0F12;
-    --bg-card: #14171C;
-    --bg-warm: #1A1D22;
-    --bg-dark: #0D0F12;
-    --bg-dark-card: #1A1D22;
+    --bg-main: #FAF8F5;
+    --bg-card: #FFFFFF;
+    --bg-warm: #F4EFEA;
+    --bg-stone: #EEEDE8;
+    --bg-dark: #141312;
+    --bg-dark-card: #1D1C1A;
     
-    --text-primary: #FAF8F5;
-    --text-secondary: #949BA6;
-    --text-muted: #6B7280;
+    --text-primary: #111111;
+    --text-secondary: #4A4641;
+    --text-muted: #7A756D;
     --text-on-dark: #FAF8F5;
 
-    --gold-primary: #C5A059;
-    --gold-hover: #B08D46;
-    --gold-light: #1F1B14;
-    --gold-border: rgba(197, 160, 89, 0.3);
+    --gold-primary: #B59C7D;
+    --gold-hover: #9E8364;
+    --gold-light: #F6F3EE;
+    --gold-border: rgba(181, 156, 125, 0.35);
 
-    --border-light: rgba(250, 248, 245, 0.08);
-    --border-medium: rgba(250, 248, 245, 0.15);
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-medium: rgba(0, 0, 0, 0.15);
     
     --radius-sm: 0.5rem;
     --radius-md: 0.875rem;
@@ -30,13 +31,13 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-body), system-ui, sans-serif;
-    background-color: #0D0F12;
-    color: #FAF8F5;
+    background-color: #FAF8F5;
+    color: #111111;
   }
 
   body {
-    background-color: #0D0F12;
-    color: #FAF8F5;
+    background-color: #FAF8F5;
+    color: #111111;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -45,52 +46,71 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), system-ui, sans-serif;
     letter-spacing: -0.02em;
+    color: #111111;
   }
 }
 
-/* Custom Utilities & Animations */
+/* Custom Typography Utilities */
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), system-ui, sans-serif;
 }
 
 .font-body {
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
+/* Glassmorphism & Surface Styles */
 .glass-header {
-  background: rgba(13, 15, 18, 0.95);
+  background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-  box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.04);
 }
 
 .glass-card {
-  background: rgba(20, 23, 28, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 160, 89, 0.25);
+  border: 1px solid rgba(181, 156, 125, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
 }
 
 .glass-dark {
-  background: rgba(13, 15, 18, 0.95);
+  background: rgba(20, 19, 18, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(197, 160, 89, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FAF8F5;
 }
 
+/* Brand Gradients - Pilates by Amanda Warm Sandstone & Charcoal */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #F3E5AB 0%, #C5A059 50%, #9E7E3B 100%);
+  background: linear-gradient(135deg, #111111 0%, #B59C7D 50%, #8E7557 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #C5A059 0%, #B08D46 100%);
+  background: linear-gradient(135deg, #B59C7D 0%, #9E8364 100%);
+}
+
+.taupe-gradient-text {
+  background: linear-gradient(135deg, #111111 0%, #B59C7D 50%, #8E7557 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taupe-gradient-bg {
+  background: linear-gradient(135deg, #B59C7D 0%, #8E7557 100%);
 }
 
 .subtle-shadow {
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
 }
 
 .hover-lift {
@@ -98,7 +118,7 @@
 }
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(197, 160, 89, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(181, 156, 125, 0.25);
 }
 
 /* Custom Scrollbar */
@@ -106,12 +126,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0D0F12;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C5A059;
+  background: #B59C7D;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B08D46;
+  background: #9E8364;
 }
