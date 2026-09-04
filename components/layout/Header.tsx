@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
           {/* Official Logo */}
           <Link href="/" className="group flex items-center py-0.5">
             <Image
-              src="/logo.png"
+              src="/logo-dark.png"
               alt="Dr Pilates Studio Bengaluru"
               width={200}
               height={60}

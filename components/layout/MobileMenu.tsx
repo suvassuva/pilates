@@ -38,7 +38,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#E5E0D8]">
         <Link href="/" onClick={onClose} className="flex items-center">
           <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="Dr Pilates"
             width={160}
             height={48}
