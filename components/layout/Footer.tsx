@@ -95,23 +95,43 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Studio Locations & Contact */}
           <div>
-            <h3 className="text-xs sm:text-sm font-bold text-[#B59C7D] uppercase tracking-wider mb-2 sm:mb-4">
-              Locations & Contact
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#B59C7D] mb-3 sm:mb-4">
+              Visit Our Studios
             </h3>
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-[#A39E96]">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-[#FAF8F5]">Kalyan Nagar:</strong> Y4 Heights, 6th Main Rd (Above Starbucks), HRBR Layout 2nd Block, Bengaluru
-                </span>
+            <div className="space-y-3 text-xs sm:text-sm text-[#A39E96]">
+              {/* Kalyan Nagar */}
+              <div className="space-y-1 pb-2 border-b border-white/10">
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#FAF8F5]">Kalyan Nagar:</strong> Y4 Heights (Above Starbucks), HRBR Layout
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 pl-5 sm:pl-6 text-[11px] sm:text-xs">
+                  <Phone className="w-3 h-3 text-[#B59C7D] shrink-0" />
+                  <a href="tel:+918892236442" className="hover:text-[#B59C7D]">
+                    088922 36442
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0" />
-                <a href={`tel:${mainBranch.rawPhone}`} className="hover:text-[#B59C7D]">
-                  088922 36442
-                </a>
+
+              {/* Hennur */}
+              <div className="space-y-1 pb-2 border-b border-white/10">
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#FAF8F5]">Hennur:</strong> ANR Arcade, 2nd Flr, Doddagubbi Main Rd
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 pl-5 sm:pl-6 text-[11px] sm:text-xs">
+                  <Phone className="w-3 h-3 text-[#B59C7D] shrink-0" />
+                  <a href="tel:+919481003827" className="hover:text-[#B59C7D]">
+                    094810 03827
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
+
+              <div className="flex items-center gap-2 pt-0.5">
                 <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#25D366] shrink-0" />
                 <a
                   href={generateWhatsAppUrl("kalyan-nagar")}
@@ -121,10 +141,6 @@ export const Footer: React.FC = () => {
                 >
                   WhatsApp Booking Desk
                 </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0" />
-                <span>info@drpilates.in</span>
               </div>
             </div>
           </div>

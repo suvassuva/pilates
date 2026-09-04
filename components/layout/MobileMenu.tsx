@@ -111,7 +111,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
         <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
           <MapPin className="w-3 h-3 text-[#B59C7D]" />
-          <span>Kalyan Nagar & Doddagubbi • Bengaluru</span>
+          <span>Kalyan Nagar & Hennur • Bengaluru</span>
         </div>
       </div>
     </div>
