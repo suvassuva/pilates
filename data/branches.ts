@@ -33,7 +33,7 @@ export const BRANCHES: Branch[] = [
     id: "kalyan-nagar",
     name: "Dr Pilates – Kalyan Nagar",
     shortName: "Kalyan Nagar",
-    tagline: "Our Flagship Studio in North Bengaluru",
+    tagline: "Our Flagship Branch in North Bengaluru",
     isMainBranch: true,
     address: {
       building: "3rd Floor, Y4 Heights Building",
@@ -46,8 +46,8 @@ export const BRANCHES: Branch[] = [
     },
     phone: "088922 36442",
     rawPhone: "+918892236442",
-    whatsapp: "918892236442",
-    email: "kalyannagar@drpilates.in",
+    whatsapp: "919481003827",
+    email: "contact@drpilates.in",
     hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM, Sun: 7:00 AM – 1:00 PM)",
     rating: 4.9,
     reviewCount: 129,
@@ -69,24 +69,24 @@ export const BRANCHES: Branch[] = [
     ]
   },
   {
-    id: "hennur",
-    name: "Dr Pilates – Hennur",
-    shortName: "Hennur",
-    tagline: "Premier Studio Opp. Medi Derma Hospital",
+    id: "kothanur",
+    name: "Dr Pilates – Kothanur",
+    shortName: "Kothanur",
+    tagline: "",
     isMainBranch: false,
     address: {
       building: "ANR Arcade, 2nd Floor",
-      street: "Doddagubbi Main Road, Hennur",
+      street: "Doddagubbi Main Road, Kothanur",
       landmark: "Opposite Medi Derma Hospital, Near Legacy School",
-      area: "Hennur",
+      area: "Kothanur",
       city: "Bengaluru, Karnataka",
       pincode: "560077",
-      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Hennur, Bengaluru, Karnataka 560077"
+      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Kothanur, Bengaluru, Karnataka 560077"
     },
     phone: "094810 03827",
     rawPhone: "+919481003827",
     whatsapp: "919481003827",
-    email: "hennur@drpilates.in",
+    email: "kothanur@drpilates.in",
     hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM, Sun: 7:00 AM – 1:00 PM)",
     rating: 4.9,
     reviewCount: 45,
@@ -111,8 +111,11 @@ export const BRANCHES: Branch[] = [
 
 export function getBranchById(id: string): Branch {
   return (
-    BRANCHES.find((b) => b.id === id || (id === "doddagubbi" && b.id === "hennur")) ||
-    BRANCHES[0]
+    BRANCHES.find(
+      (b) =>
+        b.id === id ||
+        ((id === "hennur" || id === "doddagubbi") && b.id === "kothanur")
+    ) || BRANCHES[0]
   );
 }
 

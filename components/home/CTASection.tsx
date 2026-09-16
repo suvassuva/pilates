@@ -26,7 +26,7 @@ export const CTASection: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-xs sm:text-base text-[#4A4641] leading-relaxed max-w-xl mx-auto">
-            Book your personalized 1-on-1 Reformer, EMS, or Physiotherapy session today at our Kalyan Nagar studio or inquire about Branch 02 slots.
+            Book your personalized 1-on-1 Reformer, EMS, or Physiotherapy session today at Dr Pilates Kalyan Nagar or Hennur.
           </p>
 
           {/* Symmetrical 2x2 Grid on Mobile / Flex Row on Desktop */}
@@ -73,7 +73,7 @@ export const CTASection: React.FC = () => {
           </div>
 
           <p className="text-[10px] sm:text-xs text-[#7A756D] pt-2 sm:pt-4">
-            Kalyan Nagar Studio: 3rd Floor Y4 Heights (Above Starbucks) • 088922 36442
+            Dr Pilates Kalyan Nagar: 3rd Floor Y4 Heights (Above Starbucks) • 088922 36442
           </p>
         </div>
       </Container>

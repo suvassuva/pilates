@@ -28,7 +28,7 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch, onSelect }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-6">
             <div className="flex items-center justify-between w-full">
               <Badge variant={branch.isMainBranch ? "gold" : "dark"}>
-                {branch.isMainBranch ? "Kalyan Nagar Flagship" : "Branch 02 Location"}
+                {branch.isMainBranch ? "Kalyan Nagar Flagship" : `${branch.shortName} Location`}
               </Badge>
               {branch.rating > 0 && (
                 <span className="text-xs font-bold text-white bg-[#141312]/90 px-3 py-1 rounded-full border border-[#B59C7D]/40">
@@ -41,12 +41,16 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch, onSelect }) => {
 
         {/* Content */}
         <div className="p-6">
-          <h3 className="text-2xl font-bold font-display text-[#111111]">
+          <h3 className="text-2xl font-bold font-display text-[#111111] mb-2">
             {branch.name}
           </h3>
-          <p className="text-xs text-[#7A756D] mt-1 mb-4 leading-relaxed">
-            {branch.tagline}
-          </p>
+          {branch.tagline ? (
+            <p className="text-xs text-[#7A756D] mb-4 leading-relaxed">
+              {branch.tagline}
+            </p>
+          ) : (
+            <div className="mb-4" />
+          )}
 
           <div className="space-y-3 text-xs sm:text-sm text-[#111111] mb-6 bg-[#FAF8F5] p-4 rounded-2xl border border-[#E5E0D8]">
             <div className="flex items-start gap-2.5">

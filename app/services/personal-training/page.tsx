@@ -3,14 +3,13 @@ import { getServiceBySlug } from "@/data/services";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { TrainersPreview } from "@/components/home/TrainersPreview";
 import { CTASection } from "@/components/home/CTASection";
 import { Dumbbell, CheckCircle2, HelpCircle, Target } from "lucide-react";
 
 export const metadata = {
   title: "Personal Training in Bengaluru | Dr Pilates",
   description:
-    "Custom 1-on-1 personal fitness coaching, strength building, and posture alignment at Dr Pilates Kalyan Nagar & Branch 02."
+    "Custom 1-on-1 personal fitness coaching, strength building, and posture alignment at Dr Pilates Kalyan Nagar & Hennur."
 };
 
 export default function PersonalTrainingPage() {
@@ -128,7 +127,6 @@ export default function PersonalTrainingPage() {
         </Container>
       </section>
 
-      <TrainersPreview />
       <CTASection />
     </div>
   );

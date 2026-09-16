@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Star, MapPin, Calendar, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { MapPin, Calendar, ArrowRight, Sparkles } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 
@@ -20,11 +20,11 @@ export const Hero: React.FC = () => {
             {/* Top Badge */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5E0D8] shadow-xs">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B59C7D]" />
-              <span className="uppercase tracking-widest text-[10px]">Bengaluru's Premier Wellness & Pilates Studio</span>
+              <span className="uppercase tracking-widest text-[10px]">Bengaluru's Premier Wellness & Pilates</span>
             </div>
 
             {/* Main Headline with Amanda-inspired editorial serif accent */}
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold font-display tracking-tight text-[#111111] leading-[1.08]">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#111111] leading-tight sm:leading-[1.12]">
               Move Better. <br />
               <span className="font-serif italic font-normal text-[#8E7557]">Feel Stronger.</span> <br />
               Live Better.
@@ -54,42 +54,6 @@ export const Hero: React.FC = () => {
               >
                 Explore Services
               </Button>
-            </div>
-
-            {/* Trust Indicators Bar */}
-            <div className="pt-4 sm:pt-8 border-t border-[#E5E0D8] grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-              {/* Rating */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1 text-[#8E7557] font-bold text-sm sm:text-lg">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-[#B59C7D] text-[#B59C7D]" />
-                  <span>4.9 ★</span>
-                </div>
-                <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Google Rating</span>
-              </div>
-
-              {/* Reviews */}
-              <div className="flex flex-col">
-                <span className="text-sm sm:text-lg font-bold text-[#111111]">129+</span>
-                <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Google Reviews</span>
-              </div>
-
-              {/* Locations */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1 text-[#111111] font-bold text-sm sm:text-lg">
-                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D]" />
-                  <span>2</span>
-                </div>
-                <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Bengaluru Studios</span>
-              </div>
-
-              {/* Training */}
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1 text-[#111111] font-bold text-sm sm:text-lg">
-                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D]" />
-                  <span>Clinical</span>
-                </div>
-                <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Expert Physio Team</span>
-              </div>
             </div>
           </div>
 

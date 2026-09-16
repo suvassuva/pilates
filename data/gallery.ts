@@ -22,15 +22,15 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Reformer Pilates Training Session",
     category: "Reformer Pilates",
     image: "/videos/woman_performing_reformer.jpeg",
-    alt: "Dr Pilates Reformer Pilates Studio Equipment in Kalyan Nagar Bengaluru"
+    alt: "Dr Pilates Reformer Pilates Equipment in Kalyan Nagar Bengaluru"
   },
   {
     id: "gal-2",
-    title: "Entering Dr Pilates Studio",
+    title: "Entering Dr Pilates",
     category: "Studio",
     image: "/videos/woman_walking_outside.jpeg",
     video: "/videos/woman_enters_studio.mp4",
-    alt: "Client entering Dr Pilates studio in Kalyan Nagar"
+    alt: "Client entering Dr Pilates in Kalyan Nagar"
   },
   {
     id: "gal-3",
@@ -48,7 +48,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "gal-5",
-    title: "Studio Welcome & Reception",
+    title: "Welcome & Reception",
     category: "Studio",
     image: "/videos/instructor_welcoming_woman.jpeg",
     alt: "Dr Pilates Kalyan Nagar Reception Welcome Atmosphere"
@@ -79,23 +79,23 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "gal-9",
-    title: "Precision Reformer Studio Bed",
+    title: "Precision Reformer Carriage",
     category: "Reformer Pilates",
     image: "/videos/pilates_reformer_machine.jpeg",
-    alt: "State-of-the-art Reformer Pilates machine at Dr Pilates studio"
+    alt: "State-of-the-art Reformer Pilates machine at Dr Pilates"
   },
   {
     id: "gal-10",
     title: "German EMS Bio-Suit Suite",
     category: "EMS",
     image: "/videos/ems_suits_displayed.jpeg",
-    alt: "Advanced EMS Wireless Bio-Suits displayed inside Dr Pilates studio"
+    alt: "Advanced EMS Wireless Bio-Suits displayed at Dr Pilates"
   },
   {
     id: "gal-11",
-    title: "Dr Pilates Studio Interior Bay",
+    title: "Dr Pilates Interior Bay",
     category: "Studio",
     image: "/videos/pilates_studio_interior.jpeg",
-    alt: "Spacious luxury interior view of Dr Pilates studio"
+    alt: "Spacious luxury interior view of Dr Pilates"
   }
 ];

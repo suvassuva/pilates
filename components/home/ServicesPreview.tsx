@@ -61,7 +61,7 @@ export const ServicesPreview: React.FC = () => {
           className="mb-6 sm:mb-12"
         />
 
-        {/* Mobile: Horizontal Auto-Slider | Desktop: Static 4-Column Grid */}
+        {/* Mobile: Horizontal Auto-Slider | Desktop: Static 3-Column Grid */}
         <div
           ref={scrollTrackRef}
           onScroll={handleScroll}
@@ -69,10 +69,10 @@ export const ServicesPreview: React.FC = () => {
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 pt-2 no-scrollbar scroll-smooth"
+          className="flex md:grid md:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 pt-2 no-scrollbar scroll-smooth"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {SERVICES.map((service) => (
+          {SERVICES.slice(0, 3).map((service) => (
             <div
               key={service.slug}
               className="snap-start shrink-0 w-[82vw] md:w-auto"
@@ -84,7 +84,7 @@ export const ServicesPreview: React.FC = () => {
 
         {/* Pagination Dots (Mobile Only) */}
         <div className="flex md:hidden items-center justify-center gap-2 mt-6">
-          {SERVICES.map((_, idx) => (
+          {SERVICES.slice(0, 3).map((_, idx) => (
             <button
               key={idx}
               onClick={() => scrollToIndex(idx)}

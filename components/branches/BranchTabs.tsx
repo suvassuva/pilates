@@ -27,7 +27,7 @@ export const BranchTabs: React.FC<BranchTabsProps> = ({
           Choose Your Preferred <span className="font-serif italic font-normal text-[#8E7557]">Dr Pilates Branch</span>
         </h3>
         <p className="text-xs sm:text-sm text-[#4A4641] mt-0.5 max-w-lg mx-auto">
-          Switch tabs below to view studio specs, opening hours, directions, and direct contacts
+          Switch tabs below to view branch specs, opening hours, directions, and direct contacts
         </p>
       </div>
 

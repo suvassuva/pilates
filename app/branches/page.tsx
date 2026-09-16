@@ -5,9 +5,9 @@ import { BranchSelector } from "@/components/branches/BranchSelector";
 import { CTASection } from "@/components/home/CTASection";
 
 export const metadata = {
-  title: "Dr Pilates Studios & Locations in Bengaluru | Kalyan Nagar & Branch 02",
+  title: "Dr Pilates Locations & Branches in Bengaluru | Kalyan Nagar & Hennur",
   description:
-    "View Dr Pilates branch details, addresses, phone numbers, opening hours, directions, and available services for Kalyan Nagar and Branch 02 in Bengaluru."
+    "View Dr Pilates branch details, addresses, phone numbers, opening hours, directions, and available services for Kalyan Nagar and Hennur in Bengaluru."
 };
 
 export default function BranchesPage() {
@@ -18,7 +18,7 @@ export default function BranchesPage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/woman_walking_outside.jpeg"
-            alt="Dr Pilates Bengaluru Studio Entrance"
+            alt="Dr Pilates Bengaluru Entrance"
             fill
             priority
             className="object-cover object-center"
@@ -35,7 +35,7 @@ export default function BranchesPage() {
               Dr Pilates Locations
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Explore Our <span className="font-serif italic font-normal text-[#E2C79A]">Bengaluru Studios</span>
+              Explore Our <span className="font-serif italic font-normal text-[#E2C79A]">Bengaluru Branches</span>
             </h1>
             <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Select your preferred branch below to view detailed address specs, operating hours, Google Maps directions, and direct desk contact options.

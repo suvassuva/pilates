@@ -3,14 +3,13 @@ import { getServiceBySlug } from "@/data/services";
 import { ServiceHero } from "@/components/services/ServiceHero";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { TrainersPreview } from "@/components/home/TrainersPreview";
 import { CTASection } from "@/components/home/CTASection";
 import { CheckCircle2, HelpCircle, Shield, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Reformer Pilates in Bengaluru | Dr Pilates Kalyan Nagar",
   description:
-    "Transform posture, core strength, and joint mobility with Reformer Pilates at Dr Pilates Kalyan Nagar and Branch 02, Bengaluru."
+    "Transform posture, core strength, and joint mobility with Reformer Pilates at Dr Pilates Kalyan Nagar and Hennur, Bengaluru."
 };
 
 export default function ReformerPilatesPage() {
@@ -132,7 +131,6 @@ export default function ReformerPilatesPage() {
         </Container>
       </section>
 
-      <TrainersPreview />
       <CTASection />
     </div>
   );

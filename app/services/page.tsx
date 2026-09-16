@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_studio_interior.jpeg"
-            alt="Dr Pilates Studio Interior Background"
+            alt="Dr Pilates Interior Background"
             fill
             priority
             className="object-cover object-center"
@@ -49,8 +49,8 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-[#FAF8F5]">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10 max-w-5xl mx-auto">
-            {SERVICES.map((service) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-7xl mx-auto">
+            {SERVICES.slice(0, 3).map((service) => (
               <ServiceCard key={service.slug} service={service} />
             ))}
           </div>

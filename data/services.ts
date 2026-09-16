@@ -29,7 +29,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "Dr Pilates Reformer Pilates combines precision resistance training with mindful movement principles. Utilizing custom spring-loaded reformer beds, our sessions isolate micro-muscles, enhance core stability, align joint articulation, and build lean, functional strength without high-impact stress on your joints.",
     heroHeadline: "Reformer Pilates in Bengaluru",
     tagline: "Transform your posture, core strength, and body alignment with specialized Reformer machinery.",
-    image: "/videos/Pilates_reformer_machine_in_studio_202608281428.jpeg",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200",
     iconName: "Activity",
     benefits: [
       "Deep Core & Pelvic Floor Activation",
@@ -71,61 +71,13 @@ export const SERVICES: ServiceDetail[] = [
     ]
   },
   {
-    slug: "ems-training",
-    title: "EMS Training",
-    shortDescription: "Time-efficient full-body training using advanced Electrical Muscle Stimulation technology.",
-    fullDescription: "EMS (Electrical Muscle Stimulation) Training delivers a high-efficiency full-body workout in just 20 minutes. By sending low-frequency impulse bio-signals to deep muscle layers while performing functional exercises, EMS activates over 90% of muscle fibers simultaneously—delivering the results of a 90-minute conventional gym workout.",
-    heroHeadline: "Power Up Your Workout with EMS Training",
-    tagline: "Achieve maximum muscle activation, fat burn, and conditioning in just 20 minutes.",
-    image: "/videos/EMS_suits_displayed_in_studio_202608281431.jpeg",
-    iconName: "Zap",
-    benefits: [
-      "20-Minute Ultra-Efficient Full Body Workout",
-      "90%+ Simultaneous Muscle Fiber Activation",
-      "Metabolic Boost & Accelerated Fat Burning",
-      "Zero Joint Strain Resistance",
-      "Targeted Core & Deep Stabilizer Engagement"
-    ],
-    features: [
-      "Medical-Grade Wireless EMS Bio-Suits",
-      "Individual Impulse Level Calibration",
-      "Personal EMS Certified Trainer Guidance",
-      "Hygienic Undergarment Gear Provided"
-    ],
-    whoItIsFor: [
-      "Busy executives & entrepreneurs with limited workout time",
-      "Individuals wanting rapid body re-composition without lifting heavy weights",
-      "People with joint sensitivities or lower back vulnerability",
-      "Fitness enthusiasts breaking through training plateaus"
-    ],
-    sessionStructure: {
-      duration: "20 Mins",
-      intensity: "High Efficiency (Impulse Modulated)",
-      format: "1-on-1 Dedicated Trainer"
-    },
-    faqs: [
-      {
-        question: "Is EMS Training safe?",
-        answer: "Yes, EMS utilizes low-frequency electrical impulses that mimic the natural electrical signals sent by your central nervous system to contract muscles. It is gentle on joints and guided 1-on-1 by certified specialists."
-      },
-      {
-        question: "How many sessions of EMS do I need per week?",
-        answer: "Because EMS provides intense deep-muscle stimulation, 1 to 2 sessions per week (with at least 48 hours rest between sessions) is optimal."
-      },
-      {
-        question: "Do I need to bring specialized equipment?",
-        answer: "No. We supply hygienic cotton EMS innerwear and fit you into our state-of-the-art bio-suit at the studio."
-      }
-    ]
-  },
-  {
     slug: "physiotherapy",
-    title: "Physiotherapy",
+    title: "Physiotherapy Treatment",
     shortDescription: "Personalized clinical support for mobility, pain recovery, postural corrections, and rehabilitation.",
-    fullDescription: "Our Physiotherapy service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
+    fullDescription: "Our Physiotherapy Treatment service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
     heroHeadline: "Move Better. Recover Stronger.",
-    tagline: "Evidence-based physiotherapy and movement rehabilitation tailored to your body's needs.",
-    image: "/videos/woman_stretching_at_desk.jpeg",
+    tagline: "Evidence-based clinical physiotherapy and movement rehabilitation tailored to your body's needs.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200",
     iconName: "HeartPulse",
     benefits: [
       "Targeted Relief from Back, Neck, Knee & Joint Pain",
@@ -158,7 +110,55 @@ export const SERVICES: ServiceDetail[] = [
       },
       {
         question: "Can I combine Physiotherapy with Reformer Pilates?",
-        answer: "Absoluty. At Dr Pilates, our physiotherapists often integrate Reformer Pilates equipment into active rehab to build stabilizing strength safely."
+        answer: "Absolutely. At Dr Pilates, our physiotherapists integrate Reformer Pilates equipment into active rehab to build stabilizing strength safely."
+      }
+    ]
+  },
+  {
+    slug: "dry-needling",
+    title: "Dry Needling",
+    shortDescription: "Targeted myofascial trigger point therapy to release deep muscle tension, relieve pain, and restore mobility.",
+    fullDescription: "Dry Needling is an evidence-based clinical therapy performed by licensed physiotherapists. Using ultrafine filiform needles inserted into myofascial trigger points, dry needling stimulates targeted neuromuscular responses, releases persistent muscular knots, diminishes pain signaling, and promotes natural tissue healing.",
+    heroHeadline: "Precision Myofascial Trigger Point Therapy",
+    tagline: "Release deep muscle knots, alleviate pain, and restore kinetic tissue balance with advanced dry needling.",
+    image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=1200",
+    iconName: "Sparkles",
+    benefits: [
+      "Immediate Decompression of Muscle Knots & Trigger Points",
+      "Targeted Chronic Pain Relief (Neck, Lower Back, Shoulders & Sciatica)",
+      "Accelerated Muscle Recovery & Tissue Oxygenation",
+      "Improved Joint Range of Motion & Neuromuscular Coordination",
+      "Complements Reformer Pilates & Active Rehabilitation"
+    ],
+    features: [
+      "Certified Practitioners in Advanced Dry Needling",
+      "Sterile Single-Use Ultra-Fine Needles",
+      "Comprehensive Pre-Needling Musculoskeletal Audit",
+      "Integrated with Active Movement Guidance"
+    ],
+    whoItIsFor: [
+      "Individuals with persistent muscle tightness and painful knots",
+      "Desk workers with chronic neck, upper back, and shoulder strain",
+      "Athletes recovering from overuse injuries and muscular spasms",
+      "Rehabilitation patients requiring myofascial decompression"
+    ],
+    sessionStructure: {
+      duration: "30 - 45 Mins",
+      intensity: "Targeted Clinical Therapy",
+      format: "Private 1-on-1 Clinical Session"
+    },
+    faqs: [
+      {
+        question: "Does Dry Needling hurt?",
+        answer: "Most clients feel only a minimal tap upon insertion. When the needle reaches a trigger point, you may experience a brief local twitch response or mild dull ache, which indicates the muscle is releasing tension."
+      },
+      {
+        question: "How is Dry Needling different from traditional acupuncture?",
+        answer: "While both use fine needles, traditional acupuncture is based on energy meridians, whereas Dry Needling is rooted in Western clinical medicine, biomechanics, and targeted myofascial trigger point neurology."
+      },
+      {
+        question: "Can Dry Needling be combined with Reformer Pilates?",
+        answer: "Yes. In fact, releasing tight myofascial knots with Dry Needling restores muscle flexibility, enabling you to perform Reformer Pilates exercises with greater range, symmetry, and zero compensation."
       }
     ]
   },

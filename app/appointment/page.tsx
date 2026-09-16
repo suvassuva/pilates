@@ -63,14 +63,16 @@ function AppointmentFormContent() {
       <div className="lg:col-span-5 bg-[#EEEDE8] text-[#111111] p-6 sm:p-10 rounded-3xl border border-[#E5E0D8] shadow-sm space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] text-[#8E7557] text-xs font-bold uppercase tracking-widest border border-[#E5E0D8]">
           <Sparkles className="w-3.5 h-3.5 text-[#B59C7D]" />
-          <span>Selected Studio Specs</span>
+          <span>Selected Branch Specs</span>
         </div>
 
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#111111]">
             {activeBranch.name}
           </h2>
-          <p className="text-xs text-[#7A756D] mt-1">{activeBranch.tagline}</p>
+          {activeBranch.tagline ? (
+            <p className="text-xs text-[#7A756D] mt-1">{activeBranch.tagline}</p>
+          ) : null}
         </div>
 
         <div className="space-y-4 pt-2 border-t border-[#E5E0D8] text-xs sm:text-sm">
@@ -168,7 +170,7 @@ function AppointmentFormContent() {
             {/* Select Branch */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
-                1. Select Studio Branch <span className="text-[#B59C7D]">*</span>
+                1. Select Branch <span className="text-[#B59C7D]">*</span>
               </label>
               <div className="grid grid-cols-2 gap-3">
                 {BRANCHES.map((b) => {

@@ -128,14 +128,14 @@ export const TrainersPreview: React.FC = () => {
               {/* Action */}
               <div className="p-4 sm:p-6 pt-0">
                 <Button
-                  href="/trainers"
+                  href="/appointment?branch=kalyan-nagar"
                   variant="ghost"
                   size="sm"
                   fullWidth
                   className="text-xs border border-[#E5E0D8] text-[#111111] hover:bg-[#FAF8F5]"
                   icon={<ArrowRight className="w-3.5 h-3.5 text-[#B59C7D]" />}
                 >
-                  View Profile
+                  Book Session
                 </Button>
               </div>
             </div>
@@ -160,12 +160,12 @@ export const TrainersPreview: React.FC = () => {
 
         <div className="mt-8 sm:mt-12 text-center">
           <Button
-            href="/trainers"
+            href="/appointment?branch=kalyan-nagar"
             variant="outline"
             size="md"
             icon={<ArrowRight className="w-4 h-4 text-[#B59C7D]" />}
           >
-            Meet All Instructors
+            Book with Our Specialists
           </Button>
         </div>
       </Container>

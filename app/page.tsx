@@ -5,7 +5,6 @@ import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { AboutPreview } from "@/components/home/AboutPreview";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { BranchPreview } from "@/components/home/BranchPreview";
-import { TrainersPreview } from "@/components/home/TrainersPreview";
 import { TestimonialsPreview } from "@/components/home/TestimonialsPreview";
 import { CTASection } from "@/components/home/CTASection";
 
@@ -18,7 +17,6 @@ export default function HomePage() {
       <AboutPreview />
       <WhyChooseUs />
       <BranchPreview />
-      <TrainersPreview />
       <TestimonialsPreview />
       <CTASection />
     </>

@@ -4,19 +4,16 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, Calendar, Phone } from "lucide-react";
+import { Menu, Calendar, Phone, ChevronDown } from "lucide-react";
 import { Button } from "../ui/Button";
 import { MobileMenu } from "./MobileMenu";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Branches", href: "/branches" },
-  { label: "Trainers", href: "/trainers" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Testimonials", href: "/testimonials" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -51,7 +48,7 @@ export const Header: React.FC = () => {
           <Link href="/" className="group flex items-center py-0.5">
             <Image
               src="/logo-dark.png"
-              alt="Dr Pilates Studio Bengaluru"
+              alt="Dr Pilates Bengaluru"
               width={200}
               height={60}
               priority
@@ -62,6 +59,58 @@ export const Header: React.FC = () => {
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-1 bg-[#EEEDE8] px-3 py-1.5 rounded-full border border-[#E5E0D8] shadow-xs">
             {navLinks.map((link) => {
+              if (link.label === "Services") {
+                const isServicesActive = pathname.startsWith("/services");
+                return (
+                  <div key={link.href} className="relative group">
+                    <Link
+                      href={link.href}
+                      className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 inline-flex items-center gap-1 ${
+                        isServicesActive
+                          ? "bg-[#111111] text-white shadow-xs"
+                          : "text-[#4A4641] hover:text-[#111111] hover:bg-[#FAF8F5]"
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+
+                    {/* Services Dropdown Menu */}
+                    <div className="absolute top-full left-0 mt-2 w-56 p-2 bg-[#FFFFFF] border border-[#E5E0D8] rounded-2xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#B91C1C]">
+                        Our Treatments
+                      </div>
+                      <Link
+                        href="/services/reformer-pilates"
+                        className="block px-3 py-2 text-xs font-semibold text-[#111111] hover:bg-[#FAF8F5] hover:text-[#B91C1C] rounded-xl transition-colors"
+                      >
+                        Reformer Pilates
+                      </Link>
+                      <Link
+                        href="/services/physiotherapy"
+                        className="block px-3 py-2 text-xs font-semibold text-[#111111] hover:bg-[#FAF8F5] hover:text-[#B91C1C] rounded-xl transition-colors"
+                      >
+                        Physiotherapy Treatment
+                      </Link>
+                      <Link
+                        href="/services/dry-needling"
+                        className="block px-3 py-2 text-xs font-semibold text-[#111111] hover:bg-[#FAF8F5] hover:text-[#B91C1C] rounded-xl transition-colors"
+                      >
+                        Dry Needling
+                      </Link>
+                      <div className="pt-1 mt-1 border-t border-[#E5E0D8]">
+                        <Link
+                          href="/services"
+                          className="block px-3 py-1.5 text-[11px] font-medium text-[#7A756D] hover:text-[#111111] rounded-lg transition-colors"
+                        >
+                          View All Services →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               const isActive = pathname === link.href;
               return (
                 <Link

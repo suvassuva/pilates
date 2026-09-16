@@ -27,7 +27,7 @@ export const BranchMap: React.FC<BranchMapProps> = ({ branch }) => {
             Map View Placeholder
           </h4>
           <p className="text-xs text-[#7A756D] max-w-xs mt-1">
-            {branch.statusText || "Location pin map for Branch 02 will update upon official launch."}
+            {branch.statusText || `Location pin map for ${branch.name} will update upon official launch.`}
           </p>
         </div>
       )}

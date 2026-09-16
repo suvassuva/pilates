@@ -7,9 +7,9 @@ import { BranchCard } from "@/components/branches/BranchCard";
 import { CTASection } from "@/components/home/CTASection";
 
 export const metadata = {
-  title: "Contact Dr Pilates | Kalyan Nagar & Branch 02 Bengaluru",
+  title: "Contact Dr Pilates | Kalyan Nagar & Hennur Bengaluru",
   description:
-    "Get in touch with Dr Pilates in Kalyan Nagar (088922 36442) or Branch 02. Phone, WhatsApp, directions, and studio timings."
+    "Get in touch with Dr Pilates in Kalyan Nagar (088922 36442) or Hennur (094810 03827). Phone, WhatsApp, directions, and timings."
 };
 
 export default function ContactPage() {
@@ -37,10 +37,10 @@ export default function ContactPage() {
               Connect With Us
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Contact <span className="font-serif italic font-normal text-[#E2C79A]">Dr Pilates Studios</span>
+              Contact <span className="font-serif italic font-normal text-[#E2C79A]">Dr Pilates</span>
             </h1>
             <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Reach out for appointment bookings, studio visits, or movement consultation inquiries in Bengaluru.
+              Reach out for appointment bookings, visits, or movement consultation inquiries in Bengaluru.
             </p>
           </div>
         </Container>
@@ -50,7 +50,7 @@ export default function ContactPage() {
       <section className="py-20 bg-[#FAF8F5]">
         <Container>
           <SectionTitle
-            subtitle="Our Studio Branches"
+            subtitle="Our Branches"
             title="Two Convenient Bengaluru Locations"
             description="Choose a branch below for instant phone call, WhatsApp enquiry, or Google Maps navigation."
           />

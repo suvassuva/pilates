@@ -154,12 +154,12 @@ export const TestimonialsPreview: React.FC = () => {
 
         <div className="mt-8 sm:mt-12 text-center">
           <Button
-            href="/testimonials"
+            href="/appointment?branch=kalyan-nagar"
             variant="gold"
             size="md"
             icon={<ArrowRight className="w-4 h-4" />}
           >
-            Read All Reviews
+            Book Your Consultation
           </Button>
         </div>
       </Container>

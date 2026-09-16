@@ -18,8 +18,8 @@ export const TrustSection: React.FC = () => {
     },
     {
       value: "2",
-      label: "Bengaluru Studios",
-      subtext: "Kalyan Nagar & Branch 02",
+      label: "Bengaluru Branches",
+      subtext: "Kalyan Nagar & Hennur",
       icon: <MapPin className="w-4 h-4 sm:w-6 sm:h-6 text-[#B59C7D]" />
     },
     {

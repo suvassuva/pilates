@@ -4,11 +4,12 @@ import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { CTASection } from "@/components/home/CTASection";
+import { Activity, Layers, Heart, Zap, ShieldCheck, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "About Dr Pilates | Premium Reformer Studio in Bengaluru",
+  title: "About Founders Dr. Govinda Raju S. & Vivek | Dr Pilates Bengaluru",
   description:
-    "Learn about Dr Pilates, Bengaluru's leading studio for Reformer Pilates, EMS Training, Physiotherapy, and Personal Training."
+    "Learn about founders Dr. Govinda Raju S. and Vivek, and Dr Pilates, Bengaluru's leading studio for clinical Reformer Pilates, EMS Training, and Physiotherapy."
 };
 
 export default function AboutPage() {
@@ -39,7 +40,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_studio_interior.jpeg"
-            alt="Dr Pilates Studio Interior Background"
+            alt="Dr Pilates Interior Background"
             fill
             priority
             className="object-cover object-center"
@@ -56,11 +57,178 @@ export default function AboutPage() {
               About Dr Pilates
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Movement Crafted for <span className="font-serif italic font-normal text-[#E2C79A]">Vitality & Longevity</span>
+              Movement Crafted for <span className="font-serif italic font-normal text-[#E2C79A]">Vitality &amp; Longevity</span>
             </h1>
             <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Combining evidence-based physiotherapy with high-end Reformer Pilates and EMS technology in Bengaluru.
             </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* The Leadership & Founders Section - Light Theme */}
+      <section className="py-16 sm:py-24 bg-[#FAF8F5] text-[#111111] relative overflow-hidden border-b border-[#E5E0D8]">
+        <Container>
+          <div className="space-y-12 sm:space-y-16">
+            {/* Section Header */}
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#B91C1C] block mb-2">
+                The Leadership
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#111111] tracking-tight mb-4">
+                Pioneering Clinical Movement &amp;{" "}
+                <span className="font-serif italic font-normal text-[#B91C1C]">
+                  Studio Excellence
+                </span>
+              </h2>
+              <p className="text-sm sm:text-base text-[#5A554E] max-w-3xl leading-relaxed">
+                Meet the founders behind Dr Pilates—bridging medical rehabilitation, high-performance athletic refinement, and personalized wellness across Bengaluru.
+              </p>
+            </div>
+
+            {/* Dual Founders Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              {/* Founder: Dr. Govinda Raju S. */}
+              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
+                <div>
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                    Founder &amp; Clinical Director
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1 mb-4">
+                    About{" "}
+                    <span className="font-serif italic font-normal text-[#B91C1C]">
+                      Dr. Govinda Raju S.
+                    </span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                    Blending clinical expertise with an artist&apos;s eye for movement, Dr. Govinda Raju S. has
+                    redefined Pilates to bridge the gap between performance medical discipline and athletic
+                    refinement. Over his decade-long career, he has combined physiotherapy, Pilates, and EMS
+                    training to develop personalized protocols that restore posture, build core strength, and
+                    support sustainable physical longevity.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
+                    <Activity className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <span>Clinical Practice: 10+ Years</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
+                    <Layers className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <span>Integrative Rehab &amp; Athletics</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Co-Founder: Vivek */}
+              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
+                <div>
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                    Co-Founder &amp; Managing Director
+                  </span>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1 mb-4">
+                    About{" "}
+                    <span className="font-serif italic font-normal text-[#B91C1C]">
+                      Vivek
+                    </span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                    Driven by a passion for premium wellness delivery and client-centric hospitality, Vivek leads
+                    the strategic vision and operational excellence at Dr Pilates. He ensures every studio bay,
+                    apparatus calibration, and personal training journey upholds the highest standards of safety,
+                    privacy, and transformative client satisfaction across our Bengaluru locations.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <span>Studio Operations &amp; Experience</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
+                    <Sparkles className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <span>Expansion &amp; Wellness Strategy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Horizontal Divider */}
+            <div className="border-t border-[#E5E0D8]" />
+
+            {/* Two-Column: Journey & Philosophy Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
+              {/* Left Column: A Journey of Clinical Evolution */}
+              <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display tracking-tight">
+                  A Journey of Clinical Evolution
+                </h3>
+                <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
+                  Dr. Govinda Raju S. did not begin his journey in simple fitness gyms. As a licensed physical
+                  therapist (Bachelor of Physiotherapy), his early years were spent in orthopedic clinical
+                  settings, treating structural spine pathologies and complex joint injuries.
+                </p>
+                <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
+                  He soon realized that traditional gym training lacks biomechanical accuracy, often
+                  exacerbating structural stress. Together with co-founder Vivek, he turned to Reformer Pilates
+                  and EMS technology—not as general workouts, but as medical rehabilitation tools designed to
+                  activate correct neuromuscular pathways and restore structural integrity.
+                </p>
+                <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
+                  Certified by the American Council on Exercise (ACE) and licensed in Advanced Dry Needling and
+                  manual therapy, the leadership team curates customized movements that safely push the human
+                  body to its peak physiological expression.
+                </p>
+              </div>
+
+              {/* Right Column: Cards */}
+              <div className="lg:col-span-5 space-y-4">
+                {/* Card 1: Philosophy of Focus */}
+                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <div className="w-7 h-7 rounded-md bg-[#FEF2F2] border border-[#FCA5A5]/40 flex items-center justify-center">
+                      <Heart className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    </div>
+                    <h4 className="text-sm sm:text-base font-bold text-[#111111]">
+                      Philosophy of Focus
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#5A554E] leading-relaxed">
+                    Fitness is 80% clinical execution and 20% physical effort. Our studio focuses on safe,
+                    natural, and symmetrical movements to permanently correct long-standing posture imbalances.
+                  </p>
+                </div>
+
+                {/* Card 2: Scientific Rigor */}
+                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <div className="w-7 h-7 rounded-md bg-[#FEF2F2] border border-[#FCA5A5]/40 flex items-center justify-center">
+                      <Zap className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    </div>
+                    <h4 className="text-sm sm:text-base font-bold text-[#111111]">
+                      Scientific Rigor
+                    </h4>
+                  </div>
+                  <p className="text-xs sm:text-sm text-[#5A554E] leading-relaxed">
+                    Every client program is data-driven. We use initial clinical assessment audits that
+                    measure joint range of motion, core recruitment metrics, and kinetic compensations before
+                    scheduling.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Signature Pull Quote */}
+            <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B91C1C] py-2">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#111111] leading-relaxed mb-3">
+                &ldquo;The body is a symphony of mechanics. Our role is to tune it to perfection, ensuring
+                every movement serves both physical function and athletic form.&rdquo;
+              </p>
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block font-mono">
+                DR. GOVINDA RAJU S. &amp; VIVEK, FOUNDERS
+              </span>
+            </div>
           </div>
         </Container>
       </section>
@@ -80,7 +248,7 @@ export default function AboutPage() {
                 Dr Pilates was founded with a clear mission: to provide a refined, clinically-grounded space where individuals can build deep core strength, correct posture imbalances, and recover from physical stress without joint wear.
               </p>
               <p className="text-base text-[#4A4641] leading-relaxed">
-                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and expanding to Branch 02, our studios serve as quiet sanctuaries for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
+                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Hennur, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
               </p>
 
               <div className="pt-4 flex items-center gap-6">
@@ -95,7 +263,7 @@ export default function AboutPage() {
                   <span className="text-3xl font-bold font-display text-[#111111] block">
                     2
                   </span>
-                  <span className="text-xs text-[#7A756D]">Bengaluru Studios</span>
+                  <span className="text-xs text-[#7A756D]">Bengaluru Branches</span>
                 </div>
               </div>
             </div>
@@ -104,7 +272,7 @@ export default function AboutPage() {
               <div className="relative min-h-[320px] sm:min-h-[440px] lg:h-full w-full rounded-3xl overflow-hidden shadow-sm border border-[#E5E0D8]">
                 <Image
                   src="/videos/woman_performing_reformer.jpeg"
-                  alt="Dr Pilates Reformer Equipment Studio"
+                  alt="Dr Pilates Reformer Equipment"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

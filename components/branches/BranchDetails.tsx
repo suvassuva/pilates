@@ -45,7 +45,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
               <div className="flex items-center gap-2">
                 <Badge variant={branch.isMainBranch ? "gold" : "outline"}>
-                  {branch.isMainBranch ? "Flagship Studio" : `${branch.shortName} Studio`}
+                  {branch.isMainBranch ? "Flagship Branch" : `${branch.shortName} Branch`}
                 </Badge>
                 {branch.rating > 0 && (
                   <div className="flex items-center gap-1 bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E0D8]">
@@ -66,12 +66,16 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-xl sm:text-3xl font-bold font-display text-[#111111] mb-1">
+            <h3 className="text-xl sm:text-3xl font-bold font-display text-[#111111] mb-2">
               {branch.name}
             </h3>
-            <p className="text-xs sm:text-sm text-[#4A4641] mb-4 leading-relaxed">
-              {branch.tagline}
-            </p>
+            {branch.tagline ? (
+              <p className="text-xs sm:text-sm text-[#4A4641] mb-4 leading-relaxed">
+                {branch.tagline}
+              </p>
+            ) : (
+              <div className="mb-4" />
+            )}
 
             {/* Contact Details List */}
             <div className="space-y-3 mb-6 bg-[#FAF8F5] p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8]">
@@ -82,7 +86,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                 </div>
                 <div>
                   <h4 className="text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#7A756D]">
-                    Studio Address
+                    Branch Address
                   </h4>
                   <p className="text-xs sm:text-sm font-medium text-[#111111] leading-snug mt-0.5">
                     {branch.address.fullText}
@@ -187,10 +191,10 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-4 sm:p-6">
               <div>
                 <span className="text-[10px] text-[#B59C7D] font-bold uppercase tracking-widest">
-                  Studio View
+                  Branch View
                 </span>
                 <h4 className="text-base sm:text-xl font-bold font-display text-white">
-                  {branch.shortName} Studio
+                  {branch.shortName} Branch
                 </h4>
               </div>
             </div>
