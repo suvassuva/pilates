@@ -49,7 +49,7 @@ export const FAQS: FAQItem[] = [
     id: "faq-6",
     category: "Booking & Locations",
     question: "Where are Dr Pilates branches located in Bengaluru?",
-    answer: "Our flagship Kalyan Nagar branch is located on the 3rd Floor, Y4 Heights Building, 6th Main Rd (above Starbucks Coffee), HRBR Layout, Kalyan Nagar, Bengaluru. Our second branch is located at ANR Arcade, Doddagubbi Main Road, Kothanur / Hennur."
+    answer: "Our flagship Kalyan Nagar branch is located on the 3rd Floor, Y4 Heights Building, 6th Main Rd (above Starbucks Coffee), HRBR Layout, Kalyan Nagar, Bengaluru. Our second branch is located at ANR Arcade, Doddagubbi Main Road, Kothanur."
   },
   {
     id: "faq-7",

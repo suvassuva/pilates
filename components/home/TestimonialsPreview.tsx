@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { Star, Quote, ArrowRight } from "lucide-react";
-import { TESTIMONIALS } from "@/data/testimonials";
+import { Star, Quote, ArrowRight, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { TESTIMONIALS, BRANCH_REVIEWS } from "@/data/testimonials";
 import { Container } from "../ui/Container";
 import { SectionTitle } from "../ui/SectionTitle";
 import { Button } from "../ui/Button";
@@ -15,27 +15,28 @@ export const TestimonialsPreview: React.FC = () => {
   const scrollToIndex = (index: number) => {
     if (!scrollTrackRef.current) return;
     const track = scrollTrackRef.current;
-    const cardWidth = track.firstElementChild ? (track.firstElementChild as HTMLElement).offsetWidth + 16 : 300;
-    track.scrollTo({
-      left: index * cardWidth,
-      behavior: "smooth"
-    });
-    setActiveIndex(index);
+    const children = track.children;
+    if (children.length > index && children[index]) {
+      const targetElement = children[index] as HTMLElement;
+      track.scrollTo({
+        left: targetElement.offsetLeft - track.offsetLeft,
+        behavior: "smooth"
+      });
+      setActiveIndex(index);
+    }
   };
 
-  // Auto-run slider on mobile screens only (< 768px)
+  // Auto-run slider on all screen sizes (loops continuously, pauses on hover)
   useEffect(() => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
-      if (typeof window !== "undefined" && window.innerWidth >= 768) return;
-
       setActiveIndex((prevIndex) => {
-        const nextIndex = prevIndex === TESTIMONIALS.length - 1 ? 0 : prevIndex + 1;
+        const nextIndex = prevIndex >= TESTIMONIALS.length - 1 ? 0 : prevIndex + 1;
         scrollToIndex(nextIndex);
         return nextIndex;
       });
-    }, 4000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, [isPaused]);
@@ -43,10 +44,19 @@ export const TestimonialsPreview: React.FC = () => {
   const handleScroll = () => {
     if (!scrollTrackRef.current) return;
     const track = scrollTrackRef.current;
-    const scrollPosition = track.scrollLeft;
-    const cardWidth = track.firstElementChild ? (track.firstElementChild as HTMLElement).offsetWidth + 16 : 300;
-    const newIndex = Math.round(scrollPosition / cardWidth);
-    setActiveIndex(Math.min(Math.max(newIndex, 0), TESTIMONIALS.length - 1));
+    const scrollLeft = track.scrollLeft;
+    const children = track.children;
+    let closestIndex = 0;
+    let minDiff = Infinity;
+    for (let i = 0; i < children.length; i++) {
+      const el = children[i] as HTMLElement;
+      const diff = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestIndex = i;
+      }
+    }
+    setActiveIndex(closestIndex);
   };
 
   return (
@@ -64,31 +74,84 @@ export const TestimonialsPreview: React.FC = () => {
           className="mb-6 sm:mb-8"
         />
 
-        {/* Rating Banner */}
-        <div className="mb-8 max-w-xl mx-auto p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#E5E0D8] text-center flex flex-col sm:flex-row items-center justify-around gap-3 shadow-sm">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#B59C7D] text-white flex items-center justify-center font-bold text-base sm:text-lg shadow-xs">
-              4.9
-            </div>
-            <div className="text-left">
-              <div className="flex text-[#B59C7D] text-xs sm:text-sm">
-                {"★".repeat(5)}
+        {/* Dual Branch Google Reviews Banner */}
+        <div className="mb-8 sm:mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            {/* Kalyan Nagar Branch */}
+            <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#E5E0D8] shadow-sm flex items-center justify-between gap-3 hover:border-[#B59C7D]/50 transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#B59C7D] text-white flex flex-col items-center justify-center font-bold shadow-xs shrink-0">
+                  <span className="text-sm sm:text-base font-bold leading-none">4.9</span>
+                  <div className="flex text-[7px] sm:text-[8px] text-[#FAF8F5] mt-1 leading-none">
+                    {"★".repeat(5)}
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
+                      Kalyan Nagar
+                    </h4>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#EEEDE8] text-[#8E7557] font-semibold border border-[#E5E0D8]">
+                      Flagship
+                    </span>
+                  </div>
+                  <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
+                    <strong className="text-[#111111] font-semibold">129 Google reviews</strong> • Above Starbucks
+                  </p>
+                </div>
               </div>
-              <span className="text-[10px] sm:text-xs text-[#7A756D] font-medium">Google Rating</span>
+
+              <a
+                href={BRANCH_REVIEWS["kalyan-nagar"].googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#111111] border border-[#E5E0D8] hover:bg-[#111111] hover:text-[#FAF8F5] hover:border-[#111111] transition-all shadow-xs shrink-0"
+              >
+                <Star className="w-3 h-3 text-[#B59C7D] fill-[#B59C7D]" />
+                <span>Review</span>
+                <ExternalLink className="w-2.5 h-2.5 text-[#7A756D]" />
+              </a>
             </div>
-          </div>
 
-          <div className="h-6 w-px bg-[#E5E0D8] hidden sm:block" />
+            {/* Kothanur Branch */}
+            <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#E5E0D8] shadow-sm flex items-center justify-between gap-3 hover:border-[#B59C7D]/50 transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#B59C7D] text-white flex flex-col items-center justify-center font-bold shadow-xs shrink-0">
+                  <span className="text-sm sm:text-base font-bold leading-none">4.8</span>
+                  <div className="flex text-[7px] sm:text-[8px] text-[#FAF8F5] mt-1 leading-none">
+                    {"★".repeat(5)}
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
+                      Kothanur
+                    </h4>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#EEEDE8] text-[#8E7557] font-semibold border border-[#E5E0D8]">
+                      New
+                    </span>
+                  </div>
+                  <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
+                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong> • ANR Arcade
+                  </p>
+                </div>
+              </div>
 
-          <div className="text-left">
-            <span className="text-lg sm:text-2xl font-bold text-[#111111] block">
-              129+ Reviews
-            </span>
-            <span className="text-[10px] sm:text-xs text-[#7A756D]">Verified Client Ratings</span>
+              <a
+                href={BRANCH_REVIEWS["kothanur"].googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#111111] border border-[#E5E0D8] hover:bg-[#111111] hover:text-[#FAF8F5] hover:border-[#111111] transition-all shadow-xs shrink-0"
+              >
+                <Star className="w-3 h-3 text-[#B59C7D] fill-[#B59C7D]" />
+                <span>Review</span>
+                <ExternalLink className="w-2.5 h-2.5 text-[#7A756D]" />
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Mobile: Horizontal Auto-Slider | Desktop: Static 3-Column Grid */}
+        {/* Auto-Running Slider Track */}
         <div
           ref={scrollTrackRef}
           onScroll={handleScroll}
@@ -96,13 +159,13 @@ export const TestimonialsPreview: React.FC = () => {
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="flex md:grid md:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 pt-2 no-scrollbar scroll-smooth"
+          className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-4 pt-2 no-scrollbar scroll-smooth px-1"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="snap-start shrink-0 w-[82vw] md:w-auto bg-[#FFFFFF] p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D]/50 shadow-sm transition-all flex flex-col justify-between"
+              className="snap-start shrink-0 w-[85vw] sm:w-[350px] lg:w-[380px] bg-[#FFFFFF] p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D] shadow-sm hover:shadow-md transition-all flex flex-col justify-between select-none"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -128,7 +191,7 @@ export const TestimonialsPreview: React.FC = () => {
                   </h4>
                   <span className="text-[10px] sm:text-xs text-[#7A756D]">{item.role}</span>
                 </div>
-                <span className="text-[10px] sm:text-xs text-[#8E7557] font-medium">
+                <span className="text-[10px] sm:text-xs text-[#8E7557] font-semibold">
                   {item.branch}
                 </span>
               </div>
@@ -136,23 +199,47 @@ export const TestimonialsPreview: React.FC = () => {
           ))}
         </div>
 
-        {/* Pagination Dots (Mobile Only) */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-6">
-          {TESTIMONIALS.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => scrollToIndex(idx)}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                activeIndex === idx
-                  ? "w-7 bg-[#B59C7D]"
-                  : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
-              }`}
-              aria-label={`Go to testimonial ${idx + 1}`}
-            />
-          ))}
+        {/* Universal Slider Controls (Prev, Dots, Next) with Pause indicator */}
+        <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <button
+            onClick={() => {
+              const prev = activeIndex === 0 ? TESTIMONIALS.length - 1 : activeIndex - 1;
+              scrollToIndex(prev);
+            }}
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#111111] hover:bg-[#111111] hover:text-white hover:border-[#111111] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {TESTIMONIALS.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => scrollToIndex(idx)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  activeIndex === idx
+                    ? "w-6 sm:w-8 bg-[#B59C7D]"
+                    : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
+                }`}
+                aria-label={`Go to testimonial ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={() => {
+              const next = activeIndex === TESTIMONIALS.length - 1 ? 0 : activeIndex + 1;
+              scrollToIndex(next);
+            }}
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#111111] hover:bg-[#111111] hover:text-white hover:border-[#111111] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
 
-        <div className="mt-8 sm:mt-12 text-center">
+        <div className="mt-8 sm:mt-10 text-center">
           <Button
             href="/appointment?branch=kalyan-nagar"
             variant="gold"

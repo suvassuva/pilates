@@ -130,7 +130,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2 pt-0.5">
                 <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#25D366] shrink-0" />
                 <a
-                  href={generateWhatsAppUrl("kalyan-nagar")}
+                  href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur branch.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#B59C7D]"

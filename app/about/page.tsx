@@ -248,7 +248,7 @@ export default function AboutPage() {
                 Dr Pilates was founded with a clear mission: to provide a refined, clinically-grounded space where individuals can build deep core strength, correct posture imbalances, and recover from physical stress without joint wear.
               </p>
               <p className="text-base text-[#4A4641] leading-relaxed">
-                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Hennur, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
+                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Kothanur, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
               </p>
 
               <div className="pt-4 flex items-center gap-6">

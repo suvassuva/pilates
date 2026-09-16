@@ -77,7 +77,7 @@ export const SERVICES: ServiceDetail[] = [
     fullDescription: "Our Physiotherapy Treatment service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
     heroHeadline: "Move Better. Recover Stronger.",
     tagline: "Evidence-based clinical physiotherapy and movement rehabilitation tailored to your body's needs.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/physiotherapy_treatment.jpg",
     iconName: "HeartPulse",
     benefits: [
       "Targeted Relief from Back, Neck, Knee & Joint Pain",

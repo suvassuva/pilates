@@ -5,9 +5,9 @@ import { BranchSelector } from "@/components/branches/BranchSelector";
 import { CTASection } from "@/components/home/CTASection";
 
 export const metadata = {
-  title: "Dr Pilates Locations & Branches in Bengaluru | Kalyan Nagar & Hennur",
+  title: "Dr Pilates Locations & Branches in Bengaluru | Kalyan Nagar & Kothanur",
   description:
-    "View Dr Pilates branch details, addresses, phone numbers, opening hours, directions, and available services for Kalyan Nagar and Hennur in Bengaluru."
+    "View Dr Pilates branch details, addresses, phone numbers, opening hours, directions, and available services for Kalyan Nagar and Kothanur in Bengaluru."
 };
 
 export default function BranchesPage() {

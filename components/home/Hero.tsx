@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
             {/* Top Badge */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5E0D8] shadow-xs">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B59C7D]" />
-              <span className="uppercase tracking-widest text-[10px]">Bengaluru's Premier Wellness & Pilates</span>
+              <span className="uppercase tracking-widest text-[10px]">Dr Pilates • Bengaluru's Premier Wellness &amp; Movement Studio</span>
             </div>
 
             {/* Main Headline with Amanda-inspired editorial serif accent */}
@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Text */}
             <p className="text-xs sm:text-lg text-[#4A4641] max-w-2xl leading-relaxed font-normal">
-              Premium Reformer Pilates, EMS Training and Physiotherapy designed to help you build strength, improve mobility and feel your best.
+              At <strong className="font-semibold text-[#111111]">Dr Pilates</strong>, experience premium Reformer Pilates, German EMS Training, and clinical Physiotherapy across Kalyan Nagar &amp; Kothanur — designed to help you build deep strength, restore joint mobility, and feel your absolute best.
             </p>
 
             {/* Primary CTAs */}
@@ -76,20 +76,42 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/50 via-transparent to-transparent pointer-events-none" />
               </div>
 
-              {/* Floating Card Badge 1: Kalyan Nagar Branch */}
-              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-3 rounded-xl shadow-xl border border-[#E5E0D8] max-w-[200px] sm:max-w-[260px] hidden sm:block">
-                <div className="flex items-start gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-[#EEEDE8] text-[#B59C7D] flex items-center justify-center shrink-0 border border-[#B59C7D]/30">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[9px] font-bold uppercase tracking-wider text-[#8E7557]">
-                      Flagship Branch
+              {/* Floating Card Badge: Both Bengaluru Branches */}
+              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-[#E5E0D8] max-w-[250px] sm:max-w-[310px] hidden sm:block">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 pb-1.5 border-b border-[#E5E0D8]">
+                    <div className="w-6 h-6 rounded-full bg-[#EEEDE8] text-[#B59C7D] flex items-center justify-center shrink-0 border border-[#B59C7D]/30">
+                      <MapPin className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8E7557]">
+                      2 Bengaluru Studios
                     </span>
-                    <h4 className="text-xs font-bold text-[#111111]">
-                      Kalyan Nagar, HRBR Layout
-                    </h4>
-                    <p className="text-[10px] text-[#7A756D]">Above Starbucks • Open till 8 PM</p>
+                  </div>
+
+                  {/* Kalyan Nagar */}
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <h4 className="text-xs font-bold text-[#111111] leading-tight">
+                        Kalyan Nagar
+                      </h4>
+                      <p className="text-[10px] text-[#7A756D]">Above Starbucks • HRBR Layout</p>
+                    </div>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-[#FAF8F5] text-[#8E7557] font-semibold border border-[#E5E0D8] shrink-0">
+                      Flagship
+                    </span>
+                  </div>
+
+                  {/* Kothanur */}
+                  <div className="flex items-center justify-between gap-3 pt-1.5 border-t border-[#E5E0D8]/60">
+                    <div>
+                      <h4 className="text-xs font-bold text-[#111111] leading-tight">
+                        Kothanur
+                      </h4>
+                      <p className="text-[10px] text-[#7A756D]">ANR Arcade • Doddagubbi Rd</p>
+                    </div>
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-[#FAF8F5] text-[#8E7557] font-semibold border border-[#E5E0D8] shrink-0">
+                      Now Open
+                    </span>
                   </div>
                 </div>
               </div>

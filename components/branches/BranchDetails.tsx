@@ -11,7 +11,8 @@ import {
   MessageSquare,
   Navigation,
   Calendar,
-  Info
+  Info,
+  ExternalLink
 } from "lucide-react";
 import { Branch, generateWhatsAppUrl, generateCallUrl } from "@/data/branches";
 import { Button } from "../ui/Button";
@@ -24,8 +25,8 @@ interface BranchDetailsProps {
 
 export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-300">
-      {/* Status Alert */}
+    <div className="space-y-6">
+      {/* Branch Announcement / Notice Banner */}
       {branch.statusText && (
         <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl bg-[#EEEDE8] border border-[#B59C7D]/40 flex items-start gap-2.5 text-xs sm:text-sm text-[#111111]">
           <Info className="w-4 h-4 text-[#B59C7D] shrink-0 mt-0.5" />
@@ -48,13 +49,26 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                   {branch.isMainBranch ? "Flagship Branch" : `${branch.shortName} Branch`}
                 </Badge>
                 {branch.rating > 0 && (
-                  <div className="flex items-center gap-1 bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E0D8]">
-                    <Star className="w-3 h-3 fill-[#B59C7D] text-[#B59C7D]" />
-                    <span>{branch.rating} ★</span>
-                    {branch.reviewCount > 0 && (
-                      <span className="text-[#7A756D] font-normal">
-                        ({branch.reviewCount}+)
-                      </span>
+                  <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1 bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E0D8]">
+                      <Star className="w-3 h-3 fill-[#B59C7D] text-[#B59C7D]" />
+                      <span>{branch.rating} ★</span>
+                      {branch.reviewCount > 0 && (
+                        <span className="text-[#7A756D] font-normal">
+                          ({branch.reviewCount} reviews)
+                        </span>
+                      )}
+                    </div>
+                    {branch.googleReviewUrl && (
+                      <a
+                        href={branch.googleReviewUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[10px] sm:text-xs text-[#8E7557] hover:text-[#111111] font-semibold bg-[#FAF8F5] px-2 py-0.5 rounded-full border border-[#E5E0D8] hover:border-[#B59C7D] transition-colors"
+                      >
+                        <span>Review</span>
+                        <ExternalLink className="w-2.5 h-2.5" />
+                      </a>
                     )}
                   </div>
                 )}
@@ -133,47 +147,53 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
           </div>
 
           {/* Action CTAs */}
-          <div className="pt-4 border-t border-[#E5E0D8] grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3">
+          <div className="pt-4 border-t border-[#E5E0D8] space-y-2.5">
             <Button
               href={`/appointment?branch=${branch.id}`}
               variant="gold"
               size="sm"
-              className="col-span-2 sm:flex-1"
+              fullWidth
               icon={<Calendar className="w-3.5 h-3.5" />}
             >
               Book Appointment
             </Button>
 
-            <Button
-              href={generateWhatsAppUrl(branch.id)}
-              external
-              variant="whatsapp"
-              size="sm"
-              icon={<MessageSquare className="w-3.5 h-3.5" />}
-            >
-              WhatsApp
-            </Button>
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2.5">
+              <Button
+                href={generateWhatsAppUrl(branch.id)}
+                external
+                variant="whatsapp"
+                size="sm"
+                fullWidth
+                className="px-1.5 sm:px-3 text-[11px] sm:text-xs"
+                icon={<MessageSquare className="w-3.5 h-3.5" />}
+              >
+                WhatsApp
+              </Button>
 
-            <Button
-              href={generateCallUrl(branch.id)}
-              variant="outline"
-              size="sm"
-              className="border-[#111111]/25 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
-              icon={<Phone className="w-3.5 h-3.5 text-[#B59C7D]" />}
-            >
-              Call Now
-            </Button>
+              <Button
+                href={generateCallUrl(branch.id)}
+                variant="outline"
+                size="sm"
+                fullWidth
+                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#111111]/25 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] bg-[#FFFFFF]"
+                icon={<Phone className="w-3.5 h-3.5 text-[#B59C7D]" />}
+              >
+                Call Now
+              </Button>
 
-            <Button
-              href={branch.mapUrl}
-              external
-              variant="ghost"
-              size="sm"
-              className="col-span-2 sm:col-auto text-[#8E7557]"
-              icon={<Navigation className="w-3.5 h-3.5" />}
-            >
-              Directions
-            </Button>
+              <Button
+                href={branch.mapUrl}
+                external
+                variant="outline"
+                size="sm"
+                fullWidth
+                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#111111]/25 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] bg-[#FFFFFF]"
+                icon={<Navigation className="w-3.5 h-3.5 text-[#B59C7D]" />}
+              >
+                Directions
+              </Button>
+            </div>
           </div>
         </div>
 

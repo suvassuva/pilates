@@ -28,10 +28,20 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Dr Pilates | Reformer Pilates, EMS Training & Physiotherapy in Bengaluru",
   description:
-    "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Hennur, Bengaluru. Call 088922 36442 to book your 1-on-1 session.",
+    "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Bengaluru. Call 088922 36442 to book your 1-on-1 session.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" }
+    ],
+    apple: [
+      { url: "/favicon.png" }
+    ]
+  },
   keywords: [
     "Reformer Pilates Bengaluru",
     "Pilates Kalyan Nagar",
+    "Pilates Kothanur",
     "EMS Training Bengaluru",
     "Physiotherapy HRBR Layout",
     "Personal Training Bengaluru",
@@ -41,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dr Pilates | Reformer Pilates, EMS Training & Physiotherapy in Bengaluru",
     description:
-      "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Hennur, Bengaluru.",
+      "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Bengaluru.",
     url: "https://drpilates.in",
     siteName: "Dr Pilates",
     locale: "en_IN",

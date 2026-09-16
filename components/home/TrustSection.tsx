@@ -6,12 +6,12 @@ export const TrustSection: React.FC = () => {
   const stats = [
     {
       value: "4.9 ★",
-      label: "Google Rating",
-      subtext: "Highest rated in Kalyan Nagar",
+      label: "Top Rated Pilates",
+      subtext: "Kalyan Nagar & Kothanur",
       icon: <Star className="w-4 h-4 sm:w-6 sm:h-6 text-[#B59C7D] fill-[#B59C7D]" />
     },
     {
-      value: "129+",
+      value: "141+",
       label: "Google Reviews",
       subtext: "Verified client feedback",
       icon: <Award className="w-4 h-4 sm:w-6 sm:h-6 text-[#B59C7D]" />
@@ -19,7 +19,7 @@ export const TrustSection: React.FC = () => {
     {
       value: "2",
       label: "Bengaluru Branches",
-      subtext: "Kalyan Nagar & Hennur",
+      subtext: "Kalyan Nagar & Kothanur",
       icon: <MapPin className="w-4 h-4 sm:w-6 sm:h-6 text-[#B59C7D]" />
     },
     {

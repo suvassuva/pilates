@@ -32,7 +32,7 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch, onSelect }) => {
               </Badge>
               {branch.rating > 0 && (
                 <span className="text-xs font-bold text-white bg-[#141312]/90 px-3 py-1 rounded-full border border-[#B59C7D]/40">
-                  {branch.rating} ★ (129+ reviews)
+                  {branch.rating} ★ ({branch.reviewCount} reviews)
                 </span>
               )}
             </div>
