@@ -9,7 +9,7 @@ import { Sparkles, CheckCircle2, HelpCircle, ShieldAlert, Target } from "lucide-
 export const metadata = {
   title: "Dry Needling Therapy in Bengaluru | Dr Pilates",
   description:
-    "Advanced clinical Dry Needling and myofascial trigger point therapy by certified practitioners at Dr Pilates Kalyan Nagar and Kothanur."
+    "Advanced clinical Dry Needling and myofascial trigger point therapy by certified practitioners at Dr Pilates Kalyan Nagar and Kothanur, Hennur Road."
 };
 
 export default function DryNeedlingPage() {

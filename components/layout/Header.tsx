@@ -188,9 +188,6 @@ export const Header: React.FC = () => {
                           <span className="text-xs font-bold text-[#111111]">
                             Kalyan Nagar
                           </span>
-                          <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
-                            Flagship
-                          </span>
                         </div>
                         <span className="text-xs font-bold text-[#111111] block mt-0.5 tracking-wide">
                           088922 36442
@@ -227,13 +224,13 @@ export const Header: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Branch 2: Kothanur */}
+                  {/* Branch 2: Kothanur, Hennur Road */}
                   <div className="p-2.5 rounded-xl hover:bg-[#FAF8F5] transition-all border border-[#E5E0D8]/60 bg-[#FAF8F5]/40">
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <div className="flex items-center gap-1.5">
                           <span className="text-xs font-bold text-[#111111]">
-                            Kothanur
+                            Kothanur, Hennur Road
                           </span>
                           <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
                             Now Open
@@ -253,19 +250,19 @@ export const Header: React.FC = () => {
                           href="tel:+919481003827"
                           onClick={() => setIsCallMenuOpen(false)}
                           className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#EEEDE8] hover:bg-[#111111] text-[#111111] hover:text-white transition-all text-[11px] font-semibold group/btn"
-                          title="Call Kothanur (094810 03827)"
+                          title="Call Kothanur, Hennur Road (094810 03827)"
                         >
                           <Phone className="w-3 h-3 text-[#B59C7D] group-hover/btn:text-white transition-colors" />
                           <span>Call</span>
                         </a>
 
                         <a
-                          href={generateWhatsAppUrl("kothanur", "Hi Dr Pilates Kothanur, I would like to enquire about appointments and sessions.")}
+                          href={generateWhatsAppUrl("kothanur", "Hi Dr Pilates Kothanur (Hennur Road), I would like to enquire about appointments and sessions.")}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setIsCallMenuOpen(false)}
                           className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#25D366]/15 hover:bg-[#25D366] text-[#1E7E34] hover:text-white transition-all text-[11px] font-semibold group/btn"
-                          title="WhatsApp Kothanur"
+                          title="WhatsApp Kothanur, Hennur Road"
                         >
                           <MessageSquare className="w-3 h-3 text-[#25D366] group-hover/btn:text-white transition-colors" />
                           <span>WhatsApp</span>
@@ -307,14 +304,12 @@ export const Header: React.FC = () => {
                   </div>
 
                   {/* Kalyan Nagar */}
+                  {/* Kalyan Nagar */}
                   <div className="p-2 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8]/60 mb-2">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5">
                         <span className="text-xs font-bold text-[#111111]">
                           Kalyan Nagar
-                        </span>
-                        <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
-                          Flagship
                         </span>
                       </div>
                       <span className="text-[11px] font-bold text-[#8E7557]">
@@ -345,12 +340,12 @@ export const Header: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Kothanur */}
+                  {/* Kothanur, Hennur Road */}
                   <div className="p-2 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8]/60">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5">
                         <span className="text-xs font-bold text-[#111111]">
-                          Kothanur
+                          Kothanur, Hennur Road
                         </span>
                         <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
                           Now Open
@@ -372,7 +367,7 @@ export const Header: React.FC = () => {
                         <span>Call</span>
                       </a>
                       <a
-                        href={generateWhatsAppUrl("kothanur", "Hi Dr Pilates Kothanur, I would like to enquire about appointments and sessions.")}
+                        href={generateWhatsAppUrl("kothanur", "Hi Dr Pilates Kothanur (Hennur Road), I would like to enquire about appointments and sessions.")}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setIsMobileCallOpen(false)}

@@ -46,7 +46,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
               <div className="flex items-center gap-2">
                 <Badge variant={branch.isMainBranch ? "gold" : "outline"}>
-                  {branch.isMainBranch ? "Flagship Branch" : `${branch.shortName} Branch`}
+                  {`${branch.shortName} Studio`}
                 </Badge>
                 {branch.rating > 0 && (
                   <div className="flex items-center gap-1.5">

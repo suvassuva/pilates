@@ -104,7 +104,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                     <span>Clinical Movement Excellence</span>
                   </div>
                   <p className="text-[11px] sm:text-xs text-[#111111] leading-snug">
-                    Guided 1-on-1 by certified instructors at Dr Pilates Kalyan Nagar &amp; Kothanur.
+                    Guided 1-on-1 by certified instructors at Dr Pilates Kalyan Nagar &amp; Kothanur, Hennur Road.
                   </p>
                 </div>
               </div>

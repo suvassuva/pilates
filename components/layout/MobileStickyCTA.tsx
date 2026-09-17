@@ -20,7 +20,7 @@ export const MobileStickyCTA: React.FC = () => {
         </a>
 
         <a
-          href={generateWhatsAppUrl(mainBranch.id, "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur branch.")}
+          href={generateWhatsAppUrl(mainBranch.id, "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-1.5 py-2 px-2 bg-[#25D366] text-white rounded-xl text-[11px] font-semibold hover:opacity-90 active:scale-95 transition-all shadow-xs"

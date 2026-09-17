@@ -40,7 +40,7 @@ export const CTASection: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-xs sm:text-base text-[#4A4641] leading-relaxed max-w-xl mx-auto">
-            Book your personalized 1-on-1 Reformer, EMS, or Physiotherapy session today at Dr Pilates Kalyan Nagar or Kothanur.
+            Book your personalized 1-on-1 Reformer, EMS, or Physiotherapy session today at Dr Pilates Kalyan Nagar or Kothanur, Hennur Road.
           </p>
 
           {/* Symmetrical 2x2 Grid on Mobile / Flex Row on Desktop */}
@@ -55,7 +55,7 @@ export const CTASection: React.FC = () => {
             </Button>
 
             <Button
-              href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur branch.")}
+              href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
               external
               variant="whatsapp"
               size="sm"
@@ -81,7 +81,7 @@ export const CTASection: React.FC = () => {
               className="border-[#111111]/30 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
               icon={<Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D]" />}
             >
-              Call Kothanur
+              Call Kothanur (Hennur Rd)
             </Button>
 
             {/* 2-Branch Directions Dropdown */}
@@ -129,9 +129,6 @@ export const CTASection: React.FC = () => {
                         <span className="text-xs font-bold text-[#111111] group-hover/branch:text-[#8E7557] transition-colors">
                           Kalyan Nagar
                         </span>
-                        <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
-                          Flagship
-                        </span>
                       </div>
                       <span className="text-[10px] text-[#7A756D] block mt-0.5">
                         Above Starbucks, HRBR Layout
@@ -142,7 +139,7 @@ export const CTASection: React.FC = () => {
                     </div>
                   </a>
 
-                  {/* Kothanur */}
+                  {/* Kothanur, Hennur Road */}
                   <a
                     href={BRANCHES[1].mapUrl}
                     target="_blank"
@@ -153,7 +150,7 @@ export const CTASection: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-1.5">
                         <span className="text-xs font-bold text-[#111111] group-hover/branch:text-[#8E7557] transition-colors">
-                          Kothanur
+                          Kothanur, Hennur Road
                         </span>
                         <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
                           Now Open
@@ -173,7 +170,7 @@ export const CTASection: React.FC = () => {
           </div>
 
           <p className="text-[10px] sm:text-xs text-[#7A756D] pt-2 sm:pt-4">
-            Dr Pilates: Kalyan Nagar (088922 36442) • Kothanur (094810 03827)
+            Dr Pilates: Kalyan Nagar (088922 36442) • Kothanur, Hennur Road (094810 03827)
           </p>
         </div>
       </Container>

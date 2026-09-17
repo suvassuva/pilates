@@ -111,12 +111,12 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
 
-              {/* Kothanur */}
+              {/* Kothanur, Hennur Road */}
               <div className="space-y-1 pb-2 border-b border-white/10">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-[#FAF8F5]">Kothanur:</strong> ANR Arcade, 2nd Flr, Doddagubbi Main Rd
+                    <strong className="text-[#FAF8F5]">Kothanur, Hennur Road:</strong> ANR Arcade, 2nd Flr, Doddagubbi Main Rd
                   </span>
                 </div>
                 <div className="flex items-center gap-2 pl-5 sm:pl-6 text-[11px] sm:text-xs">
@@ -130,7 +130,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2 pt-0.5">
                 <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#25D366] shrink-0" />
                 <a
-                  href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur branch.")}
+                  href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#B59C7D]"

@@ -9,7 +9,7 @@ import { Dumbbell, CheckCircle2, HelpCircle, Target } from "lucide-react";
 export const metadata = {
   title: "Personal Training in Bengaluru | Dr Pilates",
   description:
-    "Custom 1-on-1 personal fitness coaching, strength building, and posture alignment at Dr Pilates Kalyan Nagar & Kothanur."
+    "Custom 1-on-1 personal fitness coaching, strength building, and posture alignment at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road."
 };
 
 export default function PersonalTrainingPage() {

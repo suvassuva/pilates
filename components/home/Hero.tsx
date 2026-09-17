@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
 
             {/* Supporting Text */}
             <p className="text-xs sm:text-lg text-[#4A4641] max-w-2xl leading-relaxed font-normal">
-              At <strong className="font-semibold text-[#111111]">Dr Pilates</strong>, experience premium Reformer Pilates, German EMS Training, and clinical Physiotherapy across Kalyan Nagar &amp; Kothanur — designed to help you build deep strength, restore joint mobility, and feel your absolute best.
+              At <strong className="font-semibold text-[#111111]">Dr Pilates</strong>, experience premium Reformer Pilates, German EMS Training, and clinical Physiotherapy across Kalyan Nagar &amp; Kothanur, Hennur Road — designed to help you build deep strength, restore joint mobility, and feel your absolute best.
             </p>
 
             {/* Primary CTAs */}
@@ -96,16 +96,13 @@ export const Hero: React.FC = () => {
                       </h4>
                       <p className="text-[10px] text-[#7A756D]">Above Starbucks • HRBR Layout</p>
                     </div>
-                    <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-[#FAF8F5] text-[#8E7557] font-semibold border border-[#E5E0D8] shrink-0">
-                      Flagship
-                    </span>
                   </div>
 
-                  {/* Kothanur */}
+                  {/* Kothanur, Hennur Road */}
                   <div className="flex items-center justify-between gap-3 pt-1.5 border-t border-[#E5E0D8]/60">
                     <div>
                       <h4 className="text-xs font-bold text-[#111111] leading-tight">
-                        Kothanur
+                        Kothanur, Hennur Road
                       </h4>
                       <p className="text-[10px] text-[#7A756D]">ANR Arcade • Doddagubbi Rd</p>
                     </div>

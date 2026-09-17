@@ -7,9 +7,9 @@ import { CTASection } from "@/components/home/CTASection";
 import { Activity, Layers, Heart, Zap, ShieldCheck, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "About Founders Dr. Govinda Raju S. & Vivek | Dr Pilates Bengaluru",
+  title: "About Founders Dr. Govinda Raju S. & Vivek Victor | Dr Pilates Bengaluru",
   description:
-    "Learn about founders Dr. Govinda Raju S. and Vivek, and Dr Pilates, Bengaluru's leading studio for clinical Reformer Pilates, EMS Training, and Physiotherapy."
+    "Learn about founders Dr. Govinda Raju S. (Founder and Program Director) and Vivek Victor (Co-Founder and Operations Director) of Dr Pilates Bengaluru."
 };
 
 export default function AboutPage() {
@@ -91,22 +91,38 @@ export default function AboutPage() {
               {/* Founder: Dr. Govinda Raju S. */}
               <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
                 <div>
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
-                    Founder &amp; Clinical Director
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1 mb-4">
-                    About{" "}
-                    <span className="font-serif italic font-normal text-[#B91C1C]">
-                      Dr. Govinda Raju S.
-                    </span>
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
-                    Blending clinical expertise with an artist&apos;s eye for movement, Dr. Govinda Raju S. has
-                    redefined Pilates to bridge the gap between performance medical discipline and athletic
-                    refinement. Over his decade-long career, he has combined physiotherapy, Pilates, and EMS
-                    training to develop personalized protocols that restore posture, build core strength, and
-                    support sustainable physical longevity.
-                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#E5E0D8]">
+                      <Image
+                        src="/dr-govinda-raju.jpg"
+                        alt="Dr. Govinda Raju S. - Founder and Program Director"
+                        fill
+                        quality={95}
+                        className="object-cover object-top"
+                        sizes="112px"
+                      />
+                    </div>
+                    <div>
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                        Founder and Program Director
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
+                        DR GOVINDRAJU
+                      </h3>
+                      <span className="text-xs sm:text-sm font-serif italic text-[#8E7557] block mt-0.5">
+                        Dr. Govinda Raju S.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                    <p>
+                      With over a decade of clinical experience, Dr. Govinda Raju S has pioneered the integration of physical therapy with the athletic refinement of Reformer Pilates. His philosophy focuses on accuracy, biomechanical integrity, and customized rehab programs that deliver sustainable, long-term physical evolution. Qualifications include a Bachelor of Physiotherapy, ACE Certified Professional, and licensed practitioner of Advanced Dry Needling.
+                    </p>
+                    <p>
+                      Blending clinical expertise with a refined understanding of movement, Dr. Govinda Raju S. brings a distinctive approach to Pilates that unites medical precision with athletic performance. Over the course of his decade-long career, he has integrated physiotherapy, Pilates, and EMS training to create personalized programs that improve posture, strengthen the core, enhance mobility, and support lasting physical well-being.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
@@ -121,34 +137,44 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Co-Founder: Vivek */}
+              {/* Co-Founder: Vivek Victor */}
               <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
                 <div>
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
-                    Co-Founder &amp; Managing Director
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1 mb-4">
-                    About{" "}
-                    <span className="font-serif italic font-normal text-[#B91C1C]">
-                      Vivek
-                    </span>
-                  </h3>
-                  <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
-                    Driven by a passion for premium wellness delivery and client-centric hospitality, Vivek leads
-                    the strategic vision and operational excellence at Dr Pilates. He ensures every studio bay,
-                    apparatus calibration, and personal training journey upholds the highest standards of safety,
-                    privacy, and transformative client satisfaction across our Bengaluru locations.
-                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#141312] flex items-center justify-center text-[#E2C79A] font-display text-2xl sm:text-3xl font-bold tracking-wider">
+                      VV
+                    </div>
+                    <div>
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                        Co-Founder and Operations Director
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
+                        VIVEK VICTOR
+                      </h3>
+                      <span className="text-xs sm:text-sm font-serif italic text-[#8E7557] block mt-0.5">
+                        Strategic Vision &amp; Operations
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                    <p>
+                      With over 22 years of experience across sales and operations, customer success and entrepreneurship, Vivek brings a strategic and people-focused approach. Has expertise which spans business strategy, customer acquisition, operational excellence, business development, negotiations, and team management.
+                    </p>
+                    <p>
+                      Driven by a passion for premium wellness delivery and client-centric hospitality, Vivek leads the strategic vision and operational excellence at Dr Pilates. Passionate about creating seamless studio experiences, building strong client relationships, and empowering teams to deliver exceptional service.
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Studio Operations &amp; Experience</span>
+                    <span>Operations &amp; Experience: 22+ Years</span>
                   </div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
                     <Sparkles className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Expansion &amp; Wellness Strategy</span>
+                    <span>Hospitality &amp; Client Success</span>
                   </div>
                 </div>
               </div>
@@ -171,7 +197,7 @@ export default function AboutPage() {
                 </p>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
                   He soon realized that traditional gym training lacks biomechanical accuracy, often
-                  exacerbating structural stress. Together with co-founder Vivek, he turned to Reformer Pilates
+                  exacerbating structural stress. Together with co-founder Vivek Victor, he turned to Reformer Pilates
                   and EMS technology—not as general workouts, but as medical rehabilitation tools designed to
                   activate correct neuromuscular pathways and restore structural integrity.
                 </p>
@@ -226,7 +252,7 @@ export default function AboutPage() {
                 every movement serves both physical function and athletic form.&rdquo;
               </p>
               <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block font-mono">
-                DR. GOVINDA RAJU S. &amp; VIVEK, FOUNDERS
+                DR. GOVINDA RAJU S. &amp; VIVEK VICTOR, FOUNDERS
               </span>
             </div>
           </div>
@@ -248,7 +274,7 @@ export default function AboutPage() {
                 Dr Pilates was founded with a clear mission: to provide a refined, clinically-grounded space where individuals can build deep core strength, correct posture imbalances, and recover from physical stress without joint wear.
               </p>
               <p className="text-base text-[#4A4641] leading-relaxed">
-                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Kothanur, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
+                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Kothanur, Hennur Road, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
               </p>
 
               <div className="pt-4 flex items-center gap-6">

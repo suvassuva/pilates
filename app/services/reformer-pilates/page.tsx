@@ -7,9 +7,9 @@ import { CTASection } from "@/components/home/CTASection";
 import { CheckCircle2, HelpCircle, Shield, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "Reformer Pilates in Bengaluru | Dr Pilates Kalyan Nagar & Kothanur",
+  title: "Reformer Pilates in Bengaluru | Dr Pilates Kalyan Nagar & Kothanur, Hennur Road",
   description:
-    "Transform posture, core strength, and joint mobility with Reformer Pilates at Dr Pilates Kalyan Nagar and Kothanur, Bengaluru."
+    "Transform posture, core strength, and joint mobility with Reformer Pilates at Dr Pilates Kalyan Nagar and Kothanur, Hennur Road, Bengaluru."
 };
 
 export default function ReformerPilatesPage() {

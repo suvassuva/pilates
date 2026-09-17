@@ -148,14 +148,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             >
               <div className="flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
-                <span>Kothanur</span>
+                <span>Kothanur, Hennur Rd</span>
               </div>
               <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">094810 03827</span>
             </a>
           </div>
 
           <a
-            href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur branch.")}
+            href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-1.5 py-2 px-3 bg-[#25D366] rounded-xl text-xs font-semibold text-white shadow-xs hover:opacity-90 w-full"
@@ -167,7 +167,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
         <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
           <MapPin className="w-3 h-3 text-[#B59C7D]" />
-          <span>Kalyan Nagar &amp; Kothanur • Bengaluru</span>
+          <span>Kalyan Nagar &amp; Kothanur, Hennur Rd • Bengaluru</span>
         </div>
       </div>
     </div>

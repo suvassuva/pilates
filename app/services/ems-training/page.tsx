@@ -9,7 +9,7 @@ import { Zap, ShieldCheck, Clock, CheckCircle2, HelpCircle } from "lucide-react"
 export const metadata = {
   title: "EMS Training in Bengaluru | Dr Pilates",
   description:
-    "20-minute full body workout using advanced bio-suit Electrical Muscle Stimulation technology at Dr Pilates Kalyan Nagar & Kothanur."
+    "20-minute full body workout using advanced bio-suit Electrical Muscle Stimulation technology at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road."
 };
 
 export default function EMSTrainingPage() {

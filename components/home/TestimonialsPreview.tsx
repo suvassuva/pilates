@@ -91,9 +91,6 @@ export const TestimonialsPreview: React.FC = () => {
                     <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
                       Kalyan Nagar
                     </h4>
-                    <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#EEEDE8] text-[#8E7557] font-semibold border border-[#E5E0D8]">
-                      Flagship
-                    </span>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
                     <strong className="text-[#111111] font-semibold">129 Google reviews</strong> • Above Starbucks
@@ -125,14 +122,14 @@ export const TestimonialsPreview: React.FC = () => {
                 <div>
                   <div className="flex items-center gap-1.5">
                     <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
-                      Kothanur
+                      Kothanur, Hennur Road
                     </h4>
                     <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-[#EEEDE8] text-[#8E7557] font-semibold border border-[#E5E0D8]">
                       New
                     </span>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
-                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong> • ANR Arcade
+                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong> • ANR Arcade, Doddagubbi Rd
                   </p>
                 </div>
               </div>

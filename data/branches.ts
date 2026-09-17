@@ -34,7 +34,7 @@ export const BRANCHES: Branch[] = [
     id: "kalyan-nagar",
     name: "Dr Pilates – Kalyan Nagar",
     shortName: "Kalyan Nagar",
-    tagline: "Our Flagship Branch in North Bengaluru",
+    tagline: "Our Premier Studio in North Bengaluru",
     isMainBranch: true,
     address: {
       building: "3rd Floor, Y4 Heights Building",
@@ -72,18 +72,18 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: "kothanur",
-    name: "Dr Pilates – Kothanur",
-    shortName: "Kothanur",
-    tagline: "",
+    name: "Dr Pilates – Kothanur, Hennur Road",
+    shortName: "Kothanur, Hennur Road",
+    tagline: "North Bengaluru Studio (Hennur Road)",
     isMainBranch: false,
     address: {
       building: "ANR Arcade, 2nd Floor",
-      street: "Doddagubbi Main Road, Kothanur",
+      street: "Doddagubbi Main Road, Kothanur, Hennur Road",
       landmark: "Opposite Medi Derma Hospital, Near Legacy School",
-      area: "Kothanur",
+      area: "Kothanur, Hennur Road",
       city: "Bengaluru, Karnataka",
       pincode: "560077",
-      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Kothanur, Bengaluru, Karnataka 560077"
+      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Kothanur, Hennur Road, Bengaluru, Karnataka 560077"
     },
     phone: "094810 03827",
     rawPhone: "+919481003827",
