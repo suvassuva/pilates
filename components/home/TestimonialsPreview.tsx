@@ -174,7 +174,7 @@ export const TestimonialsPreview: React.FC = () => {
                 <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]/40 mb-2" />
 
                 <p className="text-xs sm:text-sm text-[#111111] font-serif italic leading-relaxed mb-4">
-                  "{item.content}"
+                  &ldquo;{item.content}&rdquo;
                 </p>
               </div>
 

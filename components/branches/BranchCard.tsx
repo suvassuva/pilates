@@ -2,17 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import { MapPin, Phone, Clock, MessageSquare, Calendar, Navigation, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, MessageSquare, Calendar, Navigation } from "lucide-react";
 import { Branch, generateWhatsAppUrl, generateCallUrl } from "@/data/branches";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
 
 interface BranchCardProps {
   branch: Branch;
-  onSelect?: (branchId: string) => void;
 }
 
-export const BranchCard: React.FC<BranchCardProps> = ({ branch, onSelect }) => {
+export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
   return (
     <div className="bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm hover-lift flex flex-col justify-between transition-all duration-300">
       <div>

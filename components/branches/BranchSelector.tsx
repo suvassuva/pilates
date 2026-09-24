@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { BRANCHES, getBranchById } from "@/data/branches";
+import { getBranchById } from "@/data/branches";
 import { BranchTabs } from "./BranchTabs";
 import { BranchDetails } from "./BranchDetails";
 

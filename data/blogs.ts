@@ -344,6 +344,10 @@ export function getBlogBySlug(slug: string): BlogPost | undefined {
 
 export function getRelatedBlogs(currentSlug: string, category: string, limit = 2): BlogPost[] {
   return BLOG_POSTS.filter((p) => p.slug !== currentSlug)
-    .sort((a, b) => (a.category === category ? -1 : 1))
+    .sort((a, b) => {
+      const aMatches = a.category === category ? 1 : 0;
+      const bMatches = b.category === category ? 1 : 0;
+      return bMatches - aMatches;
+    })
     .slice(0, limit);
 }

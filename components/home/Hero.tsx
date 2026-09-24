@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { MapPin, Calendar, ArrowRight, Sparkles } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -20,7 +19,7 @@ export const Hero: React.FC = () => {
             {/* Top Badge */}
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5E0D8] shadow-xs">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B59C7D]" />
-              <span className="uppercase tracking-widest text-[10px]">Dr Pilates • Bengaluru's Premier Wellness &amp; Movement Studio</span>
+              <span className="uppercase tracking-widest text-[10px]">Dr Pilates • Bengaluru&apos;s Premier Wellness &amp; Movement Studio</span>
             </div>
 
             {/* Main Headline with Amanda-inspired editorial serif accent */}

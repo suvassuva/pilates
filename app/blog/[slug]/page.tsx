@@ -11,7 +11,7 @@ import {
   getBlogBySlug,
   getRelatedBlogs,
 } from "@/data/blogs";
-import { Calendar, Clock, ArrowLeft, CheckCircle2, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 
 function YouTubeIcon({ className }: { className?: string }) {
   return (

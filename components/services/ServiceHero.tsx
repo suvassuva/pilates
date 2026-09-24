@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Calendar, MessageSquare, Sparkles } from "lucide-react";
+import { Calendar, Sparkles } from "lucide-react";
 import { ServiceDetail } from "@/data/services";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -72,16 +72,6 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                 icon={<Calendar className="w-3.5 h-3.5" />}
               >
                 Book Session
-              </Button>
-
-              <Button
-                href="https://wa.me/919481003827?text=Hi%20Dr%20Pilates%2C%20I%20would%20like%20to%20enquire%20about%20a%20session."
-                external
-                variant="whatsapp"
-                size="sm"
-                icon={<MessageSquare className="w-3.5 h-3.5 text-white fill-white/20" />}
-              >
-                WhatsApp Enquiry
               </Button>
             </div>
           </div>

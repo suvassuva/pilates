@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { BlogPost, BLOG_CATEGORIES } from "@/data/blogs";
+import { BlogPost } from "@/data/blogs";
 import BlogCard from "./BlogCard";
 import { Search } from "lucide-react";
 

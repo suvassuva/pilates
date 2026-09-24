@@ -9,7 +9,6 @@ import { Button } from "../ui/Button";
 export const CTASection: React.FC = () => {
   const [isDirectionsOpen, setIsDirectionsOpen] = useState(false);
   const directionsRef = useRef<HTMLDivElement>(null);
-  const mainBranch = BRANCHES[0];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

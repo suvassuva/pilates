@@ -27,6 +27,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://drpilates.in"),
   title: "Dr Pilates | Reformer Pilates, EMS Training & Physiotherapy in Bengaluru",
   description:
     "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road, Bengaluru. Call 088922 36442 to book your 1-on-1 session.",

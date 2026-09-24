@@ -4,9 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { X, Calendar, Phone, MessageSquare, MapPin } from "lucide-react";
+import { X, Calendar, Phone, MapPin } from "lucide-react";
 import { Button } from "../ui/Button";
-import { BRANCHES, generateWhatsAppUrl } from "@/data/branches";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -27,8 +26,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname();
 
   if (!isOpen) return null;
-
-  const defaultBranch = BRANCHES[0];
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FAF8F5]/98 text-[#111111] backdrop-blur-xl animate-in fade-in duration-200">
@@ -111,16 +108,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">+91 94810 03827</span>
             </a>
           </div>
-
-          <a
-            href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 py-2 px-3 bg-[#25D366] rounded-xl text-xs font-semibold text-white shadow-xs hover:opacity-90 w-full"
-          >
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>WhatsApp Enquiry</span>
-          </a>
         </div>
 
         <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
