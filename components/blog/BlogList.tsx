@@ -72,33 +72,35 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
       )}
 
       {/* Article Grid */}
-      <section aria-label="Articles Grid">
-        {gridPosts.length > 0 ? (
+      {gridPosts.length > 0 && (
+        <section aria-label="Articles Grid">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {gridPosts.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
           </div>
-        ) : (
-          <div className="text-center py-16 px-4 rounded-2xl bg-white border border-[#E5E0D8]">
-            <p className="text-base text-neutral-600 mb-2">
-              No articles found matching &ldquo;{searchQuery}&rdquo;.
-            </p>
-            <p className="text-xs text-neutral-400">
-              Try adjusting your search terms or clearing the category filter.
-            </p>
-            <button
-              onClick={() => {
-                setSearchQuery("");
-                setSelectedCategory("All");
-              }}
-              className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF8F5] text-[#8E7557] border border-[#E5E0D8] hover:bg-[#EEEDE8]"
-            >
-              Reset Filters
-            </button>
-          </div>
-        )}
-      </section>
+        </section>
+      )}
+
+      {gridPosts.length === 0 && searchQuery.trim() !== "" && (
+        <div className="text-center py-16 px-4 rounded-2xl bg-white border border-[#E5E0D8]">
+          <p className="text-base text-neutral-600 mb-2">
+            No articles found matching &ldquo;{searchQuery}&rdquo;.
+          </p>
+          <p className="text-xs text-neutral-400">
+            Try adjusting your search terms or clearing the category filter.
+          </p>
+          <button
+            onClick={() => {
+              setSearchQuery("");
+              setSelectedCategory("All");
+            }}
+            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF8F5] text-[#8E7557] border border-[#E5E0D8] hover:bg-[#EEEDE8]"
+          >
+            Reset Filters
+          </button>
+        </div>
+      )}
     </div>
   );
 }
