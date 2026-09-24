@@ -50,28 +50,8 @@ export default function GalleryPage() {
       </section>
 
       {/* Main Gallery Section */}
-      <section className="py-20 bg-[#FAF8F5]">
+      <section className="py-14 sm:py-20 bg-[#FAF8F5]">
         <Container>
-          {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-            {GALLERY_CATEGORIES.map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 cursor-pointer focus:outline-none ${
-                    isActive
-                      ? "bg-[#111111] text-[#FAF8F5] shadow-sm border border-[#111111] scale-105"
-                      : "bg-[#EEEDE8] text-[#111111] hover:bg-[#FAF8F5] hover:text-[#8E7557]"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
-          </div>
-
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredItems.map((item) => (

@@ -7,7 +7,7 @@ import { BRANCHES, getBranchById } from "@/data/branches";
 import { SERVICES } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { Calendar, Clock, MapPin, MessageSquare, Phone, CheckCircle2, Sparkles } from "lucide-react";
+import { Calendar, Clock, MapPin, MessageSquare, Phone, CheckCircle2, Sparkles, ChevronDown } from "lucide-react";
 
 function AppointmentFormContent() {
   const searchParams = useSearchParams();
@@ -19,7 +19,6 @@ function AppointmentFormContent() {
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [preferredDate, setPreferredDate] = useState<string>("");
-  const [preferredTime, setPreferredTime] = useState<string>("10:00 AM");
   const [message, setMessage] = useState<string>("");
 
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
@@ -52,7 +51,6 @@ function AppointmentFormContent() {
       `*Branch:* ${activeBranch.name}\n` +
       `*Service:* ${activeService.title}\n` +
       `*Preferred Date:* ${preferredDate || "Earliest available"}\n` +
-      `*Preferred Time:* ${preferredTime}\n` +
       `*Notes:* ${message || "None"}`;
     return `https://wa.me/${activeBranch.whatsapp}?text=${encodeURIComponent(text)}`;
   };
@@ -60,7 +58,7 @@ function AppointmentFormContent() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
       {/* Left Info Panel */}
-      <div className="lg:col-span-5 bg-[#EEEDE8] text-[#111111] p-6 sm:p-10 rounded-3xl border border-[#E5E0D8] shadow-sm space-y-6">
+      <div className="lg:col-span-5 bg-[#EEEDE8] text-[#111111] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-sm space-y-6 lg:sticky lg:top-28 self-start">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] text-[#8E7557] text-xs font-bold uppercase tracking-widest border border-[#E5E0D8]">
           <Sparkles className="w-3.5 h-3.5 text-[#B59C7D]" />
           <span>Selected Branch Specs</span>
@@ -90,26 +88,6 @@ function AppointmentFormContent() {
             <Clock className="w-4 h-4 text-[#B59C7D] shrink-0" />
             <span className="text-[#4A4641]">{activeBranch.hours}</span>
           </div>
-        </div>
-
-        <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8]">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-[#8E7557] mb-2">
-            Why Book Online?
-          </h4>
-          <ul className="space-y-2 text-xs text-[#4A4641]">
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#B59C7D]" />
-              <span>Direct priority scheduling with lead instructors</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#B59C7D]" />
-              <span>Instant WhatsApp confirmation option</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#B59C7D]" />
-              <span>Zero cancellation fees for 24h notice</span>
-            </li>
-          </ul>
         </div>
       </div>
 
@@ -170,7 +148,7 @@ function AppointmentFormContent() {
             {/* Select Branch */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
-                1. Select Branch <span className="text-[#B59C7D]">*</span>
+                Select Studio Branch <span className="text-[#B59C7D]">*</span>
               </label>
               <div className="grid grid-cols-2 gap-3">
                 {BRANCHES.map((b) => {
@@ -199,25 +177,28 @@ function AppointmentFormContent() {
             {/* Select Service */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
-                2. Select Service <span className="text-[#B59C7D]">*</span>
+                Select Service <span className="text-[#B59C7D]">*</span>
               </label>
-              <select
-                value={selectedServiceSlug}
-                onChange={(e) => setSelectedServiceSlug(e.target.value)}
-                className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
-              >
-                {SERVICES.map((s) => (
-                  <option key={s.slug} value={s.slug}>
-                    {s.title} ({s.sessionStructure.duration})
-                  </option>
-                ))}
-              </select>
+              <div className="relative">
+                <select
+                  value={selectedServiceSlug}
+                  onChange={(e) => setSelectedServiceSlug(e.target.value)}
+                  className="w-full h-12 px-4 pr-10 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D] appearance-none cursor-pointer"
+                >
+                  {SERVICES.map((s) => (
+                    <option key={s.slug} value={s.slug}>
+                      {s.title} ({s.sessionStructure.duration})
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-[#8E7557] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
             </div>
 
             {/* Contact Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
                   Full Name <span className="text-[#B59C7D]">*</span>
                 </label>
                 <input
@@ -226,12 +207,12 @@ function AppointmentFormContent() {
                   placeholder="e.g. Ananya Roy"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
                   Phone Number <span className="text-[#B59C7D]">*</span>
                 </label>
                 <input
@@ -240,13 +221,13 @@ function AppointmentFormContent() {
                   placeholder="e.g. 9876543210"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-1.5">
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
                 Email Address (Optional)
               </label>
               <input
@@ -254,41 +235,21 @@ function AppointmentFormContent() {
                 placeholder="e.g. user@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
               />
             </div>
 
-            {/* Date & Time Slot */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-1.5">
-                  Preferred Date
-                </label>
-                <input
-                  type="date"
-                  value={preferredDate}
-                  onChange={(e) => setPreferredDate(e.target.value)}
-                  className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-1.5">
-                  Preferred Time Slot
-                </label>
-                <select
-                  value={preferredTime}
-                  onChange={(e) => setPreferredTime(e.target.value)}
-                  className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
-                >
-                  <option value="07:00 AM">07:00 AM (Morning)</option>
-                  <option value="09:00 AM">09:00 AM (Morning)</option>
-                  <option value="11:00 AM">11:00 AM (Late Morning)</option>
-                  <option value="04:00 PM">04:00 PM (Afternoon)</option>
-                  <option value="06:00 PM">06:00 PM (Evening)</option>
-                  <option value="07:30 PM">07:30 PM (Evening)</option>
-                </select>
-              </div>
+            {/* Preferred Date */}
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#111111] mb-2">
+                Preferred Date
+              </label>
+              <input
+                type="date"
+                value={preferredDate}
+                onChange={(e) => setPreferredDate(e.target.value)}
+                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#111111] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+              />
             </div>
 
             {/* Additional Message */}
@@ -342,9 +303,6 @@ export default function AppointmentPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E2C79A] bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#B59C7D]/50 shadow-sm inline-block">
-              Appointment Booking
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
               Book Your <span className="font-serif italic font-normal text-[#E2C79A]">Dr Pilates Session</span>
             </h1>

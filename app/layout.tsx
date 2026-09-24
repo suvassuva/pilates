@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
+import { WhatsAppPopup } from "@/components/ui/WhatsAppPopup";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -71,6 +72,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <MobileStickyCTA />
+        <WhatsAppPopup />
       </body>
     </html>
   );

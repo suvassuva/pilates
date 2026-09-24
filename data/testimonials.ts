@@ -28,7 +28,7 @@ export const BRANCH_REVIEWS: Record<string, BranchReviewStat> = {
     rating: 4.9,
     reviewCount: 129,
     googleReviewUrl: "https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru",
-    locationText: "Above Starbucks, HRBR Layout"
+    locationText: "Y4 Heights, HRBR Layout"
   },
   "kothanur": {
     id: "kothanur",
@@ -99,7 +99,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Entrepreneur",
     branch: "Kalyan Nagar",
     rating: 5,
-    content: "EMS training here is a game changer! Being able to get a thorough, intense full body workout in just 20 minutes fits perfectly into my packed schedule. Highly professional environment above Starbucks Y4 Heights.",
+    content: "EMS training here is a game changer! Being able to get a thorough, intense full body workout in just 20 minutes fits perfectly into my packed schedule. Highly professional environment at Y4 Heights, Kalyan Nagar.",
     date: "Recent Google Review",
     source: "Google Review",
     verified: true

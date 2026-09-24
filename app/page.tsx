@@ -2,7 +2,6 @@ import React from "react";
 import { Hero } from "@/components/home/Hero";
 import { TrustSection } from "@/components/home/TrustSection";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
-import { AboutPreview } from "@/components/home/AboutPreview";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { BranchPreview } from "@/components/home/BranchPreview";
 import { TestimonialsPreview } from "@/components/home/TestimonialsPreview";
@@ -14,7 +13,6 @@ export default function HomePage() {
       <Hero />
       <TrustSection />
       <ServicesPreview />
-      <AboutPreview />
       <WhyChooseUs />
       <BranchPreview />
       <TestimonialsPreview />

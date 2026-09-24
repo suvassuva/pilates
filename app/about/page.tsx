@@ -1,10 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
-import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { CTASection } from "@/components/home/CTASection";
-import { Activity, Layers, Heart, Zap, ShieldCheck, Sparkles } from "lucide-react";
+import { Heart, Zap } from "lucide-react";
 
 export const metadata = {
   title: "About Founders Dr. Govinda Raju S. & Vivek Victor | Dr Pilates Bengaluru",
@@ -13,25 +11,6 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const pillars = [
-    {
-      title: "Clinical & Movement Science",
-      desc: "Our workouts are built on sound anatomical principles. Every spring setting and resistance level is calibrated for optimal joint mechanics."
-    },
-    {
-      title: "Private 1-on-1 Sanctuary",
-      desc: "We prioritize intimacy and high focus. Sessions take place in quiet, elegant studio bays designed to give you undivided coach attention."
-    },
-    {
-      title: "State-of-the-Art Apparatus",
-      desc: "From smooth-gliding Reformers to medical-grade EMS bio-suits, we invest in elite equipment to deliver superior fitness outcomes."
-    },
-    {
-      title: "Client-Centered Transformation",
-      desc: "Whether recovering from lower back strain or targeting core strength, your individual goals dictate your personalized program."
-    }
-  ];
-
   return (
     <div className="pt-24 pb-12 bg-[#FAF8F5]">
       {/* Page Hero with Background Studio Image */}
@@ -115,24 +94,13 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed">
                     <p>
                       With over a decade of clinical experience, Dr. Govinda Raju S has pioneered the integration of physical therapy with the athletic refinement of Reformer Pilates. His philosophy focuses on accuracy, biomechanical integrity, and customized rehab programs that deliver sustainable, long-term physical evolution. Qualifications include a Bachelor of Physiotherapy, ACE Certified Professional, and licensed practitioner of Advanced Dry Needling.
                     </p>
                     <p>
                       Blending clinical expertise with a refined understanding of movement, Dr. Govinda Raju S. brings a distinctive approach to Pilates that unites medical precision with athletic performance. Over the course of his decade-long career, he has integrated physiotherapy, Pilates, and EMS training to create personalized programs that improve posture, strengthen the core, enhance mobility, and support lasting physical well-being.
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
-                    <Activity className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Clinical Practice: 10+ Years</span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
-                    <Layers className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Integrative Rehab &amp; Athletics</span>
                   </div>
                 </div>
               </div>
@@ -157,24 +125,13 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed mb-6">
+                  <div className="space-y-4 text-xs sm:text-sm text-[#4A4641] leading-relaxed">
                     <p>
                       With over 22 years of experience across sales and operations, customer success and entrepreneurship, Vivek brings a strategic and people-focused approach. Has expertise which spans business strategy, customer acquisition, operational excellence, business development, negotiations, and team management.
                     </p>
                     <p>
                       Driven by a passion for premium wellness delivery and client-centric hospitality, Vivek leads the strategic vision and operational excellence at Dr Pilates. Passionate about creating seamless studio experiences, building strong client relationships, and empowering teams to deliver exceptional service.
                     </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-4 border-t border-[#E5E0D8]/70">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Operations &amp; Experience: 22+ Years</span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#2D2A26]">
-                    <Sparkles className="w-3.5 h-3.5 text-[#B91C1C]" />
-                    <span>Hospitality &amp; Client Success</span>
                   </div>
                 </div>
               </div>
@@ -191,15 +148,10 @@ export default function AboutPage() {
                   A Journey of Clinical Evolution
                 </h3>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
-                  Dr. Govinda Raju S. did not begin his journey in simple fitness gyms. As a licensed physical
-                  therapist (Bachelor of Physiotherapy), his early years were spent in orthopedic clinical
-                  settings, treating structural spine pathologies and complex joint injuries.
+                  Dr. Govind has spent nearly a decade refining a distinctive Pilates method designed to deliver lasting transformation. His approach begins with a thorough postural analysis, the foundation of every program we create.
                 </p>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
-                  He soon realized that traditional gym training lacks biomechanical accuracy, often
-                  exacerbating structural stress. Together with co-founder Vivek Victor, he turned to Reformer Pilates
-                  and EMS technology—not as general workouts, but as medical rehabilitation tools designed to
-                  activate correct neuromuscular pathways and restore structural integrity.
+                  Recognizing that no two bodies are alike, Dr. Govind customizes each client’s journey by identifying specific weak points, muscular imbalances, and areas that need targeted strength and stability. From this detailed assessment, he builds personalized Pilates programs that progress safely and effectively, helping clients move better, feel stronger, and achieve their fitness goals with confidence.
                 </p>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
                   Certified by the American Council on Exercise (ACE) and licensed in Advanced Dry Needling and
@@ -247,13 +199,10 @@ export default function AboutPage() {
 
             {/* Signature Pull Quote */}
             <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B91C1C] py-2">
-              <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#111111] leading-relaxed mb-3">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#111111] leading-relaxed">
                 &ldquo;The body is a symphony of mechanics. Our role is to tune it to perfection, ensuring
                 every movement serves both physical function and athletic form.&rdquo;
               </p>
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block font-mono">
-                DR. GOVINDA RAJU S. &amp; VIVEK VICTOR, FOUNDERS
-              </span>
             </div>
           </div>
         </Container>
@@ -274,7 +223,7 @@ export default function AboutPage() {
                 Dr Pilates was founded with a clear mission: to provide a refined, clinically-grounded space where individuals can build deep core strength, correct posture imbalances, and recover from physical stress without joint wear.
               </p>
               <p className="text-base text-[#4A4641] leading-relaxed">
-                Located on the 3rd Floor of Y4 Heights in Kalyan Nagar (above Starbucks Coffee) and at Doddagubbi Main Road in Kothanur, Hennur Road, Dr Pilates serves as a quiet sanctuary for busy professionals, athletes, pre/post-natal women, and anyone committed to moving better.
+                At Dr. Pilates, Bengaluru, a premium Reformer Pilates experience is delivered with precision and care. Programs include Reformer Pilates and specialized pre- and postnatal sessions, all thoughtfully designed to enhance flexibility, build functional strength, improve posture, and support overall well-being. Sessions focus on controlled movement, breath coordination, core stability, and muscle balance, with individualized progressions to suit beginners through advanced clients. Clients benefit from personalized assessments, small class sizes, equipment-calibrated workouts, and ongoing progress tracking to ensure safe, measurable results.
               </p>
 
               <div className="pt-4 flex items-center gap-6">
@@ -282,14 +231,14 @@ export default function AboutPage() {
                   <span className="text-3xl font-bold font-display text-[#111111] block">
                     4.9 ★
                   </span>
-                  <span className="text-xs text-[#7A756D]">129+ Google Reviews</span>
+                  <span className="text-xs text-[#7A756D]">141+ Google Reviews</span>
                 </div>
                 <div className="h-10 w-px bg-[#E5E0D8]" />
                 <div>
                   <span className="text-3xl font-bold font-display text-[#111111] block">
                     2
                   </span>
-                  <span className="text-xs text-[#7A756D]">Bengaluru Branches</span>
+                  <span className="text-xs text-[#7A756D]">Bengaluru Studios</span>
                 </div>
               </div>
             </div>
@@ -306,36 +255,9 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-
-          {/* Pillars */}
-          <SectionTitle
-            subtitle="Core Philosophy"
-            title="The Four Pillars of Dr Pilates"
-            description="How we ensure every workout delivers tangible strength, flexibility, and recovery."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {pillars.map((pillar, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FFFFFF] p-8 rounded-3xl border border-[#E5E0D8] shadow-sm hover-lift"
-              >
-                <div className="w-10 h-10 rounded-full bg-[#EEEDE8] text-[#8E7557] border border-[#B59C7D]/25 flex items-center justify-center font-bold text-sm font-display mb-4">
-                  0{idx + 1}
-                </div>
-                <h3 className="text-lg font-bold font-display text-[#111111] mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-xs text-[#4A4641] leading-relaxed">
-                  {pillar.desc}
-                </p>
-              </div>
-            ))}
-          </div>
         </Container>
       </section>
 
-      <WhyChooseUs />
       <CTASection />
     </div>
   );

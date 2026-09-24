@@ -49,18 +49,18 @@ export const FAQS: FAQItem[] = [
     id: "faq-6",
     category: "Booking & Locations",
     question: "Where are Dr Pilates branches located in Bengaluru?",
-    answer: "Our Kalyan Nagar branch is located on the 3rd Floor, Y4 Heights Building, 6th Main Rd (above Starbucks Coffee), HRBR Layout, Kalyan Nagar, Bengaluru. Our second branch is located at ANR Arcade, Doddagubbi Main Road, Kothanur, Hennur Road."
+    answer: "Our Kalyan Nagar branch is located on the 3rd Floor, Y4 Heights Building, 6th Main Rd, HRBR Layout, Kalyan Nagar, Bengaluru. Our second branch is located at ANR Arcade, Doddagubbi Main Road, Kothanur, Hennur Road."
   },
   {
     id: "faq-7",
     category: "Booking & Locations",
     question: "How can I book an appointment or schedule a visit?",
-    answer: "You can book directly using our website appointment form, call us at 088922 36442, or click the WhatsApp button on any page to message our reception desk directly with your preferred branch and time slot."
+    answer: "You can book directly using our website appointment form, call us at +91 88922 36442, or click the WhatsApp button on any page to message our reception desk directly with your preferred studio and time slot."
   },
   {
     id: "faq-8",
     category: "General",
     question: "What are your opening hours?",
-    answer: "Our Kalyan Nagar branch is open Monday through Saturday from 6:00 AM to 8:00 PM, and Sundays from 7:00 AM to 1:00 PM."
+    answer: "Both our Kalyan Nagar and Kothanur studios are open Monday through Saturday from 6:00 AM to 8:00 PM. Studios are closed on Sundays (Holiday)."
   }
 ];

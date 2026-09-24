@@ -65,23 +65,13 @@ export const CTASection: React.FC = () => {
             </Button>
 
             <Button
-              href="tel:+918892236442"
-              variant="outline"
-              size="sm"
-              className="border-[#111111]/30 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
-              icon={<Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D]" />}
-            >
-              Call Kalyan Nagar
-            </Button>
-
-            <Button
               href="tel:+919481003827"
               variant="outline"
               size="sm"
               className="border-[#111111]/30 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
               icon={<Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D]" />}
             >
-              Call Kothanur (Hennur Rd)
+              Call +91 94810 03827
             </Button>
 
             {/* 2-Branch Directions Dropdown */}
@@ -131,7 +121,7 @@ export const CTASection: React.FC = () => {
                         </span>
                       </div>
                       <span className="text-[10px] text-[#7A756D] block mt-0.5">
-                        Above Starbucks, HRBR Layout
+                        Y4 Heights, HRBR Layout
                       </span>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-[#EEEDE8] group-hover/branch:bg-[#111111] flex items-center justify-center transition-colors shrink-0 shadow-2xs">
@@ -152,9 +142,6 @@ export const CTASection: React.FC = () => {
                         <span className="text-xs font-bold text-[#111111] group-hover/branch:text-[#8E7557] transition-colors">
                           Kothanur, Hennur Road
                         </span>
-                        <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#EEEDE8] text-[#8E7557] font-semibold">
-                          Now Open
-                        </span>
                       </div>
                       <span className="text-[10px] text-[#7A756D] block mt-0.5">
                         ANR Arcade, Doddagubbi Main Rd
@@ -168,10 +155,6 @@ export const CTASection: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <p className="text-[10px] sm:text-xs text-[#7A756D] pt-2 sm:pt-4">
-            Dr Pilates: Kalyan Nagar (088922 36442) • Kothanur, Hennur Road (094810 03827)
-          </p>
         </div>
       </Container>
     </section>

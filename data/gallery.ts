@@ -8,12 +8,7 @@ export interface GalleryItem {
 }
 
 export const GALLERY_CATEGORIES = [
-  "All",
-  "Studio",
-  "Reformer Pilates",
-  "EMS",
-  "Physiotherapy",
-  "Training"
+  "All"
 ] as const;
 
 export const GALLERY_ITEMS: GalleryItem[] = [

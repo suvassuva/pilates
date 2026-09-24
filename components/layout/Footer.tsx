@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, MessageSquare } from "lucide-react";
-import { BRANCHES, generateWhatsAppUrl } from "@/data/branches";
+import { MapPin, Mail } from "lucide-react";
 
 export const Footer: React.FC = () => {
-  const mainBranch = BRANCHES[0];
 
   return (
     <footer className="bg-[#141312] text-[#FAF8F5] pt-10 pb-20 sm:pt-16 sm:pb-24 lg:pb-12 border-t border-[#B59C7D]/20 relative overflow-hidden">
@@ -50,7 +48,8 @@ export const Footer: React.FC = () => {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
                 { label: "Services", href: "/services" },
-                { label: "Branches", href: "/branches" },
+                { label: "Studios", href: "/branches" },
+                { label: "Blog", href: "/blog" },
                 { label: "Gallery", href: "/gallery" },
                 { label: "Contact", href: "/contact" }
               ].map((item) => (
@@ -74,8 +73,8 @@ export const Footer: React.FC = () => {
             <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm text-[#A39E96]">
               {[
                 { label: "Reformer Pilates", href: "/services/reformer-pilates" },
-                { label: "Physiotherapy Treatment", href: "/services/physiotherapy" },
-                { label: "Dry Needling", href: "/services/dry-needling" }
+                { label: "EMS Training", href: "/services/ems-training" },
+                { label: "Physiotherapy", href: "/services/physiotherapy" }
               ].map((item) => (
                 <li key={item.href}>
                   <Link
@@ -92,7 +91,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: Locations & Contact */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-[#B59C7D] mb-3 sm:mb-4">
-              Visit Our Branches
+              Visit Our Studios
             </h3>
             <div className="space-y-3 text-xs sm:text-sm text-[#A39E96]">
               {/* Kalyan Nagar */}
@@ -100,43 +99,19 @@ export const Footer: React.FC = () => {
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
                   <span>
-                    <strong className="text-[#FAF8F5]">Kalyan Nagar:</strong> Y4 Heights (Above Starbucks), HRBR Layout
+                    <strong className="text-[#FAF8F5]">Kalyan Nagar:</strong> Y4 Heights, HRBR Layout
                   </span>
-                </div>
-                <div className="flex items-center gap-2 pl-5 sm:pl-6 text-[11px] sm:text-xs">
-                  <Phone className="w-3 h-3 text-[#B59C7D] shrink-0" />
-                  <a href="tel:+918892236442" className="hover:text-[#B59C7D]">
-                    088922 36442
-                  </a>
                 </div>
               </div>
 
               {/* Kothanur, Hennur Road */}
-              <div className="space-y-1 pb-2 border-b border-white/10">
+              <div className="space-y-1">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
                   <span>
                     <strong className="text-[#FAF8F5]">Kothanur, Hennur Road:</strong> ANR Arcade, 2nd Flr, Doddagubbi Main Rd
                   </span>
                 </div>
-                <div className="flex items-center gap-2 pl-5 sm:pl-6 text-[11px] sm:text-xs">
-                  <Phone className="w-3 h-3 text-[#B59C7D] shrink-0" />
-                  <a href="tel:+919481003827" className="hover:text-[#B59C7D]">
-                    094810 03827
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2 pt-0.5">
-                <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#25D366] shrink-0" />
-                <a
-                  href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#B59C7D]"
-                >
-                  WhatsApp Booking Desk
-                </a>
               </div>
             </div>
           </div>

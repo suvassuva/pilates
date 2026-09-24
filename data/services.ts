@@ -1,6 +1,7 @@
 export interface ServiceDetail {
   slug: string;
   title: string;
+  badge?: string;
   shortDescription: string;
   fullDescription: string;
   heroHeadline: string;
@@ -25,24 +26,24 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "reformer-pilates",
     title: "Reformer Pilates",
-    shortDescription: "Strength, flexibility, posture and controlled movement using specialized springs and carriage equipment.",
+    shortDescription: "Dynamic resistance training utilizing world-class Merrithew equipment to optimize spinal structure, posture, and core control.",
     fullDescription: "Dr Pilates Reformer Pilates combines precision resistance training with mindful movement principles. Utilizing custom spring-loaded reformer beds, our sessions isolate micro-muscles, enhance core stability, align joint articulation, and build lean, functional strength without high-impact stress on your joints.",
     heroHeadline: "Reformer Pilates in Bengaluru",
-    tagline: "Transform your posture, core strength, and body alignment with specialized Reformer machinery.",
+    tagline: "Dynamic resistance training utilizing world-class Merrithew equipment to optimize spinal structure, posture, and core control.",
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1200",
     iconName: "Activity",
     benefits: [
+      "Posture Alignment",
+      "Core Stabilization",
+      "Joint Mobilization",
       "Deep Core & Pelvic Floor Activation",
-      "Postural Realignment & Spinal Decompression",
-      "Enhanced Joint Mobility & Flexibility",
-      "Low-Impact Muscle Sculpting",
-      "Balance, Coordination & Mind-Body Awareness"
+      "Low-Impact Muscle Sculpting"
     ],
     features: [
+      "World-Class Merrithew Apparatus",
       "Customized Spring Resistance Settings",
       "Maximum 1-on-1 & Small Group Focus",
-      "Certified Master Pilates Instructors",
-      "Tailored for All Fitness Levels"
+      "Certified Master Pilates Instructors"
     ],
     whoItIsFor: [
       "Desk professionals suffering from back stiffness & posture issues",
@@ -71,20 +72,69 @@ export const SERVICES: ServiceDetail[] = [
     ]
   },
   {
+    slug: "ems-training",
+    title: "EMS Training",
+    badge: "BIO-ELECTRIC",
+    shortDescription: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional training.",
+    fullDescription: "EMS (Electrical Muscle Stimulation) Training delivers a high-efficiency full-body workout in just 20 minutes. By sending low-frequency impulse bio-signals to deep muscle layers while performing functional exercises, EMS activates over 90% of muscle fibers simultaneously—delivering the results of a 90-minute conventional gym workout.",
+    heroHeadline: "Power Up Your Workout with EMS Training",
+    tagline: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional training.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1200",
+    iconName: "Zap",
+    benefits: [
+      "90% Muscle Activation",
+      "Fat Loss & Conditioning",
+      "Joint-Safe Loading",
+      "Metabolic Boost & Accelerated Fat Burning",
+      "Zero Joint Strain Resistance"
+    ],
+    features: [
+      "Medical-Grade Wireless EMS Bio-Suits",
+      "Individual Impulse Level Calibration",
+      "Personal EMS Certified Trainer Guidance",
+      "Hygienic Undergarment Gear Provided"
+    ],
+    whoItIsFor: [
+      "Busy executives & entrepreneurs with limited workout time",
+      "Individuals wanting rapid body re-composition without lifting heavy weights",
+      "People with joint sensitivities or lower back vulnerability",
+      "Fitness enthusiasts breaking through training plateaus"
+    ],
+    sessionStructure: {
+      duration: "20 Mins",
+      intensity: "High Efficiency (Impulse Modulated)",
+      format: "1-on-1 Dedicated Trainer"
+    },
+    faqs: [
+      {
+        question: "Is EMS Training safe?",
+        answer: "Yes, EMS utilizes low-frequency electrical impulses that mimic the natural electrical signals sent by your central nervous system to contract muscles. It is gentle on joints and guided 1-on-1 by certified specialists."
+      },
+      {
+        question: "How many sessions of EMS do I need per week?",
+        answer: "Because EMS provides intense deep-muscle stimulation, 1 to 2 sessions per week (with at least 48 hours rest between sessions) is optimal."
+      },
+      {
+        question: "Do I need to bring specialized equipment?",
+        answer: "No. We supply hygienic cotton EMS innerwear and fit you into our state-of-the-art bio-suit at the studio."
+      }
+    ]
+  },
+  {
     slug: "physiotherapy",
-    title: "Physiotherapy Treatment",
-    shortDescription: "Personalized clinical support for mobility, pain recovery, postural corrections, and rehabilitation.",
-    fullDescription: "Our Physiotherapy Treatment service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
+    title: "Physiotherapy",
+    shortDescription: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
+    fullDescription: "Our Physiotherapy service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
     heroHeadline: "Move Better. Recover Stronger.",
-    tagline: "Evidence-based clinical physiotherapy and movement rehabilitation tailored to your body's needs.",
+    tagline: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
     image: "/images/physiotherapy_treatment.jpg",
     iconName: "HeartPulse",
     benefits: [
+      "Pain Management",
+      "Sports Rehabilitation",
+      "Kinetic Re-education",
       "Targeted Relief from Back, Neck, Knee & Joint Pain",
-      "Comprehensive Biomechanical & Postural Assessment",
-      "Post-Surgical & Post-Injury Rehabilitation",
-      "Ergonomic Alignment & Spine Decompression",
-      "Long-Term Injury Prevention Strategies"
+      "Post-Surgical & Post-Injury Rehabilitation"
     ],
     features: [
       "Licensed Senior Physiotherapists",

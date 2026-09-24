@@ -29,13 +29,20 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#FFFFFF] via-[#FFFFFF]/20 to-transparent flex items-end p-4 sm:p-6">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#FAF8F5]/95 backdrop-blur-md border border-[#E5E0D8] flex items-center justify-center shadow-xs">
-                {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#FAF8F5]/95 backdrop-blur-md border border-[#E5E0D8] flex items-center justify-center shadow-xs">
+                  {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
+                </div>
+                <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
+                  {service.title}
+                </h3>
               </div>
-              <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
-                {service.title}
-              </h3>
+              {service.badge && (
+                <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40 shadow-xs">
+                  {service.badge}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -73,7 +80,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           className="border-[#111111]/20 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
           icon={<ArrowRight className="w-3.5 h-3.5 text-[#B59C7D]" />}
         >
-          Explore Service
+          Explore Program
         </Button>
       </div>
     </div>

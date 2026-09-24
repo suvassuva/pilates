@@ -34,24 +34,24 @@ export const BRANCHES: Branch[] = [
     id: "kalyan-nagar",
     name: "Dr Pilates – Kalyan Nagar",
     shortName: "Kalyan Nagar",
-    tagline: "Our Premier Studio in North Bengaluru",
+    tagline: "Kalyan Nagar Studio",
     isMainBranch: true,
     address: {
       building: "3rd Floor, Y4 Heights Building",
       street: "6th Main Rd, 2nd Block",
-      landmark: "Above Starbucks Coffee, HRBR Layout",
+      landmark: "HRBR Layout",
       area: "Kalyan Nagar",
       city: "Bengaluru, Karnataka",
       pincode: "560043",
-      fullText: "3rd Floor, Y4 Heights Building, 6th Main Rd, above Starbucks Coffee, HRBR Layout, 2nd Block, Kalyan Nagar, Bengaluru, Karnataka 560043"
+      fullText: "3rd Floor, Y4 Heights Building, 6th Main Rd, HRBR Layout, 2nd Block, Kalyan Nagar, Bengaluru, Karnataka 560043"
     },
-    phone: "088922 36442",
+    phone: "+91 88922 36442",
     rawPhone: "+918892236442",
     whatsapp: "919481003827",
     email: "contact@drpilates.in",
-    hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM, Sun: 7:00 AM – 1:00 PM)",
+    hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM | Sunday: Closed / Holiday)",
     rating: 4.9,
-    reviewCount: 129,
+    reviewCount: 141,
     mapUrl: "https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru",
     googleReviewUrl: "https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru",
     embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.214436577884!2d77.6436663!3d13.0220677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae173b9e4a3b7d%3A0x6b4f74cf5a0f2b3e!2sHRBR%20Layout%2C%20Kalyan%20Nagar%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
@@ -63,11 +63,8 @@ export const BRANCHES: Branch[] = [
       "Personal Training"
     ],
     features: [
-      "State-of-the-art Reformer Machines",
-      "Certified EMS Technology Suite",
-      "Dedicated Rehab & Physio Bay",
-      "Private 1-on-1 Training Rooms",
-      "Above Starbucks (Parking Available)"
+      "State-of-the-art Merrithew Reformer Machines",
+      "Certified EMS Technology Suite"
     ]
   },
   {
@@ -85,11 +82,11 @@ export const BRANCHES: Branch[] = [
       pincode: "560077",
       fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Kothanur, Hennur Road, Bengaluru, Karnataka 560077"
     },
-    phone: "094810 03827",
+    phone: "+91 94810 03827",
     rawPhone: "+919481003827",
     whatsapp: "919481003827",
     email: "kothanur@drpilates.in",
-    hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM, Sun: 7:00 AM – 1:00 PM)",
+    hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM | Sunday: Closed / Holiday)",
     rating: 4.8,
     reviewCount: 12,
     mapUrl: "https://maps.google.com/?q=ANR+Arcade+Doddagubbi+Main+Road+Bengaluru+560077",
@@ -105,10 +102,9 @@ export const BRANCHES: Branch[] = [
       "Modern Reformer Equipment",
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
-      "Customized Movement Plans",
-      "Opposite Medi Derma Hospital (Parking Available)"
+      "Customized Movement Plans"
     ],
-    statusText: "Now Open! Accepting bookings for Reformer Pilates, EMS Training & Physiotherapy."
+    statusText: "Accepting bookings for Reformer Pilates, EMS Training & Physiotherapy."
   }
 ];
 

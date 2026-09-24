@@ -35,10 +35,10 @@ export default function BranchesPage() {
               Dr Pilates Locations
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Explore Our <span className="font-serif italic font-normal text-[#E2C79A]">Bengaluru Branches</span>
+              Explore Our <span className="font-serif italic font-normal text-[#E2C79A]">Bengaluru Studios</span>
             </h1>
             <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-              Select your preferred branch below to view detailed address specs, operating hours, Google Maps directions, and direct desk contact options.
+              Select your preferred studio below to view detailed address specs, operating hours, Google Maps directions, and direct desk contact options.
             </p>
           </div>
         </Container>
