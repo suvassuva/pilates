@@ -1,96 +1,77 @@
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "Studio" | "Reformer Pilates" | "EMS" | "Physiotherapy" | "Training";
+  category: "Reformer Pilates" | "Cadillac & Trapeze" | "Personal Training" | "Stability Chair";
   image: string;
-  video?: string;
+  video: string;
   alt: string;
 }
 
 export const GALLERY_CATEGORIES = [
-  "All"
+  "All",
+  "Reformer Pilates",
+  "Cadillac & Trapeze",
+  "Personal Training",
+  "Stability Chair"
 ] as const;
+
+export type GalleryCategory = (typeof GALLERY_CATEGORIES)[number];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "Reformer Pilates Training Session",
+    title: "Reformer Pike & Core Flow",
     category: "Reformer Pilates",
-    image: "/videos/woman_performing_reformer.jpeg",
-    alt: "Dr Pilates Reformer Pilates Equipment in Kalyan Nagar Bengaluru"
+    image: "/videos/client_reformer_pike_core_thumb.jpg",
+    video: "/videos/client_reformer_pike_core.mp4",
+    alt: "Client performing advanced Reformer Pilates pike core conditioning at Dr Pilates Bengaluru"
   },
   {
     id: "gal-2",
-    title: "Entering Dr Pilates",
-    category: "Studio",
-    image: "/videos/woman_walking_outside.jpeg",
-    video: "/videos/woman_enters_studio.mp4",
-    alt: "Client entering Dr Pilates in Kalyan Nagar"
+    title: "Reformer Squats with Pilates Ring",
+    category: "Reformer Pilates",
+    image: "/videos/client_reformer_squats_ring_thumb.jpg",
+    video: "/videos/client_reformer_squats_ring.mp4",
+    alt: "Client executing Reformer squat pulses with resistance magic circle at Dr Pilates Bengaluru"
   },
   {
     id: "gal-3",
-    title: "Physiotherapy & Ergonomic Stretching",
-    category: "Physiotherapy",
-    image: "/videos/woman_stretching_at_desk.jpeg",
-    alt: "Physiotherapy posture assessment and desk stretch guidance"
+    title: "Reformer Lunges & Glute Alignment",
+    category: "Reformer Pilates",
+    image: "/videos/client_reformer_lunge_glute_thumb.jpg",
+    video: "/videos/client_reformer_lunge_glute.mp4",
+    alt: "Reformer carriage lunges for lower-body stability and glute strength at Dr Pilates"
   },
   {
     id: "gal-4",
-    title: "1-on-1 Personal Training Session",
-    category: "Training",
-    image: "/videos/professional_woman_stretching.jpeg",
-    alt: "Personal Fitness Training Session with Coach at Dr Pilates"
+    title: "Cadillac Trapeze Suspension & Balance",
+    category: "Cadillac & Trapeze",
+    image: "/videos/client_cadillac_trapeze_suspension_thumb.jpg",
+    video: "/videos/client_cadillac_trapeze_suspension.mp4",
+    alt: "Cadillac Trapeze Table suspension acrobatics and full body extension at Dr Pilates"
   },
   {
     id: "gal-5",
-    title: "Welcome & Reception",
-    category: "Studio",
-    image: "/videos/instructor_welcoming_woman.jpeg",
-    alt: "Dr Pilates Kalyan Nagar Reception Welcome Atmosphere"
+    title: "1-on-1 Guided Reformer Side Plank",
+    category: "Personal Training",
+    image: "/videos/client_trainer_side_plank_thumb.jpg",
+    video: "/videos/client_trainer_side_plank.mp4",
+    alt: "Personal trainer coaching client through Reformer side plank stability at Dr Pilates"
   },
   {
     id: "gal-6",
-    title: "Wellness & Transformation Training",
-    category: "Reformer Pilates",
-    image: "/videos/woman_performing_reformer.jpeg",
-    video: "/videos/woman_performing_wellness.mp4",
-    alt: "Wellness transformation Reformer Pilates workout video"
+    title: "Cadillac Inverted Arch & Spinal Decompression",
+    category: "Cadillac & Trapeze",
+    image: "/videos/client_cadillac_inverted_arch_thumb.jpg",
+    video: "/videos/client_cadillac_inverted_arch.mp4",
+    alt: "Cadillac Trapeze inverted stretch for spinal decompression and hamstring flexibility"
   },
   {
     id: "gal-7",
-    title: "Post-Workout Hydration & EMS Recovery",
-    category: "EMS",
-    image: "/videos/woman_holding_water_bottle.jpeg",
-    video: "/videos/woman_drinking_water.mp4",
-    alt: "Post-workout hydration and EMS recovery session"
-  },
-  {
-    id: "gal-8",
-    title: "Spine & Desk Mobility Stretch",
-    category: "Physiotherapy",
-    image: "/videos/woman_stretching_at_desk.jpeg",
-    video: "/videos/woman_closes_laptop.mp4",
-    alt: "Spinal stretch and desk mobility realignment video"
-  },
-  {
-    id: "gal-9",
-    title: "Precision Reformer Carriage",
-    category: "Reformer Pilates",
-    image: "/videos/pilates_reformer_machine.jpeg",
-    alt: "State-of-the-art Reformer Pilates machine at Dr Pilates"
-  },
-  {
-    id: "gal-10",
-    title: "German EMS Bio-Suit Suite",
-    category: "EMS",
-    image: "/videos/ems_suits_displayed.jpeg",
-    alt: "Advanced EMS Wireless Bio-Suits displayed at Dr Pilates"
-  },
-  {
-    id: "gal-11",
-    title: "Dr Pilates Interior Bay",
-    category: "Studio",
-    image: "/videos/pilates_studio_interior.jpeg",
-    alt: "Spacious luxury interior view of Dr Pilates"
+    title: "Stability Chair & Ring Duo Workout",
+    category: "Stability Chair",
+    image: "/videos/client_stability_chair_duo_thumb.jpg",
+    video: "/videos/client_stability_chair_duo.mp4",
+    alt: "Duo client workout on Pilates Stability Chairs with resistance rings at Dr Pilates"
   }
 ];

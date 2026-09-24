@@ -93,8 +93,15 @@ export const AboutPreview: React.FC = () => {
 
               <div className="p-3 sm:p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] shadow-2xs hover:border-[#B59C7D]/50 transition-colors">
                 <div className="flex items-center gap-2.5 mb-1.5">
-                  <div className="w-10 h-10 rounded-full bg-[#111111] text-[#FAF8F5] font-bold text-xs flex items-center justify-center shrink-0 border border-[#B59C7D]/30">
-                    VV
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#B59C7D]/40 shrink-0 bg-[#E5E0D8]">
+                    <Image
+                      src="/vivek.jpeg"
+                      alt="Vivek Victor"
+                      fill
+                      quality={95}
+                      className="object-cover object-top"
+                      sizes="40px"
+                    />
                   </div>
                   <div>
                     <h4 className="text-xs sm:text-sm font-bold text-[#111111] leading-tight">

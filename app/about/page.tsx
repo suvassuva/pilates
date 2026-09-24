@@ -109,8 +109,15 @@ export default function AboutPage() {
               <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
-                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#141312] flex items-center justify-center text-[#E2C79A] font-display text-2xl sm:text-3xl font-bold tracking-wider">
-                      VV
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#E5E0D8]">
+                      <Image
+                        src="/vivek.jpeg"
+                        alt="Vivek Victor - Co-Founder and Operations Director"
+                        fill
+                        quality={95}
+                        className="object-cover object-top"
+                        sizes="112px"
+                      />
                     </div>
                     <div>
                       <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">

@@ -38,12 +38,12 @@ export const BRANCHES: Branch[] = [
     isMainBranch: true,
     address: {
       building: "3rd Floor, Y4 Heights Building",
-      street: "6th Main Rd, 2nd Block",
+      street: "6th Main Rd, HRBR Layout 2nd Block",
       landmark: "HRBR Layout",
       area: "Kalyan Nagar",
       city: "Bengaluru, Karnataka",
       pincode: "560043",
-      fullText: "3rd Floor, Y4 Heights Building, 6th Main Rd, HRBR Layout, 2nd Block, Kalyan Nagar, Bengaluru, Karnataka 560043"
+      fullText: "3rd floor, Y4 Heights Building, 6th Main Rd, HRBR Layout 2nd Block, Bengaluru, Karnataka"
     },
     phone: "+91 88922 36442",
     rawPhone: "+918892236442",
@@ -74,13 +74,13 @@ export const BRANCHES: Branch[] = [
     tagline: "North Bengaluru Studio (Hennur Road)",
     isMainBranch: false,
     address: {
-      building: "ANR Arcade, 2nd Floor",
-      street: "Doddagubbi Main Road, Kothanur, Hennur Road",
+      building: "ANR Arcade",
+      street: "Doddagubbi Main Road",
       landmark: "Opposite Medi Derma Hospital, Near Legacy School",
-      area: "Kothanur, Hennur Road",
+      area: "Kothanur",
       city: "Bengaluru, Karnataka",
       pincode: "560077",
-      fullText: "ANR Arcade, 2nd Floor, Doddagubbi Main Road, Opposite Medi Derma Hospital, Near Legacy School, Kothanur, Hennur Road, Bengaluru, Karnataka 560077"
+      fullText: "ANR Arcade, Doddagubbi Main Rd, Kothanur, Bengaluru, Karnataka"
     },
     phone: "+91 94810 03827",
     rawPhone: "+919481003827",
