@@ -50,40 +50,12 @@ export default function ServicesPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E2C79A] bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#B59C7D]/50 shadow-sm inline-block">
-              Our Core Offerings
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
               Specialized Movement & <span className="font-serif italic font-normal text-[#E2C79A]">Clinical Programs</span>
             </h1>
             <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               Targeted strength, core conditioning, rapid bio-suit EMS, and evidence-based physiotherapy tailored to your body.
             </p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Quick Navigation Pills */}
-      <section className="py-6 sm:py-8 bg-[#FFFFFF] border-b border-[#E5E0D8] sticky top-[64px] z-30">
-        <Container>
-          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-            {SERVICES.map((service) => (
-              <a
-                key={service.slug}
-                href={`#${service.slug}`}
-                className="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#E5E0D8] bg-[#FAF8F5] hover:bg-[#111111] hover:text-[#FAF8F5] hover:border-[#111111] text-xs sm:text-sm font-semibold text-[#111111] transition-all duration-200 shadow-xs"
-              >
-                <span className="w-5 h-5 flex items-center justify-center">
-                  {iconMap[service.iconName] || <Activity className="w-4 h-4 text-[#B59C7D]" />}
-                </span>
-                {service.title}
-                {service.badge && (
-                  <span className="text-[8px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40">
-                    {service.badge}
-                  </span>
-                )}
-              </a>
-            ))}
           </div>
         </Container>
       </section>

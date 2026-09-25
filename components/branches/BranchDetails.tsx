@@ -16,7 +16,7 @@ import {
 import { Branch, generateWhatsAppUrl, generateCallUrl } from "@/data/branches";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
-import { BranchMap } from "./BranchMap";
+
 
 interface BranchDetailsProps {
   branch: Branch;
@@ -182,10 +182,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
         </div>
       </div>
 
-      {/* Branch Map Embed (Full Width Below) */}
-      <div className="w-full">
-        <BranchMap branch={branch} />
-      </div>
+
     </div>
   );
 };
