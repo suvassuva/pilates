@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { X, Calendar, Phone, MapPin } from "lucide-react";
+import { X, Calendar, MapPin } from "lucide-react";
 import { Button } from "../ui/Button";
 
 interface MobileMenuProps {
@@ -16,10 +16,9 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Studios", href: "/branches" },
-  { label: "Blog", href: "/blog" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" }
+  { label: "Blog", href: "/blog" },
+  { label: "Studios", href: "/branches" }
 ];
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
@@ -85,30 +84,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           Book Appointment
         </Button>
 
-        <div className="space-y-2">
-          <div className="grid grid-cols-2 gap-2">
-            <a
-              href="tel:+919481003827"
-              className="flex flex-col items-center justify-center py-2 px-2 bg-[#FAF8F5] rounded-xl text-[11px] font-semibold text-[#111111] border border-[#E5E0D8] hover:bg-[#E2DFD7] text-center transition-colors"
-            >
-              <div className="flex items-center gap-1">
-                <Phone className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
-                <span>Kalyan Nagar</span>
-              </div>
-              <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">+91 94810 03827</span>
-            </a>
-            <a
-              href="tel:+919481003827"
-              className="flex flex-col items-center justify-center py-2 px-2 bg-[#FAF8F5] rounded-xl text-[11px] font-semibold text-[#111111] border border-[#E5E0D8] hover:bg-[#E2DFD7] text-center transition-colors"
-            >
-              <div className="flex items-center gap-1">
-                <Phone className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
-                <span>Kothanur, Hennur Rd</span>
-              </div>
-              <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">+91 94810 03827</span>
-            </a>
-          </div>
-        </div>
+
 
         <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
           <MapPin className="w-3 h-3 text-[#B59C7D]" />
