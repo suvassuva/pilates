@@ -93,7 +93,6 @@ export const Hero: React.FC = () => {
                       <h4 className="text-xs font-bold text-[#111111] leading-tight">
                         Kalyan Nagar
                       </h4>
-                      <p className="text-[10px] text-[#7A756D]">Y4 Heights • HRBR Layout</p>
                     </div>
                   </div>
 
@@ -103,7 +102,6 @@ export const Hero: React.FC = () => {
                       <h4 className="text-xs font-bold text-[#111111] leading-tight">
                         Kothanur, Hennur Road
                       </h4>
-                      <p className="text-[10px] text-[#7A756D]">ANR Arcade • Doddagubbi Rd</p>
                     </div>
                   </div>
                 </div>
