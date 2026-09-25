@@ -63,8 +63,10 @@ export const BRANCHES: Branch[] = [
       "Personal Training"
     ],
     features: [
-      "State-of-the-art Merrithew Reformer Machines",
-      "Certified EMS Technology Suite"
+      "Modern Reformer Equipment",
+      "Full Body EMS Suite",
+      "Expert Physiotherapist Consultations",
+      "Customized Movement Plans"
     ]
   },
   {

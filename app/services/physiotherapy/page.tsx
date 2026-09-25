@@ -4,7 +4,7 @@ import { ServiceHero } from "@/components/services/ServiceHero";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { CTASection } from "@/components/home/CTASection";
-import { HeartPulse, CheckCircle2, HelpCircle, ShieldAlert } from "lucide-react";
+import { HeartPulse, CheckCircle2, ShieldAlert } from "lucide-react";
 
 export const metadata = {
   title: "Physiotherapy in Bengaluru | Dr Pilates Kalyan Nagar",
@@ -107,25 +107,7 @@ export default function PhysiotherapyPage() {
         </Container>
       </section>
 
-      {/* FAQ */}
-      <section className="py-20 bg-[#FAF8F5]">
-        <Container size="small">
-          <SectionTitle subtitle="Physiotherapy FAQ" title="Frequently Asked Questions" />
-          <div className="space-y-4">
-            {service.faqs.map((faq, idx) => (
-              <div key={idx} className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#E5E0D8] shadow-xs">
-                <h4 className="text-base font-bold text-[#111111] flex items-center gap-2 mb-2">
-                  <HelpCircle className="w-4 h-4 text-[#B59C7D]" />
-                  {faq.question}
-                </h4>
-                <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+
 
       <CTASection />
     </div>
