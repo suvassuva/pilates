@@ -88,14 +88,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         <div className="space-y-2">
           <div className="grid grid-cols-2 gap-2">
             <a
-              href="tel:+918892236442"
+              href="tel:+919481003827"
               className="flex flex-col items-center justify-center py-2 px-2 bg-[#FAF8F5] rounded-xl text-[11px] font-semibold text-[#111111] border border-[#E5E0D8] hover:bg-[#E2DFD7] text-center transition-colors"
             >
               <div className="flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
                 <span>Kalyan Nagar</span>
               </div>
-              <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">+91 88922 36442</span>
+              <span className="text-[10px] text-[#8E7557] font-bold mt-0.5">+91 94810 03827</span>
             </a>
             <a
               href="tel:+919481003827"

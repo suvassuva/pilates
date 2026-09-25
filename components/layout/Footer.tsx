@@ -130,9 +130,9 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm text-[#A39E96]">
               {[
-                { label: "Reformer Pilates", href: "/services/reformer-pilates" },
-                { label: "EMS Training", href: "/services/ems-training" },
-                { label: "Physiotherapy", href: "/services/physiotherapy" }
+                { label: "Reformer Pilates", href: "/services#reformer-pilates" },
+                { label: "EMS Training", href: "/services#ems-training" },
+                { label: "Physiotherapy", href: "/services#physiotherapy" }
               ].map((item) => (
                 <li key={item.href}>
                   <Link

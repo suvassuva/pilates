@@ -9,7 +9,7 @@ import { CTASection } from "@/components/home/CTASection";
 export const metadata = {
   title: "Contact Dr Pilates | Kalyan Nagar & Kothanur, Hennur Road Bengaluru",
   description:
-    "Get in touch with Dr Pilates in Kalyan Nagar (088922 36442) or Kothanur, Hennur Road (094810 03827). Phone, WhatsApp, directions, and timings."
+    "Get in touch with Dr Pilates across Kalyan Nagar & Kothanur, Hennur Road (094810 03827). Phone, WhatsApp, directions, and timings."
 };
 
 export default function ContactPage() {

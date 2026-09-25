@@ -17,50 +17,32 @@ export const FAQ_CATEGORIES = [
 export const FAQS: FAQItem[] = [
   {
     id: "faq-1",
-    category: "General",
-    question: "What makes Dr Pilates different from a regular gym?",
-    answer: "Dr Pilates is a specialized wellness and movement studio focusing on clinical precision, core strength, joint safety, and personalized movement care. Rather than crowded gym floors, we offer private 1-on-1 and small group sessions guided by master instructors and licensed physiotherapists using state-of-the-art Reformer and EMS equipment."
+    category: "Reformer Pilates",
+    question: "What is Reformer Pilates?",
+    answer: "Reformer Pilates is a full-body conditioning method performed on a specialized carriage machine that uses springs, pulleys, and straps for resistance. Unlike mat pilates, the reformer offers adjustable resistance, providing both deep support for rehabilitation and high-intensity challenge for athletic performance."
   },
   {
     id: "faq-2",
-    category: "Reformer Pilates",
-    question: "What is Reformer Pilates and what are its main benefits?",
-    answer: "Reformer Pilates utilizes a specialized spring-loaded carriage machine to provide smooth, adjustable resistance. It targets deep core stabilizers, aligns spinal posture, sculpts lean muscle, and improves joint mobility without placing heavy impact on your knees or lower back."
+    category: "General",
+    question: "Who can join Pilates classes?",
+    answer: "Anyone can join. Because our sessions are supervised by a clinical physical therapist, we cater to all ages, fitness levels, and rehabilitation needs. Whether you are correcting posture, building core strength, or recovering from a spinal injury, we custom-tailor the spring resistance for you."
   },
   {
     id: "faq-3",
-    category: "Reformer Pilates",
-    question: "Do I need previous Pilates experience to join?",
-    answer: "No prior experience is necessary! Our instructors conduct a initial movement screen and adjust spring settings specifically to your body's strength and flexibility level."
+    category: "EMS Training",
+    question: "How does EMS training work?",
+    answer: "Electro Muscle Stimulation (EMS) sends gentle, low-frequency bio-electric impulses directly to your muscle fibers via a technical suit. This triggers deep muscle contractions that are difficult to reach with standard weights. A 20-minute session activates over 90% of your muscle fibers safely and efficiently."
   },
   {
     id: "faq-4",
-    category: "EMS Training",
-    question: "What is EMS Training and how does a 20-minute session work?",
-    answer: "EMS (Electrical Muscle Stimulation) uses medical-grade bio-impulses to contract over 90% of your muscle fibers simultaneously while you perform gentle functional exercises. A single 20-minute EMS session delivers muscle activation equal to a 90-minute traditional weight workout."
+    category: "Physiotherapy",
+    question: "Do I need physiotherapy before starting Pilates?",
+    answer: "Not necessarily, but every client at Dr Pilates starts with a comprehensive physical assessment. If you suffer from active spinal pain, sports injuries, or joint issues, Dr. Govinda Raju will direct a physiotherapy mobilization plan before transitioning you into Reformer work."
   },
   {
     id: "faq-5",
-    category: "Physiotherapy",
-    question: "How does your Physiotherapy service integrate with Pilates?",
-    answer: "Our licensed physiotherapists perform thorough clinical musculoskeletal evaluations. When beneficial, we combine manual therapy with gentle Reformer Pilates exercises to safely strengthen injured areas, improve posture, and prevent re-injury."
-  },
-  {
-    id: "faq-6",
     category: "Booking & Locations",
-    question: "Where are Dr Pilates branches located in Bengaluru?",
-    answer: "Our Kalyan Nagar branch is located on the 3rd Floor, Y4 Heights Building, 6th Main Rd, HRBR Layout, Kalyan Nagar, Bengaluru. Our second branch is located at ANR Arcade, Doddagubbi Main Road, Kothanur, Hennur Road."
-  },
-  {
-    id: "faq-7",
-    category: "Booking & Locations",
-    question: "How can I book an appointment or schedule a visit?",
-    answer: "You can book directly using our website appointment form, call us at +91 88922 36442, or click the WhatsApp button on any page to message our reception desk directly with your preferred studio and time slot."
-  },
-  {
-    id: "faq-8",
-    category: "General",
-    question: "What are your opening hours?",
-    answer: "Both our Kalyan Nagar and Kothanur studios are open Monday through Saturday from 6:00 AM to 8:00 PM. Studios are closed on Sundays (Holiday)."
+    question: "How do I book a consultation?",
+    answer: "Booking is simple. Click any 'Book Assessment' or 'Book Consultation' CTA, fill out your contact details, and choose your service of interest. Our clinic coordinators will reach out within 2 hours to confirm your physical audit slot. You can also call us directly or click the WhatsApp widget."
   }
 ];

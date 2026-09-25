@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import {
-  MapPin,
   Phone,
   Clock,
   Star,
@@ -91,42 +90,6 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
               <div className="mb-4" />
             )}
 
-            {/* Contact Details List */}
-            <div className="space-y-3 mb-6 bg-[#FAF8F5] p-3.5 sm:p-5 rounded-2xl border border-[#E5E0D8]">
-              {/* Address */}
-              <div className="flex items-start gap-2.5">
-                <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#EEEDE8] text-[#B59C7D] border border-[#B59C7D]/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </div>
-                <div>
-                  <h4 className="text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#7A756D]">
-                    Branch Address
-                  </h4>
-                  <p className="text-xs sm:text-sm font-medium text-[#111111] leading-snug mt-0.5">
-                    {branch.address.fullText}
-                  </p>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="flex items-start gap-2.5">
-                <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#EEEDE8] text-[#B59C7D] border border-[#B59C7D]/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                </div>
-                <div>
-                  <h4 className="text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#7A756D]">
-                    Desk Direct Phone
-                  </h4>
-                  <a
-                    href={generateCallUrl(branch.id)}
-                    className="text-xs sm:text-base font-bold text-[#111111] hover:text-[#8E7557] transition-colors"
-                  >
-                    {branch.phone}
-                  </a>
-                </div>
-              </div>
-            </div>
-
             {/* Branch Features / Highlights */}
             <div className="mb-6">
               <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#8E7557] mb-2">
@@ -197,34 +160,31 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
           </div>
         </div>
 
-        {/* Right Side: Image & Map View */}
-        <div className="lg:col-span-5 flex flex-col gap-4 sm:gap-6">
-          {/* Branch Image */}
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm h-48 sm:h-72 border border-[#E5E0D8] group">
-            <Image
-              src={branch.image}
-              alt={branch.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 40vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-4 sm:p-6">
-              <div>
-                <span className="text-[10px] text-[#B59C7D] font-bold uppercase tracking-widest">
-                  Branch View
-                </span>
-                <h4 className="text-base sm:text-xl font-bold font-display text-white">
-                  {branch.shortName} Branch
-                </h4>
-              </div>
+        {/* Right Side: Branch Studio Image */}
+        <div className="lg:col-span-5 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm min-h-[280px] sm:min-h-[340px] border border-[#E5E0D8] group">
+          <Image
+            src={branch.image}
+            alt={branch.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 40vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-4 sm:p-6">
+            <div>
+              <span className="text-[10px] text-[#B59C7D] font-bold uppercase tracking-widest">
+                Branch View
+              </span>
+              <h4 className="text-base sm:text-xl font-bold font-display text-white">
+                {branch.shortName} Studio
+              </h4>
             </div>
           </div>
-
-          {/* Branch Map Embed */}
-          <div className="flex-1 min-h-[250px]">
-            <BranchMap branch={branch} />
-          </div>
         </div>
+      </div>
+
+      {/* Branch Map Embed (Full Width Below) */}
+      <div className="w-full">
+        <BranchMap branch={branch} />
       </div>
     </div>
   );

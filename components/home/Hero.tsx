@@ -22,17 +22,23 @@ export const Hero: React.FC = () => {
               <span className="uppercase tracking-widest text-[10px]">Dr Pilates • Bengaluru&apos;s Premier Wellness &amp; Movement Studio</span>
             </div>
 
-            {/* Main Headline with Amanda-inspired editorial serif accent */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#111111] leading-tight sm:leading-[1.12]">
-              Move Better. <br />
-              <span className="font-serif italic font-normal text-[#8E7557]">Feel Stronger.</span> <br />
-              Live Better.
+            {/* Main Headline with editorial serif accent */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#111111] leading-tight sm:leading-[1.12]">
+              Pilates with <span className="font-serif italic font-normal text-[#8E7557]">Purpose.</span>
             </h1>
 
             {/* Supporting Text */}
-            <p className="text-xs sm:text-lg text-[#4A4641] max-w-2xl leading-relaxed font-normal">
-              At <strong className="font-semibold text-[#111111]">Dr Pilates</strong>, experience premium Reformer Pilates, German EMS Training, and clinical Physiotherapy across Kalyan Nagar &amp; Kothanur, Hennur Road — designed to help you build deep strength, restore joint mobility, and feel your absolute best.
-            </p>
+            <div className="space-y-3 text-xs sm:text-sm lg:text-[15px] text-[#4A4641] max-w-2xl leading-relaxed font-normal">
+              <p>
+                Not all Pilates is the same. Achieving meaningful, lasting results depends on understanding how to engage the right muscles and move with proper alignment and control.
+              </p>
+              <p>
+                At <strong className="font-semibold text-[#111111]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
+              </p>
+              <p className="font-medium text-[#8E7557] italic">
+                Move with intention. Feel the difference. Transform your body with Dr. Pilates.
+              </p>
+            </div>
 
             {/* Primary CTAs */}
             <div className="flex flex-wrap items-center gap-2.5 pt-1 sm:pt-2">

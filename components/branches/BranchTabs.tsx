@@ -23,9 +23,6 @@ export const BranchTabs: React.FC<BranchTabsProps> = ({
         <span className="text-[9px] sm:text-xs font-bold uppercase tracking-widest text-[#8E7557] bg-[#EEEDE8] px-3 py-1 rounded-full border border-[#E5E0D8] inline-block mb-1">
           Our Locations
         </span>
-        <h3 className="text-xl sm:text-3xl font-bold font-display text-[#111111]">
-          Choose Your Preferred <span className="font-serif italic font-normal text-[#8E7557]">Dr Pilates Branch</span>
-        </h3>
         <p className="text-xs sm:text-sm text-[#4A4641] mt-0.5 max-w-lg mx-auto">
           Switch tabs below to view branch specs, opening hours, directions, and direct contacts
         </p>

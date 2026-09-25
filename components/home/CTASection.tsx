@@ -54,7 +54,7 @@ export const CTASection: React.FC = () => {
             </Button>
 
             <Button
-              href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about an appointment at Kalyan Nagar or Kothanur, Hennur Road branch.")}
+              href={generateWhatsAppUrl("kalyan-nagar", "Hi Dr Pilates, I would like to enquire about your services.")}
               external
               variant="whatsapp"
               size="sm"

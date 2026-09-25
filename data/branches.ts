@@ -45,8 +45,8 @@ export const BRANCHES: Branch[] = [
       pincode: "560043",
       fullText: "3rd floor, Y4 Heights Building, 6th Main Rd, HRBR Layout 2nd Block, Bengaluru, Karnataka"
     },
-    phone: "+91 88922 36442",
-    rawPhone: "+918892236442",
+    phone: "+91 94810 03827",
+    rawPhone: "+919481003827",
     whatsapp: "919481003827",
     email: "contact@drpilates.in",
     hours: "Open · Closes 8 PM (Mon – Sat: 6:00 AM – 8:00 PM | Sunday: Closed / Holiday)",
@@ -66,7 +66,8 @@ export const BRANCHES: Branch[] = [
       "Modern Reformer Equipment",
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
-      "Customized Movement Plans"
+      "Customized Movement Plans",
+      "Personal and Group Sessions"
     ]
   },
   {
@@ -104,7 +105,8 @@ export const BRANCHES: Branch[] = [
       "Modern Reformer Equipment",
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
-      "Customized Movement Plans"
+      "Customized Movement Plans",
+      "Personal and Group Sessions"
     ],
     statusText: "Accepting bookings for Reformer Pilates, EMS Training & Physiotherapy."
   }
@@ -124,7 +126,7 @@ export function generateWhatsAppUrl(branchId: string, customMessage?: string): s
   const branch = getBranchById(branchId);
   const text = customMessage
     ? customMessage
-    : `Hi Dr Pilates, I would like to enquire about an appointment at ${branch.shortName} branch.`;
+    : "Hi Dr Pilates, I would like to enquire about your services.";
   return `https://wa.me/${branch.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 

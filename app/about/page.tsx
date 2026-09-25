@@ -73,7 +73,7 @@ export default function AboutPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
                     <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#E5E0D8]">
                       <Image
-                        src="/dr-govinda-raju.jpg"
+                        src="/goivnd.jpeg"
                         alt="Dr. Govinda Raju S. - Founder and Program Director"
                         fill
                         quality={95}

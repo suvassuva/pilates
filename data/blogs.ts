@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. Govinda Raju S.",
       role: "Founder & Clinical Director",
-      avatar: "/dr-govinda-raju.jpg"
+      avatar: "/goivnd.jpeg"
     },
     publishedAt: "September 18, 2026",
     readTime: "5 min read",
@@ -96,51 +96,33 @@ export const BLOG_POSTS: BlogPost[] = [
 export const BLOG_FAQS: BlogFAQItem[] = [
   {
     id: "faq-1",
-    category: "Getting Started",
-    question: "Can beginners start Reformer Pilates without any prior fitness background?",
-    answer: "Absolutely. In fact, Reformer Pilates is one of the safest environments for true beginners. Every movement is performed on an engineered carriage with calibrated spring resistance that supports your body weight while you learn proper form. Our instructors customize spring tension and movement range for your baseline strength."
+    category: "Reformer Pilates",
+    question: "What is Reformer Pilates?",
+    answer: "Reformer Pilates is a full-body conditioning method performed on a specialized carriage machine that uses springs, pulleys, and straps for resistance. Unlike mat pilates, the reformer offers adjustable resistance, providing both deep support for rehabilitation and high-intensity challenge for athletic performance."
   },
   {
     id: "faq-2",
-    category: "Methodology",
-    question: "How is clinical Pilates at Dr. Pilates different from regular gym fitness?",
-    answer: "Conventional gyms typically prioritize moving heavy external weights through standardized machine tracks, which can compress joints and reinforce muscular imbalances. At Dr. Pilates, our programs begin with a detailed postural evaluation led by clinical physiotherapists. We isolate weak intrinsic stabilizers, decompress the spine, and build lean, balanced functional strength without joint impact."
+    category: "Getting Started",
+    question: "Who can join Pilates classes?",
+    answer: "Anyone can join. Because our sessions are supervised by a clinical physical therapist, we cater to all ages, fitness levels, and rehabilitation needs. Whether you are correcting posture, building core strength, or recovering from a spinal injury, we custom-tailor the spring resistance for you."
   },
   {
     id: "faq-3",
-    category: "Frequency & Results",
-    question: "How often should I attend sessions to see lasting postural and core results?",
-    answer: "Most clients experience noticeable postural relief, reduced back stiffness, and improved core awareness within 4 to 6 sessions. For sustained physical transformation and muscular symmetry, attending 2 to 3 sessions per week is ideal."
+    category: "EMS Training",
+    question: "How does EMS training work?",
+    answer: "Electro Muscle Stimulation (EMS) sends gentle, low-frequency bio-electric impulses directly to your muscle fibers via a technical suit. This triggers deep muscle contractions that are difficult to reach with standard weights. A 20-minute session activates over 90% of your muscle fibers safely and efficiently."
   },
   {
     id: "faq-4",
-    category: "Pain & Injuries",
-    question: "Is Reformer Pilates safe if I currently have chronic lower back or neck pain?",
-    answer: "Yes, provided it is clinically supervised. Because Dr. Pilates was founded by physical therapists, we specialize in rehabilitating conditions such as disc herniations, sciatica, cervical stiffness, and postural scoliosis. We first perform an assessment to identify contraindications, then craft a gentle, decompression-based program."
+    category: "Physiotherapy",
+    question: "Do I need physiotherapy before starting Pilates?",
+    answer: "Not necessarily, but every client at Dr Pilates starts with a comprehensive physical assessment. If you suffer from active spinal pain, sports injuries, or joint issues, Dr. Govinda Raju will direct a physiotherapy mobilization plan before transitioning you into Reformer work."
   },
   {
     id: "faq-5",
-    category: "Physiotherapy",
-    question: "How does physiotherapy integrate with Pilates at Dr. Pilates?",
-    answer: "Our licensed physiotherapists provide thorough clinical evaluations and hands-on treatments—including dry needling, myofascial release, and joint mobilizations. Once tight muscular contractures are released, we immediately transition clients onto Reformer equipment to reprogram neuromuscular movement patterns and prevent pain recurrence."
-  },
-  {
-    id: "faq-6",
-    category: "Session Experience",
-    question: "What should I wear and bring to my first session?",
-    answer: "Wear comfortable, form-fitting workout attire (such as leggings and athletic tops) that allows our instructors to observe your spinal alignment and joint mechanics. Anti-slip grip socks are recommended for hygiene and stability on the Reformer carriage. We provide water, clean towel service, and sanitized studio equipment."
-  },
-  {
-    id: "faq-7",
-    category: "Comparison",
-    question: "What is the difference between Mat Pilates and Reformer Pilates?",
-    answer: "While Mat Pilates relies strictly on your body weight against gravity, Reformer Pilates uses a gliding carriage, pulleys, footbars, and spring-loaded resistance. The springs can either assist you through challenging motions (making it ideal for rehab) or amplify resistance to build deep muscular strength and endurance far beyond what mat work alone can achieve."
-  },
-  {
-    id: "faq-8",
-    category: "Classes & Booking",
-    question: "How do 1-on-1 private sessions compare to small group classes?",
-    answer: "Private 1-on-1 sessions provide 100% dedicated instructor attention, customized spring calibrations, and real-time posture adjustments tailored to your specific biomechanical needs or injuries. Small group classes offer an energizing, community-driven workout while still maintaining a strict cap on student count to guarantee quality supervision."
+    category: "Booking",
+    question: "How do I book a consultation?",
+    answer: "Booking is simple. Click any 'Book Assessment' or 'Book Consultation' CTA, fill out your contact details, and choose your service of interest. Our clinic coordinators will reach out within 2 hours to confirm your physical audit slot. You can also call us directly or click the WhatsApp widget."
   }
 ];
 

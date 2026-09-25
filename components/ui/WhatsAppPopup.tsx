@@ -3,7 +3,7 @@
 import React from "react";
 
 const WHATSAPP_NUMBER = "919481003827";
-const DEFAULT_MESSAGE = "Hi Dr. Pilates, I would like to enquire about sessions and appointments.";
+const DEFAULT_MESSAGE = "Hi Dr Pilates, I would like to enquire about your services.";
 
 export const WhatsAppPopup: React.FC = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;

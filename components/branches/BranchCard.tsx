@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { MapPin, Phone, Clock, MessageSquare, Calendar, Navigation } from "lucide-react";
+import { Phone, Clock, MessageSquare, Calendar, Navigation } from "lucide-react";
 import { Branch, generateWhatsAppUrl, generateCallUrl } from "@/data/branches";
 import { Button } from "../ui/Button";
 import { Badge } from "../ui/Badge";
@@ -13,7 +13,7 @@ interface BranchCardProps {
 
 export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
   return (
-    <div className="bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm hover-lift flex flex-col justify-between transition-all duration-300">
+    <div className="bg-[#FFFFFF] rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm hover-lift flex flex-col justify-between transition-all duration-300 h-full">
       <div>
         {/* Branch Header Image */}
         <div className="relative h-56 w-full">
@@ -40,32 +40,17 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
 
         {/* Content */}
         <div className="p-6">
-          <h3 className="text-2xl font-bold font-display text-[#111111] mb-2">
+          <h3 className="text-2xl font-bold font-display text-[#111111] mb-1.5">
             {branch.name}
           </h3>
-          {branch.tagline ? (
-            <p className="text-xs text-[#7A756D] mb-4 leading-relaxed">
-              {branch.tagline}
-            </p>
-          ) : (
-            <div className="mb-4" />
-          )}
+          <p className="text-xs text-[#7A756D] mb-4 min-h-[20px] flex items-center">
+            {branch.tagline || ""}
+          </p>
 
-          <div className="space-y-3 text-xs sm:text-sm text-[#111111] mb-6 bg-[#FAF8F5] p-4 rounded-2xl border border-[#E5E0D8]">
-            <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-[#B59C7D] shrink-0 mt-0.5" />
-              <span className="leading-snug">{branch.address.fullText}</span>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <Phone className="w-4 h-4 text-[#B59C7D] shrink-0" />
-              <a href={generateCallUrl(branch.id)} className="font-semibold text-[#111111] hover:text-[#8E7557]">
-                {branch.phone}
-              </a>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <Clock className="w-4 h-4 text-[#B59C7D] shrink-0" />
-              <span className="text-[#4A4641]">{branch.hours}</span>
-            </div>
+          {/* Timings */}
+          <div className="flex items-center gap-2.5 text-xs text-[#4A4641] mb-6 bg-[#FAF8F5] p-3.5 rounded-2xl border border-[#E5E0D8]">
+            <Clock className="w-4 h-4 text-[#B59C7D] shrink-0" />
+            <span className="leading-snug">{branch.hours}</span>
           </div>
         </div>
       </div>

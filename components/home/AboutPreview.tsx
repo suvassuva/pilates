@@ -22,7 +22,7 @@ export const AboutPreview: React.FC = () => {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative h-80 sm:h-96 lg:h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[560px] w-full flex-1 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#E5E0D8] group bg-[#141312]">
               <Image
-                src="/dr-govinda-raju.jpg"
+                src="/goivnd.jpeg"
                 alt="Dr. Govinda Raju S. - Founder and Program Director"
                 fill
                 priority
@@ -71,7 +71,7 @@ export const AboutPreview: React.FC = () => {
                 <div className="flex items-center gap-2.5 mb-1.5">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#B59C7D]/40 shrink-0 bg-[#E5E0D8]">
                     <Image
-                      src="/dr-govinda-raju.jpg"
+                      src="/goivnd.jpeg"
                       alt="Dr. Govinda Raju S."
                       fill
                       quality={95}

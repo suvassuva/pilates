@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://drpilates.in"),
   title: "Dr Pilates | Reformer Pilates, EMS Training & Physiotherapy in Bengaluru",
   description:
-    "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road, Bengaluru. Call 088922 36442 to book your 1-on-1 session.",
+    "Premium Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road, Bengaluru. Call 094810 03827 to book your 1-on-1 session.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

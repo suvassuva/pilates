@@ -93,7 +93,7 @@ export const TestimonialsPreview: React.FC = () => {
                     </h4>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
-                    <strong className="text-[#111111] font-semibold">129 Google reviews</strong> • HRBR Layout
+                    <strong className="text-[#111111] font-semibold">129 Google reviews</strong>
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export const TestimonialsPreview: React.FC = () => {
                     </h4>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
-                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong> • ANR Arcade, Doddagubbi Rd
+                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong>
                   </p>
                 </div>
               </div>

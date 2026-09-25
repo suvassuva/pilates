@@ -84,8 +84,7 @@ export const WhyChooseUs: React.FC = () => {
     <section className="py-12 sm:py-20 bg-[#EEEDE8] text-[#111111] relative overflow-hidden">
       <Container>
         <SectionTitle
-          subtitle="The Dr Pilates Standards"
-          title="Designed for Discerning Wellness Seekers"
+          title="Designed for Wellness Seekers"
           description="Discover why clients across Bengaluru choose Dr Pilates for physical fitness, posture realignment, and movement therapy."
           theme="light"
           align="center"

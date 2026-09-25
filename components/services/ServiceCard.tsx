@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Activity, Zap, HeartPulse, Dumbbell, Check, ArrowRight } from "lucide-react";
+import { Activity, Zap, HeartPulse, Check, ArrowRight } from "lucide-react";
 import { ServiceDetail } from "@/data/services";
 import { Button } from "../ui/Button";
 
@@ -11,44 +11,43 @@ interface ServiceCardProps {
 const iconMap: Record<string, React.ReactNode> = {
   Activity: <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
   Zap: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
-  HeartPulse: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
-  Dumbbell: <Dumbbell className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />
+  HeartPulse: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
     <div className="bg-[#FFFFFF] text-[#111111] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] hover:border-[#B59C7D]/60 shadow-sm hover:shadow-xl hover-lift flex flex-col justify-between group transition-all duration-300">
       <div>
-        {/* Service Card Image */}
-        <div className="relative h-44 sm:h-60 w-full overflow-hidden">
+        {/* Service Card Image - Full 16:9 banner without gradient fade or text overlay blocking it */}
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#FAF8F5]">
           <Image
             src={service.image}
             alt={service.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-cover group-hover:scale-103 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FFFFFF] via-[#FFFFFF]/20 to-transparent flex items-end p-4 sm:p-6">
-            <div className="flex items-center justify-between w-full">
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#FAF8F5]/95 backdrop-blur-md border border-[#E5E0D8] flex items-center justify-center shadow-xs">
-                  {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
-                </div>
-                <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
-                  {service.title}
-                </h3>
-              </div>
-              {service.badge && (
-                <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40 shadow-xs">
-                  {service.badge}
-                </span>
-              )}
-            </div>
-          </div>
         </div>
 
         {/* Card Body */}
         <div className="p-4 sm:p-6">
+          {/* Service Title, Icon & Badge Header */}
+          <div className="flex items-center justify-between gap-3 mb-3 sm:mb-4">
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-center justify-center shrink-0 shadow-xs">
+                {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
+              </div>
+              <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
+                {service.title}
+              </h3>
+            </div>
+            {service.badge && (
+              <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40 shadow-xs shrink-0">
+                {service.badge}
+              </span>
+            )}
+          </div>
+
           <p className="text-xs sm:text-sm text-[#4A4641] mb-4 sm:mb-6 leading-relaxed">
             {service.shortDescription}
           </p>
@@ -73,7 +72,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       {/* Card Action */}
       <div className="p-4 sm:p-6 pt-0">
         <Button
-          href={`/services/${service.slug}`}
+          href={`/services#${service.slug}`}
           variant="outline"
           size="sm"
           fullWidth

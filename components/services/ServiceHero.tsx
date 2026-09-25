@@ -4,7 +4,6 @@ import { Calendar, Sparkles } from "lucide-react";
 import { ServiceDetail } from "@/data/services";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
-import { Badge } from "../ui/Badge";
 
 interface ServiceHeroProps {
   service: ServiceDetail;
@@ -21,13 +20,6 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
           {/* Text Left */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-4 sm:space-y-5">
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <Badge variant="gold">Dr Pilates Services</Badge>
-                <span className="text-[11px] text-[#7A756D] font-medium">
-                  Bengaluru Locations
-                </span>
-              </div>
-
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display tracking-tight text-[#111111]">
                 {service.heroHeadline}
               </h1>
@@ -71,7 +63,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                 size="sm"
                 icon={<Calendar className="w-3.5 h-3.5" />}
               >
-                Book Session
+                Start Your Journey With Us
               </Button>
             </div>
           </div>
@@ -94,7 +86,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                     <span>Clinical Movement Excellence</span>
                   </div>
                   <p className="text-[11px] sm:text-xs text-[#111111] leading-snug">
-                    Guided 1-on-1 by certified instructors at Dr Pilates Kalyan Nagar &amp; Kothanur, Hennur Road.
+                    Guided Personal and Group sessions by certified instructors at Dr Pilates Kalyan Nagar &amp; Kothanur, Hennur Road.
                   </p>
                 </div>
               </div>
