@@ -24,7 +24,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             src={service.image}
             alt={service.title}
             fill
-            className="object-cover group-hover:scale-103 transition-transform duration-500"
+            className={`object-cover group-hover:scale-103 transition-transform duration-500 ${service.imagePosition || "object-center"}`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>

@@ -75,7 +75,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                 src={service.image}
                 alt={service.title}
                 fill
-                className="object-cover"
+                className={`object-cover ${service.imagePosition || "object-center"}`}
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />

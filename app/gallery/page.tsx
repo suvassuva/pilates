@@ -2,41 +2,30 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { GALLERY_ITEMS, GALLERY_CATEGORIES, GalleryItem, GalleryCategory } from "@/data/gallery";
+import { GALLERY_ITEMS, GalleryItem } from "@/data/gallery";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
-import { X, ZoomIn, Play, Camera, Film, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ZoomIn, Play, Camera, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function GalleryPage() {
-  const [selectedCategory, setSelectedCategory] = useState<GalleryCategory>("All");
-  const [selectedType, setSelectedType] = useState<"all" | "image" | "video">("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // Filter items based on active category and media type
-  const filteredItems = GALLERY_ITEMS.filter((item) => {
-    const matchesCategory =
-      selectedCategory === "All" || item.category === selectedCategory;
-    const matchesType =
-      selectedType === "all" || item.type === selectedType;
-    return matchesCategory && matchesType;
-  });
-
   const currentItem: GalleryItem | null =
-    lightboxIndex !== null ? filteredItems[lightboxIndex] ?? null : null;
+    lightboxIndex !== null ? GALLERY_ITEMS[lightboxIndex] ?? null : null;
 
   const handleNext = useCallback(() => {
     if (lightboxIndex === null) return;
     setLightboxIndex((prev) =>
-      prev !== null && prev < filteredItems.length - 1 ? prev + 1 : 0
+      prev !== null && prev < GALLERY_ITEMS.length - 1 ? prev + 1 : 0
     );
-  }, [lightboxIndex, filteredItems.length]);
+  }, [lightboxIndex]);
 
   const handlePrev = useCallback(() => {
     if (lightboxIndex === null) return;
     setLightboxIndex((prev) =>
-      prev !== null && prev > 0 ? prev - 1 : filteredItems.length - 1
+      prev !== null && prev > 0 ? prev - 1 : GALLERY_ITEMS.length - 1
     );
-  }, [lightboxIndex, filteredItems.length]);
+  }, [lightboxIndex]);
 
   // Keyboard navigation for lightbox
   useEffect(() => {
@@ -86,96 +75,9 @@ export default function GalleryPage() {
       {/* Main Gallery Section */}
       <section className="py-12 sm:py-16 bg-[#FAF8F5]">
         <Container>
-          {/* Controls Bar: Category Pills & Media Filter */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-10 pb-6 border-b border-[#E5E0D8]">
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 w-full lg:w-auto">
-              {GALLERY_CATEGORIES.map((cat) => {
-                const isActive = selectedCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => {
-                      setSelectedCategory(cat);
-                      setLightboxIndex(null);
-                    }}
-                    className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                      isActive
-                        ? "bg-[#141312] text-[#E2C79A] shadow-md shadow-black/10 scale-105"
-                        : "bg-white text-[#5C554E] hover:text-[#141312] hover:bg-[#F3EFEA] border border-[#E5E0D8]"
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Media Type Filter (All / Photos / Videos) */}
-            <div className="flex items-center gap-1.5 bg-white p-1 rounded-full border border-[#E5E0D8] shadow-sm shrink-0">
-              <button
-                onClick={() => {
-                  setSelectedType("all");
-                  setLightboxIndex(null);
-                }}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer ${
-                  selectedType === "all"
-                    ? "bg-[#141312] text-[#FAF8F5]"
-                    : "text-[#7C756D] hover:text-[#141312]"
-                }`}
-              >
-                All ({GALLERY_ITEMS.length})
-              </button>
-              <button
-                onClick={() => {
-                  setSelectedType("image");
-                  setLightboxIndex(null);
-                }}
-                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer ${
-                  selectedType === "image"
-                    ? "bg-[#141312] text-[#FAF8F5]"
-                    : "text-[#7C756D] hover:text-[#141312]"
-                }`}
-              >
-                <Camera className="w-3 h-3 text-[#B59C7D]" />
-                Photos ({GALLERY_ITEMS.filter((i) => i.type === "image").length})
-              </button>
-              <button
-                onClick={() => {
-                  setSelectedType("video");
-                  setLightboxIndex(null);
-                }}
-                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer ${
-                  selectedType === "video"
-                    ? "bg-[#141312] text-[#FAF8F5]"
-                    : "text-[#7C756D] hover:text-[#141312]"
-                }`}
-              >
-                <Film className="w-3 h-3 text-[#B59C7D]" />
-                Videos ({GALLERY_ITEMS.filter((i) => i.type === "video").length})
-              </button>
-            </div>
-          </div>
-
           {/* Gallery Grid */}
-          {filteredItems.length === 0 ? (
-            <div className="text-center py-20 bg-white rounded-3xl border border-[#E5E0D8]">
-              <p className="text-lg font-medium text-[#7C756D]">
-                No moments found in this category.
-              </p>
-              <button
-                onClick={() => {
-                  setSelectedCategory("All");
-                  setSelectedType("all");
-                }}
-                className="mt-4 px-5 py-2.5 rounded-full bg-[#141312] text-[#FAF8F5] text-xs font-semibold uppercase tracking-wider hover:bg-[#2A2825] transition-colors"
-              >
-                Reset Filters
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredItems.map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {GALLERY_ITEMS.map((item, index) => (
                 <div
                   key={item.id}
                   onClick={() => setLightboxIndex(index)}
@@ -200,7 +102,9 @@ export default function GalleryPage() {
                       alt={item.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      className={`object-cover group-hover:scale-105 transition-transform duration-700 ${
+                        item.image.includes("ems_bio_suit") ? "object-top" : "object-center"
+                      }`}
                     />
                   )}
 
@@ -255,7 +159,6 @@ export default function GalleryPage() {
                 </div>
               ))}
             </div>
-          )}
         </Container>
       </section>
 
@@ -338,7 +241,7 @@ export default function GalleryPage() {
                 </span>
                 <span className="text-xs text-white/40">•</span>
                 <span className="text-xs text-white/60">
-                  {lightboxIndex + 1} of {filteredItems.length}
+                  {lightboxIndex + 1} of {GALLERY_ITEMS.length}
                 </span>
               </div>
               <h3 className="text-lg sm:text-xl font-bold font-display text-white">

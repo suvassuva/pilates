@@ -15,6 +15,7 @@ export interface ServiceDetail {
   heroHeadline: string;
   tagline: string;
   image: string;
+  imagePosition?: string;
   iconName: string;
   pillarsHeading?: string;
   pillarsSubheading?: string;
@@ -132,6 +133,7 @@ export const SERVICES: ServiceDetail[] = [
     heroHeadline: "Power Up Your Workout with EMS Training",
     tagline: "20-Minute Bio-Electric Stimulation Delivering 90 Minutes of Training Output.",
     image: "/images/ems_bio_suit_trainer_device.webp",
+    imagePosition: "object-top",
     iconName: "Zap",
     pillarsHeading: "Electro Muscle Stimulation (EMS)",
     pillarsSubheading: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",

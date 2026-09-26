@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Calendar, ArrowRight, Sparkles, MapPin } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
@@ -65,20 +66,18 @@ export const Hero: React.FC = () => {
           {/* Right Visual Hero Feature */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Video Feature */}
-              <div className="relative h-56 sm:h-[550px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-[#B59C7D]/30">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  poster="/videos/woman_performing_reformer.jpeg"
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/videos/woman_enters_studio.mp4" type="video/mp4" />
-                  Your browser does not support video tag.
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/50 via-transparent to-transparent pointer-events-none" />
+              {/* Main Visual Feature: Pilates Reformer Machine */}
+              <div className="relative h-56 sm:h-[550px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-[#B59C7D]/30 group bg-[#141312]">
+                <Image
+                  src="/videos/pilates_reformer_machine.jpeg"
+                  alt="Dr Pilates Studio & Reformer Machine"
+                  fill
+                  priority
+                  quality={95}
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/40 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating Card Badge: Both Bengaluru Branches */}
