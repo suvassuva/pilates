@@ -48,12 +48,12 @@ export default function AboutPage() {
           <div className="space-y-12 sm:space-y-16">
             {/* Section Header */}
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#B91C1C] block mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mb-2">
                 The Leadership
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#111111] tracking-tight mb-4">
                 Pioneering Clinical Movement &amp;{" "}
-                <span className="font-serif italic font-normal text-[#B91C1C]">
+                <span className="font-serif italic font-normal text-[#B59C7D]">
                   Studio Excellence
                 </span>
               </h2>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block">
                         Founder and Program Director
                       </span>
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
@@ -117,7 +117,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B91C1C] block">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block">
                         Co-Founder and Operations Director
                       </span>
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
@@ -169,8 +169,8 @@ export default function AboutPage() {
                 {/* Card 1: Philosophy of Focus */}
                 <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
                   <div className="flex items-center gap-3 mb-2.5">
-                    <div className="w-7 h-7 rounded-md bg-[#FEF2F2] border border-[#FCA5A5]/40 flex items-center justify-center">
-                      <Heart className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
+                      <Heart className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
                     <h4 className="text-sm sm:text-base font-bold text-[#111111]">
                       Philosophy of Focus
@@ -185,8 +185,8 @@ export default function AboutPage() {
                 {/* Card 2: Scientific Rigor */}
                 <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
                   <div className="flex items-center gap-3 mb-2.5">
-                    <div className="w-7 h-7 rounded-md bg-[#FEF2F2] border border-[#FCA5A5]/40 flex items-center justify-center">
-                      <Zap className="w-3.5 h-3.5 text-[#B91C1C]" />
+                    <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
+                      <Zap className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
                     <h4 className="text-sm sm:text-base font-bold text-[#111111]">
                       Scientific Rigor
@@ -202,7 +202,7 @@ export default function AboutPage() {
             </div>
 
             {/* Signature Pull Quote */}
-            <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B91C1C] py-2">
+            <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B59C7D] py-2">
               <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#111111] leading-relaxed">
                 &ldquo;The body is a symphony of mechanics. Our role is to tune it to perfection, ensuring
                 every movement serves both physical function and athletic form.&rdquo;

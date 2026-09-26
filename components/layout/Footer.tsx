@@ -106,9 +106,9 @@ export const Footer: React.FC = () => {
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
                 { label: "Services", href: "/services" },
-                { label: "Gallery", href: "/gallery" },
+                { label: "Studios", href: "/branches" },
                 { label: "Blog", href: "/blog" },
-                { label: "Studios", href: "/branches" }
+                { label: "Gallery", href: "/gallery" }
               ].map((item) => (
                 <li key={item.href}>
                   <Link

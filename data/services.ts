@@ -1,13 +1,24 @@
+export interface ServicePillar {
+  title: string;
+  description: string;
+  iconName: string;
+  tag?: string;
+}
+
 export interface ServiceDetail {
   slug: string;
   title: string;
   badge?: string;
+  sectionNumber?: string;
   shortDescription: string;
   fullDescription: string;
   heroHeadline: string;
   tagline: string;
   image: string;
   iconName: string;
+  pillarsHeading?: string;
+  pillarsSubheading?: string;
+  pillars?: ServicePillar[];
   benefits: string[];
   features: string[];
   whoItIsFor: string[];
@@ -27,12 +38,42 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "reformer-pilates",
     title: "Reformer Pilates",
-    shortDescription: "Dynamic resistance training utilizing world-class Merrithew equipment to optimize spinal structure, posture, and core control.",
-    fullDescription: "Dr Pilates Reformer Pilates combines precision resistance training with mindful movement principles. Utilizing custom spring-loaded reformer beds, our sessions isolate micro-muscles, enhance core stability, align joint articulation, and build lean, functional strength without high-impact stress on your joints.",
+    badge: "WORLD-CLASS APPARATUS",
+    sectionNumber: "01 / CLINICAL REFORMER",
+    shortDescription: "Precision resistance training utilizing world-class Merrithew SPX Max equipment to optimize posture, spinal integrity, and functional core strength.",
+    fullDescription: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
     heroHeadline: "Reformer Pilates in Bengaluru",
-    tagline: "Dynamic resistance training utilizing world-class Merrithew equipment to optimize spinal structure, posture, and core control.",
-    image: "/images/service-1.jpg",
-    iconName: "Activity",
+    tagline: "Precision Resistance & Postural Sculpting on World-Class Merrithew Systems.",
+    image: "/images/reformer_plank_trainer_guidance.webp",
+    iconName: "Layers",
+    pillarsHeading: "Merrithew Reformer Systems",
+    pillarsSubheading: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
+    pillars: [
+      {
+        title: "Posture Restoration",
+        description: "Corrects spinal chains and imbalances through segmental centric loading and joint de-compression.",
+        iconName: "Shield",
+        tag: "ALIGNMENT"
+      },
+      {
+        title: "Core Optimization",
+        description: "Activating deep stabilizing musculature (transversus abdominis, multifidus) beyond superficial layers.",
+        iconName: "Layers",
+        tag: "CORE STRENGTH"
+      },
+      {
+        title: "Muscular Longevity",
+        description: "Developing lean, powerful muscle fibers while maintaining joint integrity and globally restoring flexibility.",
+        iconName: "Activity",
+        tag: "TONING"
+      },
+      {
+        title: "Neuromuscular Logic",
+        description: "Refining the brain-body connection for improved spatial awareness and organic, fluid movement patterns.",
+        iconName: "RotateCcw",
+        tag: "NEUROMUSCULAR"
+      }
+    ],
     benefits: [
       "Total Body Toning",
       "Stronger Core & Posture",
@@ -62,9 +103,9 @@ export const SERVICES: ServiceDetail[] = [
       "Supportive studio environment"
     ],
     sessionStructure: {
-      duration: "50 - 60 Mins",
-      intensity: "Adaptable (Beginner to Advanced)",
-      format: "1-on-1 Personal, Semi-Private & Group Sessions"
+      duration: "50 – 60 Mins",
+      intensity: "All Fitness Levels (Beginner to Advanced)",
+      format: "1-on-1 Private, Semi-Private & Group Sessions"
     },
     faqs: [
       {
@@ -84,13 +125,36 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "ems-training",
     title: "EMS Training",
-    badge: "BIO-ELECTRIC",
-    shortDescription: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional training.",
-    fullDescription: "EMS (Electrical Muscle Stimulation) Training delivers a high-efficiency full-body workout in just 20 minutes. By sending low-frequency impulse bio-signals to deep muscle layers while performing functional exercises, EMS activates over 90% of muscle fibers simultaneously—delivering the results of a 90-minute conventional gym workout.",
+    badge: "BIO-ELECTRIC FIT",
+    sectionNumber: "02 / BIO-ELECTRONIC STIMULATION",
+    shortDescription: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional weight training.",
+    fullDescription: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",
     heroHeadline: "Power Up Your Workout with EMS Training",
-    tagline: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional training.",
-    image: "/images/service-2.jpg",
+    tagline: "20-Minute Bio-Electric Stimulation Delivering 90 Minutes of Training Output.",
+    image: "/images/ems_bio_suit_trainer_device.webp",
     iconName: "Zap",
+    pillarsHeading: "Electro Muscle Stimulation (EMS)",
+    pillarsSubheading: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",
+    pillars: [
+      {
+        title: "+90% Muscle Activation",
+        description: "Stimulating deep agonists and antagonists muscle groups simultaneously with medical-grade electric impulses.",
+        iconName: "Zap",
+        tag: "90% ACTIVATION"
+      },
+      {
+        title: "Accelerated Metabolic Rate",
+        description: "Optimizes fat burning and EPOC (excess post-exercise oxygen consumption) response for up to 48 hours post conditioning.",
+        iconName: "Heart",
+        tag: "METABOLIC BOOST"
+      },
+      {
+        title: "Joint-Safe Hypertrophy",
+        description: "Achieves muscle contraction and growth without the mechanical stress and compression of heavy weights on joints.",
+        iconName: "Target",
+        tag: "JOINT-SAFE"
+      }
+    ],
     benefits: [
       "90% Muscle Activation",
       "Fat Loss & Conditioning",
@@ -117,9 +181,9 @@ export const SERVICES: ServiceDetail[] = [
       "Accelerated recovery cool-down & progress tracking"
     ],
     sessionStructure: {
-      duration: "20 Mins",
-      intensity: "High Efficiency (Impulse Modulated)",
-      format: "1-on-1 Dedicated Trainer"
+      duration: "20 Minutes Total",
+      intensity: "Impulse-Modulated Intensity",
+      format: "Dedicated 1-on-1 Certified Coach"
     },
     faqs: [
       {
@@ -139,12 +203,36 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "physiotherapy",
     title: "Physiotherapy",
+    badge: "CLINICAL RESTORATIVE",
+    sectionNumber: "03 / CLINICAL THERAPEUTICS",
     shortDescription: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
-    fullDescription: "Our Physiotherapy service integrates clinical musculoskeletal diagnostics with active exercise therapy. Led by licensed physiotherapists, we focus on identifying root causes of movement dysfunction, relieving acute or chronic pain, restoring joint range-of-motion, and building long-term physical resilience.",
+    fullDescription: "Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.",
     heroHeadline: "Move Better. Recover Stronger.",
-    tagline: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
-    image: "/images/service-3.jpg",
+    tagline: "Clinical Diagnosis & Evidence-Based Recovery for Pain Relief and Peak Function.",
+    image: "/images/physiotherapy_treatment.jpg",
     iconName: "HeartPulse",
+    pillarsHeading: "Advanced Therapeutics",
+    pillarsSubheading: "Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.",
+    pillars: [
+      {
+        title: "Structural Spinal Care",
+        description: "Specialized decompression and mobilization protocols for chronic lower back pain, neck strain, herniated discs, and scoliosis posture correction.",
+        iconName: "Activity",
+        tag: "SPINAL CARE"
+      },
+      {
+        title: "Sports Traumatology",
+        description: "Clinical recovery protocols for joint sprains, ligament tears (ACL, meniscus), tendonitis, and shoulder impingement, assuring safe return to sport.",
+        iconName: "ShieldCheck",
+        tag: "ATHLETIC REHAB"
+      },
+      {
+        title: "Kinetic Re-education",
+        description: "Manual therapy (dry needling, myofascial release) combined with movement re-patterning to resolve long-standing postural compensation.",
+        iconName: "Sparkles",
+        tag: "KINETIC RESET"
+      }
+    ],
     benefits: [
       "Pain Management",
       "Sports Rehabilitation",
@@ -171,9 +259,9 @@ export const SERVICES: ServiceDetail[] = [
       "Personalized home exercise routine to prevent recurrence"
     ],
     sessionStructure: {
-      duration: "45 - 60 Mins",
-      intensity: "Therapeutic & Restorative",
-      format: "Clinical 1-on-1 Session"
+      duration: "45 – 60 Mins",
+      intensity: "Restorative & Therapeutic",
+      format: "Clinical 1-on-1 Consultation"
     },
     faqs: [
       {

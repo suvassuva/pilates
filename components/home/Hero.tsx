@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Calendar, ArrowRight, Sparkles } from "lucide-react";
+import { Calendar, ArrowRight, Sparkles, MapPin } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 
@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
             {/* Supporting Text */}
             <div className="space-y-3 text-xs sm:text-sm lg:text-[15px] text-[#4A4641] max-w-2xl leading-relaxed font-normal">
               <p>
-                Not all Pilates is the same. Achieving meaningful, lasting results depends on understanding how to engage the right muscles and move with proper alignment and control.
+                Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
               </p>
               <p>
                 At <strong className="font-semibold text-[#111111]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
                 size="md"
                 icon={<Calendar className="w-4 h-4" />}
               >
-                Book an Appointment
+                Start Your Journey with Us
               </Button>
 
               <Button
@@ -82,34 +82,41 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card Badge: Both Bengaluru Branches */}
-              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-[#E5E0D8] max-w-[250px] sm:max-w-[310px] hidden sm:block">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-1.5 pb-1.5 border-b border-[#E5E0D8]">
-                    <div className="w-6 h-6 rounded-full bg-[#EEEDE8] text-[#B59C7D] flex items-center justify-center shrink-0 border border-[#B59C7D]/30">
-                      <MapPin className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#8E7557]">
-                      2 Bengaluru Studios
-                    </span>
-                  </div>
-
+              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl shadow-xl border border-[#E5E0D8] min-w-[220px] hidden sm:block">
+                <div className="flex flex-col">
                   {/* Kalyan Nagar */}
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
-                      <h4 className="text-xs font-bold text-[#111111] leading-tight">
-                        Kalyan Nagar
-                      </h4>
+                  <a
+                    href="https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF8F5] transition-colors group cursor-pointer"
+                    title="Open Kalyan Nagar Studio in Google Maps"
+                  >
+                    <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
+                      <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                  </div>
+                    <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
+                      Kalyan Nagar
+                    </span>
+                  </a>
+
+                  <div className="h-px bg-[#E5E0D8]/70 my-1" />
 
                   {/* Kothanur, Hennur Road */}
-                  <div className="flex items-center justify-between gap-3 pt-1.5 border-t border-[#E5E0D8]/60">
-                    <div>
-                      <h4 className="text-xs font-bold text-[#111111] leading-tight">
-                        Kothanur, Hennur Road
-                      </h4>
+                  <a
+                    href="https://maps.google.com/?q=ANR+Arcade+Doddagubbi+Main+Road+Bengaluru+560077"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF8F5] transition-colors group cursor-pointer"
+                    title="Open Kothanur, Hennur Road Studio in Google Maps"
+                  >
+                    <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
+                      <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                  </div>
+                    <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
+                      Kothanur, Hennur Road
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
