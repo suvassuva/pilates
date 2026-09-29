@@ -27,7 +27,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
     <div className="space-y-6">
       {/* Branch Announcement / Notice Banner */}
       {branch.statusText && (
-        <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl bg-[#EEEDE8] border border-[#B59C7D]/40 flex items-start gap-2.5 text-xs sm:text-sm text-[#111111]">
+        <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-xl bg-[#EEEDE8] border border-[#B59C7D]/40 flex items-start gap-2.5 text-xs sm:text-sm text-[#2A2520]">
           <Info className="w-4 h-4 text-[#B59C7D] shrink-0 mt-0.5" />
           <div>
             <strong className="font-semibold text-[#8E7557]">Location Notice:</strong>{" "}
@@ -39,7 +39,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
       {/* Main Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
         {/* Left Side: Branch Specs & Info */}
-        <div className="lg:col-span-7 bg-[#FFFFFF] text-[#111111] rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#E5E0D8] shadow-sm flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-[#FFFFFF] text-[#2A2520] rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#E5E0D8] shadow-sm flex flex-col justify-between">
           <div>
             {/* Header badges */}
             <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
@@ -49,7 +49,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                 </Badge>
                 {branch.rating > 0 && (
                   <div className="flex items-center gap-1.5">
-                    <div className="flex items-center gap-1 bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E0D8]">
+                    <div className="flex items-center gap-1 bg-[#EEEDE8] text-[#2A2520] text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full border border-[#E5E0D8]">
                       <Star className="w-3 h-3 fill-[#B59C7D] text-[#B59C7D]" />
                       <span>{branch.rating} ★</span>
                       {branch.reviewCount > 0 && (
@@ -63,7 +63,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                         href={branch.googleReviewUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[10px] sm:text-xs text-[#8E7557] hover:text-[#111111] font-semibold bg-[#FAF8F5] px-2 py-0.5 rounded-full border border-[#E5E0D8] hover:border-[#B59C7D] transition-colors"
+                        className="inline-flex items-center gap-1 text-[10px] sm:text-xs text-[#8E7557] hover:text-[#2A2520] font-semibold bg-[#FAF8F5] px-2 py-0.5 rounded-full border border-[#E5E0D8] hover:border-[#B59C7D] transition-colors"
                       >
                         <span>Review</span>
                         <ExternalLink className="w-2.5 h-2.5" />
@@ -79,7 +79,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             </div>
 
             {/* Title & Tagline */}
-            <h3 className="text-xl sm:text-3xl font-bold font-display text-[#111111] mb-2">
+            <h3 className="text-xl sm:text-3xl font-bold font-display text-[#2A2520] mb-2">
               {branch.name}
             </h3>
             {branch.tagline ? (
@@ -99,10 +99,10 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                 {branch.features.map((feat, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-2 text-xs text-[#111111] font-medium"
+                    className="flex items-center gap-2 text-xs text-[#2A2520] font-medium"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
-                    <span className="text-[#111111]">{feat}</span>
+                    <span className="text-[#2A2520]">{feat}</span>
                   </div>
                 ))}
               </div>
@@ -139,7 +139,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                 variant="outline"
                 size="sm"
                 fullWidth
-                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#111111]/25 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] bg-[#FFFFFF]"
+                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#B59C7D]/35 text-[#2A2520] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] bg-[#FFFFFF]"
                 icon={<Phone className="w-3.5 h-3.5 text-[#B59C7D]" />}
               >
                 Call Now
@@ -151,7 +151,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
                 variant="outline"
                 size="sm"
                 fullWidth
-                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#111111]/25 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5] bg-[#FFFFFF]"
+                className="px-1.5 sm:px-3 text-[11px] sm:text-xs border-[#B59C7D]/35 text-[#2A2520] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] bg-[#FFFFFF]"
                 icon={<Navigation className="w-3.5 h-3.5 text-[#B59C7D]" />}
               >
                 Directions
@@ -169,7 +169,7 @@ export const BranchDetails: React.FC<BranchDetailsProps> = ({ branch }) => {
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 40vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-4 sm:p-6">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-transparent to-transparent flex items-end p-4 sm:p-6">
             <div>
               <span className="text-[10px] text-[#B59C7D] font-bold uppercase tracking-widest">
                 Branch View

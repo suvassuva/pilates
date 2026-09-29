@@ -9,7 +9,7 @@ import { Button } from "../ui/Button";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[80vh] pt-20 pb-12 sm:pt-32 sm:pb-20 flex items-center bg-[#FAF8F5] text-[#111111] overflow-hidden">
+    <section className="relative min-h-[80vh] pt-20 pb-12 sm:pt-32 sm:pb-20 flex items-center bg-[#FAF8F5] text-[#2A2520] overflow-hidden">
       {/* Background Decorative Shapes */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 sm:w-96 sm:h-96 bg-[#B59C7D]/12 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-[#EEEDE8] rounded-full blur-3xl pointer-events-none" />
@@ -19,13 +19,13 @@ export const Hero: React.FC = () => {
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-8">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EEEDE8] text-[#111111] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5E0D8] shadow-xs">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EEEDE8] text-[#2A2520] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#E5E0D8] shadow-xs">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B59C7D]" />
               <span className="uppercase tracking-widest text-[10px]">Dr Pilates • Bengaluru&apos;s Premier Wellness &amp; Movement Studio</span>
             </div>
 
             {/* Main Headline with editorial serif accent */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#111111] leading-tight sm:leading-[1.12]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#2A2520] leading-tight sm:leading-[1.12]">
               Pilates with <span className="font-serif italic font-normal text-[#8E7557]">Purpose.</span>
             </h1>
 
@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
                 Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
               </p>
               <p>
-                At <strong className="font-semibold text-[#111111]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
+                At <strong className="font-semibold text-[#2A2520]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
               </p>
               <p className="font-medium text-[#8E7557] italic">
                 Move with intention. Feel the difference. Transform your body with Dr. Pilates.
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Main Visual Feature: Pilates Reformer Machine */}
-              <div className="relative h-56 sm:h-[550px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-[#B59C7D]/30 group bg-[#141312]">
+              <div className="relative h-56 sm:h-[550px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-2 sm:border-4 border-[#B59C7D]/30 group bg-[#F3EFE9]">
                 <Image
                   src="/videos/pilates_reformer_machine.jpeg"
                   alt="Dr Pilates Studio & Reformer Machine"
@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/20 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Floating Card Badge: Both Bengaluru Branches */}
@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
                     <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
                       <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                    <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
+                    <span className="text-xs font-bold text-[#2A2520] group-hover:text-[#8E7557] transition-colors leading-tight">
                       Kalyan Nagar
                     </span>
                     <ChevronRight className="w-3.5 h-3.5 text-[#B59C7D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
                     <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
                       <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                    <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
+                    <span className="text-xs font-bold text-[#2A2520] group-hover:text-[#8E7557] transition-colors leading-tight">
                       Kothanur, Hennur Road
                     </span>
                     <ChevronRight className="w-3.5 h-3.5 text-[#B59C7D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />

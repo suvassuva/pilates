@@ -11,7 +11,7 @@ interface ServiceHeroProps {
 
 export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
   return (
-    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-[#FAF8F5] text-[#111111] overflow-hidden">
+    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-20 bg-[#FAF8F5] text-[#2A2520] overflow-hidden">
       {/* Background Subtle Gradient overlay */}
       <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#B59C7D]/15 via-transparent to-transparent pointer-events-none" />
 
@@ -20,7 +20,7 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
           {/* Text Left */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-4 sm:space-y-5">
             <div className="space-y-3">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display tracking-tight text-[#111111]">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display tracking-tight text-[#2A2520]">
                 {service.heroHeadline}
               </h1>
 
@@ -37,19 +37,19 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
             <div className="grid grid-cols-3 gap-3 pt-3 border-t border-[#E5E0D8] max-w-lg">
               <div>
                 <span className="block text-[10px] text-[#7A756D] uppercase tracking-wider font-semibold">Duration</span>
-                <span className="text-xs sm:text-sm font-bold text-[#111111]">
+                <span className="text-xs sm:text-sm font-bold text-[#2A2520]">
                   {service.sessionStructure.duration}
                 </span>
               </div>
               <div>
                 <span className="block text-[10px] text-[#7A756D] uppercase tracking-wider font-semibold">Intensity</span>
-                <span className="text-xs sm:text-sm font-bold text-[#111111]">
+                <span className="text-xs sm:text-sm font-bold text-[#2A2520]">
                   {service.sessionStructure.intensity}
                 </span>
               </div>
               <div>
                 <span className="block text-[10px] text-[#7A756D] uppercase tracking-wider font-semibold">Format</span>
-                <span className="text-xs sm:text-sm font-bold text-[#111111]">
+                <span className="text-xs sm:text-sm font-bold text-[#2A2520]">
                   {service.sessionStructure.format}
                 </span>
               </div>
@@ -79,13 +79,13 @@ export const ServiceHero: React.FC<ServiceHeroProps> = ({ service }) => {
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/70 via-transparent to-transparent flex items-end p-3.5 sm:p-5">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/40 via-transparent to-transparent flex items-end p-3.5 sm:p-5">
                 <div className="bg-[#FFFFFF]/95 backdrop-blur-md p-3.5 rounded-2xl border border-[#E5E0D8] w-full shadow-sm">
                   <div className="flex items-center gap-1.5 text-[10px] sm:text-xs text-[#8E7557] font-bold uppercase tracking-wider mb-1">
                     <Sparkles className="w-3 h-3 text-[#B59C7D]" />
                     <span>Clinical Movement Excellence</span>
                   </div>
-                  <p className="text-[11px] sm:text-xs text-[#111111] leading-snug">
+                  <p className="text-[11px] sm:text-xs text-[#2A2520] leading-snug">
                     Guided Personal and Group sessions by certified instructors at Dr Pilates Kalyan Nagar &amp; Kothanur, Hennur Road.
                   </p>
                 </div>

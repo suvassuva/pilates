@@ -87,8 +87,8 @@ export const TrainersPreview: React.FC = () => {
                     className="object-cover hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 25vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-3 sm:p-4">
-                    <span className="text-[10px] sm:text-xs font-semibold text-white bg-[#141312]/90 px-2.5 py-0.5 rounded-full border border-[#B59C7D]/40">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/75 via-transparent to-transparent flex items-end p-3 sm:p-4">
+                    <span className="text-[10px] sm:text-xs font-semibold text-[#2A2520] bg-[#FAF8F5]/95 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-[#B59C7D]/40 shadow-xs">
                       {trainer.experience}
                     </span>
                   </div>
@@ -96,7 +96,7 @@ export const TrainersPreview: React.FC = () => {
 
                 {/* Trainer Details */}
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
+                  <h3 className="text-base sm:text-xl font-bold font-display text-[#2A2520]">
                     {trainer.name}
                   </h3>
                   <p className="text-xs font-semibold text-[#8E7557] mt-0.5 mb-2 sm:mb-3">
@@ -115,7 +115,7 @@ export const TrainersPreview: React.FC = () => {
                       {trainer.specializations.slice(0, 2).map((spec, idx) => (
                         <span
                           key={idx}
-                          className="text-[10px] sm:text-[11px] bg-[#EEEDE8] text-[#111111] px-2 py-0.5 rounded-md font-medium"
+                          className="text-[10px] sm:text-[11px] bg-[#EEEDE8] text-[#2A2520] px-2 py-0.5 rounded-md font-medium"
                         >
                           {spec}
                         </span>
@@ -132,7 +132,7 @@ export const TrainersPreview: React.FC = () => {
                   variant="ghost"
                   size="sm"
                   fullWidth
-                  className="text-xs border border-[#E5E0D8] text-[#111111] hover:bg-[#FAF8F5]"
+                  className="text-xs border border-[#E5E0D8] text-[#2A2520] hover:bg-[#FAF8F5] hover:text-[#8E7557]"
                   icon={<ArrowRight className="w-3.5 h-3.5 text-[#B59C7D]" />}
                 >
                   Book Session
@@ -151,7 +151,7 @@ export const TrainersPreview: React.FC = () => {
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
                   ? "w-7 bg-[#B59C7D]"
-                  : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
+                  : "w-2 bg-[#B59C7D]/30 hover:bg-[#B59C7D]/50"
               }`}
               aria-label={`Go to trainer ${idx + 1}`}
             />

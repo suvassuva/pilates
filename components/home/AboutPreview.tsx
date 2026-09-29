@@ -15,12 +15,12 @@ export const AboutPreview: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#EEEDE8] text-[#111111] relative overflow-hidden">
+    <section className="py-12 sm:py-16 bg-[#EEEDE8] text-[#2A2520] relative overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
           {/* Left Image Collage - Dr. Govinda Raju S. */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative h-80 sm:h-96 lg:h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[560px] w-full flex-1 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#E5E0D8] group bg-[#141312]">
+            <div className="relative h-80 sm:h-96 lg:h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[560px] w-full flex-1 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#E5E0D8] group bg-[#F3EFE9]">
               <Image
                 src="/goivnd.jpeg"
                 alt="Dr. Govinda Raju S. - Founder and Program Director"
@@ -31,10 +31,10 @@ export const AboutPreview: React.FC = () => {
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
 
-              {/* Minimalist Dark Gradient Overlay with Clean Name & Title */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-5 sm:p-7">
+              {/* Minimalist Warm Gradient Overlay with Clean Name & Title */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/90 via-[#2A2520]/25 to-transparent flex items-end p-5 sm:p-7">
                 <div className="text-white">
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#E2C79A] bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-[#B59C7D]/40 inline-block mb-1.5 shadow-sm">
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#2A2520] bg-[#FAF8F5]/95 backdrop-blur-md px-3 py-1 rounded-full border border-[#B59C7D]/40 inline-block mb-1.5 shadow-sm">
                     Founder &amp; Program Director
                   </span>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-white leading-tight">
@@ -57,7 +57,7 @@ export const AboutPreview: React.FC = () => {
               Why Dr Pilates?
             </span>
 
-            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-snug">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] leading-snug">
               A Refined Approach to <span className="font-serif italic font-normal text-[#8E7557]">Strength &amp; Recovery</span>
             </h2>
 
@@ -80,7 +80,7 @@ export const AboutPreview: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-[#111111] leading-tight">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#2A2520] leading-tight">
                       Dr. Govinda Raju S.
                     </h4>
                     <span className="text-[10px] text-[#8E7557] font-semibold block">Founder and Program Director</span>
@@ -104,7 +104,7 @@ export const AboutPreview: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-[#111111] leading-tight">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#2A2520] leading-tight">
                       Vivek Victor
                     </h4>
                     <span className="text-[10px] text-[#8E7557] font-semibold block">Co-Founder and Operations Director</span>
@@ -120,7 +120,7 @@ export const AboutPreview: React.FC = () => {
               {highlights.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#B59C7D] shrink-0" />
-                  <span className="text-xs font-medium text-[#111111] leading-tight">
+                  <span className="text-xs font-medium text-[#2A2520] leading-tight">
                     {item}
                   </span>
                 </div>

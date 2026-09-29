@@ -50,7 +50,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-24 pb-0 bg-[#FAF8F5]">
       {/* Hero */}
-      <section className="py-20 sm:py-28 bg-[#141312] text-[#FAF8F5] relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_studio_interior.jpeg"
@@ -60,19 +60,18 @@ export default function ServicesPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B59C7D]/20 text-[#E2C79A] text-xs font-semibold uppercase tracking-widest border border-[#B59C7D]/30 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5]/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/30 backdrop-blur-sm shadow-xs">
               Clinical Movement &amp; Wellness
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Specialized Movement &amp; <span className="font-serif italic font-normal text-[#E2C79A]">Clinical Programs</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
+              Specialized Movement &amp; <span className="font-serif italic font-normal text-[#FAF8F5]">Clinical Programs</span>
             </h1>
-            <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
               Targeted strength, core conditioning, rapid bio-suit EMS, and evidence-based physiotherapy tailored to your body.
             </p>
           </div>
@@ -93,7 +92,7 @@ export default function ServicesPage() {
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-stretch ${!isEven ? "lg:flex-row-reverse" : ""}`}>
                   {/* Image Side */}
                   <div className={`${!isEven ? "lg:col-start-8 lg:col-span-5" : "lg:col-span-5"} order-1 ${!isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className={`relative ${service.slug === "ems-training" ? "aspect-[4/5] sm:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#FFFFFF]" : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#141312]"} w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-md`}>
+                    <div className={`relative ${service.slug === "ems-training" ? "aspect-[4/5] sm:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#FFFFFF]" : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#F3EFE9]"} w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-md`}>
                       <Image
                         src={service.image}
                         alt={service.title}
@@ -109,7 +108,7 @@ export default function ServicesPage() {
                     {service.slug === "reformer-pilates" ? (
                       <>
                         <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
+                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] leading-tight">
                             Reformer Pilates Systems
                           </h2>
                         </div>
@@ -126,7 +125,7 @@ export default function ServicesPage() {
                               <Shield className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Posture Restoration
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -141,7 +140,7 @@ export default function ServicesPage() {
                               <Layers className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Core Optimization
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -156,7 +155,7 @@ export default function ServicesPage() {
                               <Activity className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Muscular Longevity
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -171,7 +170,7 @@ export default function ServicesPage() {
                               <RotateCcw className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Neuromuscular Logic
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -195,7 +194,7 @@ export default function ServicesPage() {
                     ) : service.slug === "ems-training" ? (
                       <>
                         <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
+                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] leading-tight">
                             Electro Muscle Stimulation (EMS)
                           </h2>
                         </div>
@@ -212,7 +211,7 @@ export default function ServicesPage() {
                               <Zap className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 +90% Muscle Activation
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -227,7 +226,7 @@ export default function ServicesPage() {
                               <Heart className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Accelerated Metabolic Rate
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -242,7 +241,7 @@ export default function ServicesPage() {
                               <Target className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Joint-Safe Hypertrophy
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -266,7 +265,7 @@ export default function ServicesPage() {
                     ) : service.slug === "physiotherapy" ? (
                       <>
                         <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
+                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] leading-tight">
                             Advanced <span className="font-serif italic font-normal text-[#B59C7D]">Therapeutics</span>
                           </h2>
                         </div>
@@ -283,7 +282,7 @@ export default function ServicesPage() {
                               <Activity className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Structural Spinal Care
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -298,7 +297,7 @@ export default function ServicesPage() {
                               <ShieldCheck className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Sports Traumatology
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -313,7 +312,7 @@ export default function ServicesPage() {
                               <Sparkles className="w-4 h-4 text-[#B59C7D]" />
                             </div>
                             <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#111111] leading-snug">
+                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
                                 Kinetic Re-education
                               </h3>
                               <p className="text-xs sm:text-[13px] text-[#55504A] leading-relaxed mt-1">
@@ -341,11 +340,11 @@ export default function ServicesPage() {
                             {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
                           </div>
                           <div>
-                            <h2 className="text-2xl sm:text-4xl font-bold font-display text-[#111111] leading-tight">
+                            <h2 className="text-2xl sm:text-4xl font-bold font-display text-[#2A2520] leading-tight">
                               {service.title}
                             </h2>
                             {service.badge && (
-                              <span className="text-[9px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40 mt-1 inline-block">
+                              <span className="text-[9px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[#B59C7D] text-white border border-[#A08566]/40 mt-1 inline-block">
                                 {service.badge}
                               </span>
                             )}
@@ -358,15 +357,15 @@ export default function ServicesPage() {
 
                         {/* Session Structure Specs */}
                         <div className="flex flex-wrap gap-2.5 sm:gap-3 pt-1">
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#111111] shadow-xs">
+                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
                             <Clock className="w-3.5 h-3.5 text-[#B59C7D]" />
                             <span>{service.sessionStructure.duration}</span>
                           </div>
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#111111] shadow-xs">
+                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
                             <Flame className="w-3.5 h-3.5 text-[#B59C7D]" />
                             <span>{service.sessionStructure.intensity}</span>
                           </div>
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#111111] shadow-xs">
+                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
                             <Users className="w-3.5 h-3.5 text-[#B59C7D]" />
                             <span>{service.sessionStructure.format}</span>
                           </div>
@@ -394,7 +393,7 @@ export default function ServicesPage() {
                       {/* Card Header Banner */}
                       <div className="bg-[#FAF8F5] px-6 sm:px-8 py-4 sm:py-5 border-b border-[#E5E0D8] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <div>
-                          <h3 className="text-base sm:text-lg font-bold font-display text-[#111111] uppercase tracking-wide">
+                          <h3 className="text-base sm:text-lg font-bold font-display text-[#2A2520] uppercase tracking-wide">
                             {service.title}: <span className="text-[#8C7658] font-normal">{serviceTaglines[service.slug] || "TRANSFORM YOUR BODY"}</span>
                           </h3>
                         </div>
@@ -404,7 +403,7 @@ export default function ServicesPage() {
                       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E5E0D8]">
                         {/* Top Benefits */}
                         <div className="p-6 sm:p-8 space-y-4">
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
                             <CheckCircle2 className="w-5 h-5 text-[#B59C7D]" />
                             Top Benefits
                           </h4>
@@ -420,7 +419,7 @@ export default function ServicesPage() {
 
                         {/* Suitable For */}
                         <div className="p-6 sm:p-8 space-y-4 bg-[#FAF8F5]/50">
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
                             <Users className="w-5 h-5 text-[#B59C7D]" />
                             Suitable For
                           </h4>
@@ -436,7 +435,7 @@ export default function ServicesPage() {
 
                         {/* How It Works */}
                         <div className="p-6 sm:p-8 space-y-4">
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
                             <Sparkles className="w-5 h-5 text-[#B59C7D]" />
                             How It Works
                           </h4>
@@ -456,22 +455,22 @@ export default function ServicesPage() {
               </Container>
             </section>
 
-            {/* Dark Pillar Breakdown Section for Service */}
+            {/* Light Luxury Pillar Breakdown Section for Service */}
             {service.slug !== "reformer-pilates" && service.slug !== "ems-training" && service.slug !== "physiotherapy" && service.pillars && service.pillars.length > 0 && (
-              <section className="py-16 sm:py-20 bg-[#141312] text-[#FAF8F5] relative overflow-hidden border-y border-[#262422]">
+              <section className="py-16 sm:py-20 bg-[#F3EFE9] text-[#2A2520] relative overflow-hidden border-y border-[#E5E0D8]">
                 <Container>
                   {/* Section Heading */}
                   <div className="max-w-3xl mb-10 sm:mb-12">
                     {service.sectionNumber && (
-                      <span className="text-[11px] font-bold tracking-widest text-[#B59C7D] uppercase block mb-2 font-mono">
+                      <span className="text-[11px] font-bold tracking-widest text-[#8E7557] uppercase block mb-2 font-mono">
                         {service.sectionNumber}
                       </span>
                     )}
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white tracking-tight leading-snug">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] tracking-tight leading-snug">
                       {service.pillarsHeading}
                     </h3>
                     {service.pillarsSubheading && (
-                      <p className="text-sm sm:text-base text-[#D4CECA] mt-2.5 leading-relaxed max-w-2xl font-normal">
+                      <p className="text-sm sm:text-base text-[#4A4641] mt-2.5 leading-relaxed max-w-2xl font-normal">
                         {service.pillarsSubheading}
                       </p>
                     )}
@@ -488,26 +487,26 @@ export default function ServicesPage() {
                     {service.pillars.map((pillar, pIdx) => (
                       <div
                         key={pIdx}
-                        className="bg-[#1C1A18] p-6 rounded-2xl sm:rounded-3xl border border-[#2E2A27] hover:border-[#B59C7D]/50 transition-all duration-300 flex flex-col justify-between group"
+                        className="bg-[#FFFFFF] p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D]/50 shadow-sm transition-all duration-300 flex flex-col justify-between group"
                       >
                         <div>
                           <div className="flex items-center justify-between gap-3 mb-4">
                             {/* Icon box with champagne gold accent */}
-                            <div className="w-10 h-10 rounded-xl bg-[#262320] border border-[#B59C7D]/30 flex items-center justify-center shrink-0 group-hover:bg-[#B59C7D]/20 transition-colors">
+                            <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center shrink-0 group-hover:bg-[#B59C7D]/20 transition-colors">
                               {pillarIconMap[pillar.iconName] || <Sparkles className="w-5 h-5 text-[#B59C7D]" />}
                             </div>
                             {pillar.tag && (
-                              <span className="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#262320] text-[#B59C7D] border border-[#B59C7D]/30">
+                              <span className="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#FAF8F5] text-[#8E7557] border border-[#B59C7D]/30">
                                 {pillar.tag}
                               </span>
                             )}
                           </div>
 
-                          <h4 className="text-base sm:text-lg font-bold font-display text-white group-hover:text-[#E2C79A] transition-colors leading-snug">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] group-hover:text-[#B59C7D] transition-colors leading-snug">
                             {pillar.title}
                           </h4>
 
-                          <p className="text-xs sm:text-sm text-[#A8A29E] mt-2.5 leading-relaxed">
+                          <p className="text-xs sm:text-sm text-[#4A4641] mt-2.5 leading-relaxed">
                             {pillar.description}
                           </p>
                         </div>

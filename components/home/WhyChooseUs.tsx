@@ -81,7 +81,7 @@ export const WhyChooseUs: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-20 bg-[#EEEDE8] text-[#111111] relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-[#EEEDE8] text-[#2A2520] relative overflow-hidden">
       <Container>
         <SectionTitle
           title="Designed for Wellness Seekers"
@@ -111,7 +111,7 @@ export const WhyChooseUs: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#B59C7D]/25 flex items-center justify-center mb-3">
                   {feat.icon}
                 </div>
-                <h3 className="text-sm sm:text-base font-bold font-display text-[#111111] mb-2">
+                <h3 className="text-sm sm:text-base font-bold font-display text-[#2A2520] mb-2">
                   {feat.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
@@ -131,7 +131,7 @@ export const WhyChooseUs: React.FC = () => {
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
                   ? "w-7 bg-[#B59C7D]"
-                  : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
+                  : "w-2 bg-[#B59C7D]/30 hover:bg-[#B59C7D]/60"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />

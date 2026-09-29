@@ -27,7 +27,7 @@ export default function BlogHubPage() {
   return (
     <div className="pt-24 pb-0 bg-[#FAF8F5]">
       {/* Hero Banner with Studio Image Background */}
-      <section className="py-20 sm:py-28 bg-[#141312] text-[#FAF8F5] relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_studio_interior.jpeg"
@@ -37,19 +37,18 @@ export default function BlogHubPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141312] via-black/30 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
         </div>
 
         <Container className="relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Clinical Insights, Science &amp;{" "}
-              <span className="font-serif italic font-normal text-[#E2C79A]">
+              <span className="font-serif italic font-normal text-[#FAF8F5]">
                 Movement Culture
               </span>
             </h1>
-            <p className="text-base sm:text-lg text-neutral-200 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto">
               Evidence-based rehabilitation, biomechanics breakdowns, and reformer training advice curated by Dr. Govinda Raju S. and our elite clinical faculty.
             </p>
           </div>

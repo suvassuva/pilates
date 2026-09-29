@@ -20,10 +20,10 @@ export const BranchMap: React.FC<BranchMapProps> = ({ branch }) => {
         />
       ) : (
         <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-[#EEEDE8]">
-          <div className="w-14 h-14 rounded-full bg-[#111111] text-[#B59C7D] flex items-center justify-center mb-3 shadow-md">
+          <div className="w-14 h-14 rounded-full bg-[#B59C7D] text-white flex items-center justify-center mb-3 shadow-md">
             <MapPin className="w-7 h-7" />
           </div>
-          <h4 className="text-lg font-bold text-[#111111] font-display">
+          <h4 className="text-lg font-bold text-[#2A2520] font-display">
             Map View Placeholder
           </h4>
           <p className="text-xs text-[#7A756D] max-w-xs mt-1">
@@ -33,10 +33,10 @@ export const BranchMap: React.FC<BranchMapProps> = ({ branch }) => {
       )}
 
       {/* Floating Directions overlay bar */}
-      <div className="p-4 bg-[#141312] text-[#FAF8F5] flex flex-wrap items-center justify-between gap-3">
+      <div className="p-4 bg-[#FAF8F5] text-[#2A2520] border-t border-[#E5E0D8] flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <Navigation className="w-4 h-4 text-[#B59C7D]" />
-          <span className="text-xs font-medium truncate max-w-[200px] sm:max-w-xs">
+          <Navigation className="w-4 h-4 text-[#8E7557]" />
+          <span className="text-xs font-semibold text-[#2A2520] truncate max-w-[200px] sm:max-w-xs">
             {branch.address.area}, {branch.address.city}
           </span>
         </div>

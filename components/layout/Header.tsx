@@ -39,15 +39,15 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#FAF8F5]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-xs border-b border-[#E5E0D8]"
-            : "bg-[#FAF8F5]/90 backdrop-blur-md py-3 sm:py-4 border-b border-[#E5E0D8]/70 shadow-xs"
+            ? "bg-[#B59C7D]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-md border-b border-[#A08566]"
+            : "bg-[#B59C7D] backdrop-blur-md py-3 sm:py-4 border-b border-[#A58B6E] shadow-xs"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Official Logo */}
           <Link href="/" className="group flex items-center py-0.5">
             <Image
-              src="/logo-dark.png"
+              src="/logo.png"
               alt="Dr Pilates Bengaluru"
               width={200}
               height={60}
@@ -57,7 +57,7 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-1 bg-[#EEEDE8] px-3 py-1.5 rounded-full border border-[#E5E0D8] shadow-xs">
+          <nav className="hidden xl:flex items-center gap-1 bg-[#FAF8F5] px-3 py-1.5 rounded-full border border-white/60 shadow-xs">
             {navLinks.map((link) => {
               const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
@@ -66,8 +66,8 @@ export const Header: React.FC = () => {
                   href={link.href}
                   className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
                     isActive
-                      ? "bg-[#111111] text-white shadow-xs"
-                      : "text-[#4A4641] hover:text-[#111111] hover:bg-[#FAF8F5]"
+                      ? "bg-[#B59C7D] text-white shadow-xs"
+                      : "text-[#5A534B] hover:text-[#2A2520] hover:bg-[#EEEDE8]"
                   }`}
                 >
                   {link.label}
@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
           <div className="hidden sm:flex items-center gap-2.5 lg:gap-3">
             <Button
               href="/appointment?branch=kalyan-nagar"
-              variant="gold"
+              variant="cream"
               size="sm"
               icon={<Calendar className="w-4 h-4" />}
             >
@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center xl:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-full text-[#111111] bg-[#EEEDE8] border border-[#E5E0D8] hover:bg-[#B59C7D] hover:text-white transition-colors focus:outline-none cursor-pointer"
+              className="p-2 rounded-full text-[#2A2520] bg-[#FAF8F5] hover:bg-white border border-white/60 transition-colors focus:outline-none cursor-pointer shadow-xs"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />

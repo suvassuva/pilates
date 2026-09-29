@@ -6,10 +6,10 @@
     --bg-card: #FFFFFF;
     --bg-warm: #F4EFEA;
     --bg-stone: #EEEDE8;
-    --bg-dark: #141312;
-    --bg-dark-card: #1D1C1A;
+    --bg-dark: #2A2520;
+    --bg-dark-card: #35302A;
     
-    --text-primary: #111111;
+    --text-primary: #2A2520;
     --text-secondary: #4A4641;
     --text-muted: #7A756D;
     --text-on-dark: #FAF8F5;
@@ -32,12 +32,12 @@
     scroll-behavior: smooth;
     font-family: var(--font-body), system-ui, sans-serif;
     background-color: #FAF8F5;
-    color: #111111;
+    color: #2A2520;
   }
 
   body {
     background-color: #FAF8F5;
-    color: #111111;
+    color: #2A2520;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -46,7 +46,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), system-ui, sans-serif;
     letter-spacing: -0.02em;
-    color: #111111;
+    color: #2A2520;
   }
 }
 
@@ -81,7 +81,7 @@
 }
 
 .glass-dark {
-  background: rgba(20, 19, 18, 0.96);
+  background: rgba(42, 37, 32, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -90,7 +90,7 @@
 
 /* Brand Gradients - Pilates by Amanda Warm Sandstone & Charcoal */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #111111 0%, #B59C7D 50%, #8E7557 100%);
+  background: linear-gradient(135deg, #2A2520 0%, #B59C7D 50%, #8E7557 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -100,7 +100,7 @@
 }
 
 .taupe-gradient-text {
-  background: linear-gradient(135deg, #111111 0%, #B59C7D 50%, #8E7557 100%);
+  background: linear-gradient(135deg, #2A2520 0%, #B59C7D 50%, #8E7557 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

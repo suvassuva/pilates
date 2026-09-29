@@ -60,7 +60,7 @@ export const TestimonialsPreview: React.FC = () => {
   };
 
   return (
-    <section className="py-12 sm:py-20 bg-[#FAF8F5] text-[#111111] relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-[#FAF8F5] text-[#2A2520] relative overflow-hidden">
       {/* Subtle warm background accent */}
       <div className="absolute top-1/3 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-[#B59C7D]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -88,12 +88,12 @@ export const TestimonialsPreview: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#2A2520]">
                       Kalyan Nagar
                     </h4>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
-                    <strong className="text-[#111111] font-semibold">129 Google reviews</strong>
+                    <strong className="text-[#2A2520] font-semibold">129 Google reviews</strong>
                   </p>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export const TestimonialsPreview: React.FC = () => {
                 href={BRANCH_REVIEWS["kalyan-nagar"].googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#111111] border border-[#E5E0D8] hover:bg-[#111111] hover:text-[#FAF8F5] hover:border-[#111111] transition-all shadow-xs shrink-0"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#2A2520] border border-[#E5E0D8] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] transition-all shadow-xs shrink-0"
               >
                 <Star className="w-3 h-3 text-[#B59C7D] fill-[#B59C7D]" />
                 <span>Review</span>
@@ -121,12 +121,12 @@ export const TestimonialsPreview: React.FC = () => {
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#2A2520]">
                       Kothanur, Hennur Road
                     </h4>
                   </div>
                   <p className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5">
-                    <strong className="text-[#111111] font-semibold">12 Google reviews</strong>
+                    <strong className="text-[#2A2520] font-semibold">12 Google reviews</strong>
                   </p>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export const TestimonialsPreview: React.FC = () => {
                 href={BRANCH_REVIEWS["kothanur"].googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#111111] border border-[#E5E0D8] hover:bg-[#111111] hover:text-[#FAF8F5] hover:border-[#111111] transition-all shadow-xs shrink-0"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold bg-[#FAF8F5] text-[#2A2520] border border-[#E5E0D8] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] transition-all shadow-xs shrink-0"
               >
                 <Star className="w-3 h-3 text-[#B59C7D] fill-[#B59C7D]" />
                 <span>Review</span>
@@ -173,14 +173,14 @@ export const TestimonialsPreview: React.FC = () => {
 
                 <Quote className="w-4 h-4 text-[#B59C7D]/40 mb-1" />
 
-                <p className="text-xs sm:text-[13px] text-[#111111] font-serif italic leading-relaxed line-clamp-4">
+                <p className="text-xs sm:text-[13px] text-[#2A2520] font-serif italic leading-relaxed line-clamp-4">
                   &ldquo;{item.content}&rdquo;
                 </p>
               </div>
 
               <div className="pt-2.5 border-t border-[#E5E0D8] flex items-center justify-between">
                 <div>
-                  <h4 className="text-xs font-bold text-[#111111] leading-tight">
+                  <h4 className="text-xs font-bold text-[#2A2520] leading-tight">
                     {item.author}
                   </h4>
                   <span className="text-[10px] text-[#7A756D]">{item.role}</span>
@@ -200,7 +200,7 @@ export const TestimonialsPreview: React.FC = () => {
               const prev = activeIndex === 0 ? TESTIMONIALS.length - 1 : activeIndex - 1;
               scrollToIndex(prev);
             }}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#111111] hover:bg-[#111111] hover:text-white hover:border-[#111111] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#2A2520] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -214,7 +214,7 @@ export const TestimonialsPreview: React.FC = () => {
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   activeIndex === idx
                     ? "w-6 sm:w-8 bg-[#B59C7D]"
-                    : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
+                    : "w-2 bg-[#B59C7D]/30 hover:bg-[#B59C7D]/60"
                 }`}
                 aria-label={`Go to testimonial ${idx + 1}`}
               />
@@ -226,7 +226,7 @@ export const TestimonialsPreview: React.FC = () => {
               const next = activeIndex === TESTIMONIALS.length - 1 ? 0 : activeIndex + 1;
               scrollToIndex(next);
             }}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#111111] hover:bg-[#111111] hover:text-white hover:border-[#111111] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-[#2A2520] hover:bg-[#B59C7D] hover:text-white hover:border-[#B59C7D] flex items-center justify-center transition-all shadow-xs active:scale-95 cursor-pointer"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-4 h-4" />

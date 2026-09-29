@@ -38,20 +38,20 @@ export const BranchTabs: React.FC<BranchTabsProps> = ({
               onClick={() => onSelectBranch(branch.id)}
               className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap focus:outline-none ${
                 isActive
-                  ? "bg-[#111111] text-white shadow-sm scale-[1.02] border border-[#111111]"
-                  : "text-[#4A4641] hover:text-[#111111] hover:bg-[#FAF8F5]"
+                  ? "bg-[#B59C7D] text-white shadow-sm scale-[1.02] border border-[#B59C7D]"
+                  : "text-[#5A534B] hover:text-[#2A2520] hover:bg-[#FAF8F5]"
               }`}
               role="tab"
               aria-selected={isActive}
             >
               <MapPin
                 className={`w-3 h-3 sm:w-4 sm:h-4 transition-colors shrink-0 ${
-                  isActive ? "text-[#B59C7D]" : "text-[#7A756D]"
+                  isActive ? "text-white" : "text-[#7A756D]"
                 }`}
               />
               <span>{branch.shortName}</span>
               {isActive && (
-                <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B59C7D] ml-0.5 shrink-0" />
+                <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white ml-0.5 shrink-0" />
               )}
             </button>
           );

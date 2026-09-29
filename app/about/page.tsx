@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <div className="pt-24 pb-12 bg-[#FAF8F5]">
       {/* Page Hero with Background Studio Image */}
-      <section className="py-20 sm:py-28 bg-[#141312] text-[#FAF8F5] relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
@@ -25,17 +25,15 @@ export default function AboutPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          {/* Light translucent overlay keeping image bright, vivid and clearly visible */}
-          <div className="absolute inset-0 bg-black/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Movement Crafted for <span className="font-serif italic font-normal text-[#E2C79A]">Vitality &amp; Longevity</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
+              Movement Crafted for <span className="font-serif italic font-normal text-[#FAF8F5]">Vitality &amp; Longevity</span>
             </h1>
-            <p className="text-base sm:text-lg text-white font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
               Combining evidence-based physiotherapy with high-end Reformer Pilates and EMS technology in Bengaluru.
             </p>
           </div>
@@ -43,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       {/* The Leadership & Founders Section - Light Theme */}
-      <section className="py-16 sm:py-24 bg-[#FAF8F5] text-[#111111] relative overflow-hidden border-b border-[#E5E0D8]">
+      <section className="py-16 sm:py-24 bg-[#FAF8F5] text-[#2A2520] relative overflow-hidden border-b border-[#E5E0D8]">
         <Container>
           <div className="space-y-12 sm:space-y-16">
             {/* Section Header */}
@@ -51,7 +49,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mb-2">
                 The Leadership
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#111111] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#2A2520] tracking-tight mb-4">
                 Pioneering Clinical Movement &amp;{" "}
                 <span className="font-serif italic font-normal text-[#B59C7D]">
                   Studio Excellence
@@ -79,7 +77,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#2A2520] font-display">
                         DR. GOVINDA RAJU
                       </h3>
                       <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
@@ -114,7 +112,7 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#2A2520] font-display">
                         VIVEK VICTOR
                       </h3>
                       <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
@@ -142,7 +140,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
               {/* Left Column: A Journey of Clinical Evolution */}
               <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#2A2520] font-display tracking-tight">
                   A Journey of Clinical Evolution
                 </h3>
                 <p className="text-xs sm:text-sm text-[#4A4641] leading-relaxed">
@@ -166,7 +164,7 @@ export default function AboutPage() {
                     <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
                       <Heart className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-[#111111]">
+                    <h4 className="text-sm sm:text-base font-bold text-[#2A2520]">
                       Philosophy of Focus
                     </h4>
                   </div>
@@ -182,7 +180,7 @@ export default function AboutPage() {
                     <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
                       <Zap className="w-3.5 h-3.5 text-[#B59C7D]" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-[#111111]">
+                    <h4 className="text-sm sm:text-base font-bold text-[#2A2520]">
                       Scientific Rigor
                     </h4>
                   </div>
@@ -197,7 +195,7 @@ export default function AboutPage() {
 
             {/* Signature Pull Quote */}
             <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B59C7D] py-2">
-              <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#111111] leading-relaxed">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#2A2520] leading-relaxed">
                 &ldquo;The body is a symphony of mechanics. Our role is to tune it to perfection, ensuring
                 every movement serves both physical function and athletic form.&rdquo;
               </p>
@@ -214,7 +212,7 @@ export default function AboutPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-[#8E7557]">
                 Our Origin & Ethos
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#111111]">
+              <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#2A2520]">
                 Elevating Wellness Beyond <span className="font-serif italic font-normal text-[#8E7557]">Conventional Gyms</span>
               </h2>
               <p className="text-base text-[#4A4641] leading-relaxed">
@@ -226,14 +224,14 @@ export default function AboutPage() {
 
               <div className="pt-4 flex items-center gap-6">
                 <div>
-                  <span className="text-3xl font-bold font-display text-[#111111] block">
+                  <span className="text-3xl font-bold font-display text-[#2A2520] block">
                     4.9 ★
                   </span>
                   <span className="text-xs text-[#7A756D]">141+ Google Reviews</span>
                 </div>
                 <div className="h-10 w-px bg-[#E5E0D8]" />
                 <div>
-                  <span className="text-3xl font-bold font-display text-[#111111] block">
+                  <span className="text-3xl font-bold font-display text-[#2A2520] block">
                     2
                   </span>
                   <span className="text-xs text-[#7A756D]">Bengaluru Studios</span>

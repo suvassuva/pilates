@@ -33,7 +33,7 @@ export const TrustSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-12 bg-[#FAF8F5] text-[#111111] relative overflow-hidden border-y border-[#E5E0D8]">
+    <section className="py-8 sm:py-12 bg-[#FAF8F5] text-[#2A2520] relative overflow-hidden border-y border-[#E5E0D8]">
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-8">
           {stats.map((stat, idx) => {
@@ -49,7 +49,7 @@ export const TrustSection: React.FC = () => {
                   {stat.icon}
                 </div>
                 <span
-                  className={`font-extrabold font-display text-[#111111] ${
+                  className={`font-extrabold font-display text-[#2A2520] ${
                     stat.value.length > 5
                       ? "text-sm sm:text-2xl leading-tight"
                       : "text-xl sm:text-4xl"

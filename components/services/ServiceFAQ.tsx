@@ -19,7 +19,7 @@ export function ServiceFAQ() {
           <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-[#B59C7D]/15 text-[#8C7658] border border-[#B59C7D]/30 mb-3">
             Got Questions?
           </span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#111111] tracking-tight mb-3">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-[#2A2520] tracking-tight mb-3">
             Frequently Asked Questions
           </h2>
           <p className="text-[#4A4641] text-sm sm:text-base leading-relaxed">
@@ -42,14 +42,14 @@ export function ServiceFAQ() {
                   className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B59C7D]"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display font-semibold text-base sm:text-lg text-[#111111] leading-snug">
+                  <span className="font-display font-semibold text-base sm:text-lg text-[#2A2520] leading-snug">
                     {faq.question}
                   </span>
                   <div
                     className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-200 ${
                       isOpen
-                        ? "bg-[#111111] text-[#E2C79A]"
-                        : "bg-[#FAF8F5] text-[#4A4641]"
+                        ? "bg-[#B59C7D] text-white shadow-xs"
+                        : "bg-[#FAF8F5] text-[#4A4641] border border-[#E5E0D8]"
                     }`}
                   >
                     <svg

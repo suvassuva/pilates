@@ -40,7 +40,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       )}
       <h2
         className={`text-2xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight ${
-          isDark ? "text-[#FAF8F5]" : "text-[#111111]"
+          isDark ? "text-[#FAF8F5]" : "text-[#2A2520]"
         }`}
       >
         {title}

@@ -27,12 +27,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FAF8F5]/98 text-[#111111] backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FAF8F5]/98 text-[#2A2520] backdrop-blur-xl animate-in fade-in duration-200">
       {/* Top Header inside Drawer */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#E5E0D8]">
+      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#A08566] bg-[#B59C7D]">
         <Link href="/" onClick={onClose} className="flex items-center">
           <Image
-            src="/logo-dark.png"
+            src="/logo.png"
             alt="Dr Pilates"
             width={160}
             height={48}
@@ -43,10 +43,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
         <button
           onClick={onClose}
-          className="p-1.5 rounded-full text-[#111111] hover:bg-[#EEEDE8] focus:outline-none cursor-pointer"
+          className="p-1.5 rounded-full text-[#2A2520] bg-[#FAF8F5] hover:bg-white border border-white/60 focus:outline-none cursor-pointer transition-colors shadow-xs"
           aria-label="Close menu"
         >
-          <X className="w-5 h-5 text-[#B59C7D]" />
+          <X className="w-5 h-5 text-[#2A2520]" />
         </button>
       </div>
 
@@ -61,8 +61,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive
-                  ? "bg-[#111111] text-white font-semibold shadow-xs"
-                  : "text-[#3A3A3A] hover:bg-[#EEEDE8] hover:text-[#111111]"
+                  ? "bg-[#B59C7D] text-white font-semibold shadow-xs"
+                  : "text-[#4A443C] hover:bg-[#F3EFE9] hover:text-[#2A2520]"
               }`}
             >
               {link.label}
@@ -72,7 +72,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       </div>
 
       {/* Compact Drawer Footer Actions */}
-      <div className="p-4 border-t border-[#E5E0D8] bg-[#EEEDE8] space-y-2">
+      <div className="p-4 border-t border-[#E5E0D8] bg-[#F3EFE9] space-y-2">
         <Button
           href="/appointment?branch=kalyan-nagar"
           variant="gold"

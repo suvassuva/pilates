@@ -44,28 +44,28 @@ export default function GalleryPage() {
   return (
     <div className="pt-24 pb-12 bg-[#FAF8F5]">
       {/* Page Hero */}
-      <section className="py-20 sm:py-28 bg-[#141312] text-[#FAF8F5] relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/studio_interior_reformer_beds.webp"
             alt="Dr Pilates Visual Gallery Background"
             fill
             priority
-            className="object-cover object-center opacity-40 scale-105"
+            className="object-cover object-center scale-105"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141312] via-[#141312]/60 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B59C7D]/20 text-[#E2C79A] text-xs font-semibold uppercase tracking-widest border border-[#B59C7D]/30 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5]/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/30 backdrop-blur-sm shadow-xs">
               Authentic Studio Media
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-              Dr Pilates <span className="font-serif italic font-normal text-[#E2C79A]">Live Gallery</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
+              Dr Pilates <span className="font-serif italic font-normal text-[#FAF8F5]">Live Gallery</span>
             </h1>
-            <p className="text-base sm:text-lg text-[#FAF8F5]/90 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
               Explore authentic movement, clinical training, and precision equipment inside our Bengaluru studio — featuring Reformer flows, Cadillac acrobatics, Stability Chair workouts, EMS training, and studio spaces.
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function GalleryPage() {
                 <div
                   key={item.id}
                   onClick={() => setLightboxIndex(index)}
-                  className="group relative h-96 rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm cursor-pointer hover-lift bg-[#141312]"
+                  className="group relative h-96 rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm cursor-pointer hover-lift bg-[#F3EFE9]"
                 >
                   {/* Media Content */}
                   {item.type === "video" && item.video ? (
@@ -109,7 +109,7 @@ export default function GalleryPage() {
                   )}
 
                   {/* Format Badge (Top Right) */}
-                  <div className="absolute top-4 right-4 bg-[#141312]/80 text-[#B59C7D] text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-[#B59C7D]/30 flex items-center gap-1.5 shadow-sm">
+                  <div className="absolute top-4 right-4 bg-[#FAF8F5]/90 text-[#2A2520] text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/60 flex items-center gap-1.5 shadow-sm">
                     {item.type === "video" ? (
                       <>
                         <Play className="w-2.5 h-2.5 fill-current" />
@@ -125,7 +125,7 @@ export default function GalleryPage() {
 
                   {/* Hover Center Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="w-14 h-14 rounded-full bg-black/60 backdrop-blur-sm border border-[#B59C7D]/70 flex items-center justify-center text-[#B59C7D] shadow-xl transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-full bg-[#B59C7D] border border-white/50 flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 transition-transform duration-300">
                       {item.type === "video" ? (
                         <Play className="w-6 h-6 fill-current ml-0.5" />
                       ) : (
@@ -135,22 +135,22 @@ export default function GalleryPage() {
                   </div>
 
                   {/* Bottom Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/95 via-[#141312]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#B59C7D] mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/90 via-[#2A2520]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#E2C79A] mb-1">
                       {item.category}
                     </span>
                     <h3 className="text-base font-bold text-white leading-snug line-clamp-2">
                       {item.title}
                     </h3>
-                    <div className="mt-2 text-xs text-[#FAF8F5]/80 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="mt-2 text-xs text-[#FAF8F5]/90 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {item.type === "video" ? (
                         <>
-                          <Play className="w-3.5 h-3.5 text-[#B59C7D]" />
+                          <Play className="w-3.5 h-3.5 text-[#E2C79A]" />
                           <span>Click to play video</span>
                         </>
                       ) : (
                         <>
-                          <ZoomIn className="w-3.5 h-3.5 text-[#B59C7D]" />
+                          <ZoomIn className="w-3.5 h-3.5 text-[#E2C79A]" />
                           <span>Click to view full photo</span>
                         </>
                       )}
@@ -165,7 +165,7 @@ export default function GalleryPage() {
       {/* Lightbox Modal */}
       {currentItem && lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-[#141312]/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-[#24201C]/92 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
           onClick={(e) => {
             if (e.target === e.currentTarget) setLightboxIndex(null);
           }}
@@ -173,7 +173,7 @@ export default function GalleryPage() {
           {/* Close Button */}
           <button
             onClick={() => setLightboxIndex(null)}
-            className="absolute top-5 right-5 p-3 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute top-5 right-5 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Close modal"
           >
             <X className="w-6 h-6" />
@@ -185,7 +185,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] hover:text-[#141312] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Previous item"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -197,7 +197,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] hover:text-[#141312] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Next item"
           >
             <ChevronRight className="w-6 h-6" />
@@ -206,7 +206,7 @@ export default function GalleryPage() {
           {/* Modal Content */}
           <div className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center">
             {/* Media Container */}
-            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-2xl overflow-hidden shadow-2xl border border-[#B59C7D]/30 bg-black flex items-center justify-center">
+            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-2xl overflow-hidden shadow-2xl border border-[#B59C7D]/30 bg-[#1D1A17] flex items-center justify-center">
               {currentItem.type === "video" && currentItem.video ? (
                 <video
                   key={currentItem.video}

@@ -91,7 +91,7 @@ export const ServicesPreview: React.FC = () => {
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
                   ? "w-7 bg-[#B59C7D]"
-                  : "w-2 bg-[#111111]/20 hover:bg-[#B59C7D]/50"
+                  : "w-2 bg-[#B59C7D]/30 hover:bg-[#B59C7D]/60"
               }`}
               aria-label={`Go to service ${idx + 1}`}
             />
@@ -104,7 +104,7 @@ export const ServicesPreview: React.FC = () => {
             href="/services"
             variant="outline"
             size="md"
-            icon={<ArrowRight className="w-4 h-4 text-[#C5A059]" />}
+            icon={<ArrowRight className="w-4 h-4 text-[#B59C7D]" />}
           >
             View All Services Details
           </Button>

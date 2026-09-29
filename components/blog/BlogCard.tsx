@@ -22,8 +22,8 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             sizes="(max-width: 1024px) 100vw, 60vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
-          <span className="absolute top-4 left-4 inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#111111]/85 text-[#E6D7C3] backdrop-blur-md border border-[#8E7557]/30 shadow-sm">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/60 via-transparent to-transparent lg:hidden" />
+          <span className="absolute top-4 left-4 inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#FAF8F5]/95 text-[#2A2520] backdrop-blur-md border border-[#B59C7D]/40 shadow-sm">
             Featured Article
           </span>
         </div>
@@ -40,7 +40,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
               <span>{post.readTime}</span>
             </div>
 
-            <h3 className="font-display font-semibold text-2xl lg:text-3xl text-neutral-900 group-hover:text-[#8E7557] transition-colors leading-snug tracking-tight mb-4">
+            <h3 className="font-display font-semibold text-2xl lg:text-3xl text-[#2A2520] group-hover:text-[#8E7557] transition-colors leading-snug tracking-tight mb-4">
               <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
@@ -85,7 +85,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3">
-          <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-[#111111]/80 text-[#E6D7C3] backdrop-blur-md border border-[#8E7557]/20 shadow-xs">
+          <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-[#FAF8F5]/95 text-[#2A2520] backdrop-blur-md border border-[#B59C7D]/30 shadow-xs">
             {post.category}
           </span>
         </div>

@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} ${cormorant.variable}`}>
-      <body className="font-body antialiased min-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#111111]">
+      <body className="font-body antialiased min-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#2A2520]">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

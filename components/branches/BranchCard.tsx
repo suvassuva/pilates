@@ -24,13 +24,13 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#141312]/80 via-transparent to-transparent flex items-end p-6">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/75 via-transparent to-transparent flex items-end p-6">
             <div className="flex items-center justify-between w-full">
-              <Badge variant={branch.isMainBranch ? "gold" : "dark"}>
+              <Badge variant={branch.isMainBranch ? "gold" : "light"}>
                 {`${branch.shortName} Studio`}
               </Badge>
               {branch.rating > 0 && (
-                <span className="text-xs font-bold text-white bg-[#141312]/90 px-3 py-1 rounded-full border border-[#B59C7D]/40">
+                <span className="text-xs font-bold text-[#2A2520] bg-[#FAF8F5]/95 backdrop-blur-sm px-3 py-1 rounded-full border border-[#B59C7D]/40 shadow-xs">
                   {branch.rating} ★ ({branch.reviewCount} reviews)
                 </span>
               )}
@@ -40,7 +40,7 @@ export const BranchCard: React.FC<BranchCardProps> = ({ branch }) => {
 
         {/* Content */}
         <div className="p-6">
-          <h3 className="text-2xl font-bold font-display text-[#111111] mb-1.5">
+          <h3 className="text-2xl font-bold font-display text-[#2A2520] mb-1.5">
             {branch.name}
           </h3>
           <p className="text-xs text-[#7A756D] mb-4 min-h-[20px] flex items-center">

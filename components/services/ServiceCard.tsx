@@ -16,9 +16,9 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
-    <div className="bg-[#FFFFFF] text-[#111111] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] hover:border-[#B59C7D]/60 shadow-sm hover:shadow-xl hover-lift flex flex-col justify-between group transition-all duration-300">
+    <div className="bg-[#FFFFFF] text-[#2A2520] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] hover:border-[#B59C7D]/60 shadow-sm hover:shadow-xl hover-lift flex flex-col justify-between group transition-all duration-300">
       <div>
-        {/* Service Card Image - Full 16:9 banner without gradient fade or text overlay blocking it */}
+        {/* Service Card Image - Full 16:9 banner */}
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#FAF8F5]">
           <Image
             src={service.image}
@@ -27,25 +27,23 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             className={`object-cover group-hover:scale-103 transition-transform duration-500 ${service.imagePosition || "object-center"}`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
+          {service.badge && (
+            <span className="absolute top-3 right-3 z-10 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#B59C7D] text-white border border-white/40 shadow-md">
+              {service.badge}
+            </span>
+          )}
         </div>
 
         {/* Card Body */}
         <div className="p-4 sm:p-6">
-          {/* Service Title, Icon & Badge Header */}
-          <div className="flex items-center justify-between gap-3 mb-3 sm:mb-4">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-center justify-center shrink-0 shadow-xs">
-                {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
-              </div>
-              <h3 className="text-base sm:text-xl font-bold font-display text-[#111111]">
-                {service.title}
-              </h3>
+          {/* Service Title & Icon Header */}
+          <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-center justify-center shrink-0 shadow-xs">
+              {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
             </div>
-            {service.badge && (
-              <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-[#111111] text-[#E2C79A] border border-[#B59C7D]/40 shadow-xs shrink-0">
-                {service.badge}
-              </span>
-            )}
+            <h3 className="text-base sm:text-xl font-bold font-display text-[#2A2520] leading-snug">
+              {service.title}
+            </h3>
           </div>
 
           <p className="text-xs sm:text-sm text-[#4A4641] mb-4 sm:mb-6 leading-relaxed">
@@ -58,11 +56,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
               Key Benefits
             </h4>
             {service.benefits.slice(0, 3).map((benefit, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-[#111111] font-medium">
+              <div key={idx} className="flex items-center gap-2 text-xs text-[#2A2520] font-medium">
                 <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-[#EEEDE8] text-[#B59C7D] border border-[#B59C7D]/30 flex items-center justify-center shrink-0">
                   <Check className="w-2.5 h-2.5 stroke-[3]" />
                 </div>
-                <span className="text-[11px] sm:text-xs text-[#111111]">{benefit}</span>
+                <span className="text-[11px] sm:text-xs text-[#2A2520]">{benefit}</span>
               </div>
             ))}
           </div>
@@ -73,11 +71,11 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       <div className="p-4 sm:p-6 pt-0">
         <Button
           href={`/services#${service.slug}`}
-          variant="outline"
+          variant="primary"
           size="sm"
           fullWidth
-          className="border-[#111111]/20 text-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]"
-          icon={<ArrowRight className="w-3.5 h-3.5 text-[#B59C7D]" />}
+          className="bg-[#B59C7D] text-white hover:bg-[#9E8364] font-semibold shadow-xs"
+          icon={<ArrowRight className="w-3.5 h-3.5 text-white" />}
         >
           Explore Program
         </Button>

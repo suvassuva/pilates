@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "gold" | "outline" | "ghost" | "whatsapp";
+  variant?: "primary" | "secondary" | "gold" | "outline" | "ghost" | "whatsapp" | "cream";
   size?: "sm" | "md" | "lg";
   href?: string;
   className?: string;
@@ -36,17 +36,19 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-[#111111] text-[#FAF8F5] hover:bg-[#262524] hover:shadow-md border border-[#111111]",
+      "bg-[#B59C7D] text-white hover:bg-[#9E8364] shadow-sm hover:shadow-md border border-[#B59C7D]",
     secondary:
-      "bg-[#EEEDE8] text-[#111111] hover:bg-[#E2DFD7] border border-[#E5E0D8]",
+      "bg-[#F3EFE9] text-[#2A2520] hover:bg-[#EAE4DC] border border-[#E2DBD2]",
     gold:
       "bg-[#B59C7D] text-white hover:bg-[#9E8364] shadow-sm hover:shadow-md border border-[#B59C7D]",
+    cream:
+      "bg-[#FAF8F5] text-[#2A2520] hover:bg-white hover:shadow-md border border-white/60 font-semibold shadow-xs",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-md border-none !text-white font-semibold",
     outline:
-      "bg-transparent text-[#111111] border border-[#111111] hover:bg-[#111111] hover:text-[#FAF8F5]",
+      "bg-transparent text-[#2A2520] border border-[#B59C7D] hover:bg-[#B59C7D] hover:text-white",
     ghost:
-      "bg-transparent text-[#111111] hover:bg-[#EEEDE8] hover:text-[#B59C7D]"
+      "bg-transparent text-[#2A2520] hover:bg-[#F3EFE9] hover:text-[#B59C7D]"
   };
 
   const widthClass = fullWidth ? "w-full" : "";

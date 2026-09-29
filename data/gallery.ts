@@ -120,7 +120,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: "image",
     title: "Advanced Reformer Backbend Wheel & Extension",
     category: "Reformer Pilates",
-    image: "/images/reformer_advanced_backbend_bridge.webp",
+    image: "/images/reformer_advanced_backbend_bridge_alt.webp",
     alt: "Advanced Reformer carriage backbend bridge with single leg vertical extension"
   },
   {
