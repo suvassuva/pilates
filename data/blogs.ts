@@ -73,7 +73,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "How Spring Tension Calibrates Muscular Balance",
         paragraphs: [
-          "Unlike static iron dumbbells that apply maximum resistance at the start or bottom of a movement, Merrithew Reformer springs provide linear dynamic resistance. As the carriage moves away from the footbar, the tension progressively increases, requiring full motor unit recruitment throughout the eccentric phase of muscle contraction.",
+          "Unlike static iron dumbbells that apply maximum resistance at the start or bottom of a movement, Reformer springs provide linear dynamic resistance. As the carriage moves away from the footbar, the tension progressively increases, requiring full motor unit recruitment throughout the eccentric phase of muscle contraction.",
           "This dynamic tension actively lengthens the spine while strengthening postural muscles. For individuals suffering from chronic desk hunch, forward head posture, or asymmetrical hip elevation, Reformer movements guide the skeletal frame back into anatomical equilibrium."
         ],
         bulletPoints: [

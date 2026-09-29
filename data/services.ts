@@ -40,14 +40,13 @@ export const SERVICES: ServiceDetail[] = [
     slug: "reformer-pilates",
     title: "Reformer Pilates",
     badge: "WORLD-CLASS APPARATUS",
-    sectionNumber: "01 / CLINICAL REFORMER",
-    shortDescription: "Precision resistance training utilizing world-class Merrithew SPX Max equipment to optimize posture, spinal integrity, and functional core strength.",
+    shortDescription: "Precision resistance training utilizing world-class Reformer equipment to optimize posture, spinal integrity, and functional core strength.",
     fullDescription: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
     heroHeadline: "Reformer Pilates in Bengaluru",
-    tagline: "Precision Resistance & Postural Sculpting on World-Class Merrithew Systems.",
+    tagline: "Precision Resistance & Postural Sculpting on World-Class Reformer Systems.",
     image: "/images/reformer_plank_trainer_guidance.webp",
     iconName: "Layers",
-    pillarsHeading: "Merrithew Reformer Systems",
+    pillarsHeading: "Reformer Pilates Systems",
     pillarsSubheading: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
     pillars: [
       {
@@ -86,7 +85,7 @@ export const SERVICES: ServiceDetail[] = [
       "Long-Term Health Benefits"
     ],
     features: [
-      "World-Class Merrithew Apparatus",
+      "World-Class Reformer Equipment",
       "Customized Spring Resistance Settings",
       "Maximum 1-on-1 & Small Group Focus",
       "Certified Master Pilates Instructors"
@@ -127,7 +126,6 @@ export const SERVICES: ServiceDetail[] = [
     slug: "ems-training",
     title: "EMS Training",
     badge: "BIO-ELECTRIC FIT",
-    sectionNumber: "02 / BIO-ELECTRONIC STIMULATION",
     shortDescription: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional weight training.",
     fullDescription: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",
     heroHeadline: "Power Up Your Workout with EMS Training",
@@ -206,7 +204,6 @@ export const SERVICES: ServiceDetail[] = [
     slug: "physiotherapy",
     title: "Physiotherapy",
     badge: "CLINICAL RESTORATIVE",
-    sectionNumber: "03 / CLINICAL THERAPEUTICS",
     shortDescription: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
     fullDescription: "Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.",
     heroHeadline: "Move Better. Recover Stronger.",

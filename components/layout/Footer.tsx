@@ -157,7 +157,7 @@ export const Footer: React.FC = () => {
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
                   <div className="text-xs sm:text-sm leading-relaxed">
                     <strong className="text-[#FAF8F5] block">Kalyan Nagar:</strong>
-                    <span className="text-[#A39E96]">3rd floor, Y4 Heights Building, 6th Main Rd, HRBR Layout 2nd Block, Bengaluru, Karnataka</span>
+                    <span className="text-[#A39E96]">3rd floor, Y4 Heights Building, 6th Main Rd, HRBR Layout 2nd Block, Bengaluru, 560043</span>
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export const Footer: React.FC = () => {
                   <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#B59C7D] shrink-0 mt-0.5" />
                   <div className="text-xs sm:text-sm leading-relaxed">
                     <strong className="text-[#FAF8F5] block">Kothanur:</strong>
-                    <span className="text-[#A39E96]">ANR Arcade, Doddagubbi Main Rd, Kothanur, Bengaluru, Karnataka</span>
+                    <span className="text-[#A39E96]">2nd floor, ANR Arcade, Doddagubbi Main Rd, Kothanur, Bengaluru, 560077</span>
                   </div>
                 </div>
               </div>

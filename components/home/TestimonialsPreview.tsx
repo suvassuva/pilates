@@ -159,33 +159,33 @@ export const TestimonialsPreview: React.FC = () => {
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="snap-start shrink-0 w-[85vw] sm:w-[350px] lg:w-[380px] bg-[#FFFFFF] p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D] shadow-sm hover:shadow-md transition-all flex flex-col justify-between select-none"
+              className="snap-start shrink-0 w-[85vw] sm:w-[320px] lg:w-[350px] h-[220px] sm:h-[235px] bg-[#FFFFFF] p-4 sm:p-5 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D] shadow-xs hover:shadow-sm transition-all flex flex-col justify-between select-none"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex text-[#B59C7D] text-xs sm:text-sm">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex text-[#B59C7D] text-xs">
                     {"★".repeat(item.rating)}
                   </div>
-                  <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider text-[#8E7557] bg-[#EEEDE8] px-2.5 py-0.5 rounded-full border border-[#B59C7D]/20">
+                  <span className="text-[9px] font-semibold uppercase tracking-wider text-[#8E7557] bg-[#EEEDE8] px-2 py-0.5 rounded-full border border-[#B59C7D]/20">
                     {item.source}
                   </span>
                 </div>
 
-                <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]/40 mb-2" />
+                <Quote className="w-4 h-4 text-[#B59C7D]/40 mb-1" />
 
-                <p className="text-xs sm:text-sm text-[#111111] font-serif italic leading-relaxed mb-4">
+                <p className="text-xs sm:text-[13px] text-[#111111] font-serif italic leading-relaxed line-clamp-4">
                   &ldquo;{item.content}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#E5E0D8] flex items-center justify-between">
+              <div className="pt-2.5 border-t border-[#E5E0D8] flex items-center justify-between">
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#111111]">
+                  <h4 className="text-xs font-bold text-[#111111] leading-tight">
                     {item.author}
                   </h4>
-                  <span className="text-[10px] sm:text-xs text-[#7A756D]">{item.role}</span>
+                  <span className="text-[10px] text-[#7A756D]">{item.role}</span>
                 </div>
-                <span className="text-[10px] sm:text-xs text-[#8E7557] font-semibold">
+                <span className="text-[10px] sm:text-[11px] text-[#8E7557] font-semibold">
                   {item.branch}
                 </span>
               </div>

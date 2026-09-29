@@ -47,8 +47,6 @@ const serviceTaglines: Record<string, string> = {
 };
 
 export default function ServicesPage() {
-  const reformerService = SERVICES.find((s) => s.slug === "reformer-pilates");
-
   return (
     <div className="pt-24 pb-0 bg-[#FAF8F5]">
       {/* Hero */}
@@ -111,11 +109,8 @@ export default function ServicesPage() {
                     {service.slug === "reformer-pilates" ? (
                       <>
                         <div>
-                          <span className="text-xs sm:text-[13px] font-mono font-bold tracking-widest text-[#B59C7D] uppercase block mb-1.5">
-                            01 / CLINICAL REFORMER
-                          </span>
                           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
-                            Merrithew Reformer Systems
+                            Reformer Pilates Systems
                           </h2>
                         </div>
 
@@ -193,16 +188,13 @@ export default function ServicesPage() {
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
-                            Book Reformer Pilates Session
+                            Contact Us
                           </Button>
                         </div>
                       </>
                     ) : service.slug === "ems-training" ? (
                       <>
                         <div>
-                          <span className="text-xs sm:text-[13px] font-mono font-bold tracking-widest text-[#B59C7D] uppercase block mb-1.5">
-                            02 / BIO-ELECTRONIC STIMULATION
-                          </span>
                           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
                             Electro Muscle Stimulation (EMS)
                           </h2>
@@ -267,16 +259,13 @@ export default function ServicesPage() {
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
-                            Book EMS Training Session
+                            Contact Us
                           </Button>
                         </div>
                       </>
                     ) : service.slug === "physiotherapy" ? (
                       <>
                         <div>
-                          <span className="text-xs sm:text-[13px] font-mono font-bold tracking-widest text-[#B59C7D] uppercase block mb-1.5">
-                            03 / CLINICAL THERAPEUTICS
-                          </span>
                           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#111111] leading-tight">
                             Advanced <span className="font-serif italic font-normal text-[#B59C7D]">Therapeutics</span>
                           </h2>
@@ -341,7 +330,7 @@ export default function ServicesPage() {
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
-                            Book Physiotherapy Session
+                            Contact Us
                           </Button>
                         </div>
                       </>
@@ -390,13 +379,80 @@ export default function ServicesPage() {
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
-                            Book {service.title} Session
+                            Contact Us
                           </Button>
                         </div>
                       </>
                     )}
                   </div>
                 </div>
+
+                {/* Program Overview Showcase Card (Positioned directly below Reformer Pilates Systems) */}
+                {service.slug === "reformer-pilates" && (
+                  <div className="mt-12 sm:mt-16">
+                    <div className="bg-[#FFFFFF] rounded-2xl sm:rounded-3xl border border-[#E5E0D8] shadow-sm overflow-hidden">
+                      {/* Card Header Banner */}
+                      <div className="bg-[#FAF8F5] px-6 sm:px-8 py-4 sm:py-5 border-b border-[#E5E0D8] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                        <div>
+                          <h3 className="text-base sm:text-lg font-bold font-display text-[#111111] uppercase tracking-wide">
+                            {service.title}: <span className="text-[#8C7658] font-normal">{serviceTaglines[service.slug] || "TRANSFORM YOUR BODY"}</span>
+                          </h3>
+                        </div>
+                      </div>
+
+                      {/* 3 Sections Grid */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E5E0D8]">
+                        {/* Top Benefits */}
+                        <div className="p-6 sm:p-8 space-y-4">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-[#B59C7D]" />
+                            Top Benefits
+                          </h4>
+                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
+                            {service.benefits.map((benefit, idx) => (
+                              <li key={idx} className="flex items-start gap-2.5">
+                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span>{benefit}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Suitable For */}
+                        <div className="p-6 sm:p-8 space-y-4 bg-[#FAF8F5]/50">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                            <Users className="w-5 h-5 text-[#B59C7D]" />
+                            Suitable For
+                          </h4>
+                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
+                            {service.whoItIsFor.map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2.5">
+                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* How It Works */}
+                        <div className="p-6 sm:p-8 space-y-4">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
+                            <Sparkles className="w-5 h-5 text-[#B59C7D]" />
+                            How It Works
+                          </h4>
+                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
+                            {(service.howItWorks || service.features).map((item, idx) => (
+                              <li key={idx} className="flex items-start gap-2.5">
+                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </Container>
             </section>
 
@@ -465,74 +521,7 @@ export default function ServicesPage() {
         );
       })}
 
-      {/* Program Overview Showcase Card (Positioned below all services) */}
-      {reformerService && (
-        <section className="py-14 sm:py-20 bg-[#FAF8F5] border-t border-[#E5E0D8]">
-          <Container>
-            <div className="bg-[#FFFFFF] rounded-2xl sm:rounded-3xl border border-[#E5E0D8] shadow-sm overflow-hidden">
-              {/* Card Header Banner */}
-              <div className="bg-[#FAF8F5] px-6 sm:px-8 py-4 sm:py-5 border-b border-[#E5E0D8] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold font-display text-[#111111] uppercase tracking-wide">
-                    {reformerService.title}: <span className="text-[#8C7658] font-normal">{serviceTaglines[reformerService.slug] || "TRANSFORM YOUR BODY"}</span>
-                  </h3>
-                </div>
-              </div>
 
-              {/* 3 Sections Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E5E0D8]">
-                {/* Top Benefits */}
-                <div className="p-6 sm:p-8 space-y-4">
-                  <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-[#B59C7D]" />
-                    Top Benefits
-                  </h4>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
-                    {reformerService.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Suitable For */}
-                <div className="p-6 sm:p-8 space-y-4 bg-[#FAF8F5]/50">
-                  <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
-                    <Users className="w-5 h-5 text-[#B59C7D]" />
-                    Suitable For
-                  </h4>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
-                    {reformerService.whoItIsFor.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* How It Works */}
-                <div className="p-6 sm:p-8 space-y-4">
-                  <h4 className="text-base sm:text-lg font-bold font-display text-[#111111] flex items-center gap-2">
-                    <Sparkles className="w-5 h-5 text-[#B59C7D]" />
-                    How It Works
-                  </h4>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
-                    {(reformerService.howItWorks || reformerService.features).map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
-      )}
 
       <CTASection />
     </div>

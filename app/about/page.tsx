@@ -79,14 +79,11 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block">
-                        Founder and Program Director
-                      </span>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
-                        DR GOVINDRAJU
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display">
+                        DR. GOVINDA RAJU
                       </h3>
-                      <span className="text-xs sm:text-sm font-serif italic text-[#8E7557] block mt-0.5">
-                        Dr. Govinda Raju S.
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
+                        Founder and Program Director
                       </span>
                     </div>
                   </div>
@@ -117,14 +114,11 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block">
-                        Co-Founder and Operations Director
-                      </span>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display mt-1">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-display">
                         VIVEK VICTOR
                       </h3>
-                      <span className="text-xs sm:text-sm font-serif italic text-[#8E7557] block mt-0.5">
-                        Strategic Vision &amp; Operations
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
+                        Co-Founder and Operations Director
                       </span>
                     </div>
                   </div>

@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { Calendar, ArrowRight, Sparkles, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Calendar, ArrowRight, Sparkles, MapPin, ChevronRight } from "lucide-react";
 import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 
@@ -84,12 +85,10 @@ export const Hero: React.FC = () => {
               <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl shadow-xl border border-[#E5E0D8] min-w-[220px] hidden sm:block">
                 <div className="flex flex-col">
                   {/* Kalyan Nagar */}
-                  <a
-                    href="https://maps.google.com/?q=Dr+Pilates+Y4+Heights+Kalyan+Nagar+Bengaluru"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/branches?branch=kalyan-nagar"
                     className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF8F5] transition-colors group cursor-pointer"
-                    title="Open Kalyan Nagar Studio in Google Maps"
+                    title="View Kalyan Nagar Studio Details"
                   >
                     <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
                       <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
@@ -97,17 +96,16 @@ export const Hero: React.FC = () => {
                     <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
                       Kalyan Nagar
                     </span>
-                  </a>
+                    <ChevronRight className="w-3.5 h-3.5 text-[#B59C7D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
+                  </Link>
 
                   <div className="h-px bg-[#E5E0D8]/70 my-1" />
 
                   {/* Kothanur, Hennur Road */}
-                  <a
-                    href="https://maps.google.com/?q=ANR+Arcade+Doddagubbi+Main+Road+Bengaluru+560077"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/branches?branch=kothanur"
                     className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF8F5] transition-colors group cursor-pointer"
-                    title="Open Kothanur, Hennur Road Studio in Google Maps"
+                    title="View Kothanur, Hennur Road Studio Details"
                   >
                     <div className="w-6 h-6 rounded-md bg-[#FAF8F5] group-hover:bg-[#FFFFFF] border border-[#B59C7D]/35 flex items-center justify-center shrink-0 transition-colors">
                       <MapPin className="w-3.5 h-3.5 text-[#B59C7D]" />
@@ -115,7 +113,8 @@ export const Hero: React.FC = () => {
                     <span className="text-xs font-bold text-[#111111] group-hover:text-[#8E7557] transition-colors leading-tight">
                       Kothanur, Hennur Road
                     </span>
-                  </a>
+                    <ChevronRight className="w-3.5 h-3.5 text-[#B59C7D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
+                  </Link>
                 </div>
               </div>
             </div>

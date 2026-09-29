@@ -37,7 +37,7 @@ export const BRANCH_REVIEWS: Record<string, BranchReviewStat> = {
     rating: 4.8,
     reviewCount: 12,
     googleReviewUrl: "https://maps.google.com/?q=Dr+Pilates+ANR+Arcade+Doddagubbi+Main+Road+Kothanur+Bengaluru",
-    locationText: "ANR Arcade, Doddagubbi Main Rd"
+    locationText: "2nd Floor, ANR Arcade, Doddagubbi Main Rd"
   }
 };
 
@@ -50,57 +50,79 @@ export const RATING_STATS = {
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: "review-1",
-    author: "Sneha Reddy",
-    role: "IT Professional",
+    id: "review-sunita-shroff",
+    author: "Sunita Shroff",
+    role: "Verified Client",
     branch: "Kalyan Nagar",
     rating: 5,
-    content: "Dr Pilates Kalyan Nagar has completely transformed my posture and relieved my chronic lower back stiffness from long desk hours. The Reformer machines are top tier and the instructors pay incredible attention to form!",
-    date: "Recent Google Review",
+    content: "Best Pilates studio I've been to in Bangalore! The instructor is incredibly knowledgeable, patient and make sure you do every movement correctly. The studio is spotless, well-equipped and has such a positive energy. It's challenging but never intimidating - perfect for both beginners and regulars. I already see a huge difference in my posture and core strength. So glad I found this place!",
+    date: "1 month ago",
     source: "Google Review",
     verified: true
   },
   {
-    id: "review-4",
-    author: "Ananya Sharma",
-    role: "Architect",
+    id: "review-krishna-soni",
+    author: "Krishna Soni",
+    role: "Verified Client",
+    branch: "Kalyan Nagar",
+    rating: 5,
+    content: "Joined Dr. Pilates a few months ago, and I can genuinely see the difference. My posture has improved, I feel more flexible, and even my core feels much stronger. Dr. Govind is extremely observant and makes sure everyone is doing movements correctly. Definitely recommend!",
+    date: "2 months ago",
+    source: "Google Review",
+    verified: true
+  },
+  {
+    id: "review-shazia-ahmed",
+    author: "Shazia Ahmed",
+    role: "Verified Client",
+    branch: "Kalyan Nagar",
+    rating: 5,
+    content: "This Pilates experience has been absolutely transformative. The instructor's attention to detail is unmatched, with clear and thorough instructions. Every class brings a new challenge and works all muscle groups so you feel balanced and strong. Truly one of the best!",
+    date: "4 months ago",
+    source: "Google Review",
+    verified: true
+  },
+  {
+    id: "review-shalini-saklani",
+    author: "Shalini Saklani",
+    role: "Verified Client",
+    branch: "Kalyan Nagar",
+    rating: 5,
+    content: "I have had a great experience with Dr Pilates. Both the owner and the trainer (Vinod) are knowledgeable. Vinod emphasizes on slow, controlled movements with proper form rather than rushing through exercises. I highly recommend this place.",
+    date: "1 month ago",
+    source: "Google Review",
+    verified: true
+  },
+  {
+    id: "review-jo-sinha",
+    author: "Jo Sinha",
+    role: "Verified Client",
+    branch: "Kalyan Nagar",
+    rating: 5,
+    content: "I’ve had an amazing experience with these Pilates classes. The instructor is knowledgeable, patient, and always ensures everyone maintains the correct form. Every session is well-structured, challenging, and suitable for all fitness levels.",
+    date: "1 month ago",
+    source: "Google Review",
+    verified: true
+  },
+  {
+    id: "review-noel-pancras",
+    author: "Noel Pancras",
+    role: "Verified Client",
+    branch: "Kalyan Nagar",
+    rating: 5,
+    content: "Clean premises, high quality machines and welcoming atmosphere. I met one of the owners and he took time to ensure my experience was as enjoyable as possible. I would recommend this place to anyone who wants to exercise in a relaxed, professional establishment.",
+    date: "1 month ago",
+    source: "Google Review",
+    verified: true
+  },
+  {
+    id: "review-melisha-charles",
+    author: "Melisha Charles",
+    role: "Verified Client",
     branch: "Kothanur, Hennur Road",
     rating: 5,
-    content: "So thrilled that Dr Pilates is now open in Kothanur on Doddagubbi Main Road (Hennur Road)! The studio is peaceful, bright, and the 1-on-1 Reformer guidance has made a world of difference for my core strength and spinal mobility.",
-    date: "Recent Google Review",
-    source: "Google Review",
-    verified: true
-  },
-  {
-    id: "review-3",
-    author: "Dr. Meera Nambiar",
-    role: "Physician",
-    branch: "Kalyan Nagar",
-    rating: 5,
-    content: "As a doctor myself, I appreciate their clinical approach to movement. The physiotherapy and personalized rehab guidance helped me recover post knee strain safely. Exceptional studio aesthetics and hygiene.",
-    date: "Recent Google Review",
-    source: "Google Review",
-    verified: true
-  },
-  {
-    id: "review-5",
-    author: "Karthik Raja",
-    role: "Tech Consultant",
-    branch: "Kothanur, Hennur Road",
-    rating: 5,
-    content: "EMS training at the Kothanur (Hennur Road) branch is phenomenal! In just 20 minutes, every muscle group is worked thoroughly without stressing the joints. The personalized attention at ANR Arcade is unmatched.",
-    date: "Recent Google Review",
-    source: "Google Review",
-    verified: true
-  },
-  {
-    id: "review-2",
-    author: "Vikram Malhotra",
-    role: "Entrepreneur",
-    branch: "Kalyan Nagar",
-    rating: 5,
-    content: "EMS training here is a game changer! Being able to get a thorough, intense full body workout in just 20 minutes fits perfectly into my packed schedule. Highly professional environment at Y4 Heights, Kalyan Nagar.",
-    date: "Recent Google Review",
+    content: "Excellent Pilates studio with great management. Lingam is an amazing instructor and is able to cater to all levels. Highly recommend if you’re looking for an alternative to the gym and want to get more regular with workouts.",
+    date: "1 month ago",
     source: "Google Review",
     verified: true
   }

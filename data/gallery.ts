@@ -33,10 +33,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "gal-img-1",
     type: "image",
-    title: "Reformer Studio Bay & Merrithew Equipment",
+    title: "Reformer Studio Bay & Equipment",
     category: "Studio & Ambience",
     image: "/images/studio_interior_reformer_beds.webp",
-    alt: "Dr Pilates spacious Kalyan Nagar studio floor with SPX Max Reformer beds and signature arches"
+    alt: "Dr Pilates spacious Kalyan Nagar studio floor with Reformer beds and signature arches"
   },
   {
     id: "gal-1",

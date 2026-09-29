@@ -26,8 +26,8 @@ export const TrustSection: React.FC = () => {
     },
     {
       value: "CLINICAL GRADE",
-      label: "Merrithew Apparatus",
-      subtext: "World-class equipment",
+      label: "World-class equipment",
+      subtext: "",
       icon: <ShieldCheck className="w-4 h-4 sm:w-6 sm:h-6 text-[#B59C7D]" />
     }
   ];
@@ -57,12 +57,16 @@ export const TrustSection: React.FC = () => {
                 >
                   {stat.value}
                 </span>
-                <span className="text-xs sm:text-sm font-semibold text-[#8E7557] mt-0.5">
-                  {stat.label}
-                </span>
-                <span className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5 hidden sm:block">
-                  {stat.subtext}
-                </span>
+                {stat.label && (
+                  <span className="text-xs sm:text-sm font-semibold text-[#8E7557] mt-0.5">
+                    {stat.label}
+                  </span>
+                )}
+                {stat.subtext && (
+                  <span className="text-[10px] sm:text-xs text-[#7A756D] mt-0.5 hidden sm:block">
+                    {stat.subtext}
+                  </span>
+                )}
               </>
             );
 
