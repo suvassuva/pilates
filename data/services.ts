@@ -1,3 +1,10 @@
+export interface ServiceMediaItem {
+  type: "image" | "video";
+  src: string;
+  poster?: string;
+  alt: string;
+}
+
 export interface ServicePillar {
   title: string;
   description: string;
@@ -16,6 +23,7 @@ export interface ServiceDetail {
   tagline: string;
   image: string;
   imagePosition?: string;
+  media?: ServiceMediaItem[];
   iconName: string;
   pillarsHeading?: string;
   pillarsSubheading?: string;
@@ -39,12 +47,35 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "reformer-pilates",
     title: "Reformer Pilates",
-    badge: "WORLD-CLASS APPARATUS",
     shortDescription: "Precision resistance training utilizing world-class Reformer equipment to optimize posture, spinal integrity, and functional core strength.",
     fullDescription: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
     heroHeadline: "Reformer Pilates in Bengaluru",
     tagline: "Precision Resistance & Postural Sculpting on World-Class Reformer Systems.",
     image: "/images/reformer_plank_trainer_guidance.webp",
+    media: [
+      {
+        type: "image",
+        src: "/images/reformer_plank_trainer_guidance.webp",
+        alt: "Instructor guided Reformer high plank at Dr Pilates Bengaluru"
+      },
+      {
+        type: "video",
+        src: "/videos/client_reformer_pike_core.mp4",
+        poster: "/videos/client_reformer_pike_core_thumb.jpg",
+        alt: "Advanced Reformer pike & core flow at Dr Pilates"
+      },
+      {
+        type: "image",
+        src: "/images/reformer_kneeling_chest_expansion.webp",
+        alt: "Reformer kneeling chest expansion posture alignment"
+      },
+      {
+        type: "video",
+        src: "/videos/client_reformer_squats_ring.mp4",
+        poster: "/videos/client_reformer_squats_ring_thumb.jpg",
+        alt: "Reformer squats with magic circle at Dr Pilates"
+      }
+    ],
     iconName: "Layers",
     pillarsHeading: "Reformer Pilates Systems",
     pillarsSubheading: "Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.",
@@ -125,13 +156,30 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "ems-training",
     title: "EMS Training",
-    badge: "BIO-ELECTRIC FIT",
     shortDescription: "20-minute Electro Muscle Stimulation workouts that trigger deep muscle contraction equivalent to 90 minutes of traditional weight training.",
     fullDescription: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",
     heroHeadline: "Power Up Your Workout with EMS Training",
     tagline: "20-Minute Bio-Electric Stimulation Delivering 90 Minutes of Training Output.",
     image: "/images/ems_bio_suit_trainer_device.webp",
     imagePosition: "object-top",
+    media: [
+      {
+        type: "image",
+        src: "/images/ems_bio_suit_trainer_device.webp",
+        alt: "Wireless EMS bio-suit & advanced stimulation console"
+      },
+      {
+        type: "image",
+        src: "/videos/instructor_welcoming_woman.jpeg",
+        alt: "Personalized 1-on-1 EMS training coach consultation"
+      },
+      {
+        type: "video",
+        src: "/videos/client_trainer_side_plank.mp4",
+        poster: "/videos/client_trainer_side_plank_thumb.jpg",
+        alt: "Rapid muscular contraction and core stability training"
+      }
+    ],
     iconName: "Zap",
     pillarsHeading: "Electro Muscle Stimulation (EMS)",
     pillarsSubheading: "Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.",
@@ -203,12 +251,35 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "physiotherapy",
     title: "Physiotherapy",
-    badge: "CLINICAL RESTORATIVE",
     shortDescription: "Evidence-based physical treatment and manipulative programs to manage spinal pathologies, sports injuries, and chronic pain.",
     fullDescription: "Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.",
     heroHeadline: "Move Better. Recover Stronger.",
     tagline: "Clinical Diagnosis & Evidence-Based Recovery for Pain Relief and Peak Function.",
     image: "/images/physiotherapy_treatment.jpg",
+    media: [
+      {
+        type: "image",
+        src: "/images/physiotherapy_treatment.jpg",
+        alt: "Evidence-based physical therapy and joint mobilization"
+      },
+      {
+        type: "video",
+        src: "/videos/client_cadillac_trapeze_suspension.mp4",
+        poster: "/videos/client_cadillac_trapeze_suspension_thumb.jpg",
+        alt: "Cadillac trapeze suspension and restorative balance"
+      },
+      {
+        type: "image",
+        src: "/images/cadillac_trapeze_suspension_arch.webp",
+        alt: "Spinal decompression supported backbend arch"
+      },
+      {
+        type: "video",
+        src: "/videos/client_cadillac_inverted_arch.mp4",
+        poster: "/videos/client_cadillac_inverted_arch_thumb.jpg",
+        alt: "Inverted stretch for spinal decompression and mobility"
+      }
+    ],
     iconName: "HeartPulse",
     pillarsHeading: "Advanced Therapeutics",
     pillarsSubheading: "Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.",

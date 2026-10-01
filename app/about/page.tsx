@@ -242,8 +242,8 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative flex flex-col h-full">
               <div className="relative min-h-[320px] sm:min-h-[440px] lg:h-full w-full rounded-3xl overflow-hidden shadow-sm border border-[#E5E0D8]">
                 <Image
-                  src="/videos/woman_performing_reformer.jpeg"
-                  alt="Dr Pilates Reformer Equipment"
+                  src="/images/cadillac_trapeze_suspension_arch.webp"
+                  alt="Dr Pilates Cadillac Trapeze Suspension"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

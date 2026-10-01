@@ -4,6 +4,7 @@ import { SERVICES } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
 import { Button } from "@/components/ui/Button";
+import { ServiceMediaSlider } from "@/components/services/ServiceMediaSlider";
 import {
   Activity, Zap, HeartPulse, Layers,
   ShieldCheck, Target, Dumbbell, Compass,
@@ -53,8 +54,8 @@ export default function ServicesPage() {
       <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/videos/pilates_studio_interior.jpeg"
-            alt="Dr Pilates Interior Background"
+            src="/videos/instructor_welcoming_woman.jpeg"
+            alt="Dr Pilates Instructor Welcoming Client"
             fill
             priority
             className="object-cover object-center"
@@ -65,9 +66,6 @@ export default function ServicesPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5]/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/30 backdrop-blur-sm shadow-xs">
-              Clinical Movement &amp; Wellness
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Specialized Movement &amp; <span className="font-serif italic font-normal text-[#FAF8F5]">Clinical Programs</span>
             </h1>
@@ -92,15 +90,16 @@ export default function ServicesPage() {
                 <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-stretch ${!isEven ? "lg:flex-row-reverse" : ""}`}>
                   {/* Image Side */}
                   <div className={`${!isEven ? "lg:col-start-8 lg:col-span-5" : "lg:col-span-5"} order-1 ${!isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className={`relative ${service.slug === "ems-training" ? "aspect-[4/5] sm:aspect-[4/5] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#FFFFFF]" : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] bg-[#F3EFE9]"} w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-md`}>
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className={service.slug === "ems-training" ? "object-contain object-center" : "object-cover"}
-                        sizes="(max-width: 1024px) 100vw, 45vw"
-                      />
-                    </div>
+                    <ServiceMediaSlider
+                      media={service.media}
+                      fallbackImage={service.image}
+                      title={service.title}
+                      badge={service.badge}
+                      containerClassName={`aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] rounded-2xl sm:rounded-3xl border border-[#E5E0D8] shadow-md ${
+                        service.slug === "ems-training" ? "bg-[#FFFFFF]" : "bg-[#F3EFE9]"
+                      }`}
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                    />
                   </div>
 
                   {/* Text Side */}

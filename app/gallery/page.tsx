@@ -59,9 +59,6 @@ export default function GalleryPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5]/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/30 backdrop-blur-sm shadow-xs">
-              Authentic Studio Media
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Dr Pilates <span className="font-serif italic font-normal text-[#FAF8F5]">Live Gallery</span>
             </h1>

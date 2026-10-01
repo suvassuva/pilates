@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import { Activity, Zap, HeartPulse, Check, ArrowRight } from "lucide-react";
 import { ServiceDetail } from "@/data/services";
 import { Button } from "../ui/Button";
+import { ServiceMediaSlider } from "./ServiceMediaSlider";
 
 interface ServiceCardProps {
   service: ServiceDetail;
@@ -18,21 +18,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
     <div className="bg-[#FFFFFF] text-[#2A2520] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#E5E0D8] hover:border-[#B59C7D]/60 shadow-sm hover:shadow-xl hover-lift flex flex-col justify-between group transition-all duration-300">
       <div>
-        {/* Service Card Image - Full 16:9 banner */}
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#FAF8F5]">
-          <Image
-            src={service.image}
-            alt={service.title}
-            fill
-            className={`object-cover group-hover:scale-103 transition-transform duration-500 ${service.imagePosition || "object-center"}`}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          {service.badge && (
-            <span className="absolute top-3 right-3 z-10 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#B59C7D] text-white border border-white/40 shadow-md">
-              {service.badge}
-            </span>
-          )}
-        </div>
+        {/* Service Card Image & Video Slider */}
+        <ServiceMediaSlider
+          media={service.media}
+          fallbackImage={service.image}
+          title={service.title}
+          badge={service.badge}
+          imagePosition={service.imagePosition}
+        />
 
         {/* Card Body */}
         <div className="p-4 sm:p-6">
