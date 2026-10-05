@@ -59,10 +59,9 @@ export const SERVICES: ServiceDetail[] = [
         alt: "Instructor guided Reformer high plank at Dr Pilates Bengaluru"
       },
       {
-        type: "video",
-        src: "/videos/client_reformer_pike_core.mp4",
-        poster: "/videos/client_reformer_pike_core_thumb.jpg",
-        alt: "Advanced Reformer pike & core flow at Dr Pilates"
+        type: "image",
+        src: "/images/studio_interior_reformer_beds.webp",
+        alt: "Spacious studio interior with precision Reformer beds"
       },
       {
         type: "image",
@@ -70,10 +69,9 @@ export const SERVICES: ServiceDetail[] = [
         alt: "Reformer kneeling chest expansion posture alignment"
       },
       {
-        type: "video",
-        src: "/videos/client_reformer_squats_ring.mp4",
-        poster: "/videos/client_reformer_squats_ring_thumb.jpg",
-        alt: "Reformer squats with magic circle at Dr Pilates"
+        type: "image",
+        src: "/images/stability_chair_balance_core.webp",
+        alt: "Stability Chair core balance and alignment"
       }
     ],
     iconName: "Layers",
@@ -170,14 +168,13 @@ export const SERVICES: ServiceDetail[] = [
       },
       {
         type: "image",
-        src: "/videos/instructor_welcoming_woman.jpeg",
-        alt: "Personalized 1-on-1 EMS training coach consultation"
+        src: "/images/ems_workout_trainer.jpg",
+        alt: "1-on-1 personalized EMS training session with certified trainer"
       },
       {
-        type: "video",
-        src: "/videos/client_trainer_side_plank.mp4",
-        poster: "/videos/client_trainer_side_plank_thumb.jpg",
-        alt: "Rapid muscular contraction and core stability training"
+        type: "image",
+        src: "/images/ems_core_session.jpg",
+        alt: "Functional core strength and metabolic activation during EMS session"
       }
     ],
     iconName: "Zap",
@@ -263,21 +260,14 @@ export const SERVICES: ServiceDetail[] = [
         alt: "Evidence-based physical therapy and joint mobilization"
       },
       {
-        type: "video",
-        src: "/videos/client_cadillac_trapeze_suspension.mp4",
-        poster: "/videos/client_cadillac_trapeze_suspension_thumb.jpg",
-        alt: "Cadillac trapeze suspension and restorative balance"
+        type: "image",
+        src: "/images/physio_spine_rehab.jpg",
+        alt: "Clinical spinal assessment and musculoskeletal rehabilitation"
       },
       {
         type: "image",
-        src: "/images/cadillac_trapeze_suspension_arch.webp",
-        alt: "Spinal decompression supported backbend arch"
-      },
-      {
-        type: "video",
-        src: "/videos/client_cadillac_inverted_arch.mp4",
-        poster: "/videos/client_cadillac_inverted_arch_thumb.jpg",
-        alt: "Inverted stretch for spinal decompression and mobility"
+        src: "/images/physio_mobility_stretch.jpg",
+        alt: "Targeted kinetic re-education and active guided mobility therapy"
       }
     ],
     iconName: "HeartPulse",

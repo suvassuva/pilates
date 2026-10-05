@@ -46,7 +46,7 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
         {/* Articles Count & Description */}
         <div className="flex items-center gap-2.5">
           <span className="text-sm font-semibold text-neutral-900 tracking-tight">All Articles</span>
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FAF8F5] text-[#8E7557] border border-[#E5E0D8]">
+          <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20">
             {filteredPosts.length}
           </span>
         </div>
@@ -59,7 +59,7 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
             placeholder="Search articles & topics..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-xs font-body rounded-full bg-[#FAF8F5] border border-[#E5E0D8] focus:outline-none focus:ring-2 focus:ring-[#8E7557] focus:bg-white text-neutral-900 transition-colors placeholder:text-neutral-400"
+            className="w-full pl-9 pr-4 py-2 text-xs font-body rounded-full bg-[#FAF8F5] border border-[#E5E0D8] focus:outline-none focus:ring-2 focus:ring-[#962D2D] focus:bg-white text-neutral-900 transition-colors placeholder:text-neutral-400"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
               setSearchQuery("");
               setSelectedCategory("All");
             }}
-            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF8F5] text-[#8E7557] border border-[#E5E0D8] hover:bg-[#EEEDE8]"
+            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25 hover:bg-[#FAF0EE]/80 transition-colors"
           >
             Reset Filters
           </button>

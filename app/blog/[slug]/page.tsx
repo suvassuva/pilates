@@ -105,7 +105,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Back to Blog */}
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#E2C79A] hover:text-white transition-colors mb-6"
+                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#FAF0EE] hover:text-[#962D2D] transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to All Articles
@@ -113,16 +113,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Badges & Meta */}
               <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-400 mb-4">
-                <span className="px-3 py-1 rounded-full bg-[#8E7557]/20 border border-[#8E7557]/40 text-[#E2C79A] font-semibold uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-[#962D2D]/20 border border-[#962D2D]/40 text-[#FAF0EE] font-semibold uppercase tracking-wider">
                   {post.category}
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#8E7557]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#962D2D]" />
                   {post.publishedAt}
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#8E7557]" />
+                  <Clock className="w-3.5 h-3.5 text-[#962D2D]" />
                   {post.readTime}
                 </span>
               </div>
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </h1>
 
               {/* Excerpt Lead */}
-              <p className="font-body text-base sm:text-lg text-neutral-300 leading-relaxed border-l-2 border-[#8E7557] pl-4 mb-8">
+              <p className="font-body text-base sm:text-lg text-neutral-300 leading-relaxed border-l-2 border-[#962D2D] pl-4 mb-8">
                 {post.excerpt}
               </p>
 
@@ -220,7 +220,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </p>
                     ))}
                     {section.calloutQuote && (
-                      <blockquote className="my-6 p-5 sm:p-6 rounded-2xl bg-[#F5F2EB] border-l-4 border-[#8E7557] italic text-neutral-800 text-base sm:text-lg font-serif">
+                      <blockquote className="my-6 p-5 sm:p-6 rounded-2xl bg-[#F5F2EB] border-l-4 border-[#962D2D] italic text-neutral-800 text-base sm:text-lg font-serif">
                         &ldquo;{section.calloutQuote}&rdquo;
                       </blockquote>
                     )}
@@ -231,7 +231,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             key={bIdx}
                             className="flex items-start gap-3 text-neutral-700 font-body text-base"
                           >
-                            <span className="text-[#8E7557] font-bold mt-1 text-sm">•</span>
+                            <span className="text-[#962D2D] font-bold mt-1 text-sm">•</span>
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -242,9 +242,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Clinical Appointment CTA Box */}
-              <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-neutral-900 text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#8E7557]/30 shadow-lg">
+              <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-neutral-900 text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#962D2D]/30 shadow-lg">
                 <div className="space-y-2 text-center sm:text-left">
-                  <span className="text-xs uppercase tracking-widest text-[#E2C79A] font-semibold">
+                  <span className="text-xs uppercase tracking-widest text-[#FAF0EE] font-semibold">
                     Personalized Clinical Rehabilitation
                   </span>
                   <h4 className="font-display font-bold text-xl sm:text-2xl text-white">
@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
                 <Link
                   href="/appointment"
-                  className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold bg-[#E2C79A] text-neutral-950 hover:bg-white transition-colors shadow-sm"
+                  className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold bg-[#962D2D] text-white hover:bg-[#7D1F1F] transition-colors shadow-sm"
                 >
                   Book Evaluation →
                 </Link>
@@ -273,7 +273,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-10">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#8E7557] block mb-1">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#962D2D] block mb-1">
                     Keep Reading
                   </span>
                   <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-900 tracking-tight">
@@ -282,7 +282,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
                 <Link
                   href="/blog"
-                  className="text-xs font-semibold uppercase tracking-wider text-[#8E7557] hover:text-neutral-900 transition-colors"
+                  className="text-xs font-semibold uppercase tracking-wider text-[#962D2D] hover:text-[#7D1F1F] transition-colors"
                 >
                   View All Articles →
                 </Link>

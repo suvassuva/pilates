@@ -99,14 +99,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     alt: "Cadillac Trapeze Table suspension acrobatics and full body extension at Dr Pilates"
   },
   {
-    id: "gal-img-5",
-    type: "image",
-    title: "Cadillac Trapeze Supported Backbend Arch",
-    category: "Cadillac & Trapeze",
-    image: "/images/cadillac_trapeze_suspension_arch.webp",
-    alt: "Supported spinal backbend suspension arch on Cadillac Trapeze Table overlooking greenery"
-  },
-  {
     id: "gal-5",
     type: "video",
     title: "1-on-1 Guided Reformer Side Plank",
@@ -122,15 +114,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "Reformer Pilates",
     image: "/images/reformer_advanced_backbend_bridge_alt.webp",
     alt: "Advanced Reformer carriage backbend bridge with single leg vertical extension"
-  },
-  {
-    id: "gal-6",
-    type: "video",
-    title: "Cadillac Inverted Arch & Spinal Decompression",
-    category: "Cadillac & Trapeze",
-    image: "/videos/client_cadillac_inverted_arch_thumb.jpg",
-    video: "/videos/client_cadillac_inverted_arch.mp4",
-    alt: "Cadillac Trapeze inverted stretch for spinal decompression and hamstring flexibility"
   },
   {
     id: "gal-img-7",

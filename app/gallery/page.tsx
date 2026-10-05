@@ -44,7 +44,7 @@ export default function GalleryPage() {
   return (
     <div className="pt-24 pb-12 bg-[#FAF8F5]">
       {/* Page Hero */}
-      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#111110] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/studio_interior_reformer_beds.webp"
@@ -54,13 +54,16 @@ export default function GalleryPage() {
             className="object-cover object-center scale-105"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/85 via-[#111110]/50 to-[#111110]/35" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#962D2D]/20 shadow-xs mb-2">
+              <span className="uppercase tracking-widest text-[10px]">✨ Studio &amp; Movement Showcase</span>
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
-              Dr Pilates <span className="font-serif italic font-normal text-[#FAF8F5]">Live Gallery</span>
+              Dr Pilates <span className="font-serif italic font-normal text-[#962D2D]">Live Gallery</span>
             </h1>
             <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
               Explore authentic movement, clinical training, and precision equipment inside our Bengaluru studio — featuring Reformer flows, Cadillac acrobatics, Stability Chair workouts, EMS training, and studio spaces.
@@ -78,7 +81,7 @@ export default function GalleryPage() {
                 <div
                   key={item.id}
                   onClick={() => setLightboxIndex(index)}
-                  className="group relative h-96 rounded-3xl overflow-hidden border border-[#E5E0D8] shadow-sm cursor-pointer hover-lift bg-[#F3EFE9]"
+                  className="group relative h-96 rounded-3xl overflow-hidden border border-[#EAE4DC] shadow-sm cursor-pointer hover-lift bg-[#F3EFE9]"
                 >
                   {/* Media Content */}
                   {item.type === "video" && item.video ? (
@@ -106,7 +109,7 @@ export default function GalleryPage() {
                   )}
 
                   {/* Format Badge (Top Right) */}
-                  <div className="absolute top-4 right-4 bg-[#FAF8F5]/90 text-[#2A2520] text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-white/60 flex items-center gap-1.5 shadow-sm">
+                  <div className="absolute top-4 right-4 bg-[#FAF0EE]/95 text-[#962D2D] text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-[#962D2D]/25 flex items-center gap-1.5 shadow-sm">
                     {item.type === "video" ? (
                       <>
                         <Play className="w-2.5 h-2.5 fill-current" />
@@ -122,7 +125,7 @@ export default function GalleryPage() {
 
                   {/* Hover Center Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="w-14 h-14 rounded-full bg-[#B59C7D] border border-white/50 flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-full bg-[#962D2D] border border-white/50 flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 transition-transform duration-300">
                       {item.type === "video" ? (
                         <Play className="w-6 h-6 fill-current ml-0.5" />
                       ) : (
@@ -132,8 +135,8 @@ export default function GalleryPage() {
                   </div>
 
                   {/* Bottom Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/90 via-[#2A2520]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#E2C79A] mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#18181B]/90 via-[#18181B]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#FAF0EE] mb-1">
                       {item.category}
                     </span>
                     <h3 className="text-base font-bold text-white leading-snug line-clamp-2">
@@ -142,12 +145,12 @@ export default function GalleryPage() {
                     <div className="mt-2 text-xs text-[#FAF8F5]/90 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {item.type === "video" ? (
                         <>
-                          <Play className="w-3.5 h-3.5 text-[#E2C79A]" />
+                          <Play className="w-3.5 h-3.5 text-[#FAF0EE]" />
                           <span>Click to play video</span>
                         </>
                       ) : (
                         <>
-                          <ZoomIn className="w-3.5 h-3.5 text-[#E2C79A]" />
+                          <ZoomIn className="w-3.5 h-3.5 text-[#FAF0EE]" />
                           <span>Click to view full photo</span>
                         </>
                       )}
@@ -162,7 +165,7 @@ export default function GalleryPage() {
       {/* Lightbox Modal */}
       {currentItem && lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-[#24201C]/92 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-[#121214]/92 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
           onClick={(e) => {
             if (e.target === e.currentTarget) setLightboxIndex(null);
           }}
@@ -170,7 +173,7 @@ export default function GalleryPage() {
           {/* Close Button */}
           <button
             onClick={() => setLightboxIndex(null)}
-            className="absolute top-5 right-5 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute top-5 right-5 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Close modal"
           >
             <X className="w-6 h-6" />
@@ -182,7 +185,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Previous item"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -194,7 +197,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#B59C7D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
             aria-label="Next item"
           >
             <ChevronRight className="w-6 h-6" />
@@ -203,7 +206,7 @@ export default function GalleryPage() {
           {/* Modal Content */}
           <div className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center">
             {/* Media Container */}
-            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-2xl overflow-hidden shadow-2xl border border-[#B59C7D]/30 bg-[#1D1A17] flex items-center justify-center">
+            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-2xl overflow-hidden shadow-2xl border border-[#962D2D]/30 bg-[#18181B] flex items-center justify-center">
               {currentItem.type === "video" && currentItem.video ? (
                 <video
                   key={currentItem.video}
@@ -233,7 +236,7 @@ export default function GalleryPage() {
             {/* Bottom Caption & Counter */}
             <div className="mt-4 text-center px-4 max-w-2xl">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#B59C7D]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#FAF0EE]">
                   {currentItem.category}
                 </span>
                 <span className="text-xs text-white/40">•</span>

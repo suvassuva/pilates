@@ -31,8 +31,8 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         <span
           className={`inline-flex items-center text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-2 ${
             isDark
-              ? "bg-[#B59C7D]/20 text-[#B59C7D] border border-[#B59C7D]/30"
-              : "bg-[#EEEDE8] text-[#8E7557] border border-[#E5E0D8]"
+              ? "bg-[#962D2D]/20 text-[#FAF0EE] border border-[#962D2D]/40"
+              : "bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20"
           }`}
         >
           {subtitle}
@@ -40,7 +40,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       )}
       <h2
         className={`text-2xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight ${
-          isDark ? "text-[#FAF8F5]" : "text-[#2A2520]"
+          isDark ? "text-[#FAF8F5]" : "text-[#1E1B18]"
         }`}
       >
         {title}
@@ -48,7 +48,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       {description && (
         <p
           className={`mt-2.5 text-xs sm:text-base leading-relaxed ${
-            isDark ? "text-[#A39E96]" : "text-[#4A4641]"
+            isDark ? "text-[#A39E96]" : "text-[#524C46]"
           }`}
         >
           {description}

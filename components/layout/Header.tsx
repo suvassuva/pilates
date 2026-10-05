@@ -39,35 +39,35 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#B59C7D]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-md border-b border-[#A08566]"
-            : "bg-[#B59C7D] backdrop-blur-md py-3 sm:py-4 border-b border-[#A58B6E] shadow-xs"
+            ? "bg-[#111110]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-md border-b border-white/10"
+            : "bg-[#111110] backdrop-blur-md py-3 sm:py-4 border-b border-white/10 shadow-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Official Logo */}
-          <Link href="/" className="group flex items-center py-0.5">
+          <Link href="/" className="group flex items-center py-1">
             <Image
               src="/logo.png"
               alt="Dr Pilates Bengaluru"
               width={200}
               height={60}
               priority
-              className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-9 sm:h-10 w-auto object-contain group-hover:opacity-90 group-hover:scale-105 transition-all"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-1 bg-[#FAF8F5] px-3 py-1.5 rounded-full border border-white/60 shadow-xs">
+          <nav className="hidden xl:flex items-center gap-1 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 shadow-xs backdrop-blur-md">
             {navLinks.map((link) => {
               const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
+                  className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
                     isActive
-                      ? "bg-[#B59C7D] text-white shadow-xs"
-                      : "text-[#5A534B] hover:text-[#2A2520] hover:bg-[#EEEDE8]"
+                      ? "bg-[#962D2D] text-white shadow-xs"
+                      : "text-neutral-300 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {link.label}
@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
           <div className="hidden sm:flex items-center gap-2.5 lg:gap-3">
             <Button
               href="/appointment?branch=kalyan-nagar"
-              variant="cream"
+              variant="primary"
               size="sm"
               icon={<Calendar className="w-4 h-4" />}
             >
@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center xl:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-full text-[#2A2520] bg-[#FAF8F5] hover:bg-white border border-white/60 transition-colors focus:outline-none cursor-pointer shadow-xs"
+              className="p-2 rounded-full text-white bg-white/5 hover:bg-white/10 hover:text-[#962D2D] border border-white/10 transition-colors focus:outline-none cursor-pointer shadow-xs"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />

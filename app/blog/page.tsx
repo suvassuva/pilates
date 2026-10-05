@@ -27,7 +27,7 @@ export default function BlogHubPage() {
   return (
     <div className="pt-24 pb-0 bg-[#FAF8F5]">
       {/* Hero Banner with Studio Image Background */}
-      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
+      <section className="py-20 sm:py-28 bg-[#111110] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_studio_interior.jpeg"
@@ -37,14 +37,17 @@ export default function BlogHubPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/90 via-[#111110]/55 to-[#111110]/40" />
         </div>
 
         <Container className="relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#962D2D]/20 shadow-xs mb-2">
+              <span className="uppercase tracking-widest text-[10px]">✨ Clinical Movement Journal</span>
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Clinical Insights, Science &amp;{" "}
-              <span className="font-serif italic font-normal text-[#FAF8F5]">
+              <span className="font-serif italic font-normal text-[#962D2D]">
                 Movement Culture
               </span>
             </h1>

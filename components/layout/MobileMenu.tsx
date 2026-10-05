@@ -27,26 +27,26 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#FAF8F5]/98 text-[#2A2520] backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#111110]/98 text-white backdrop-blur-xl animate-in fade-in duration-200">
       {/* Top Header inside Drawer */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#A08566] bg-[#B59C7D]">
-        <Link href="/" onClick={onClose} className="flex items-center">
+      <div className="flex items-center justify-between px-4 py-3.5 border-b border-white/10 bg-[#111110]">
+        <Link href="/" onClick={onClose} className="flex items-center py-1">
           <Image
             src="/logo.png"
             alt="Dr Pilates"
             width={160}
             height={48}
             priority
-            className="h-8 sm:h-10 w-auto object-contain"
+            className="h-8 sm:h-9 w-auto object-contain"
           />
         </Link>
 
         <button
           onClick={onClose}
-          className="p-1.5 rounded-full text-[#2A2520] bg-[#FAF8F5] hover:bg-white border border-white/60 focus:outline-none cursor-pointer transition-colors shadow-xs"
+          className="p-1.5 rounded-full text-white bg-white/5 hover:bg-white/10 border border-white/10 focus:outline-none cursor-pointer transition-colors shadow-xs"
           aria-label="Close menu"
         >
-          <X className="w-5 h-5 text-[#2A2520]" />
+          <X className="w-5 h-5 text-white" />
         </button>
       </div>
 
@@ -61,8 +61,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
                 isActive
-                  ? "bg-[#B59C7D] text-white font-semibold shadow-xs"
-                  : "text-[#4A443C] hover:bg-[#F3EFE9] hover:text-[#2A2520]"
+                  ? "bg-[#962D2D] text-white font-semibold shadow-xs"
+                  : "text-neutral-300 hover:bg-white/5 hover:text-white"
               }`}
             >
               {link.label}
@@ -72,10 +72,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       </div>
 
       {/* Compact Drawer Footer Actions */}
-      <div className="p-4 border-t border-[#E5E0D8] bg-[#F3EFE9] space-y-2">
+      <div className="p-4 border-t border-white/10 bg-[#181817] space-y-2">
         <Button
           href="/appointment?branch=kalyan-nagar"
-          variant="gold"
+          variant="primary"
           size="sm"
           fullWidth
           icon={<Calendar className="w-4 h-4" />}
@@ -84,10 +84,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           Book Appointment
         </Button>
 
-
-
-        <div className="pt-1 text-center text-[10px] text-[#7A756D] flex items-center justify-center gap-1">
-          <MapPin className="w-3 h-3 text-[#B59C7D]" />
+        <div className="pt-1 text-center text-[10px] text-neutral-400 flex items-center justify-center gap-1">
+          <MapPin className="w-3 h-3 text-[#962D2D]" />
           <span>Kalyan Nagar &amp; Kothanur, Hennur Rd • Bengaluru</span>
         </div>
       </div>

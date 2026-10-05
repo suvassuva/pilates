@@ -19,26 +19,26 @@ export const metadata = {
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-  Layers: <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
-  Zap: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
-  HeartPulse: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />,
-  Activity: <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-[#B59C7D]" />
+  Layers: <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />,
+  Zap: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />,
+  HeartPulse: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />,
+  Activity: <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />
 };
 
 const pillarIconMap: Record<string, React.ReactNode> = {
-  ShieldCheck: <ShieldCheck className="w-5 h-5 text-[#B59C7D]" />,
-  Target: <Target className="w-5 h-5 text-[#B59C7D]" />,
-  Dumbbell: <Dumbbell className="w-5 h-5 text-[#B59C7D]" />,
-  Compass: <Compass className="w-5 h-5 text-[#B59C7D]" />,
-  Cpu: <Cpu className="w-5 h-5 text-[#B59C7D]" />,
-  Flame: <Flame className="w-5 h-5 text-[#B59C7D]" />,
-  Shield: <Shield className="w-5 h-5 text-[#B59C7D]" />,
-  Activity: <Activity className="w-5 h-5 text-[#B59C7D]" />,
-  Layers: <Layers className="w-5 h-5 text-[#B59C7D]" />,
-  RotateCcw: <RotateCcw className="w-5 h-5 text-[#B59C7D]" />,
-  Heart: <Heart className="w-5 h-5 text-[#B59C7D]" />,
-  Stethoscope: <Stethoscope className="w-5 h-5 text-[#B59C7D]" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-[#B59C7D]" />
+  ShieldCheck: <ShieldCheck className="w-5 h-5 text-[#962D2D]" />,
+  Target: <Target className="w-5 h-5 text-[#962D2D]" />,
+  Dumbbell: <Dumbbell className="w-5 h-5 text-[#962D2D]" />,
+  Compass: <Compass className="w-5 h-5 text-[#962D2D]" />,
+  Cpu: <Cpu className="w-5 h-5 text-[#962D2D]" />,
+  Flame: <Flame className="w-5 h-5 text-[#962D2D]" />,
+  Shield: <Shield className="w-5 h-5 text-[#962D2D]" />,
+  Activity: <Activity className="w-5 h-5 text-[#962D2D]" />,
+  Layers: <Layers className="w-5 h-5 text-[#962D2D]" />,
+  RotateCcw: <RotateCcw className="w-5 h-5 text-[#962D2D]" />,
+  Heart: <Heart className="w-5 h-5 text-[#962D2D]" />,
+  Stethoscope: <Stethoscope className="w-5 h-5 text-[#962D2D]" />,
+  Sparkles: <Sparkles className="w-5 h-5 text-[#962D2D]" />
 };
 
 const serviceTaglines: Record<string, string> = {
@@ -54,8 +54,8 @@ export default function ServicesPage() {
       <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/videos/instructor_welcoming_woman.jpeg"
-            alt="Dr Pilates Instructor Welcoming Client"
+            src="/videos/pilates_studio_interior.jpeg"
+            alt="Dr Pilates Studio Interior"
             fill
             priority
             className="object-cover object-center"
@@ -120,8 +120,8 @@ export default function ServicesPage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-1">
                           {/* Point 1: Posture Restoration */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Shield className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Shield className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -135,8 +135,8 @@ export default function ServicesPage() {
 
                           {/* Point 2: Core Optimization */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Layers className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Layers className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -150,8 +150,8 @@ export default function ServicesPage() {
 
                           {/* Point 3: Muscular Longevity */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Activity className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Activity className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -165,8 +165,8 @@ export default function ServicesPage() {
 
                           {/* Point 4: Neuromuscular Logic */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <RotateCcw className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <RotateCcw className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -182,7 +182,7 @@ export default function ServicesPage() {
                         <div className="pt-2">
                           <Button
                             href="/appointment"
-                            variant="gold"
+                            variant="primary"
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
@@ -206,8 +206,8 @@ export default function ServicesPage() {
                         <div className="space-y-3.5 sm:space-y-4 pt-1">
                           {/* Point 1: +90% Muscle Activation */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Zap className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Zap className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -221,8 +221,8 @@ export default function ServicesPage() {
 
                           {/* Point 2: Accelerated Metabolic Rate */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Heart className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Heart className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -236,8 +236,8 @@ export default function ServicesPage() {
 
                           {/* Point 3: Joint-Safe Hypertrophy */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Target className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Target className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -253,7 +253,7 @@ export default function ServicesPage() {
                         <div className="pt-2">
                           <Button
                             href="/appointment"
-                            variant="gold"
+                            variant="primary"
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
@@ -265,7 +265,7 @@ export default function ServicesPage() {
                       <>
                         <div>
                           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#2A2520] leading-tight">
-                            Advanced <span className="font-serif italic font-normal text-[#B59C7D]">Therapeutics</span>
+                            Advanced <span className="font-serif italic font-normal text-[#962D2D]">Therapeutics</span>
                           </h2>
                         </div>
 
@@ -277,8 +277,8 @@ export default function ServicesPage() {
                         <div className="space-y-3.5 sm:space-y-4 pt-1">
                           {/* Point 1: Structural Spinal Care */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Activity className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Activity className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -292,8 +292,8 @@ export default function ServicesPage() {
 
                           {/* Point 2: Sports Traumatology */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <ShieldCheck className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <ShieldCheck className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -307,8 +307,8 @@ export default function ServicesPage() {
 
                           {/* Point 3: Kinetic Re-education */}
                           <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Sparkles className="w-4 h-4 text-[#B59C7D]" />
+                            <div className="w-9 h-9 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                              <Sparkles className="w-4 h-4 text-[#962D2D]" />
                             </div>
                             <div>
                               <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#2A2520] leading-snug">
@@ -324,7 +324,7 @@ export default function ServicesPage() {
                         <div className="pt-2">
                           <Button
                             href="/appointment"
-                            variant="gold"
+                            variant="primary"
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
@@ -335,15 +335,15 @@ export default function ServicesPage() {
                     ) : (
                       <>
                         <div className="flex items-center gap-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFFFFF] border border-[#E5E0D8] flex items-center justify-center shadow-xs shrink-0">
-                            {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#B59C7D]" />}
+                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shadow-xs shrink-0">
+                            {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#962D2D]" />}
                           </div>
                           <div>
                             <h2 className="text-2xl sm:text-4xl font-bold font-display text-[#2A2520] leading-tight">
                               {service.title}
                             </h2>
                             {service.badge && (
-                              <span className="text-[9px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[#B59C7D] text-white border border-[#A08566]/40 mt-1 inline-block">
+                              <span className="text-[9px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full bg-[#962D2D] text-white border border-[#962D2D]/30 mt-1 inline-block">
                                 {service.badge}
                               </span>
                             )}
@@ -357,15 +357,15 @@ export default function ServicesPage() {
                         {/* Session Structure Specs */}
                         <div className="flex flex-wrap gap-2.5 sm:gap-3 pt-1">
                           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
-                            <Clock className="w-3.5 h-3.5 text-[#B59C7D]" />
+                            <Clock className="w-3.5 h-3.5 text-[#962D2D]" />
                             <span>{service.sessionStructure.duration}</span>
                           </div>
                           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
-                            <Flame className="w-3.5 h-3.5 text-[#B59C7D]" />
+                            <Flame className="w-3.5 h-3.5 text-[#962D2D]" />
                             <span>{service.sessionStructure.intensity}</span>
                           </div>
                           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#E5E0D8] text-xs font-semibold text-[#2A2520] shadow-xs">
-                            <Users className="w-3.5 h-3.5 text-[#B59C7D]" />
+                            <Users className="w-3.5 h-3.5 text-[#962D2D]" />
                             <span>{service.sessionStructure.format}</span>
                           </div>
                         </div>
@@ -373,7 +373,7 @@ export default function ServicesPage() {
                         <div className="pt-2">
                           <Button
                             href="/appointment"
-                            variant="gold"
+                            variant="primary"
                             size="sm"
                             icon={<Calendar className="w-3.5 h-3.5" />}
                           >
@@ -393,7 +393,7 @@ export default function ServicesPage() {
                       <div className="bg-[#FAF8F5] px-6 sm:px-8 py-4 sm:py-5 border-b border-[#E5E0D8] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                         <div>
                           <h3 className="text-base sm:text-lg font-bold font-display text-[#2A2520] uppercase tracking-wide">
-                            {service.title}: <span className="text-[#8C7658] font-normal">{serviceTaglines[service.slug] || "TRANSFORM YOUR BODY"}</span>
+                            {service.title}: <span className="text-[#962D2D] font-normal">{serviceTaglines[service.slug] || "TRANSFORM YOUR BODY"}</span>
                           </h3>
                         </div>
                       </div>
@@ -403,13 +403,13 @@ export default function ServicesPage() {
                         {/* Top Benefits */}
                         <div className="p-6 sm:p-8 space-y-4">
                           <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-[#B59C7D]" />
+                            <CheckCircle2 className="w-5 h-5 text-[#962D2D]" />
                             Top Benefits
                           </h4>
                           <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
                             {service.benefits.map((benefit, idx) => (
                               <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span className="text-[#962D2D] font-bold text-base leading-tight mt-0.5">•</span>
                                 <span>{benefit}</span>
                               </li>
                             ))}
@@ -419,13 +419,13 @@ export default function ServicesPage() {
                         {/* Suitable For */}
                         <div className="p-6 sm:p-8 space-y-4 bg-[#FAF8F5]/50">
                           <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
-                            <Users className="w-5 h-5 text-[#B59C7D]" />
+                            <Users className="w-5 h-5 text-[#962D2D]" />
                             Suitable For
                           </h4>
                           <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
                             {service.whoItIsFor.map((item, idx) => (
                               <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span className="text-[#962D2D] font-bold text-base leading-tight mt-0.5">•</span>
                                 <span>{item}</span>
                               </li>
                             ))}
@@ -435,13 +435,13 @@ export default function ServicesPage() {
                         {/* How It Works */}
                         <div className="p-6 sm:p-8 space-y-4">
                           <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-[#B59C7D]" />
+                            <Sparkles className="w-5 h-5 text-[#962D2D]" />
                             How It Works
                           </h4>
                           <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A4641]">
                             {(service.howItWorks || service.features).map((item, idx) => (
                               <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#B59C7D] font-bold text-base leading-tight mt-0.5">•</span>
+                                <span className="text-[#962D2D] font-bold text-base leading-tight mt-0.5">•</span>
                                 <span>{item}</span>
                               </li>
                             ))}
@@ -461,7 +461,7 @@ export default function ServicesPage() {
                   {/* Section Heading */}
                   <div className="max-w-3xl mb-10 sm:mb-12">
                     {service.sectionNumber && (
-                      <span className="text-[11px] font-bold tracking-widest text-[#8E7557] uppercase block mb-2 font-mono">
+                      <span className="text-[11px] font-bold tracking-widest text-[#962D2D] uppercase block mb-2 font-mono">
                         {service.sectionNumber}
                       </span>
                     )}
@@ -486,22 +486,22 @@ export default function ServicesPage() {
                     {service.pillars.map((pillar, pIdx) => (
                       <div
                         key={pIdx}
-                        className="bg-[#FFFFFF] p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#B59C7D]/50 shadow-sm transition-all duration-300 flex flex-col justify-between group"
+                        className="bg-[#FFFFFF] p-6 rounded-2xl sm:rounded-3xl border border-[#E5E0D8] hover:border-[#962D2D]/40 shadow-sm transition-all duration-300 flex flex-col justify-between group"
                       >
                         <div>
                           <div className="flex items-center justify-between gap-3 mb-4">
-                            {/* Icon box with champagne gold accent */}
-                            <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center shrink-0 group-hover:bg-[#B59C7D]/20 transition-colors">
-                              {pillarIconMap[pillar.iconName] || <Sparkles className="w-5 h-5 text-[#B59C7D]" />}
+                            {/* Icon box with blush crimson accent */}
+                            <div className="w-10 h-10 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center shrink-0 group-hover:bg-[#FAF0EE]/80 transition-colors">
+                              {pillarIconMap[pillar.iconName] || <Sparkles className="w-5 h-5 text-[#962D2D]" />}
                             </div>
                             {pillar.tag && (
-                              <span className="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#FAF8F5] text-[#8E7557] border border-[#B59C7D]/30">
+                              <span className="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20">
                                 {pillar.tag}
                               </span>
                             )}
                           </div>
 
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] group-hover:text-[#B59C7D] transition-colors leading-snug">
+                          <h4 className="text-base sm:text-lg font-bold font-display text-[#2A2520] group-hover:text-[#962D2D] transition-colors leading-snug">
                             {pillar.title}
                           </h4>
 

@@ -188,7 +188,7 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
 
       {/* Program Badge (Top Right) */}
       {badge && (
-        <span className="absolute top-3 right-3 z-10 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#B59C7D] text-white border border-white/40 shadow-md pointer-events-none">
+        <span className="absolute top-3 right-3 z-10 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#962D2D] text-white border border-white/40 shadow-md pointer-events-none">
           {badge}
         </span>
       )}

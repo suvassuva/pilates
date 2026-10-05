@@ -2,20 +2,21 @@ import React from "react";
 
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: "gold" | "dark" | "light" | "outline";
+  variant?: "gold" | "crimson" | "dark" | "light" | "outline";
   className?: string;
 }
 
 export const Badge: React.FC<BadgeProps> = ({
   children,
-  variant = "gold",
+  variant = "crimson",
   className = ""
 }) => {
   const variantClasses = {
-    gold: "bg-[#B59C7D]/15 text-[#8E7557] border border-[#B59C7D]/35",
-    dark: "bg-[#B59C7D] text-white shadow-xs",
-    light: "bg-[#EEEDE8] text-[#2A2520] border border-[#E5E0D8]",
-    outline: "bg-transparent text-[#5A534B] border border-[#B59C7D]/35"
+    crimson: "bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25",
+    gold: "bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25",
+    dark: "bg-[#18181B] text-white shadow-xs",
+    light: "bg-[#F5F2EB] text-[#1E1B18] border border-[#EAE4DC]",
+    outline: "bg-transparent text-[#962D2D] border border-[#962D2D]/35"
   };
 
   return (

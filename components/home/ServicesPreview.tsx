@@ -90,8 +90,8 @@ export const ServicesPreview: React.FC = () => {
               onClick={() => scrollToIndex(idx)}
               className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeIndex === idx
-                  ? "w-7 bg-[#B59C7D]"
-                  : "w-2 bg-[#B59C7D]/30 hover:bg-[#B59C7D]/60"
+                  ? "w-7 bg-[#962D2D]"
+                  : "w-2 bg-[#962D2D]/25 hover:bg-[#962D2D]/50"
               }`}
               aria-label={`Go to service ${idx + 1}`}
             />
@@ -104,7 +104,7 @@ export const ServicesPreview: React.FC = () => {
             href="/services"
             variant="outline"
             size="md"
-            icon={<ArrowRight className="w-4 h-4 text-[#B59C7D]" />}
+            icon={<ArrowRight className="w-4 h-4 text-[#962D2D]" />}
           >
             View All Services Details
           </Button>

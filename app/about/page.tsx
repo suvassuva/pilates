@@ -46,12 +46,12 @@ export default function AboutPage() {
           <div className="space-y-12 sm:space-y-16">
             {/* Section Header */}
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#962D2D] block mb-2">
                 The Leadership
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-[#2A2520] tracking-tight mb-4">
                 Pioneering Clinical Movement &amp;{" "}
-                <span className="font-serif italic font-normal text-[#B59C7D]">
+                <span className="font-serif italic font-normal text-[#962D2D]">
                   Studio Excellence
                 </span>
               </h2>
@@ -63,10 +63,10 @@ export default function AboutPage() {
             {/* Dual Founders Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Founder: Dr. Govinda Raju S. */}
-              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
+              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#962D2D]/40 transition-colors">
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
-                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#E5E0D8]">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#962D2D]/30 shadow-sm shrink-0 bg-[#E5E0D8]">
                       <Image
                         src="/goivnd.jpeg"
                         alt="Dr. Govinda Raju S. - Founder and Program Director"
@@ -80,7 +80,7 @@ export default function AboutPage() {
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#2A2520] font-display">
                         DR. GOVINDA RAJU
                       </h3>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#962D2D] block mt-1">
                         Founder and Program Director
                       </span>
                     </div>
@@ -98,10 +98,10 @@ export default function AboutPage() {
               </div>
 
               {/* Co-Founder: Vivek Victor */}
-              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#B59C7D]/50 transition-colors">
+              <div className="bg-[#FFFFFF] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-xs flex flex-col justify-between hover:border-[#962D2D]/40 transition-colors">
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-6">
-                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#B59C7D]/40 shadow-sm shrink-0 bg-[#E5E0D8]">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-[#962D2D]/30 shadow-sm shrink-0 bg-[#E5E0D8]">
                       <Image
                         src="/vivek.jpeg"
                         alt="Vivek Victor - Co-Founder and Operations Director"
@@ -115,7 +115,7 @@ export default function AboutPage() {
                       <h3 className="text-2xl sm:text-3xl font-bold text-[#2A2520] font-display">
                         VIVEK VICTOR
                       </h3>
-                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#B59C7D] block mt-1">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#962D2D] block mt-1">
                         Co-Founder and Operations Director
                       </span>
                     </div>
@@ -159,10 +159,10 @@ export default function AboutPage() {
               {/* Right Column: Cards */}
               <div className="lg:col-span-5 space-y-4">
                 {/* Card 1: Philosophy of Focus */}
-                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
+                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#962D2D]/40">
                   <div className="flex items-center gap-3 mb-2.5">
-                    <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
-                      <Heart className="w-3.5 h-3.5 text-[#B59C7D]" />
+                    <div className="w-7 h-7 rounded-md bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center">
+                      <Heart className="w-3.5 h-3.5 text-[#962D2D]" />
                     </div>
                     <h4 className="text-sm sm:text-base font-bold text-[#2A2520]">
                       Philosophy of Focus
@@ -175,10 +175,10 @@ export default function AboutPage() {
                 </div>
 
                 {/* Card 2: Scientific Rigor */}
-                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#B59C7D]/50">
+                <div className="bg-[#FFFFFF] border border-[#E5E0D8] p-5 sm:p-6 rounded-2xl shadow-xs transition-colors hover:border-[#962D2D]/40">
                   <div className="flex items-center gap-3 mb-2.5">
-                    <div className="w-7 h-7 rounded-md bg-[#FAF8F5] border border-[#B59C7D]/30 flex items-center justify-center">
-                      <Zap className="w-3.5 h-3.5 text-[#B59C7D]" />
+                    <div className="w-7 h-7 rounded-md bg-[#FAF0EE] border border-[#962D2D]/20 flex items-center justify-center">
+                      <Zap className="w-3.5 h-3.5 text-[#962D2D]" />
                     </div>
                     <h4 className="text-sm sm:text-base font-bold text-[#2A2520]">
                       Scientific Rigor
@@ -194,7 +194,7 @@ export default function AboutPage() {
             </div>
 
             {/* Signature Pull Quote */}
-            <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#B59C7D] py-2">
+            <div className="relative pl-6 sm:pl-8 border-l-2 sm:border-l-[3px] border-[#962D2D] py-2">
               <p className="text-xl sm:text-2xl lg:text-3xl font-serif italic text-[#2A2520] leading-relaxed">
                 &ldquo;The body is a symphony of mechanics. Our role is to tune it to perfection, ensuring
                 every movement serves both physical function and athletic form.&rdquo;
@@ -209,11 +209,11 @@ export default function AboutPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mb-20">
             <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#8E7557]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#962D2D]">
                 Our Origin & Ethos
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#2A2520]">
-                Elevating Wellness Beyond <span className="font-serif italic font-normal text-[#8E7557]">Conventional Gyms</span>
+                Elevating Wellness Beyond <span className="font-serif italic font-normal text-[#962D2D]">Conventional Gyms</span>
               </h2>
               <p className="text-base text-[#4A4641] leading-relaxed">
                 Dr Pilates was founded with a clear mission: to provide a refined, clinically-grounded space where individuals can build deep core strength, correct posture imbalances, and recover from physical stress without joint wear.
@@ -242,8 +242,8 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative flex flex-col h-full">
               <div className="relative min-h-[320px] sm:min-h-[440px] lg:h-full w-full rounded-3xl overflow-hidden shadow-sm border border-[#E5E0D8]">
                 <Image
-                  src="/images/cadillac_trapeze_suspension_arch.webp"
-                  alt="Dr Pilates Cadillac Trapeze Suspension"
+                  src="/images/studio_interior_reformer_beds.webp"
+                  alt="Dr Pilates Studio Interior and Reformer Beds"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

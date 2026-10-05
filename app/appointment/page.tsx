@@ -58,60 +58,60 @@ function AppointmentFormContent() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
       {/* Left Info Panel */}
-      <div className="lg:col-span-5 bg-[#EEEDE8] text-[#2A2520] p-6 sm:p-8 rounded-3xl border border-[#E5E0D8] shadow-sm space-y-6 lg:sticky lg:top-28 self-start">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] text-[#8E7557] text-xs font-bold uppercase tracking-widest border border-[#E5E0D8]">
-          <Sparkles className="w-3.5 h-3.5 text-[#B59C7D]" />
+      <div className="lg:col-span-5 bg-[#F4EFEA] text-[#1E1B18] p-6 sm:p-8 rounded-3xl border border-[#EAE4DC] shadow-sm space-y-6 lg:sticky lg:top-28 self-start">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-xs font-bold uppercase tracking-widest border border-[#962D2D]/20">
+          <Sparkles className="w-3.5 h-3.5 text-[#962D2D]" />
           <span>Selected Branch Specs</span>
         </div>
 
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#2A2520]">
+          <h2 className="text-2xl sm:text-3xl font-bold font-display text-[#1E1B18]">
             {activeBranch.name}
           </h2>
           {activeBranch.tagline ? (
-            <p className="text-xs text-[#7A756D] mt-1">{activeBranch.tagline}</p>
+            <p className="text-xs text-[#78716C] mt-1">{activeBranch.tagline}</p>
           ) : null}
         </div>
 
-        <div className="space-y-4 pt-2 border-t border-[#E5E0D8] text-xs sm:text-sm">
+        <div className="space-y-4 pt-2 border-t border-[#EAE4DC] text-xs sm:text-sm">
           <div className="flex items-start gap-3">
-            <MapPin className="w-4 h-4 text-[#B59C7D] shrink-0 mt-1" />
-            <span className="text-[#2A2520]">{activeBranch.address.fullText}</span>
+            <MapPin className="w-4 h-4 text-[#962D2D] shrink-0 mt-1" />
+            <span className="text-[#1E1B18]">{activeBranch.address.fullText}</span>
           </div>
           <div className="flex items-center gap-3">
-            <Phone className="w-4 h-4 text-[#B59C7D] shrink-0" />
-            <a href={`tel:${activeBranch.rawPhone}`} className="hover:text-[#8E7557] font-bold text-[#2A2520]">
+            <Phone className="w-4 h-4 text-[#962D2D] shrink-0" />
+            <a href={`tel:${activeBranch.rawPhone}`} className="hover:text-[#962D2D] font-bold text-[#1E1B18]">
               {activeBranch.phone}
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <Clock className="w-4 h-4 text-[#B59C7D] shrink-0" />
-            <span className="text-[#4A4641]">{activeBranch.hours}</span>
+            <Clock className="w-4 h-4 text-[#962D2D] shrink-0" />
+            <span className="text-[#524C46]">{activeBranch.hours}</span>
           </div>
         </div>
       </div>
 
       {/* Right Booking Form */}
-      <div className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-10 rounded-3xl border border-[#E5E0D8] shadow-sm">
+      <div className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-10 rounded-3xl border border-[#EAE4DC] shadow-sm">
         {isSubmitted ? (
           <div className="text-center py-8 space-y-6 animate-in fade-in duration-300">
-            <div className="w-16 h-16 rounded-full bg-[#EEEDE8] text-[#8E7557] flex items-center justify-center mx-auto border border-[#B59C7D]/30">
-              <CheckCircle2 className="w-10 h-10 text-[#B59C7D]" />
+            <div className="w-16 h-16 rounded-full bg-[#FAF0EE] text-[#962D2D] flex items-center justify-center mx-auto border border-[#962D2D]/20">
+              <CheckCircle2 className="w-10 h-10 text-[#962D2D]" />
             </div>
 
-            <h3 className="text-2xl font-bold font-display text-[#2A2520]">
+            <h3 className="text-2xl font-bold font-display text-[#1E1B18]">
               Appointment Request Submitted!
             </h3>
 
-            <p className="text-sm text-[#4A4641] max-w-md mx-auto leading-relaxed">
-              Thank you, <strong className="text-[#2A2520]">{fullName}</strong>. Your appointment request for <strong className="text-[#2A2520]">{activeService.title}</strong> at <strong className="text-[#2A2520]">{activeBranch.shortName}</strong> has been created.
+            <p className="text-sm text-[#524C46] max-w-md mx-auto leading-relaxed">
+              Thank you, <strong className="text-[#1E1B18]">{fullName}</strong>. Your appointment request for <strong className="text-[#1E1B18]">{activeService.title}</strong> at <strong className="text-[#1E1B18]">{activeBranch.shortName}</strong> has been created.
             </p>
 
-            <div className="p-6 rounded-2xl bg-[#EEEDE8] border border-[#E5E0D8] max-w-md mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#8E7557] block">
+            <div className="p-6 rounded-2xl bg-[#FAF0EE]/50 border border-[#EAE4DC] max-w-md mx-auto space-y-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#962D2D] block">
                 Instant Desk Confirmation
               </span>
-              <p className="text-xs text-[#4A4641]">
+              <p className="text-xs text-[#524C46]">
                 Click below to send your pre-filled details straight to our WhatsApp desk for immediate slot lock-in:
               </p>
               <Button
@@ -128,14 +128,14 @@ function AppointmentFormContent() {
 
             <button
               onClick={() => setIsSubmitted(false)}
-              className="text-xs font-semibold text-[#8E7557] hover:underline cursor-pointer"
+              className="text-xs font-semibold text-[#962D2D] hover:underline cursor-pointer"
             >
               ← Edit details or submit another booking
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
-            <h3 className="text-2xl font-bold font-display text-[#2A2520] border-b border-[#E5E0D8] pb-4">
+            <h3 className="text-2xl font-bold font-display text-[#1E1B18] border-b border-[#EAE4DC] pb-4">
               Schedule Your Session
             </h3>
 
@@ -147,8 +147,8 @@ function AppointmentFormContent() {
 
             {/* Select Branch */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
-                Select Studio Branch <span className="text-[#B59C7D]">*</span>
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
+                Select Studio Branch <span className="text-[#962D2D]">*</span>
               </label>
               <div className="grid grid-cols-2 gap-3">
                 {BRANCHES.map((b) => {
@@ -160,8 +160,8 @@ function AppointmentFormContent() {
                       onClick={() => setSelectedBranchId(b.id)}
                       className={`p-3.5 rounded-2xl border text-left font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
                         isSelected
-                          ? "bg-[#B59C7D] text-white border-[#B59C7D] shadow-xs"
-                          : "bg-[#FAF8F5] text-[#2A2520] border-[#E5E0D8] hover:border-[#B59C7D]"
+                          ? "bg-[#962D2D] text-white border-[#962D2D] shadow-xs"
+                          : "bg-[#FAF8F5] text-[#1E1B18] border-[#EAE4DC] hover:border-[#962D2D]/40"
                       }`}
                     >
                       <span className="block">{b.shortName}</span>
@@ -176,14 +176,14 @@ function AppointmentFormContent() {
 
             {/* Select Service */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
-                Select Service <span className="text-[#B59C7D]">*</span>
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
+                Select Service <span className="text-[#962D2D]">*</span>
               </label>
               <div className="relative">
                 <select
                   value={selectedServiceSlug}
                   onChange={(e) => setSelectedServiceSlug(e.target.value)}
-                  className="w-full h-12 px-4 pr-10 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D] appearance-none cursor-pointer"
+                  className="w-full h-12 px-4 pr-10 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D] appearance-none cursor-pointer"
                 >
                   {SERVICES.map((s) => (
                     <option key={s.slug} value={s.slug}>
@@ -191,15 +191,15 @@ function AppointmentFormContent() {
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="w-4 h-4 text-[#8E7557] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <ChevronDown className="w-4 h-4 text-[#962D2D] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 
             {/* Contact Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
-                  Full Name <span className="text-[#B59C7D]">*</span>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
+                  Full Name <span className="text-[#962D2D]">*</span>
                 </label>
                 <input
                   type="text"
@@ -207,13 +207,13 @@ function AppointmentFormContent() {
                   placeholder="e.g. Ananya Roy"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
-                  Phone Number <span className="text-[#B59C7D]">*</span>
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
+                  Phone Number <span className="text-[#962D2D]">*</span>
                 </label>
                 <input
                   type="tel"
@@ -221,13 +221,13 @@ function AppointmentFormContent() {
                   placeholder="e.g. 9876543210"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                  className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D]"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
                 Email Address (Optional)
               </label>
               <input
@@ -235,26 +235,26 @@ function AppointmentFormContent() {
                 placeholder="e.g. user@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D]"
               />
             </div>
 
             {/* Preferred Date */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-2">
                 Preferred Date
               </label>
               <input
                 type="date"
                 value={preferredDate}
                 onChange={(e) => setPreferredDate(e.target.value)}
-                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                className="w-full h-12 px-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D]"
               />
             </div>
 
             {/* Additional Message */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#2A2520] mb-1.5">
+              <label className="block text-xs font-bold uppercase tracking-wider text-[#1E1B18] mb-1.5">
                 Special Health Notes / Goals (Optional)
               </label>
               <textarea
@@ -262,13 +262,13 @@ function AppointmentFormContent() {
                 placeholder="Mention any lower back stiffness, knee history, or specific target goals..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8] text-sm text-[#2A2520] focus:outline-none focus:ring-2 focus:ring-[#B59C7D]"
+                className="w-full p-3.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DC] text-sm text-[#1E1B18] focus:outline-none focus:ring-2 focus:ring-[#962D2D]"
               />
             </div>
 
             <Button
               type="submit"
-              variant="gold"
+              variant="primary"
               size="lg"
               fullWidth
               icon={<Calendar className="w-5 h-5" />}
@@ -286,7 +286,7 @@ export default function AppointmentPage() {
   return (
     <div className="pt-24 pb-12 bg-[#FAF8F5]">
       {/* Page Hero with Background Image */}
-      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center mb-12">
+      <section className="py-20 sm:py-28 bg-[#18181B] text-white relative overflow-hidden flex items-center justify-center mb-12">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_reformer_machine.jpeg"
@@ -296,13 +296,13 @@ export default function AppointmentPage() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#18181B]/85 via-[#18181B]/50 to-[#18181B]/35" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
-              Book Your <span className="font-serif italic font-normal text-[#FAF8F5]">Dr Pilates Session</span>
+              Book Your <span className="font-serif italic font-normal text-[#FAF0EE]">Dr Pilates Session</span>
             </h1>
             <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
               Select your preferred branch, service, and timing below. Your branch selection carries over automatically.

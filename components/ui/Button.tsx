@@ -26,7 +26,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B59C7D] focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover-lift active:scale-95 whitespace-nowrap";
+    "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#962D2D] focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover-lift active:scale-95 whitespace-nowrap";
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-[11px] sm:text-xs tracking-wide",
@@ -36,19 +36,19 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      "bg-[#B59C7D] text-white hover:bg-[#9E8364] shadow-sm hover:shadow-md border border-[#B59C7D]",
+      "bg-[#962D2D] text-white hover:bg-[#7D1F1F] shadow-sm hover:shadow-md border border-[#962D2D]",
     secondary:
-      "bg-[#F3EFE9] text-[#2A2520] hover:bg-[#EAE4DC] border border-[#E2DBD2]",
+      "bg-[#18181B] text-white hover:bg-[#27272A] border border-[#18181B]",
     gold:
-      "bg-[#B59C7D] text-white hover:bg-[#9E8364] shadow-sm hover:shadow-md border border-[#B59C7D]",
+      "bg-[#962D2D] text-white hover:bg-[#7D1F1F] shadow-sm hover:shadow-md border border-[#962D2D]",
     cream:
-      "bg-[#FAF8F5] text-[#2A2520] hover:bg-white hover:shadow-md border border-white/60 font-semibold shadow-xs",
+      "bg-[#FAF0EE] text-[#962D2D] hover:bg-[#F5E6E3] hover:shadow-md border border-[#962D2D]/20 font-semibold shadow-xs",
     whatsapp:
       "bg-[#25D366] text-white hover:bg-[#20BD5A] shadow-md border-none !text-white font-semibold",
     outline:
-      "bg-transparent text-[#2A2520] border border-[#B59C7D] hover:bg-[#B59C7D] hover:text-white",
+      "bg-transparent text-[#1E1B18] border border-[#1E1B18]/25 hover:border-[#962D2D] hover:bg-[#FAF0EE] hover:text-[#962D2D]",
     ghost:
-      "bg-transparent text-[#2A2520] hover:bg-[#F3EFE9] hover:text-[#B59C7D]"
+      "bg-transparent text-[#1E1B18] hover:bg-[#FAF0EE] hover:text-[#962D2D]"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
