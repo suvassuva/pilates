@@ -26,8 +26,8 @@ export const TrustSection: React.FC = () => {
     },
     {
       value: "CLINICAL GRADE",
-      label: "World-class equipment",
-      subtext: "",
+      label: "World-Class Equipment",
+      subtext: "Certified Merrithew setup",
       icon: <ShieldCheck className="w-4 h-4 sm:w-6 sm:h-6 text-[#962D2D]" />
     }
   ];
@@ -35,39 +35,48 @@ export const TrustSection: React.FC = () => {
   return (
     <section className="py-8 sm:py-12 bg-[#FAF8F5] text-[#1E1B18] relative overflow-hidden border-y border-[#EAE4DC]">
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-stretch">
           {stats.map((stat, idx) => {
-            const content = (
-              <>
+            const cardInner = (
+              <div className="flex flex-col items-center justify-between h-full w-full">
+                {/* Icon */}
                 <div
-                  className={`mb-2 p-2 sm:p-3 rounded-full bg-[#FAF0EE] border border-[#962D2D]/20 ${
+                  className={`mb-2.5 p-2 sm:p-2.5 rounded-full bg-[#FAF0EE] border border-[#962D2D]/20 transition-colors ${
                     stat.href
-                      ? "group-hover:border-[#962D2D] group-hover:bg-[#F5E6E3] transition-colors"
+                      ? "group-hover:border-[#962D2D] group-hover:bg-[#F5E6E3]"
                       : ""
                   }`}
                 >
                   {stat.icon}
                 </div>
-                <span
-                  className={`font-extrabold font-display text-[#1E1B18] ${
-                    stat.value.length > 5
-                      ? "text-sm sm:text-2xl leading-tight"
-                      : "text-xl sm:text-4xl"
-                  } ${stat.href ? "group-hover:text-[#962D2D] transition-colors" : ""}`}
-                >
-                  {stat.value}
-                </span>
-                {stat.label && (
-                  <span className="text-xs sm:text-sm font-semibold text-[#962D2D] mt-0.5">
+
+                {/* Stat Value Row with fixed height to ensure baseline alignment */}
+                <div className="min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center text-center">
+                  <span
+                    className={`font-extrabold font-display text-[#1E1B18] leading-tight ${
+                      stat.value.length > 5
+                        ? "text-xs sm:text-base tracking-wider uppercase font-bold"
+                        : "text-2xl sm:text-4xl"
+                    } ${stat.href ? "group-hover:text-[#962D2D] transition-colors" : ""}`}
+                  >
+                    {stat.value}
+                  </span>
+                </div>
+
+                {/* Label Row */}
+                <div className="min-h-[1.25rem] sm:min-h-[1.5rem] flex items-center justify-center text-center mt-1">
+                  <span className="text-xs sm:text-sm font-semibold text-[#962D2D] leading-tight">
                     {stat.label}
                   </span>
-                )}
-                {stat.subtext && (
-                  <span className="text-[10px] sm:text-xs text-[#78716C] mt-0.5 hidden sm:block">
+                </div>
+
+                {/* Subtext Row */}
+                <div className="min-h-[1rem] sm:min-h-[1.25rem] flex items-center justify-center text-center mt-0.5">
+                  <span className="text-[10px] sm:text-xs text-[#78716C] leading-tight">
                     {stat.subtext}
                   </span>
-                )}
-              </>
+                </div>
+              </div>
             );
 
             return stat.href ? (
@@ -77,16 +86,16 @@ export const TrustSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="View Google Reviews"
-                className="flex flex-col items-center text-center p-3 sm:p-4 rounded-2xl bg-[#FFFFFF] border border-[#EAE4DC] shadow-xs cursor-pointer hover:border-[#962D2D]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
+                className="h-full flex flex-col p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#EAE4DC] shadow-xs cursor-pointer hover:border-[#962D2D]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
               >
-                {content}
+                {cardInner}
               </a>
             ) : (
               <div
                 key={idx}
-                className="flex flex-col items-center text-center p-3 sm:p-4 rounded-2xl bg-[#FFFFFF] border border-[#EAE4DC] shadow-xs"
+                className="h-full flex flex-col p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FFFFFF] border border-[#EAE4DC] shadow-xs"
               >
-                {content}
+                {cardInner}
               </div>
             );
           })}

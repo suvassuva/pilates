@@ -31,6 +31,14 @@ export const GALLERY_CATEGORIES = [
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
+    id: "gal-img-group-reformer",
+    type: "image",
+    title: "Guided Reformer Movement & Alignment",
+    category: "Reformer Pilates",
+    image: "/images/reformer_group_class_studio.jpeg",
+    alt: "Clients practicing guided Reformer movement and alignment in Dr Pilates studio"
+  },
+  {
     id: "gal-img-1",
     type: "image",
     title: "Reformer Studio Bay & Equipment",

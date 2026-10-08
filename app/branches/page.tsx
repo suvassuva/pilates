@@ -12,9 +12,9 @@ export const metadata = {
 
 export default function BranchesPage() {
   return (
-    <div className="pt-24 pb-12 bg-[#FAF8F5]">
+    <div className="pb-12 bg-[#FAF8F5]">
       {/* Page Hero with Studio Exterior Background */}
-      <section className="py-20 sm:py-28 bg-[#2A2520] text-white relative overflow-hidden flex items-center justify-center">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/woman_walking_outside.jpeg"

@@ -9,7 +9,7 @@ import { Button } from "../ui/Button";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[80vh] pt-20 pb-12 sm:pt-32 sm:pb-20 flex items-center bg-[#FAF8F5] text-[#2A2520] overflow-hidden">
+    <section className="relative min-h-[80vh] pt-20 pb-12 sm:pt-32 sm:pb-20 flex items-center bg-[#FAF8F5] text-[#1E1B18] overflow-hidden">
       {/* Background Decorative Shapes */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 sm:w-96 sm:h-96 bg-[#962D2D]/8 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-[#EFECE6] rounded-full blur-3xl pointer-events-none" />
@@ -18,36 +18,30 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Hero Content */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-8">
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#962D2D]/20 shadow-xs">
-              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#962D2D]" />
-              <span className="uppercase tracking-widest text-[10px]">✨ Premium Pilates in Bengaluru</span>
-            </div>
-
             {/* Main Headline with editorial serif accent */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-[#1E1B18] leading-tight sm:leading-[1.12]">
-              Pilates with <span className="font-serif italic font-normal text-[#962D2D]">Purpose.</span>
+              Pilates with a <span className="font-serif italic font-normal text-[#962D2D]">Purpose.</span>
             </h1>
 
             {/* Supporting Text */}
-            <div className="space-y-3 text-xs sm:text-sm lg:text-[15px] text-[#524C46] max-w-2xl leading-relaxed font-normal">
+            <div className="space-y-4 text-base sm:text-lg lg:text-[18px] text-[#524C46] max-w-2xl leading-relaxed sm:leading-[1.75] font-normal">
               <p>
                 Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
               </p>
               <p>
                 At <strong className="font-semibold text-[#1E1B18]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
               </p>
-              <p className="font-medium text-[#962D2D] italic">
+              <p className="font-semibold text-[#962D2D] italic pt-1 text-base sm:text-lg lg:text-[18px]">
                 Move with intention. Feel the difference. Transform your body with Dr. Pilates.
               </p>
             </div>
 
             {/* Primary CTAs */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1 sm:pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-4">
               <Button
                 href="/appointment?branch=kalyan-nagar"
                 variant="primary"
-                size="md"
+                size="lg"
                 icon={<Calendar className="w-4 h-4" />}
               >
                 Start Your Journey with Us
@@ -56,7 +50,7 @@ export const Hero: React.FC = () => {
               <Button
                 href="/services"
                 variant="outline"
-                size="md"
+                size="lg"
                 icon={<ArrowRight className="w-4 h-4 text-[#962D2D]" />}
               >
                 Explore Services
@@ -82,38 +76,38 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Card Badge: Both Bengaluru Branches */}
-              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl shadow-xl border border-[#EAE4DC] min-w-[220px] hidden sm:block">
+              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF]/95 backdrop-blur-md p-3 sm:p-4 rounded-2xl shadow-xl border border-[#EAE4DC] min-w-[240px] hidden sm:block">
                 <div className="flex flex-col">
                   {/* Kalyan Nagar */}
                   <Link
                     href="/branches?branch=kalyan-nagar"
-                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF0EE]/50 transition-colors group cursor-pointer"
+                    className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#FAF0EE]/50 transition-colors group cursor-pointer"
                     title="View Kalyan Nagar Studio Details"
                   >
-                    <div className="w-6 h-6 rounded-md bg-[#FAF0EE] group-hover:bg-[#FFFFFF] border border-[#962D2D]/20 flex items-center justify-center shrink-0 transition-colors">
-                      <MapPin className="w-3.5 h-3.5 text-[#962D2D]" />
+                    <div className="w-7 h-7 rounded-lg bg-[#FAF0EE] group-hover:bg-[#FFFFFF] border border-[#962D2D]/20 flex items-center justify-center shrink-0 transition-colors">
+                      <MapPin className="w-4 h-4 text-[#962D2D]" />
                     </div>
-                    <span className="text-xs font-bold text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-tight">
+                    <span className="text-[13px] sm:text-sm font-bold text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-tight">
                       Kalyan Nagar
                     </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#962D2D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
+                    <ChevronRight className="w-4 h-4 text-[#962D2D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
                   </Link>
 
-                  <div className="h-px bg-[#EAE4DC] my-1" />
+                  <div className="h-px bg-[#EAE4DC] my-1.5" />
 
                   {/* Kothanur, Hennur Road */}
                   <Link
                     href="/branches?branch=kothanur"
-                    className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl hover:bg-[#FAF0EE]/50 transition-colors group cursor-pointer"
+                    className="flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-[#FAF0EE]/50 transition-colors group cursor-pointer"
                     title="View Kothanur, Hennur Road Studio Details"
                   >
-                    <div className="w-6 h-6 rounded-md bg-[#FAF0EE] group-hover:bg-[#FFFFFF] border border-[#962D2D]/20 flex items-center justify-center shrink-0 transition-colors">
-                      <MapPin className="w-3.5 h-3.5 text-[#962D2D]" />
+                    <div className="w-7 h-7 rounded-lg bg-[#FAF0EE] group-hover:bg-[#FFFFFF] border border-[#962D2D]/20 flex items-center justify-center shrink-0 transition-colors">
+                      <MapPin className="w-4 h-4 text-[#962D2D]" />
                     </div>
-                    <span className="text-xs font-bold text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-tight">
+                    <span className="text-[13px] sm:text-sm font-bold text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-tight">
                       Kothanur, Hennur Road
                     </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#962D2D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
+                    <ChevronRight className="w-4 h-4 text-[#962D2D] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
                   </Link>
                 </div>
               </div>

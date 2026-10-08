@@ -10,7 +10,7 @@
     --bg-dark-card: #222226;
     
     --text-primary: #1E1B18;
-    --text-secondary: #4E4842;
+    --text-secondary: #524C46;
     --text-muted: #78716C;
     --text-on-dark: #FAF8F5;
 
@@ -20,6 +20,11 @@
     --primary-light: #FAF0EE;
     --primary-border: rgba(150, 45, 45, 0.25);
 
+    /* Card & Border tokens */
+    --border-card: #EAE4DC;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-medium: rgba(0, 0, 0, 0.15);
+
     /* Crimson tokens matching the design system */
     --gold-primary: #962D2D;
     --gold-hover: #7D1F1F;
@@ -28,9 +33,6 @@
 
     --charcoal: #18181B;
     --charcoal-hover: #27272A;
-
-    --border-light: rgba(0, 0, 0, 0.08);
-    --border-medium: rgba(0, 0, 0, 0.15);
     
     --radius-sm: 0.5rem;
     --radius-md: 0.875rem;
@@ -98,6 +100,27 @@
   color: #FAF8F5;
 }
 
+/* Universal Luxury Card Standard */
+.luxury-card {
+  background-color: #FFFFFF;
+  color: #1E1B18;
+  border: 1px solid #EAE4DC;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 640px) {
+  .luxury-card {
+    border-radius: 1.5rem;
+  }
+}
+
+.luxury-card:hover {
+  border-color: rgba(150, 45, 45, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+}
+
 /* Brand Gradients - Pilates Luxury Crimson & Warm Oat */
 .crimson-gradient-text,
 .gold-gradient-text {
@@ -136,6 +159,7 @@
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 0px;
 }
 ::-webkit-scrollbar-track {
   background: #FAF8F5;
@@ -146,5 +170,16 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #7D1F1F;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 

@@ -86,10 +86,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedBlogs(post.slug, post.category, 3);
 
   return (
-    <div className="pt-24 pb-0 bg-[#FAF8F5]">
+    <div className="pb-0 bg-[#FAF8F5]">
       {/* Header & Article Meta */}
       <article>
-        <header className="py-14 sm:py-20 bg-neutral-900 text-white relative overflow-hidden">
+        <header className="pt-28 pb-14 sm:pt-36 sm:pb-20 bg-neutral-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
               src={post.coverImage}
@@ -210,17 +210,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.sections && post.sections.map((section, idx) => (
                   <section key={idx} className="space-y-5">
                     {section.heading && (
-                      <h2 className="font-display font-bold text-2xl sm:text-3xl text-neutral-900 tracking-tight">
+                      <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#1E1B18] tracking-tight">
                         {section.heading}
                       </h2>
                     )}
                     {section.paragraphs && section.paragraphs.map((p, pIdx) => (
-                      <p key={pIdx} className="text-neutral-700 font-body leading-relaxed text-base sm:text-lg">
+                      <p key={pIdx} className="text-[#524C46] font-body leading-relaxed text-base sm:text-lg">
                         {p}
                       </p>
                     ))}
                     {section.calloutQuote && (
-                      <blockquote className="my-6 p-5 sm:p-6 rounded-2xl bg-[#F5F2EB] border-l-4 border-[#962D2D] italic text-neutral-800 text-base sm:text-lg font-serif">
+                      <blockquote className="my-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#FAF0EE] border-l-4 border-[#962D2D] italic text-[#1E1B18] text-base sm:text-lg font-serif">
                         &ldquo;{section.calloutQuote}&rdquo;
                       </blockquote>
                     )}
@@ -229,7 +229,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         {section.bulletPoints.map((bullet, bIdx) => (
                           <li
                             key={bIdx}
-                            className="flex items-start gap-3 text-neutral-700 font-body text-base"
+                            className="flex items-start gap-3 text-[#524C46] font-body text-base"
                           >
                             <span className="text-[#962D2D] font-bold mt-1 text-sm">•</span>
                             <span>{bullet}</span>
@@ -242,9 +242,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Clinical Appointment CTA Box */}
-              <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-neutral-900 text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#962D2D]/30 shadow-lg">
+              <div className="mt-14 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-neutral-900 text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#962D2D]/30 shadow-lg">
                 <div className="space-y-2 text-center sm:text-left">
-                  <span className="text-xs uppercase tracking-widest text-[#FAF0EE] font-semibold">
+                  <span className="text-xs uppercase tracking-widest text-[#FAF0EE] font-semibold font-body">
                     Personalized Clinical Rehabilitation
                   </span>
                   <h4 className="font-display font-bold text-xl sm:text-2xl text-white">
@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
                 <Link
                   href="/appointment"
-                  className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold bg-[#962D2D] text-white hover:bg-[#7D1F1F] transition-colors shadow-sm"
+                  className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold bg-[#962D2D] text-white hover:bg-[#7D1F1F] transition-colors shadow-sm font-body"
                 >
                   Book Evaluation →
                 </Link>
@@ -268,7 +268,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Related Articles */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-white border-t border-[#E5E0D8]">
+        <section className="py-16 bg-white border-t border-[#EAE4DC]">
           <Container>
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-10">
@@ -276,19 +276,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <span className="text-xs font-bold uppercase tracking-widest text-[#962D2D] block mb-1">
                     Keep Reading
                   </span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-900 tracking-tight">
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#1E1B18] tracking-tight">
                     Related Movement Insights
                   </h3>
                 </div>
                 <Link
                   href="/blog"
-                  className="text-xs font-semibold uppercase tracking-wider text-[#962D2D] hover:text-[#7D1F1F] transition-colors"
+                  className="text-xs font-semibold uppercase tracking-wider text-[#962D2D] hover:text-[#7D1F1F] transition-colors font-body"
                 >
                   View All Articles →
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                 {relatedPosts.map((related) => (
                   <BlogCard key={related.id} post={related} />
                 ))}

@@ -12,7 +12,7 @@ interface BlogCardProps {
 export default function BlogCard({ post, featured = false }: BlogCardProps) {
   if (featured) {
     return (
-      <article className="group relative rounded-2xl bg-white border border-[#EAE4DC] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <article className="group relative rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC] overflow-hidden shadow-xs hover:shadow-md transition-all duration-500 grid grid-cols-1 lg:grid-cols-12 gap-0">
         <div className="relative lg:col-span-7 h-72 lg:h-auto min-h-[320px] overflow-hidden">
           <Image
             src={post.coverImage}
@@ -23,14 +23,14 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#18181B]/60 via-transparent to-transparent lg:hidden" />
-          <span className="absolute top-4 left-4 inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-[#FAF8F5]/95 text-[#1E1B18] backdrop-blur-md border border-[#962D2D]/20 shadow-sm">
+          <span className="absolute top-4 left-4 inline-flex items-center px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-[#FAF8F5]/95 text-[#1E1B18] backdrop-blur-md border border-[#962D2D]/20 shadow-sm">
             Featured Article
           </span>
         </div>
 
         <div className="lg:col-span-5 p-7 lg:p-10 flex flex-col justify-between bg-white">
           <div>
-            <div className="flex items-center gap-3 text-xs text-neutral-500 mb-4 flex-wrap">
+            <div className="flex items-center gap-3 text-xs text-[#78716C] mb-4 flex-wrap font-body">
               <span className="px-2.5 py-1 rounded-md bg-[#FAF0EE] border border-[#962D2D]/20 font-medium text-[#962D2D]">
                 {post.category}
               </span>
@@ -40,23 +40,23 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
               <span>{post.readTime}</span>
             </div>
 
-            <h3 className="font-display font-semibold text-2xl lg:text-3xl text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-snug tracking-tight mb-4">
+            <h3 className="font-display font-bold text-2xl lg:text-3xl text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-snug tracking-tight mb-4">
               <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
             </h3>
 
-            <p className="text-neutral-600 font-body text-sm lg:text-base leading-relaxed line-clamp-3 mb-6">
+            <p className="text-[#524C46] font-body text-sm lg:text-base leading-relaxed line-clamp-3 mb-6">
               {post.excerpt}
             </p>
           </div>
 
-          <div className="pt-6 border-t border-neutral-100 flex items-center justify-between">
-            <span className="text-xs font-medium text-neutral-500">Dr Pilates Clinical Insights</span>
+          <div className="pt-6 border-t border-[#EAE4DC] flex items-center justify-between mt-auto">
+            <span className="text-xs font-medium text-[#78716C] font-body">Dr Pilates Clinical Insights</span>
 
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-[#962D2D] hover:text-[#7D1F1F] transition-colors group/link"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-[#962D2D] hover:text-[#7D1F1F] transition-colors group/link font-body"
             >
               Read Article
               <svg
@@ -75,7 +75,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
   }
 
   return (
-    <article className="group flex flex-col h-full rounded-2xl bg-white border border-[#EAE4DC] overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+    <article className="group flex flex-col h-full rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC] overflow-hidden shadow-xs hover:shadow-md transition-all duration-300">
       <Link href={`/blog/${post.slug}`} className="relative h-56 w-full overflow-hidden block">
         <Image
           src={post.coverImage}
@@ -85,7 +85,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3">
-          <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-[#FAF0EE] text-[#962D2D] backdrop-blur-md border border-[#962D2D]/20 shadow-xs">
+          <span className="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-[#FAF0EE] text-[#962D2D] backdrop-blur-md border border-[#962D2D]/20 shadow-xs font-body">
             {post.category}
           </span>
         </div>
@@ -93,29 +93,29 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
-          <div className="flex items-center gap-2 text-xs text-neutral-500 mb-3">
+          <div className="flex items-center gap-2 text-xs text-[#78716C] mb-3 font-body">
             <time dateTime={post.publishedAt}>{post.publishedAt}</time>
             <span>•</span>
             <span>{post.readTime}</span>
           </div>
 
-          <h3 className="font-display font-semibold text-lg lg:text-xl text-neutral-900 group-hover:text-[#962D2D] transition-colors leading-snug line-clamp-2 mb-3">
+          <h3 className="font-display font-bold text-lg lg:text-xl text-[#1E1B18] group-hover:text-[#962D2D] transition-colors leading-snug line-clamp-2 mb-3 min-h-[3.25rem]">
             <Link href={`/blog/${post.slug}`}>
               {post.title}
             </Link>
           </h3>
 
-          <p className="text-neutral-600 font-body text-sm leading-relaxed line-clamp-3 mb-5">
+          <p className="text-[#524C46] font-body text-xs sm:text-sm leading-relaxed line-clamp-3 mb-5">
             {post.excerpt}
           </p>
         </div>
 
-        <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
-          <span className="text-xs font-medium text-neutral-500">{post.readTime}</span>
+        <div className="pt-4 border-t border-[#EAE4DC] flex items-center justify-between mt-auto">
+          <span className="text-xs font-medium text-[#78716C] font-body">{post.readTime}</span>
 
           <Link
             href={`/blog/${post.slug}`}
-            className="inline-flex items-center text-xs font-semibold text-[#962D2D] group-hover:translate-x-0.5 transition-transform"
+            className="inline-flex items-center text-xs font-semibold text-[#962D2D] group-hover:translate-x-0.5 transition-transform font-body"
             aria-label={`Read ${post.title}`}
           >
             Read Article →

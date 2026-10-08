@@ -25,26 +25,24 @@ export default function BlogHubPage() {
   const featured = getFeaturedBlog();
 
   return (
-    <div className="pt-24 pb-0 bg-[#FAF8F5]">
+    <div className="pb-0 bg-[#FAF8F5]">
       {/* Hero Banner with Studio Image Background */}
-      <section className="py-20 sm:py-28 bg-[#111110] text-white relative overflow-hidden flex items-center justify-center">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/videos/pilates_studio_interior.jpeg"
+            src="/images/reformer_studio_unsplash.jpg"
             alt="Dr Pilates Studio Interior"
             fill
             priority
-            className="object-cover object-center"
+            quality={95}
+            className="object-cover object-[center_60%]"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/90 via-[#111110]/55 to-[#111110]/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1E1B18]/90 via-[#1E1B18]/55 to-[#1E1B18]/40" />
         </div>
 
         <Container className="relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#962D2D]/20 shadow-xs mb-2">
-              <span className="uppercase tracking-widest text-[10px]">✨ Clinical Movement Journal</span>
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Clinical Insights, Science &amp;{" "}
               <span className="font-serif italic font-normal text-[#962D2D]">

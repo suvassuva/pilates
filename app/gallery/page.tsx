@@ -42,9 +42,9 @@ export default function GalleryPage() {
   }, [lightboxIndex, handleNext, handlePrev]);
 
   return (
-    <div className="pt-24 pb-12 bg-[#FAF8F5]">
+    <div className="pb-12 bg-[#FAF8F5]">
       {/* Page Hero */}
-      <section className="py-20 sm:py-28 bg-[#111110] text-white relative overflow-hidden flex items-center justify-center">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/studio_interior_reformer_beds.webp"
@@ -59,9 +59,6 @@ export default function GalleryPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF0EE] text-[#962D2D] text-[10px] sm:text-xs font-semibold tracking-wide border border-[#962D2D]/20 shadow-xs mb-2">
-              <span className="uppercase tracking-widest text-[10px]">✨ Studio &amp; Movement Showcase</span>
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
               Dr Pilates <span className="font-serif italic font-normal text-[#962D2D]">Live Gallery</span>
             </h1>

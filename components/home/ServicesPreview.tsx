@@ -75,7 +75,7 @@ export const ServicesPreview: React.FC = () => {
           {SERVICES.slice(0, 3).map((service) => (
             <div
               key={service.slug}
-              className="snap-start shrink-0 w-[82vw] md:w-auto"
+              className="snap-start shrink-0 w-[82vw] md:w-auto h-full flex flex-col"
             >
               <ServiceCard service={service} />
             </div>

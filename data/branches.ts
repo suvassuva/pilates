@@ -67,7 +67,8 @@ export const BRANCHES: Branch[] = [
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
       "Customized Movement Plans",
-      "Personal and Group Sessions"
+      "Personal and Group Sessions",
+      "Spacious Clinical Studio Layout"
     ]
   },
   {
@@ -106,7 +107,8 @@ export const BRANCHES: Branch[] = [
       "Full Body EMS Suite",
       "Expert Physiotherapist Consultations",
       "Customized Movement Plans",
-      "Personal and Group Sessions"
+      "Personal and Group Sessions",
+      "Spacious Clinical Studio Layout"
     ],
     statusText: "Accepting bookings for Reformer Pilates, EMS Training & Physiotherapy."
   }

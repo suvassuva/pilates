@@ -42,24 +42,24 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
   return (
     <div className="space-y-12">
       {/* Search and Filters Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-[#E5E0D8] shadow-xs">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC] shadow-xs">
         {/* Articles Count & Description */}
         <div className="flex items-center gap-2.5">
-          <span className="text-sm font-semibold text-neutral-900 tracking-tight">All Articles</span>
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20">
+          <span className="text-sm font-bold font-display text-[#1E1B18] tracking-tight">All Articles</span>
+          <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20 font-body">
             {filteredPosts.length}
           </span>
         </div>
 
         {/* Search Input */}
         <div className="relative w-full md:w-72 shrink-0">
-          <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[#78716C] absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search articles & topics..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-xs font-body rounded-full bg-[#FAF8F5] border border-[#E5E0D8] focus:outline-none focus:ring-2 focus:ring-[#962D2D] focus:bg-white text-neutral-900 transition-colors placeholder:text-neutral-400"
+            className="w-full pl-9 pr-4 py-2 text-xs font-body rounded-full bg-[#FAF8F5] border border-[#EAE4DC] focus:outline-none focus:ring-2 focus:ring-[#962D2D] focus:bg-white text-[#1E1B18] transition-colors placeholder:text-[#78716C]"
           />
         </div>
       </div>
@@ -71,10 +71,10 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
         </section>
       )}
 
-      {/* Article Grid */}
+      {/* Article Grid - items-stretch guarantees equal-height rows */}
       {gridPosts.length > 0 && (
         <section aria-label="Articles Grid">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
             {gridPosts.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
@@ -83,11 +83,11 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
       )}
 
       {gridPosts.length === 0 && searchQuery.trim() !== "" && (
-        <div className="text-center py-16 px-4 rounded-2xl bg-white border border-[#E5E0D8]">
-          <p className="text-base text-neutral-600 mb-2">
+        <div className="text-center py-16 px-4 rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC]">
+          <p className="text-base text-[#524C46] font-body mb-2">
             No articles found matching &ldquo;{searchQuery}&rdquo;.
           </p>
-          <p className="text-xs text-neutral-400">
+          <p className="text-xs text-[#78716C] font-body">
             Try adjusting your search terms or clearing the category filter.
           </p>
           <button
@@ -95,7 +95,7 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
               setSearchQuery("");
               setSelectedCategory("All");
             }}
-            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25 hover:bg-[#FAF0EE]/80 transition-colors"
+            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25 hover:bg-[#FAF0EE]/80 transition-colors cursor-pointer font-body"
           >
             Reset Filters
           </button>

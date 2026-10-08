@@ -37,7 +37,7 @@ export default function BlogFAQ({ faqs }: BlogFAQProps) {
             return (
               <div
                 key={faq.id}
-                className="bg-white rounded-2xl border border-[#EAE4DC] transition-all duration-300 shadow-xs hover:border-[#962D2D]/40 overflow-hidden"
+                className="bg-white rounded-2xl sm:rounded-3xl border border-[#EAE4DC] transition-all duration-300 shadow-xs hover:border-[#962D2D]/40 overflow-hidden"
               >
                 <button
                   type="button"
@@ -45,7 +45,7 @@ export default function BlogFAQ({ faqs }: BlogFAQProps) {
                   className="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#962D2D]"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display font-semibold text-base sm:text-lg text-[#1E1B18] leading-snug">
+                  <span className="font-display font-bold text-base sm:text-lg text-[#1E1B18] leading-snug">
                     {faq.question}
                   </span>
                   <div
@@ -74,7 +74,7 @@ export default function BlogFAQ({ faqs }: BlogFAQProps) {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-neutral-600 font-body text-sm sm:text-base leading-relaxed border-t border-neutral-100/80 mt-1">
+                  <div className="px-6 pb-6 sm:px-7 sm:pb-7 pt-0 text-[#524C46] font-body text-sm sm:text-base leading-relaxed border-t border-[#EAE4DC] mt-1">
                     <p className="pt-4">{faq.answer}</p>
                   </div>
                 )}

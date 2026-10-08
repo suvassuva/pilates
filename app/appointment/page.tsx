@@ -284,9 +284,9 @@ function AppointmentFormContent() {
 
 export default function AppointmentPage() {
   return (
-    <div className="pt-24 pb-12 bg-[#FAF8F5]">
+    <div className="pb-12 bg-[#FAF8F5]">
       {/* Page Hero with Background Image */}
-      <section className="py-20 sm:py-28 bg-[#18181B] text-white relative overflow-hidden flex items-center justify-center mb-12">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#18181B] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px] mb-12">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/videos/pilates_reformer_machine.jpeg"
