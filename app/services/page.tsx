@@ -41,11 +41,6 @@ const pillarIconMap: Record<string, React.ReactNode> = {
   Sparkles: <Sparkles className="w-5 h-5 text-[#962D2D]" />
 };
 
-const serviceTaglines: Record<string, string> = {
-  "reformer-pilates": "PRECISION RESISTANCE & POSTURAL SCULPTING",
-  "ems-training": "20-MINUTE BIO-ELECTRIC WORKOUT",
-  "physiotherapy": "CLINICAL DIAGNOSIS & RECOVERY"
-};
 
 export default function ServicesPage() {
   return (
@@ -390,14 +385,6 @@ export default function ServicesPage() {
                 {service.slug === "reformer-pilates" && (
                   <div className="mt-12 sm:mt-16">
                     <div className="bg-[#FFFFFF] rounded-2xl sm:rounded-3xl border border-[#EAE4DC] shadow-sm overflow-hidden">
-                      {/* Card Header Banner */}
-                      <div className="bg-[#FAF8F5] px-6 sm:px-8 py-4 sm:py-5 border-b border-[#EAE4DC] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                        <div>
-                          <h3 className="text-base sm:text-lg font-bold font-display text-[#1E1B18] uppercase tracking-wide">
-                            {service.title}: <span className="text-[#962D2D] font-normal">{serviceTaglines[service.slug] || "TRANSFORM YOUR BODY"}</span>
-                          </h3>
-                        </div>
-                      </div>
 
                       {/* 3 Sections Grid - Equalized with items-stretch and h-full */}
                       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#EAE4DC] items-stretch">
