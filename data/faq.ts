@@ -1,6 +1,6 @@
 export interface FAQItem {
   id: string;
-  category: "General" | "Reformer Pilates" | "EMS Training" | "Physiotherapy" | "Booking & Locations";
+  category: string;
   question: string;
   answer: string;
 }
@@ -9,40 +9,97 @@ export const FAQ_CATEGORIES = [
   "All",
   "General",
   "Reformer Pilates",
-  "EMS Training",
+  "Getting Started",
+  "Sessions",
+  "Rehabilitation",
   "Physiotherapy",
+  "Pre & Postnatal",
   "Booking & Locations"
 ] as const;
 
 export const FAQS: FAQItem[] = [
   {
     id: "faq-1",
-    category: "Reformer Pilates",
-    question: "What is Reformer Pilates?",
-    answer: "Reformer Pilates is a full-body conditioning method performed on a specialized carriage machine that uses springs, pulleys, and straps for resistance. Unlike mat pilates, the reformer offers adjustable resistance, providing both deep support for rehabilitation and high-intensity challenge for athletic performance."
+    category: "General",
+    question: "What is Dr Pilates?",
+    answer: "Dr Pilates is a professional Pilates and physiotherapy centre in Bengaluru, offering personalised movement training, Reformer Pilates, and exercise-based rehabilitation to help clients improve strength, mobility, posture, and overall well-being."
   },
   {
     id: "faq-2",
-    category: "General",
-    question: "Who can join Pilates classes?",
-    answer: "Anyone can join. Because our sessions are supervised by a clinical physical therapist, we cater to all ages, fitness levels, and rehabilitation needs. Whether you are correcting posture, building core strength, or recovering from a spinal injury, we custom-tailor the spring resistance for you."
+    category: "Reformer Pilates",
+    question: "What is Reformer Pilates?",
+    answer: "Reformer Pilates is a low-impact exercise method performed on specialised equipment with springs and a moving carriage. It helps improve core strength, flexibility, balance, coordination, and body control."
   },
   {
     id: "faq-3",
-    category: "EMS Training",
-    question: "How does EMS training work?",
-    answer: "Electro Muscle Stimulation (EMS) sends gentle, low-frequency bio-electric impulses directly to your muscle fibers via a technical suit. This triggers deep muscle contractions that are difficult to reach with standard weights. A 20-minute session activates over 90% of your muscle fibers safely and efficiently."
+    category: "Getting Started",
+    question: "Is Pilates suitable for beginners?",
+    answer: "Yes! Pilates is suitable for beginners when exercises are adapted to their fitness level, movement ability, and goals. Our instructors guide clients through the exercises with proper technique and control."
   },
   {
     id: "faq-4",
-    category: "Physiotherapy",
-    question: "Do I need physiotherapy before starting Pilates?",
-    answer: "Not necessarily, but every client at Dr Pilates starts with a comprehensive physical assessment. If you suffer from active spinal pain, sports injuries, or joint issues, Dr. Govinda Raju will direct a physiotherapy mobilization plan before transitioning you into Reformer work."
+    category: "Sessions",
+    question: "What is the difference between group and private Pilates sessions?",
+    answer: "Group sessions offer instructor-guided workouts in a shared class setting. Private sessions provide one-to-one attention and a programme tailored to your individual goals, abilities, and movement needs."
   },
   {
     id: "faq-5",
+    category: "Rehabilitation",
+    question: "Can Pilates help with back pain and poor posture?",
+    answer: "Pilates can help improve strength, movement control, flexibility, and postural awareness. If you have back pain or a diagnosed condition, we recommend an appropriate assessment to determine which exercises are suitable for you."
+  },
+  {
+    id: "faq-6",
+    category: "General",
+    question: "Is Pilates only for women?",
+    answer: "Absolutely not! Pilates is for everyone. Men and women can benefit from improved core strength, mobility, balance, flexibility, and movement efficiency."
+  },
+  {
+    id: "faq-7",
+    category: "Physiotherapy",
+    question: "Do You offer physiotherapy and rehabilitation?",
+    answer: "Yes. Dr Pilates combines Pilates-based movement training with physiotherapy-informed care. Treatment and rehabilitation plans depend on individual needs and should be guided by an appropriate assessment."
+  },
+  {
+    id: "faq-8",
+    category: "Sessions",
+    question: "How many times a week should I practise Pilates?",
+    answer: "For many people, two to three sessions per week is a reasonable starting point. The ideal frequency depends on your goals, fitness level, recovery, and any medical considerations."
+  },
+  {
+    id: "faq-9",
+    category: "General",
+    question: "When will I see results from Pilates?",
+    answer: "Results vary from person to person. With consistent practice, some people notice improvements in movement awareness, coordination, and mobility within a few weeks. Strength and fitness improvements generally require ongoing practice."
+  },
+  {
+    id: "faq-10",
+    category: "Pre & Postnatal",
+    question: "Is Reformer Pilates safe during pregnancy or after childbirth?",
+    answer: "It may be appropriate with suitable modifications and guidance from a qualified professional. Pregnant and postpartum clients should obtain individual medical clearance where appropriate, especially following a C-section or when experiencing pain or complications."
+  },
+  {
+    id: "faq-11",
+    category: "General",
+    question: "What equipment do you use at Dr Pilates?",
+    answer: "Our studio features professional Merrithew Pilates equipment and specialised apparatus to support a range of exercises, from foundational movement to more advanced training."
+  },
+  {
+    id: "faq-12",
+    category: "Getting Started",
+    question: "What should I wear for my first Pilates class?",
+    answer: "Wear comfortable, stretchable, well-fitted workout clothing that allows free movement. Grip socks are recommended for hygiene and traction; please confirm the studio's requirements when booking."
+  },
+  {
+    id: "faq-13",
     category: "Booking & Locations",
-    question: "How do I book a consultation?",
-    answer: "Booking is simple. Click any 'Book Assessment' or 'Book Consultation' CTA, fill out your contact details, and choose your service of interest. Our clinic coordinators will reach out within 2 hours to confirm your physical audit slot. You can also call us directly or click the WhatsApp widget."
+    question: "How do I book a session at Dr Pilates?",
+    answer: "Contact our team to enquire about group or private sessions, available timings, pricing, and the most suitable programme for your goals."
+  },
+  {
+    id: "faq-14",
+    category: "Booking & Locations",
+    question: "Where is Dr Pilates located?",
+    answer: "Visit our Kalyan Nagar studio in Bengaluru, located in the HRBR Layout area and Kothanur studio located off Hennur Road. Contact our team for directions and current availability."
   }
 ];
