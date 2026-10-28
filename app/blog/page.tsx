@@ -43,16 +43,13 @@ export default function BlogHubPage() {
         </div>
 
         <Container className="relative z-10 text-center">
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
               Clinical Insights, Science &amp;{" "}
               <span className="font-serif italic text-white">
                 Movement Culture
               </span>
             </h1>
-            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
-              Evidence-based rehabilitation, biomechanics breakdowns, and reformer training advice curated by Dr. Govinda Raju S. and our elite clinical faculty.
-            </p>
           </div>
         </Container>
       </section>

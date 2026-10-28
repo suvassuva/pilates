@@ -32,13 +32,10 @@ export default function AboutPage() {
         </div>
 
         <Container className="relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
+          <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
               Movement Crafted for <span className="font-serif italic text-[#F7F3ED]">Vitality &amp; Longevity</span>
             </h1>
-            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
-              Combining evidence-based physiotherapy with high-end Reformer Pilates and EMS technology in Bengaluru.
-            </p>
           </div>
         </Container>
       </section>
