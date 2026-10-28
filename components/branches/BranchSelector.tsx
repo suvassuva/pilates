@@ -25,28 +25,28 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
 }) => {
   return (
     <section className={`w-full ${className}`}>
-      {/* 2 Clean & Compact Studio Cards Side-by-Side */}
+      {/* 2 Clean & Compact Studio Cards Side-by-Side (Clean rectangular, 12px restrained radius) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
         {BRANCHES.map((branch: Branch) => (
           <div
             key={branch.id}
             id={branch.id}
-            className="bg-[#FFFFFF] text-[#1E1B18] rounded-2xl sm:rounded-3xl border border-[#EAE4DC] p-5 sm:p-6 shadow-xs hover:border-[#962D2D]/40 hover:shadow-sm transition-all duration-300 flex flex-col justify-between scroll-mt-28 h-full"
+            className="bg-[#FFFFFF] text-[#282622] rounded-xl border border-[#DDD3C8] p-5 sm:p-7 hover:border-[#C5A990] transition-colors duration-200 flex flex-col justify-between scroll-mt-28 h-full"
           >
             <div className="flex-1 flex flex-col">
               {/* Card Header: Studio Title & Rating Aligned */}
-              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-[#EAE4DC] min-h-[4.5rem] lg:min-h-[5.25rem]">
-                <h3 className="text-xl sm:text-2xl font-bold font-display text-[#1E1B18] leading-snug flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-[#DDD3C8] min-h-[4.5rem] lg:min-h-[5rem]">
+                <h3 className="text-xl sm:text-2xl font-normal font-display text-[#282622] leading-snug flex-1">
                   {branch.name}
                 </h3>
 
                 {branch.rating > 0 && (
                   <div className="flex items-center gap-1.5 shrink-0 pt-0.5">
-                    <div className="flex items-center gap-1 bg-[#FAF8F5] text-[#1E1B18] text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-[#EAE4DC]">
-                      <Star className="w-3 h-3 fill-[#962D2D] text-[#962D2D]" />
+                    <div className="flex items-center gap-1 bg-[#F7F3ED] text-[#282622] text-[11px] sm:text-xs font-medium font-body px-2.5 py-1 rounded-[6px] border border-[#DDD3C8]">
+                      <Star className="w-3 h-3 fill-[#C5A990] text-[#C5A990]" />
                       <span>{branch.rating} ★</span>
                       {branch.reviewCount > 0 && (
-                        <span className="text-[#78716C] font-normal">
+                        <span className="text-[#6E685E] font-normal">
                           ({branch.reviewCount})
                         </span>
                       )}
@@ -57,10 +57,10 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         title="View Google Reviews"
-                        className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#962D2D] hover:text-[#7D1F1F] font-semibold bg-[#FAF8F5] px-2.5 py-1 rounded-full border border-[#EAE4DC] hover:border-[#962D2D]/40 transition-colors"
+                        className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#282622] font-medium font-body bg-[#F7F3ED] px-2.5 py-1 rounded-[6px] border border-[#DDD3C8] hover:border-[#282622] transition-colors"
                       >
                         <span>Reviews</span>
-                        <ExternalLink className="w-2.5 h-2.5" />
+                        <ExternalLink className="w-2.5 h-2.5 text-[#6E685E]" />
                       </a>
                     )}
                   </div>
@@ -69,36 +69,36 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
 
               {/* Card Info Rows */}
               <div className="py-4 space-y-3 flex-1 flex flex-col">
-                {/* Full Address */}
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#FAF0EE]/40 border border-[#EAE4DC] min-h-[82px] sm:min-h-[86px]">
-                  <MapPin className="w-4 h-4 text-[#962D2D] shrink-0 mt-0.5" />
-                  <div className="text-xs sm:text-[13px] text-[#524C46] leading-relaxed">
-                    <strong className="text-[#1E1B18] font-semibold block mb-0.5">Studio Address:</strong>
+                {/* Full Address (Warm Ivory, 8px radius) */}
+                <div className="flex items-start gap-2.5 p-3.5 rounded-lg bg-[#F7F3ED] border border-[#DDD3C8] min-h-[82px] sm:min-h-[86px]">
+                  <MapPin className="w-4 h-4 text-[#C5A990] shrink-0 mt-0.5" />
+                  <div className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body">
+                    <strong className="text-[#282622] font-medium block mb-0.5">Studio Address:</strong>
                     <span>{branch.address.fullText}</span>
                   </div>
                 </div>
 
-                {/* Timings */}
-                <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#FAF0EE]/40 border border-[#EAE4DC] min-h-[76px] sm:min-h-[80px]">
-                  <Clock className="w-4 h-4 text-[#962D2D] shrink-0 mt-0.5" />
-                  <div className="text-xs sm:text-[13px] text-[#524C46] leading-relaxed">
-                    <strong className="text-[#1E1B18] font-semibold block mb-0.5">Operating Hours:</strong>
+                {/* Timings (Warm Ivory, 8px radius) */}
+                <div className="flex items-start gap-2.5 p-3.5 rounded-lg bg-[#F7F3ED] border border-[#DDD3C8] min-h-[76px] sm:min-h-[80px]">
+                  <Clock className="w-4 h-4 text-[#C5A990] shrink-0 mt-0.5" />
+                  <div className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body">
+                    <strong className="text-[#282622] font-medium block mb-0.5">Operating Hours:</strong>
                     <span>{branch.hours}</span>
                   </div>
                 </div>
 
                 {/* Highlights */}
                 <div className="pt-2 mt-auto">
-                  <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#962D2D] mb-2.5">
+                  <h4 className="text-[11px] font-medium font-body uppercase tracking-wider text-[#282622] mb-2.5">
                     Studio Highlights &amp; Equipment
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {branch.features.map((feat, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2 text-xs text-[#524C46]"
+                        className="flex items-center gap-2 text-xs text-[#6E685E] font-body"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#962D2D] shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A990] shrink-0" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -108,13 +108,13 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-4 border-t border-[#EAE4DC] space-y-2.5">
+            <div className="pt-4 border-t border-[#DDD3C8] space-y-2.5">
               <Button
                 href={`/appointment?branch=${branch.id}`}
                 variant="primary"
-                size="sm"
+                size="md"
                 fullWidth
-                icon={<Calendar className="w-3.5 h-3.5" />}
+                icon={<Calendar className="w-4 h-4" />}
               >
                 Book Appointment
               </Button>
@@ -126,7 +126,7 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
                   variant="whatsapp"
                   size="sm"
                   fullWidth
-                  className="px-1.5 sm:px-2 text-[11px] sm:text-xs"
+                  className="px-1.5 sm:px-2 text-xs"
                   icon={<MessageSquare className="w-3.5 h-3.5 text-white" />}
                 >
                   WhatsApp
@@ -137,8 +137,8 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
                   variant="outline"
                   size="sm"
                   fullWidth
-                  className="px-1.5 sm:px-2 text-[11px] sm:text-xs border-[#EAE4DC] text-[#1E1B18] hover:bg-[#FAF0EE] hover:text-[#962D2D] hover:border-[#962D2D]/35 bg-[#FFFFFF]"
-                  icon={<Phone className="w-3.5 h-3.5 text-[#962D2D]" />}
+                  className="px-1.5 sm:px-2 text-xs"
+                  icon={<Phone className="w-3.5 h-3.5 text-[#282622]" />}
                 >
                   Call Now
                 </Button>
@@ -149,8 +149,8 @@ export const BranchSelector: React.FC<BranchSelectorProps> = ({
                   variant="outline"
                   size="sm"
                   fullWidth
-                  className="px-1.5 sm:px-2 text-[11px] sm:text-xs border-[#EAE4DC] text-[#1E1B18] hover:bg-[#FAF0EE] hover:text-[#962D2D] hover:border-[#962D2D]/35 bg-[#FFFFFF]"
-                  icon={<Navigation className="w-3.5 h-3.5 text-[#962D2D]" />}
+                  className="px-1.5 sm:px-2 text-xs"
+                  icon={<Navigation className="w-3.5 h-3.5 text-[#282622]" />}
                 >
                   Directions
                 </Button>

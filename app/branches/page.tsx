@@ -12,27 +12,29 @@ export const metadata = {
 
 export default function BranchesPage() {
   return (
-    <div className="pb-12 bg-[#FAF8F5]">
+    <div className="pb-12 bg-[#F7F3ED]">
       {/* Page Hero with Studio Exterior Background */}
-      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/videos/woman_walking_outside.jpeg"
-            alt="Dr Pilates Bengaluru Entrance"
+            src="/images/hero_branches_luminous.jpg"
+            alt="Dr Pilates Bright Sunlit Bengaluru Studio Entrance"
             fill
             priority
+            quality={95}
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2A2520]/80 via-[#2A2520]/45 to-[#2A2520]/30" />
+          {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
-              Explore Our <span className="font-serif italic font-normal text-[#FAF8F5]">Bengaluru Studios</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
+              Explore Our <span className="font-serif italic text-[#FFFFFF]">Bengaluru Studios</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
               Visit our Kalyan Nagar and Kothanur studios across Bengaluru to view detailed address specs, operating hours, Google Maps directions, and direct desk contact options.
             </p>
           </div>
@@ -40,7 +42,7 @@ export default function BranchesPage() {
       </section>
 
       {/* Main Interactive 2-Branch Selector Hub */}
-      <section className="py-20 bg-[#FAF8F5]">
+      <section className="py-20 bg-[#F7F3ED]">
         <Container>
           <BranchSelector defaultBranchId="kalyan-nagar" />
         </Container>

@@ -1,29 +1,25 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
+import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyCTA } from "@/components/layout/MobileStickyCTA";
 import { WhatsAppPopup } from "@/components/ui/WhatsAppPopup";
 
-const outfit = Outfit({
+const dmSerifDisplay = DM_Serif_Display({
+  weight: "400",
   subsets: ["latin"],
   variable: "--font-display",
-  display: "swap"
+  display: "swap",
+  fallback: ["Georgia", "serif"]
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-body",
-  display: "swap"
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-  display: "swap"
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"]
 });
 
 export const metadata: Metadata = {
@@ -67,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} ${cormorant.variable}`}>
-      <body className="font-body antialiased min-h-screen flex flex-col justify-between bg-[#FAF8F5] text-[#2A2520]">
+    <html lang="en" className={`${dmSerifDisplay.variable} ${dmSans.variable}`}>
+      <body className="font-body antialiased min-h-screen flex flex-col justify-between bg-[#F7F3ED] text-[#282622]">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

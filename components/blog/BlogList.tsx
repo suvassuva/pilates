@@ -40,26 +40,26 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
     selectedCategory === "All" && searchQuery.trim() === "" && featuredPost;
 
   return (
-    <div className="space-y-12">
-      {/* Search and Filters Bar */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC] shadow-xs">
+    <div className="space-y-10">
+      {/* Search and Filters Bar (Clean 12px rounded card) */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-xl bg-[#FFFFFF] border border-[#DDD3C8]">
         {/* Articles Count & Description */}
         <div className="flex items-center gap-2.5">
-          <span className="text-sm font-bold font-display text-[#1E1B18] tracking-tight">All Articles</span>
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20 font-body">
+          <span className="text-base font-normal font-display text-[#282622] tracking-tight">All Articles</span>
+          <span className="px-2.5 py-0.5 rounded-[6px] text-xs font-medium bg-[#E8DED1] text-[#282622] border border-[#DDD3C8] font-body">
             {filteredPosts.length}
           </span>
         </div>
 
-        {/* Search Input */}
-        <div className="relative w-full md:w-72 shrink-0">
-          <Search className="w-4 h-4 text-[#78716C] absolute left-3.5 top-1/2 -translate-y-1/2" />
+        {/* Search Input (Restrained 6px radius) */}
+        <div className="relative w-full md:w-80 shrink-0">
+          <Search className="w-4 h-4 text-[#6E685E] absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search articles & topics..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-xs font-body rounded-full bg-[#FAF8F5] border border-[#EAE4DC] focus:outline-none focus:ring-2 focus:ring-[#962D2D] focus:bg-white text-[#1E1B18] transition-colors placeholder:text-[#78716C]"
+            className="w-full pl-9 pr-4 py-2.5 text-xs sm:text-sm font-body rounded-[6px] bg-[#F7F3ED] border border-[#DDD3C8] focus:outline-none focus:ring-2 focus:ring-[#282622] focus:bg-[#FFFFFF] text-[#282622] transition-colors placeholder:text-[#6E685E]"
           />
         </div>
       </div>
@@ -83,11 +83,11 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
       )}
 
       {gridPosts.length === 0 && searchQuery.trim() !== "" && (
-        <div className="text-center py-16 px-4 rounded-2xl sm:rounded-3xl bg-white border border-[#EAE4DC]">
-          <p className="text-base text-[#524C46] font-body mb-2">
+        <div className="text-center py-14 px-4 rounded-xl bg-[#FFFFFF] border border-[#DDD3C8]">
+          <p className="text-base text-[#6E685E] font-body mb-2">
             No articles found matching &ldquo;{searchQuery}&rdquo;.
           </p>
-          <p className="text-xs text-[#78716C] font-body">
+          <p className="text-xs sm:text-sm text-[#6E685E] font-body">
             Try adjusting your search terms or clearing the category filter.
           </p>
           <button
@@ -95,7 +95,7 @@ export default function BlogList({ posts, featuredPost }: BlogListProps) {
               setSearchQuery("");
               setSelectedCategory("All");
             }}
-            className="mt-4 px-4 py-2 rounded-full text-xs font-semibold bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/25 hover:bg-[#FAF0EE]/80 transition-colors cursor-pointer font-body"
+            className="mt-4 min-h-[44px] px-5 py-2.5 rounded-[6px] text-xs sm:text-sm font-medium bg-[#5C604E] text-[#FFFFFF] hover:bg-[#4A4E3E] transition-colors cursor-pointer font-body shadow-xs"
           >
             Reset Filters
           </button>

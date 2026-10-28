@@ -7,13 +7,14 @@ export type GalleryCategory =
   | "Stability Chair"
   | "Personal Training"
   | "EMS Training"
-  | "Studio & Ambience";
+  | "Studio & Ambience"
+  | "Press & Media";
 
 export interface GalleryItem {
   id: string;
   type: GalleryItemType;
   title: string;
-  category: "Reformer Pilates" | "Cadillac & Trapeze" | "Personal Training" | "Stability Chair" | "EMS Training" | "Studio & Ambience";
+  category: "Reformer Pilates" | "Cadillac & Trapeze" | "Personal Training" | "Stability Chair" | "EMS Training" | "Studio & Ambience" | "Press & Media";
   image: string;
   video?: string;
   alt: string;
@@ -26,7 +27,8 @@ export const GALLERY_CATEGORIES = [
   "Stability Chair",
   "Personal Training",
   "EMS Training",
-  "Studio & Ambience"
+  "Studio & Ambience",
+  "Press & Media"
 ] as const;
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -163,5 +165,21 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     category: "Studio & Ambience",
     image: "/images/studio_ambient_reformer_room.webp",
     alt: "Luxury ambient lighting, backlit arch mirrors, and reformer stations inside Dr Pilates studio"
+  },
+  {
+    id: "gal-press-1",
+    type: "image",
+    title: "Sunday Chronicle: 'WORKOUT without weights' by Dr. Govinda Raju",
+    category: "Press & Media",
+    image: "/images/dr_govind_sunday_chronicle_workout_without_weights.jpeg",
+    alt: "Dr. Govinda Raju S. featured in Sunday Chronicle newspaper column 'phyzzicality' demonstrating equipment-free functional workouts"
+  },
+  {
+    id: "gal-press-2",
+    type: "image",
+    title: "Sunday Chronicle: 'Be toned to PARTY HARD!' by Dr. Govinda Raju",
+    category: "Press & Media",
+    image: "/images/dr_govind_sunday_chronicle_be_toned_party_hard.jpeg",
+    alt: "Dr. Govinda Raju S. published in Sunday Chronicle feature on festive season core conditioning, BDNF stimulation, and movement integrity"
   }
 ];

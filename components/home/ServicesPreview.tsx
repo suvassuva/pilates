@@ -51,11 +51,11 @@ export const ServicesPreview: React.FC = () => {
   };
 
   return (
-    <section className="py-10 sm:py-20 bg-[#FAF8F5] relative overflow-hidden">
+    <section className="py-10 sm:py-20 bg-[#F7F3ED] relative overflow-hidden">
       <Container>
         <SectionTitle
           subtitle="Our Services"
-          title="Tailored Movement & Wellness Offerings"
+          title="Tailored Movement &amp; Wellness Offerings"
           description="Explore our specialized clinical and conditioning programs designed to optimize core strength, accelerate fat loss, relieve pain, and restore vital mobility."
           align="center"
           className="mb-6 sm:mb-12"
@@ -83,15 +83,15 @@ export const ServicesPreview: React.FC = () => {
         </div>
 
         {/* Pagination Dots (Mobile Only) */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-6">
+        <div className="flex md:hidden items-center justify-center gap-1.5 mt-6">
           {SERVICES.slice(0, 3).map((_, idx) => (
             <button
               key={idx}
               onClick={() => scrollToIndex(idx)}
-              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+              className={`h-1.5 rounded-[2px] transition-all duration-200 cursor-pointer ${
                 activeIndex === idx
-                  ? "w-7 bg-[#962D2D]"
-                  : "w-2 bg-[#962D2D]/25 hover:bg-[#962D2D]/50"
+                  ? "w-6 bg-[#282622]"
+                  : "w-2 bg-[#DDD3C8] hover:bg-[#C5A990]"
               }`}
               aria-label={`Go to service ${idx + 1}`}
             />
@@ -104,7 +104,7 @@ export const ServicesPreview: React.FC = () => {
             href="/services"
             variant="outline"
             size="md"
-            icon={<ArrowRight className="w-4 h-4 text-[#962D2D]" />}
+            icon={<ArrowRight className="w-4 h-4 text-[#282622]" />}
           >
             View All Services Details
           </Button>

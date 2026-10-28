@@ -14,7 +14,7 @@ export const WhatsAppPopup: React.FC = () => {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
+        className="w-12 h-12 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
         aria-label="Chat with Dr. Pilates on WhatsApp (+91 94810 03827)"
         title="Chat with Dr. Pilates on WhatsApp (+91 94810 03827)"
       >

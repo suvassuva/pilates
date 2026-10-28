@@ -9,16 +9,16 @@ interface ServiceCardProps {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  Activity: <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />,
-  Zap: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />,
-  HeartPulse: <HeartPulse className="w-5 h-5 sm:w-6 sm:h-6 text-[#962D2D]" />
+  Activity: <Activity className="w-5 h-5 text-[#282622]" />,
+  Zap: <Zap className="w-5 h-5 text-[#282622]" />,
+  HeartPulse: <HeartPulse className="w-5 h-5 text-[#282622]" />
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
-    <div className="bg-[#FFFFFF] text-[#1E1B18] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#EAE4DC] hover:border-[#962D2D]/40 shadow-xs hover:shadow-xl hover-lift flex flex-col justify-between group transition-all duration-300 h-full">
+    <div className="bg-[#FFFFFF] text-[#282622] rounded-xl overflow-hidden border border-[#DDD3C8] hover:border-[#C5A990] transition-colors duration-200 flex flex-col justify-between group h-full">
       <div className="flex-1 flex flex-col">
-        {/* Service Card Image & Video Slider */}
+        {/* Service Card Image & Video Slider (Photography focused, restrained) */}
         <ServiceMediaSlider
           media={service.media}
           fallbackImage={service.image}
@@ -28,32 +28,32 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         />
 
         {/* Card Body */}
-        <div className="p-4 sm:p-6 flex-1 flex flex-col">
+        <div className="p-5 sm:p-6 flex-1 flex flex-col">
           {/* Service Title & Icon Header */}
-          <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 min-h-[2.5rem] sm:min-h-[2.75rem]">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FAF0EE] border border-[#962D2D]/15 flex items-center justify-center shrink-0 shadow-xs">
-              {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#962D2D]" />}
+          <div className="flex items-center gap-3 mb-3 min-h-[2.5rem]">
+            <div className="w-9 h-9 rounded-[6px] bg-[#F7F3ED] border border-[#DDD3C8] flex items-center justify-center shrink-0">
+              {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#282622]" />}
             </div>
-            <h3 className="text-base sm:text-xl font-bold font-display text-[#1E1B18] leading-snug">
+            <h3 className="text-lg sm:text-xl font-normal font-display text-[#282622] leading-snug">
               {service.title}
             </h3>
           </div>
 
-          <p className="text-xs sm:text-sm text-[#524C46] mb-4 sm:mb-6 leading-relaxed font-body">
+          <p className="text-sm sm:text-[15px] text-[#6E685E] mb-5 leading-[1.6] font-body">
             {service.shortDescription}
           </p>
 
           {/* Key Benefits snippet */}
-          <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 mt-auto">
-            <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#962D2D]">
+          <div className="space-y-2 mb-5 mt-auto">
+            <h4 className="text-[11px] font-medium font-body uppercase tracking-wider text-[#282622]">
               Key Benefits
             </h4>
             {service.benefits.slice(0, 3).map((benefit, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-xs text-[#1E1B18] font-medium">
-                <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20 flex items-center justify-center shrink-0">
-                  <Check className="w-2.5 h-2.5 stroke-[3]" />
+              <div key={idx} className="flex items-center gap-2 text-xs sm:text-[13px] text-[#282622] font-body">
+                <div className="w-4 h-4 rounded-[4px] bg-[#E8DED1] text-[#282622] border border-[#DDD3C8] flex items-center justify-center shrink-0">
+                  <Check className="w-2.5 h-2.5 stroke-[2.5]" />
                 </div>
-                <span className="text-[11px] sm:text-xs text-[#1E1B18]">{benefit}</span>
+                <span>{benefit}</span>
               </div>
             ))}
           </div>
@@ -61,14 +61,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       </div>
 
       {/* Card Action */}
-      <div className="p-4 sm:p-6 pt-0 mt-auto">
+      <div className="p-5 sm:p-6 pt-0 mt-auto">
         <Button
           href={`/services#${service.slug}`}
           variant="primary"
-          size="sm"
+          size="md"
           fullWidth
-          className="bg-[#962D2D] text-white hover:bg-[#7D1F1F] font-semibold shadow-xs"
-          icon={<ArrowRight className="w-3.5 h-3.5 text-white" />}
+          icon={<ArrowRight className="w-4 h-4 text-white" />}
         >
           Explore Program
         </Button>

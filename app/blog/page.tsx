@@ -25,9 +25,9 @@ export default function BlogHubPage() {
   const featured = getFeaturedBlog();
 
   return (
-    <div className="pb-0 bg-[#FAF8F5]">
+    <div className="pb-0 bg-[#F7F3ED]">
       {/* Hero Banner with Studio Image Background */}
-      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/reformer_studio_unsplash.jpg"
@@ -38,18 +38,19 @@ export default function BlogHubPage() {
             className="object-cover object-[center_60%]"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1E1B18]/90 via-[#1E1B18]/55 to-[#1E1B18]/40" />
+          {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
         </div>
 
         <Container className="relative z-10 text-center">
           <div className="max-w-3xl mx-auto space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
               Clinical Insights, Science &amp;{" "}
-              <span className="font-serif italic font-normal text-[#962D2D]">
+              <span className="font-serif italic text-white">
                 Movement Culture
               </span>
             </h1>
-            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
               Evidence-based rehabilitation, biomechanics breakdowns, and reformer training advice curated by Dr. Govinda Raju S. and our elite clinical faculty.
             </p>
           </div>

@@ -27,31 +27,35 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#111110]/98 text-white backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#F7F3ED] text-[#282622] animate-in fade-in duration-200">
       {/* Top Header inside Drawer */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-white/10 bg-[#111110]">
-        <Link href="/" onClick={onClose} className="flex items-center py-1">
+      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#DDD3C8] bg-[#E8DED1]/60">
+        <Link
+          href="/"
+          onClick={onClose}
+          className="flex items-center px-3 py-1.5 rounded-[8px] bg-[#282622] hover:bg-[#1E1C18] transition-colors"
+        >
           <Image
             src="/logo.png"
             alt="Dr Pilates"
             width={160}
             height={48}
             priority
-            className="h-8 sm:h-9 w-auto object-contain"
+            className="h-7 w-auto object-contain"
           />
         </Link>
 
         <button
           onClick={onClose}
-          className="p-1.5 rounded-full text-white bg-white/5 hover:bg-white/10 border border-white/10 focus:outline-none cursor-pointer transition-colors shadow-xs"
+          className="p-2 rounded-lg text-[#282622] bg-[#FFFFFF] hover:bg-[#E8DED1] border border-[#DDD3C8] focus:outline-none focus:ring-2 focus:ring-[#282622] cursor-pointer transition-colors"
           aria-label="Close menu"
         >
-          <X className="w-5 h-5 text-white" />
+          <X className="w-5 h-5 text-[#282622]" />
         </button>
       </div>
 
-      {/* Compact Navigation Links */}
-      <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
+      {/* Navigation Links (Clean editorial text) */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1">
         {navLinks.map((link) => {
           const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
           return (
@@ -59,10 +63,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               key={link.href}
               href={link.href}
               onClick={onClose}
-              className={`block px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+              className={`block py-2.5 text-base font-medium font-body transition-colors ${
                 isActive
-                  ? "bg-[#962D2D] text-white font-semibold shadow-xs"
-                  : "text-neutral-300 hover:bg-white/5 hover:text-white"
+                  ? "text-[#5C604E] font-semibold border-l-2 border-[#5C604E] pl-3"
+                  : "text-[#282622]/85 hover:text-[#5C604E] pl-3.5"
               }`}
             >
               {link.label}
@@ -71,12 +75,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         })}
       </div>
 
-      {/* Compact Drawer Footer Actions */}
-      <div className="p-4 border-t border-white/10 bg-[#181817] space-y-2">
+      {/* Drawer Footer Actions */}
+      <div className="p-4 border-t border-[#DDD3C8] bg-[#E8DED1]/40 space-y-3">
         <Button
           href="/appointment?branch=kalyan-nagar"
           variant="primary"
-          size="sm"
+          size="md"
           fullWidth
           icon={<Calendar className="w-4 h-4" />}
           onClick={onClose}
@@ -84,8 +88,8 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           Book Appointment
         </Button>
 
-        <div className="pt-1 text-center text-[10px] text-neutral-400 flex items-center justify-center gap-1">
-          <MapPin className="w-3 h-3 text-[#962D2D]" />
+        <div className="pt-1 text-center text-xs text-[#6E685E] font-body flex items-center justify-center gap-1.5">
+          <MapPin className="w-3.5 h-3.5 text-[#C5A990]" />
           <span>Kalyan Nagar &amp; Kothanur, Hennur Rd • Bengaluru</span>
         </div>
       </div>

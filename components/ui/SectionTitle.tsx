@@ -26,29 +26,29 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   const isDark = theme === "dark";
 
   return (
-    <div className={`flex flex-col max-w-3xl mb-8 sm:mb-16 ${alignClasses[align]} ${className}`}>
+    <div className={`flex flex-col max-w-3xl mb-8 sm:mb-14 ${alignClasses[align]} ${className}`}>
       {subtitle && (
         <span
-          className={`inline-flex items-center text-[10px] sm:text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-2 ${
+          className={`inline-flex items-center text-[11px] sm:text-xs font-medium font-body tracking-widest uppercase px-3 py-1 rounded-[6px] mb-3 ${
             isDark
-              ? "bg-[#962D2D]/20 text-[#FAF0EE] border border-[#962D2D]/40"
-              : "bg-[#FAF0EE] text-[#962D2D] border border-[#962D2D]/20"
+              ? "bg-[#282622] text-[#F7F3ED] border border-[#DDD3C8]/30"
+              : "bg-[#E8DED1] text-[#282622] border border-[#DDD3C8]"
           }`}
         >
           {subtitle}
         </span>
       )}
       <h2
-        className={`text-2xl sm:text-4xl md:text-5xl font-bold font-display tracking-tight ${
-          isDark ? "text-[#FAF8F5]" : "text-[#1E1B18]"
+        className={`text-2xl sm:text-3xl lg:text-[40px] font-normal font-display tracking-tight leading-[1.2] ${
+          isDark ? "text-[#F7F3ED]" : "text-[#282622]"
         }`}
       >
         {title}
       </h2>
       {description && (
         <p
-          className={`mt-2.5 text-xs sm:text-base leading-relaxed ${
-            isDark ? "text-[#A39E96]" : "text-[#524C46]"
+          className={`mt-3 text-base sm:text-[17px] font-normal font-body leading-[1.6] ${
+            isDark ? "text-[#DDD3C8]" : "text-[#6E685E]"
           }`}
         >
           {description}

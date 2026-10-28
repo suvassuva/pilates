@@ -37,40 +37,46 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
           isScrolled
-            ? "bg-[#111110]/95 backdrop-blur-xl py-2.5 sm:py-3 shadow-md border-b border-white/10"
-            : "bg-[#111110] backdrop-blur-md py-3 sm:py-4 border-b border-white/10 shadow-sm"
+            ? "bg-[#F7F3ED] py-2.5 sm:py-3 border-b border-[#DDD3C8]"
+            : "bg-[#F7F3ED] py-3 sm:py-4 border-b border-[#DDD3C8]"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Official Logo */}
-          <Link href="/" className="group flex items-center py-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Official Logo with dark charcoal container for crystal-clear contrast */}
+          <Link
+            href="/"
+            className="group flex items-center px-3 sm:px-3.5 py-1.5 rounded-[8px] bg-[#282622] hover:bg-[#1E1C18] transition-colors"
+          >
             <Image
               src="/logo.png"
               alt="Dr Pilates Bengaluru"
               width={200}
               height={60}
               priority
-              className="h-9 sm:h-10 w-auto object-contain group-hover:opacity-90 group-hover:scale-105 transition-all"
+              className="h-7 sm:h-8 w-auto object-contain group-hover:opacity-95 transition-opacity"
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-1 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 shadow-xs backdrop-blur-md">
+          {/* Desktop Nav (Clean floating editorial text links) */}
+          <nav className="hidden xl:flex items-center gap-7 lg:gap-8">
             {navLinks.map((link) => {
               const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 ${
+                  className={`text-sm font-medium font-body transition-colors duration-150 relative py-1 tracking-normal ${
                     isActive
-                      ? "bg-[#962D2D] text-white shadow-xs"
-                      : "text-neutral-300 hover:text-white hover:bg-white/10"
+                      ? "text-[#5C604E] font-semibold"
+                      : "text-[#282622]/85 hover:text-[#5C604E]"
                   }`}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5C604E] rounded-full" />
+                  )}
                 </Link>
               );
             })}
@@ -92,7 +98,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center xl:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-full text-white bg-white/5 hover:bg-white/10 hover:text-[#962D2D] border border-white/10 transition-colors focus:outline-none cursor-pointer shadow-xs"
+              className="p-2 rounded-lg text-[#282622] bg-[#E8DED1] hover:bg-[#DDD3C8] border border-[#DDD3C8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#282622] cursor-pointer"
               aria-label="Open menu"
             >
               <Menu className="w-5 h-5" />

@@ -118,7 +118,7 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
   return (
     <div
       className={`relative w-full overflow-hidden select-none group/slider ${
-        containerClassName || "aspect-[16/9] bg-[#FAF8F5]"
+        containerClassName || "aspect-[16/10] bg-[#E8DED1]"
       }`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -132,7 +132,7 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
         return (
           <div
             key={idx}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
               isActive ? "opacity-100 z-1 pointer-events-auto" : "opacity-0 z-0 pointer-events-none"
             }`}
           >
@@ -163,12 +163,12 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
         );
       })}
 
-      {/* Subtle top overlay for text & badges readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/25 pointer-events-none z-2" />
+      {/* Subtle overlay for contrast */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/15 pointer-events-none z-2" />
 
-      {/* Media Type & Counter Indicator (Top Left) */}
+      {/* Media Type & Counter Indicator (Top Left, restrained 6px radius) */}
       {totalSlides > 1 && (
-        <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/45 backdrop-blur-md text-white text-[10px] font-semibold border border-white/20 shadow-xs pointer-events-none">
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-[6px] bg-[#282622]/85 text-white text-[10px] font-medium font-body border border-white/20 pointer-events-none">
           {currentItem.type === "video" ? (
             <>
               <Play className="w-2.5 h-2.5 fill-white text-white" />
@@ -180,27 +180,27 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
               <span>Photo</span>
             </>
           )}
-          <span className="opacity-70 ml-0.5 font-normal">
+          <span className="opacity-75 ml-0.5 font-normal">
             {currentIndex + 1}/{totalSlides}
           </span>
         </div>
       )}
 
-      {/* Program Badge (Top Right) */}
+      {/* Program Badge (Top Right, restrained 6px radius) */}
       {badge && (
-        <span className="absolute top-3 right-3 z-10 text-[9px] sm:text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-[#962D2D] text-white border border-white/40 shadow-md pointer-events-none">
+        <span className="absolute top-3 right-3 z-10 text-[10px] uppercase font-medium font-body tracking-wider px-2.5 py-1 rounded-[6px] bg-[#282622] text-[#FFFFFF] border border-[#DDD3C8]/40 pointer-events-none">
           {badge}
         </span>
       )}
 
-      {/* Prev / Next Navigation Arrows (Fade in on hover / visible) */}
+      {/* Navigation Arrows (Restrained 6px radius) */}
       {totalSlides > 1 && (
         <>
           <button
             type="button"
             onClick={goToPrev}
             aria-label="Previous slide"
-            className="absolute left-2.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md text-white flex items-center justify-center border border-white/25 shadow-md opacity-70 group-hover/slider:opacity-100 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+            className="absolute left-2.5 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-[6px] bg-[#282622]/80 hover:bg-[#282622] text-white flex items-center justify-center border border-white/20 opacity-75 group-hover/slider:opacity-100 transition-opacity duration-200 cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -208,14 +208,14 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
             type="button"
             onClick={goToNext}
             aria-label="Next slide"
-            className="absolute right-2.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md text-white flex items-center justify-center border border-white/25 shadow-md opacity-70 group-hover/slider:opacity-100 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-[6px] bg-[#282622]/80 hover:bg-[#282622] text-white flex items-center justify-center border border-white/20 opacity-75 group-hover/slider:opacity-100 transition-opacity duration-200 cursor-pointer"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
         </>
       )}
 
-      {/* Bottom Progress Bars / Dots */}
+      {/* Bottom Progress Indicator */}
       {totalSlides > 1 && (
         <div className="absolute bottom-2.5 inset-x-0 z-10 flex items-center justify-center gap-1.5 px-4 pointer-events-auto">
           {items.map((_, idx) => (
@@ -224,10 +224,10 @@ export const ServiceMediaSlider: React.FC<ServiceMediaSliderProps> = ({
               type="button"
               onClick={(e) => goToSlide(idx, e)}
               aria-label={`Jump to slide ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+              className={`h-1 rounded-[2px] transition-all duration-200 cursor-pointer ${
                 currentIndex === idx
-                  ? "w-6 bg-white shadow-xs"
-                  : "w-2 bg-white/45 hover:bg-white/75"
+                  ? "w-6 bg-white"
+                  : "w-2 bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}

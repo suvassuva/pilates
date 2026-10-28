@@ -86,7 +86,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedBlogs(post.slug, post.category, 3);
 
   return (
-    <div className="pb-0 bg-[#FAF8F5]">
+    <div className="pb-0 bg-[#F7F3ED]">
       {/* Header & Article Meta */}
       <article>
         <header className="pt-28 pb-14 sm:pt-36 sm:pb-20 bg-neutral-900 text-white relative overflow-hidden">
@@ -105,41 +105,41 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Back to Blog */}
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#FAF0EE] hover:text-[#962D2D] transition-colors mb-6"
+                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#E8DED1] hover:text-[#282622] transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to All Articles
               </Link>
 
               {/* Badges & Meta */}
-              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-400 mb-4">
-                <span className="px-3 py-1 rounded-full bg-[#962D2D]/20 border border-[#962D2D]/40 text-[#FAF0EE] font-semibold uppercase tracking-wider">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-400 mb-4 font-body">
+                <span className="px-3 py-1 rounded-[6px] bg-[#282622]/40 border border-white/20 text-[#E8DED1] font-medium uppercase tracking-wider">
                   {post.category}
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#962D2D]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#C5A990]" />
                   {post.publishedAt}
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#962D2D]" />
+                  <Clock className="w-3.5 h-3.5 text-[#C5A990]" />
                   {post.readTime}
                 </span>
               </div>
 
               {/* Title */}
-              <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight mb-6">
+              <h1 className="font-display font-normal text-3xl sm:text-4xl lg:text-[44px] text-white tracking-tight leading-[1.2] mb-6">
                 {post.title}
               </h1>
 
               {/* Excerpt Lead */}
-              <p className="font-body text-base sm:text-lg text-neutral-300 leading-relaxed border-l-2 border-[#962D2D] pl-4 mb-8">
+              <p className="font-body text-base sm:text-[17px] text-neutral-300 leading-[1.65] border-l-2 border-[#C5A990] pl-4 mb-8">
                 {post.excerpt}
               </p>
 
               {/* Action Bar */}
               <div className="flex items-center justify-between border-t border-white/10 pt-6">
-                <span className="text-xs text-neutral-400 font-medium tracking-wide">
+                <span className="text-xs text-neutral-400 font-medium font-body tracking-wide">
                   Dr. Pilates Clinical Journal
                 </span>
 
@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       href={post.socialLinks.youtube}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-red-950/40 hover:bg-red-900/50 text-white transition-colors border border-red-500/40"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] text-xs font-medium font-body bg-red-950/40 hover:bg-red-900/50 text-white transition-colors border border-red-500/40"
                       aria-label="Watch on YouTube"
                     >
                       <YouTubeIcon className="w-3.5 h-3.5 text-red-500" />
@@ -162,7 +162,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       href={post.socialLinks.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-sky-950/40 hover:bg-sky-900/50 text-white transition-colors border border-sky-500/40"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] text-xs font-medium font-body bg-sky-950/40 hover:bg-sky-900/50 text-white transition-colors border border-sky-500/40"
                       aria-label="Connect on LinkedIn"
                     >
                       <LinkedInIcon className="w-3.5 h-3.5 text-sky-400" />
@@ -176,7 +176,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     )}"%20and%20wanted%20to%20learn%20more.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white/10 hover:bg-white/20 text-white transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] text-xs font-medium font-body bg-white/10 hover:bg-white/20 text-white transition-colors"
                   >
                     <Share2 className="w-3.5 h-3.5" />
                     Share / Inquire
@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Featured Image */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
-          <div className="relative h-72 sm:h-96 md:h-[460px] rounded-2xl overflow-hidden shadow-2xl border border-white/50">
+          <div className="relative h-72 sm:h-96 md:h-[460px] rounded-xl overflow-hidden border border-[#DDD3C8]">
             <Image
               src={post.coverImage}
               alt={post.title}
@@ -210,17 +210,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.sections && post.sections.map((section, idx) => (
                   <section key={idx} className="space-y-5">
                     {section.heading && (
-                      <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#1E1B18] tracking-tight">
+                      <h2 className="font-display font-normal text-2xl sm:text-3xl text-[#282622] tracking-tight leading-[1.2]">
                         {section.heading}
                       </h2>
                     )}
                     {section.paragraphs && section.paragraphs.map((p, pIdx) => (
-                      <p key={pIdx} className="text-[#524C46] font-body leading-relaxed text-base sm:text-lg">
+                      <p key={pIdx} className="text-[#6E685E] font-body leading-[1.65] text-base sm:text-[17px]">
                         {p}
                       </p>
                     ))}
                     {section.calloutQuote && (
-                      <blockquote className="my-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#FAF0EE] border-l-4 border-[#962D2D] italic text-[#1E1B18] text-base sm:text-lg font-serif">
+                      <blockquote className="my-6 p-5 sm:p-6 rounded-xl bg-[#E8DED1] border-l-4 border-[#282622] italic text-[#282622] text-base sm:text-lg font-serif">
                         &ldquo;{section.calloutQuote}&rdquo;
                       </blockquote>
                     )}
@@ -229,9 +229,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         {section.bulletPoints.map((bullet, bIdx) => (
                           <li
                             key={bIdx}
-                            className="flex items-start gap-3 text-[#524C46] font-body text-base"
+                            className="flex items-start gap-3 text-[#6E685E] font-body text-base leading-[1.6]"
                           >
-                            <span className="text-[#962D2D] font-bold mt-1 text-sm">•</span>
+                            <span className="text-[#282622] font-medium mt-0.5">•</span>
                             <span>{bullet}</span>
                           </li>
                         ))}
@@ -242,21 +242,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Clinical Appointment CTA Box */}
-              <div className="mt-14 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-neutral-900 text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#962D2D]/30 shadow-lg">
+              <div className="mt-14 p-6 sm:p-8 rounded-xl bg-[#282622] text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#DDD3C8]">
                 <div className="space-y-2 text-center sm:text-left">
-                  <span className="text-xs uppercase tracking-widest text-[#FAF0EE] font-semibold font-body">
+                  <span className="text-xs uppercase tracking-widest text-[#E8DED1] font-medium font-body">
                     Personalized Clinical Rehabilitation
                   </span>
-                  <h4 className="font-display font-bold text-xl sm:text-2xl text-white">
+                  <h4 className="font-display font-normal text-xl sm:text-2xl text-white">
                     Experience Dr. Pilates in Bengaluru
                   </h4>
-                  <p className="text-xs sm:text-sm text-neutral-300 font-body max-w-xl leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-300 font-body max-w-xl leading-[1.6]">
                     Customized Reformer Pilates, EMS bio-suit training, and orthopedic physiotherapy protocols designed for your body.
                   </p>
                 </div>
                 <Link
                   href="/appointment"
-                  className="shrink-0 px-6 py-3 rounded-full text-xs font-semibold bg-[#962D2D] text-white hover:bg-[#7D1F1F] transition-colors shadow-sm font-body"
+                  className="shrink-0 min-h-[46px] px-6 py-3.5 rounded-[6px] text-xs sm:text-sm font-medium bg-[#F7F3ED] text-[#282622] hover:bg-[#E8DED1] transition-colors font-body"
                 >
                   Book Evaluation →
                 </Link>
@@ -268,21 +268,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Related Articles */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-white border-t border-[#EAE4DC]">
+        <section className="py-16 bg-[#FFFFFF] border-t border-[#DDD3C8]">
           <Container>
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-10">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#962D2D] block mb-1">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#282622] block mb-1">
                     Keep Reading
                   </span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#1E1B18] tracking-tight">
+                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#282622] tracking-tight">
                     Related Movement Insights
                   </h3>
                 </div>
                 <Link
                   href="/blog"
-                  className="text-xs font-semibold uppercase tracking-wider text-[#962D2D] hover:text-[#7D1F1F] transition-colors font-body"
+                  className="text-xs font-semibold uppercase tracking-wider text-[#282622] hover:text-[#3E3B35] transition-colors font-body"
                 >
                   View All Articles →
                 </Link>

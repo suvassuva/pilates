@@ -42,27 +42,29 @@ export default function GalleryPage() {
   }, [lightboxIndex, handleNext, handlePrev]);
 
   return (
-    <div className="pb-12 bg-[#FAF8F5]">
+    <div className="pb-12 bg-[#F7F3ED]">
       {/* Page Hero */}
-      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#1E1B18] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
+      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/images/studio_interior_reformer_beds.webp"
-            alt="Dr Pilates Visual Gallery Background"
+            src="/images/hero_gallery_luminous.jpg"
+            alt="Dr Pilates Bright Sunlit Visual Gallery Studio"
             fill
             priority
-            className="object-cover object-center scale-105"
+            quality={95}
+            className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/85 via-[#111110]/50 to-[#111110]/35" />
+          {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white drop-shadow-md leading-tight">
-              Dr Pilates <span className="font-serif italic font-normal text-[#962D2D]">Live Gallery</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
+              Dr Pilates <span className="font-serif italic text-white">Live Gallery</span>
             </h1>
-            <p className="text-base sm:text-lg text-white/95 font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
               Explore authentic movement, clinical training, and precision equipment inside our Bengaluru studio — featuring Reformer flows, Cadillac acrobatics, Stability Chair workouts, EMS training, and studio spaces.
             </p>
           </div>
@@ -70,7 +72,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Main Gallery Section */}
-      <section className="py-12 sm:py-16 bg-[#FAF8F5]">
+      <section className="py-12 sm:py-16 bg-[#F7F3ED]">
         <Container>
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -78,7 +80,7 @@ export default function GalleryPage() {
                 <div
                   key={item.id}
                   onClick={() => setLightboxIndex(index)}
-                  className="group relative h-96 rounded-3xl overflow-hidden border border-[#EAE4DC] shadow-sm cursor-pointer hover-lift bg-[#F3EFE9]"
+                  className="group relative h-96 rounded-xl overflow-hidden border border-[#DDD3C8] cursor-pointer bg-[#E8DED1] transition-colors duration-200"
                 >
                   {/* Media Content */}
                   {item.type === "video" && item.video ? (
@@ -89,7 +91,7 @@ export default function GalleryPage() {
                       playsInline
                       preload="metadata"
                       poster={item.image}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                     >
                       <source src={item.video} type="video/mp4" />
                     </video>
@@ -99,14 +101,14 @@ export default function GalleryPage() {
                       alt={item.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                      className={`object-cover group-hover:scale-105 transition-transform duration-700 ${
+                      className={`object-cover group-hover:scale-102 transition-transform duration-500 ${
                         item.image.includes("ems_bio_suit") ? "object-top" : "object-center"
                       }`}
                     />
                   )}
 
                   {/* Format Badge (Top Right) */}
-                  <div className="absolute top-4 right-4 bg-[#FAF0EE]/95 text-[#962D2D] text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md border border-[#962D2D]/25 flex items-center gap-1.5 shadow-sm">
+                  <div className="absolute top-4 right-4 bg-[#282622]/85 text-white text-[10px] font-medium font-body px-2.5 py-1 rounded-[6px] border border-white/20 flex items-center gap-1.5">
                     {item.type === "video" ? (
                       <>
                         <Play className="w-2.5 h-2.5 fill-current" />
@@ -121,33 +123,33 @@ export default function GalleryPage() {
                   </div>
 
                   {/* Hover Center Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="w-14 h-14 rounded-full bg-[#962D2D] border border-white/50 flex items-center justify-center text-white shadow-xl transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    <div className="w-12 h-12 rounded-[6px] bg-[#282622]/90 border border-white/40 flex items-center justify-center text-white shadow-md">
                       {item.type === "video" ? (
-                        <Play className="w-6 h-6 fill-current ml-0.5" />
+                        <Play className="w-5 h-5 fill-current ml-0.5" />
                       ) : (
-                        <ZoomIn className="w-6 h-6" />
+                        <ZoomIn className="w-5 h-5" />
                       )}
                     </div>
                   </div>
 
                   {/* Bottom Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#18181B]/90 via-[#18181B]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#FAF0EE] mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#18181B]/90 via-[#18181B]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-end p-5">
+                    <span className="text-[10px] font-medium font-body uppercase tracking-wider text-[#E8DED1] mb-1">
                       {item.category}
                     </span>
-                    <h3 className="text-base font-bold text-white leading-snug line-clamp-2">
+                    <h3 className="text-base font-normal font-display text-white leading-snug line-clamp-2">
                       {item.title}
                     </h3>
-                    <div className="mt-2 text-xs text-[#FAF8F5]/90 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="mt-2 text-xs text-[#FFFFFF]/90 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {item.type === "video" ? (
                         <>
-                          <Play className="w-3.5 h-3.5 text-[#FAF0EE]" />
+                          <Play className="w-3.5 h-3.5 text-[#E8DED1]" />
                           <span>Click to play video</span>
                         </>
                       ) : (
                         <>
-                          <ZoomIn className="w-3.5 h-3.5 text-[#FAF0EE]" />
+                          <ZoomIn className="w-3.5 h-3.5 text-[#E8DED1]" />
                           <span>Click to view full photo</span>
                         </>
                       )}
@@ -170,7 +172,7 @@ export default function GalleryPage() {
           {/* Close Button */}
           <button
             onClick={() => setLightboxIndex(null)}
-            className="absolute top-5 right-5 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute top-5 right-5 p-2.5 rounded-[6px] bg-white/10 text-white hover:bg-[#282622] transition-colors focus:outline-none cursor-pointer z-30"
             aria-label="Close modal"
           >
             <X className="w-6 h-6" />
@@ -182,7 +184,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-2.5 rounded-[6px] bg-white/10 text-white hover:bg-[#282622] transition-colors focus:outline-none cursor-pointer z-30"
             aria-label="Previous item"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -194,7 +196,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 text-white hover:bg-[#962D2D] transition-colors focus:outline-none cursor-pointer z-30 shadow-lg"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-2.5 rounded-[6px] bg-white/10 text-white hover:bg-[#282622] transition-colors focus:outline-none cursor-pointer z-30"
             aria-label="Next item"
           >
             <ChevronRight className="w-6 h-6" />
@@ -202,8 +204,8 @@ export default function GalleryPage() {
 
           {/* Modal Content */}
           <div className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center">
-            {/* Media Container */}
-            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-2xl overflow-hidden shadow-2xl border border-[#962D2D]/30 bg-[#18181B] flex items-center justify-center">
+            {/* Media Container (Clean 12px radius) */}
+            <div className="relative w-full h-[62vh] sm:h-[74vh] rounded-xl overflow-hidden border border-white/20 bg-[#18181B] flex items-center justify-center">
               {currentItem.type === "video" && currentItem.video ? (
                 <video
                   key={currentItem.video}
@@ -233,7 +235,7 @@ export default function GalleryPage() {
             {/* Bottom Caption & Counter */}
             <div className="mt-4 text-center px-4 max-w-2xl">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#FAF0EE]">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#E8DED1]">
                   {currentItem.category}
                 </span>
                 <span className="text-xs text-white/40">•</span>
