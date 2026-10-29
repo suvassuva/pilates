@@ -44,7 +44,7 @@ export default function BlogHubPage() {
 
         <Container className="relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
+            <h1 className="text-2xl sm:text-4xl lg:text-[54px] font-normal font-display tracking-tight text-white leading-tight sm:leading-[1.15]">
               Clinical Insights, Science &amp;{" "}
               <span className="font-serif italic text-white">
                 Movement Culture

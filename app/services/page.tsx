@@ -63,7 +63,7 @@ export default function ServicesPage() {
 
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
+            <h1 className="text-2xl sm:text-4xl lg:text-[54px] font-normal font-display tracking-tight text-white leading-tight sm:leading-[1.15]">
               Specialized Movement &amp; <span className="font-serif italic text-[#FFFFFF]">Clinical Programs</span>
             </h1>
           </div>
@@ -89,7 +89,7 @@ export default function ServicesPage() {
                       fallbackImage={service.image}
                       title={service.title}
                       badge={service.badge}
-                      containerClassName={`aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] rounded-xl border border-[#DDD3C8] ${
+                      containerClassName={`aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] rounded-xl border border-[#DDD3C8] ${
                         service.slug === "ems-training" ? "bg-[#FFFFFF]" : "bg-[#E8DED1]"
                       }`}
                       sizes="(max-width: 1024px) 100vw, 45vw"
