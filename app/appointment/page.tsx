@@ -289,25 +289,23 @@ export default function AppointmentPage() {
       <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px] mb-12">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/videos/pilates_reformer_machine.jpeg"
-            alt="Dr Pilates Reformer Booking Background"
+            src="/images/hero_appointment_luminous.jpg"
+            alt="Dr Pilates Luxury Sunlit Reformer Studio Booking"
             fill
             priority
+            quality={95}
             className="object-cover object-center"
             sizes="100vw"
           />
           {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/70 via-[#282622]/35 to-black/20" />
         </div>
 
         <Container className="relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-normal font-display tracking-tight text-white leading-[1.15]">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-2xl sm:text-4xl lg:text-[54px] font-normal font-display tracking-tight text-white leading-tight sm:leading-[1.15]">
               Book Your <span className="font-serif italic text-[#FFFFFF]">Dr Pilates Session</span>
             </h1>
-            <p className="text-base sm:text-[17px] text-white/95 font-normal font-body leading-[1.6] max-w-2xl mx-auto">
-              Select your preferred branch, service, and timing below. Your branch selection carries over automatically.
-            </p>
           </div>
         </Container>
       </section>
