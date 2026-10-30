@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
-import { PressRecognition } from "@/components/about/PressRecognition";
 import { Heart, Zap } from "lucide-react";
 
 export const metadata = {
@@ -186,8 +185,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Featured in the Press - Sunday Chronicle National Features */}
-      <PressRecognition />
 
       {/* Main Philosophy Section */}
       <section className="py-20 bg-[#F7F3ED]">

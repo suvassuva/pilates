@@ -90,6 +90,106 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       }
     ]
+  },
+  {
+    id: "post-2",
+    slug: "workout-without-weights-sunday-chronicle",
+    title: "WORKOUT Without Weights: Calorie Burning & Zero-Joint Strain",
+    excerpt: "Featured in Sunday Chronicle: Dr. Govinda Raju S. outlines a zero-equipment bodyweight training regimen to burn calories and build functional stamina safely without heavy joint compression.",
+    category: "Clinical Physiotherapy",
+    coverImage: "/images/dr_govind_sunday_chronicle_workout_without_weights.jpeg",
+    author: {
+      name: "Dr. Govinda Raju S.",
+      role: "Founder & Clinical Director",
+      avatar: "/goivnd.jpeg"
+    },
+    publishedAt: "August 4, 2019",
+    readTime: "4 min read",
+    tags: ["Sunday Chronicle", "Bodyweight Training", "Calorie Burn", "Physiotherapy", "Functional Strength"],
+    socialLinks: {
+      youtube: "https://www.youtube.com/@drpilatesbangalore",
+      linkedin: "https://www.linkedin.com/company/dr-pilates-bengaluru"
+    },
+    sections: [
+      {
+        heading: "National Publication: Sunday Chronicle Feature",
+        paragraphs: [
+          "In a nationally published fitness breakdown for Sunday Chronicle, Dr. Govinda Raju S. tackled the common misconception that building lean muscle tone, torching calories, and advancing stamina requires heavy gym iron and complex machines.",
+          "When executed with precise anatomical control, zero-equipment bodyweight training utilizes compound kinetic movement to challenge every major muscle group while safeguarding vulnerable lumbar vertebrae and delicate knee joints from axial load compression."
+        ],
+        calloutQuote: "Exercise is not about how much external weight you lift; it is about how effectively your neuro-muscular system controls and stabilizes your own body against gravity."
+      },
+      {
+        heading: "Key Physiological Advantages of Bodyweight Regimens",
+        paragraphs: [
+          "Unlike isolated gym machines that force joints into rigid, unnatural pathways, functional bodyweight exercises mimic authentic human movement patterns. They engage the core continuously as an active stabilizer while moving through multiple anatomical planes.",
+          "By manipulating training density—shortening rest periods between sets and pairing lower-body movements with upper-body stability holds—you trigger an elevated post-exercise oxygen consumption (EPOC) effect, burning calories hours after your workout concludes."
+        ],
+        bulletPoints: [
+          "Zero axial spinal compression, drastically lowering disc herniation risk",
+          "High-efficiency caloric expenditure through multi-joint functional recruitment",
+          "Continuous engagement of deep transverse abdominis and spinal stabilizers",
+          "Accelerated metabolic rate and sustained cardiovascular endurance",
+          "Total convenience: full workout execution without dedicated equipment or gym dependency"
+        ]
+      },
+      {
+        heading: "Clinical Advice on Safe Technique and Progression",
+        paragraphs: [
+          "Dr. Govinda underscores that form must always take priority over repetition speed. Maintaining neutral pelvis alignment, engaging the pelvic sling, and breathing with intentional rhythm protects connective tissue while yielding maximum muscle activation.",
+          "For individuals recovering from injuries or beginning a new fitness phase, starting with controlled bodyweight fundamentals establishes the structural stability necessary for long-term athletic longevity."
+        ]
+      }
+    ]
+  },
+  {
+    id: "post-3",
+    slug: "be-toned-to-party-hard-sunday-chronicle",
+    title: "Be Toned to Party Hard: Core Stability, BDNF & Festive Posture",
+    excerpt: "Featured in Sunday Chronicle: Dr. Govinda Raju S. shares essential clinical strategies to stimulate neurotrophic factors (BDNF), protect posture during long social events, and sustain holiday vitality.",
+    category: "Postural Science",
+    coverImage: "/images/dr_govind_sunday_chronicle_be_toned_party_hard.jpeg",
+    author: {
+      name: "Dr. Govinda Raju S.",
+      role: "Founder & Clinical Director",
+      avatar: "/goivnd.jpeg"
+    },
+    publishedAt: "December 8, 2019",
+    readTime: "4 min read",
+    tags: ["Sunday Chronicle", "Postural Science", "Core Conditioning", "BDNF", "Festive Health"],
+    socialLinks: {
+      youtube: "https://www.youtube.com/@drpilatesbangalore",
+      linkedin: "https://www.linkedin.com/company/dr-pilates-bengaluru"
+    },
+    sections: [
+      {
+        heading: "National Publication: Sunday Chronicle Feature",
+        paragraphs: [
+          "During the peak festive and celebratory season, hectic schedules, late evenings, and prolonged standing often take a heavy toll on our physical equilibrium. In Sunday Chronicle, Dr. Govinda Raju S. presented a physician-approved guide on staying toned, vibrant, and injury-free throughout celebrations.",
+          "From standing for hours in evening attire or high heels to coping with metabolic fatigue, having conditioned core stabilizers acts as an internal biological shock absorber that keeps back aches and posture slump at bay."
+        ],
+        calloutQuote: "A well-conditioned core is your body's personal internal armor. It safeguards spinal alignment during hours on your feet, keeping your posture regal and your energy boundless."
+      },
+      {
+        heading: "Activating BDNF and Cellular Energy",
+        paragraphs: [
+          "One of the standout scientific insights Dr. Govinda emphasizes is the stimulation of Brain-Derived Neurotrophic Factor (BDNF) through rhythmic, intentional movement. BDNF is a specialized neuro-protein responsible for synaptic plasticity, mental sharpness, and stress recovery.",
+          "Engaging in brief, focused movement sequences before heading out activates peripheral circulation and accelerates lymphatic clearance, significantly reducing the morning-after lethargy and muscular heaviness."
+        ],
+        bulletPoints: [
+          "Stimulates neurotrophic factors (BDNF) for enhanced mental stamina and mood resilience",
+          "Stabilizes the lumbopelvic girdle to prevent lower back exhaustion from standing in heels",
+          "Enhances venous return and lymphatic drainage to minimize fluid retention and fatigue",
+          "Rebalances spinal curvature, eliminating rounded shoulders and forward head tilt"
+        ]
+      },
+      {
+        heading: "Dr. Govind's 10-Minute Pre-Event Alignment Routine",
+        paragraphs: [
+          "Before stepping out for social gatherings, Dr. Govind advises dedicating 10 to 15 minutes to gentle thoracic mobility openers, pelvic tilt resets, and active plank activations. This brief routine activates dormant stabilizer muscles, ensuring you move gracefully, look radiant, and feel energized from start to finish."
+        ]
+      }
+    ]
   }
 ];
 

@@ -44,10 +44,10 @@ export const Header: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Official Logo with drop-shadow contour for clear legibility on light background */}
+          {/* Official Logo with Black Container Box */}
           <Link
             href="/"
-            className="group flex items-center py-1 transition-opacity hover:opacity-90"
+            className="group flex items-center px-3.5 py-1.5 rounded-lg bg-black hover:bg-[#1c1a18] transition-colors shadow-sm"
           >
             <Image
               src="/logo.png"
@@ -55,10 +55,7 @@ export const Header: React.FC = () => {
               width={200}
               height={60}
               priority
-              className="h-8 sm:h-9 w-auto object-contain"
-              style={{
-                filter: "drop-shadow(0 0 1.5px rgba(20, 18, 15, 0.95)) drop-shadow(0 1px 3px rgba(20, 18, 15, 0.65))",
-              }}
+              className="h-7 sm:h-8 w-auto object-contain transition-opacity group-hover:opacity-95"
             />
           </Link>
 

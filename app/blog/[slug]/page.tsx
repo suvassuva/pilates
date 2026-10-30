@@ -11,7 +11,7 @@ import {
   getBlogBySlug,
   getRelatedBlogs,
 } from "@/data/blogs";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, ExternalLink } from "lucide-react";
 
 function YouTubeIcon({ className }: { className?: string }) {
   return (
@@ -84,12 +84,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedBlogs(post.slug, post.category, 3);
+  const isSundayChronicle = post.tags?.includes("Sunday Chronicle");
 
   return (
     <div className="pb-0 bg-[#F7F3ED]">
       {/* Header & Article Meta */}
       <article>
-        <header className="pt-28 pb-14 sm:pt-36 sm:pb-20 bg-neutral-900 text-white relative overflow-hidden">
+        <header className="pt-28 pb-14 sm:pt-36 sm:pb-20 bg-[#282622] text-white relative overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
               src={post.coverImage}
@@ -97,7 +98,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               fill
               className="object-cover blur-sm scale-105"
             />
-            <div className="absolute inset-0 bg-neutral-950/80" />
+            <div className="absolute inset-0 bg-[#14120F]/80" />
           </div>
 
           <Container className="relative z-10">
@@ -105,15 +106,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Back to Blog */}
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#E8DED1] hover:text-[#282622] transition-colors mb-6"
+                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#E8DED1] hover:text-[#FFFFFF] transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to All Articles
               </Link>
 
               {/* Badges & Meta */}
-              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-400 mb-4 font-body">
-                <span className="px-3 py-1 rounded-[6px] bg-[#282622]/40 border border-white/20 text-[#E8DED1] font-medium uppercase tracking-wider">
+              <div className="flex flex-wrap items-center gap-3 text-xs text-neutral-300 mb-4 font-body">
+                <span className="px-3 py-1 rounded-[6px] bg-[#FFFFFF]/10 border border-white/20 text-[#E8DED1] font-medium uppercase tracking-wider">
                   {post.category}
                 </span>
                 <span className="flex items-center gap-1.5">
@@ -189,13 +190,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Featured Image */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
-          <div className="relative h-72 sm:h-96 md:h-[460px] rounded-xl overflow-hidden border border-[#DDD3C8]">
+          <div className="relative h-72 sm:h-96 md:h-[460px] rounded-xl overflow-hidden border border-[#DDD3C8] bg-[#282622]">
             <Image
               src={post.coverImage}
               alt={post.title}
               fill
               priority
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 896px"
             />
           </div>
@@ -241,6 +242,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 ))}
               </div>
 
+              {/* Sunday Chronicle Original Scan Feature Block */}
+              {isSundayChronicle && (
+                <div className="mt-12 p-6 rounded-xl bg-[#FFFFFF] border border-[#DDD3C8] space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span className="text-xs uppercase tracking-widest font-medium font-body text-[#282622] px-2.5 py-1 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] w-fit">
+                      Sunday Chronicle Original Newspaper Print
+                    </span>
+                    <a
+                      href={post.coverImage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-[#282622] hover:text-[#5C604E] underline font-body"
+                    >
+                      <span>Open Full-Resolution Scan</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="relative w-full h-[480px] sm:h-[620px] rounded-lg overflow-hidden bg-[#282622] border border-[#DDD3C8]">
+                    <Image
+                      src={post.coverImage}
+                      alt={`${post.title} - Sunday Chronicle Print`}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 1024px) 100vw, 768px"
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Clinical Appointment CTA Box */}
               <div className="mt-14 p-6 sm:p-8 rounded-xl bg-[#282622] text-white flex flex-col sm:flex-row gap-6 items-center justify-between border border-[#DDD3C8]">
                 <div className="space-y-2 text-center sm:text-left">
@@ -273,22 +303,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-10">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#282622] block mb-1">
+                  <span className="text-xs font-medium uppercase tracking-widest text-[#282622] block mb-1 font-body">
                     Keep Reading
                   </span>
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#282622] tracking-tight">
+                  <h3 className="font-display font-normal text-2xl sm:text-3xl text-[#282622] tracking-tight">
                     Related Movement Insights
                   </h3>
                 </div>
                 <Link
                   href="/blog"
-                  className="text-xs font-semibold uppercase tracking-wider text-[#282622] hover:text-[#3E3B35] transition-colors font-body"
+                  className="text-xs font-semibold uppercase tracking-wider text-[#282622] hover:text-[#5C604E] transition-colors font-body"
                 >
                   View All Articles →
                 </Link>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                 {relatedPosts.map((related) => (
                   <BlogCard key={related.id} post={related} />
                 ))}

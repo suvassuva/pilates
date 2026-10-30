@@ -13,12 +13,12 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
   if (featured) {
     return (
       <article className="group relative rounded-xl bg-[#FFFFFF] border border-[#DDD3C8] overflow-hidden transition-colors duration-200 grid grid-cols-1 lg:grid-cols-12 gap-0">
-        <div className="relative lg:col-span-7 h-72 lg:h-auto min-h-[320px] overflow-hidden">
+        <div className="relative lg:col-span-7 h-72 lg:h-auto min-h-[320px] overflow-hidden bg-[#282622]">
           <Image
             src={post.coverImage}
             alt={post.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-102"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-102"
             sizes="(max-width: 1024px) 100vw, 60vw"
             priority
           />
@@ -75,12 +75,12 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <article className="group flex flex-col h-full rounded-xl bg-[#FFFFFF] border border-[#DDD3C8] overflow-hidden hover:border-[#C5A990] transition-colors duration-200">
-      <Link href={`/blog/${post.slug}`} className="relative h-56 w-full overflow-hidden block">
+      <Link href={`/blog/${post.slug}`} className="relative h-56 w-full overflow-hidden block bg-[#282622]">
         <Image
           src={post.coverImage}
           alt={post.title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-102"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-102"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3">

@@ -33,7 +33,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         <Link
           href="/"
           onClick={onClose}
-          className="flex items-center py-1 transition-opacity hover:opacity-90"
+          className="group flex items-center px-3 py-1.5 rounded-lg bg-black hover:bg-[#1c1a18] transition-colors shadow-sm"
         >
           <Image
             src="/logo.png"
@@ -41,10 +41,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             width={160}
             height={48}
             priority
-            className="h-7 w-auto object-contain"
-            style={{
-              filter: "drop-shadow(0 0 1.5px rgba(20, 18, 15, 0.95)) drop-shadow(0 1px 3px rgba(20, 18, 15, 0.65))",
-            }}
+            className="h-7 w-auto object-contain transition-opacity group-hover:opacity-95"
           />
         </Link>
 

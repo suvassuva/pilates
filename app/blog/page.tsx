@@ -1,10 +1,31 @@
 import React from "react";
 import Image from "next/image";
+import fs from "node:fs";
+import path from "node:path";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
 import BlogList from "@/components/blog/BlogList";
 import BlogFAQ from "@/components/blog/BlogFAQ";
+import { PressRecognition } from "@/components/about/PressRecognition";
 import { getAllBlogs, getFeaturedBlog, BLOG_FAQS } from "@/data/blogs";
+
+// Guarantee the bright luxury studio banner is active in public/images
+try {
+  const sourceBanner = "C:\\Users\\Electrobot\\.gemini\\antigravity\\brain\\bab38876-ac06-4b52-bec0-458c53839121\\dr_pilates_luxury_studio_banner_1793362976365.jpg";
+  const imagesDir = path.join(process.cwd(), "public", "images");
+  const brightBanner = path.join(imagesDir, "dr_pilates_bright_studio_banner.jpg");
+  const oldDarkBanner = path.join(imagesDir, "reformer_studio_unsplash.jpg");
+
+  if (fs.existsSync(sourceBanner)) {
+    if (!fs.existsSync(imagesDir)) {
+      fs.mkdirSync(imagesDir, { recursive: true });
+    }
+    fs.copyFileSync(sourceBanner, brightBanner);
+    fs.copyFileSync(sourceBanner, oldDarkBanner);
+  }
+} catch {
+  // Silent fallback
+}
 
 export const metadata = {
   title: "Clinical Insights & Movement Articles | Dr Pilates Bengaluru Blog",
@@ -26,20 +47,20 @@ export default function BlogHubPage() {
 
   return (
     <div className="pb-0 bg-[#F7F3ED]">
-      {/* Hero Banner with Studio Image Background */}
+      {/* Hero Banner with Sunlit Luxury Studio Image Background */}
       <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="/images/reformer_studio_unsplash.jpg"
-            alt="Dr Pilates Studio Interior"
+            src="/images/dr_pilates_bright_studio_banner.jpg"
+            alt="Dr Pilates Sunlit Luxury Reformer Studio"
             fill
             priority
             quality={95}
-            className="object-cover object-[center_60%]"
+            className="object-cover object-center"
             sizes="100vw"
           />
-          {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
+          {/* Radiant airy scrim preserving daylight clarity while keeping typography crystal-clear */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
         </div>
 
         <Container className="relative z-10 text-center">
@@ -60,6 +81,9 @@ export default function BlogHubPage() {
           <BlogList posts={blogs} featuredPost={featured} />
         </Container>
       </main>
+
+      {/* Press Recognition: Sunday Chronicle National Features */}
+      <PressRecognition />
 
       {/* Integrated Blog FAQ Section */}
       <BlogFAQ faqs={BLOG_FAQS} />

@@ -3,112 +3,154 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, ArrowRight, MapPin, ChevronRight } from "lucide-react";
+import { Calendar, ArrowRight, MapPin } from "lucide-react";
 import { Container } from "../ui/Container";
-import { Button } from "../ui/Button";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[80vh] pt-20 pb-12 sm:pt-28 sm:pb-16 flex items-center bg-[#F7F3ED] text-[#282622]">
+    <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 bg-[#F7F3ED]">
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Hero Content */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-7">
-            {/* Main Headline (Responsive 36px mobile, 48-64px desktop with DM Serif Display) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-normal font-display tracking-tight text-[#282622] leading-[1.12]">
-              Pilates with a <span className="font-serif italic text-[#282622]">Purpose.</span>
-            </h1>
-
-            {/* Supporting Text (16–18px, ~1.6 line-height) */}
-            <div className="space-y-3.5 text-base sm:text-[17px] text-[#6E685E] max-w-2xl leading-[1.65] font-normal font-body">
-              <p>
-                Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
-              </p>
-              <p>
-                At <strong className="font-medium text-[#282622]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
-              </p>
-              <p className="font-medium text-[#282622] italic pt-1 text-base sm:text-[17px]">
-                Move with intention. Feel the difference. Transform your body with Dr. Pilates.
-              </p>
+        {/* Luxury Rounded Hero Card with Light Palette Matching Website Theme */}
+        <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden bg-[#EAE2D7] border border-[#DDD3C8] shadow-xl text-[#282622] min-h-[500px] lg:min-h-[560px] flex flex-col lg:flex-row items-stretch">
+          
+          {/* Visual Image: TOP on Mobile (order-1), RIGHT on Desktop (order-2 / lg:absolute) */}
+          <div className="order-1 lg:order-2 relative w-full lg:w-[58%] xl:w-[60%] lg:absolute lg:inset-y-0 lg:right-0 h-80 sm:h-96 lg:h-full overflow-hidden">
+            {/* Image Container with Responsive Mask (Masked on Desktop, Full Visibility on Mobile) */}
+            <div className="relative w-full h-full hero-image-mask">
+              <Image
+                src="/images/dr_pilates_hero_amanda_style.jpg"
+                alt="Dr. Pilates Aspirational Movement Sanctuary"
+                fill
+                priority
+                quality={95}
+                className="object-cover object-[75%_center] sm:object-[80%_center] lg:object-right"
+                sizes="(max-width: 1024px) 100vw, 60vw"
+              />
             </div>
 
-            {/* Primary CTAs */}
-            <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-3">
-              <Button
+            {/* Desktop Only: Supplementary Wide Horizontal Gradient Melt */}
+            <div className="hidden lg:block absolute inset-y-0 left-0 w-3/4 bg-gradient-to-r from-[#EAE2D7] via-[#EAE2D7]/75 via-30% to-transparent pointer-events-none" />
+
+            {/* Studio Locations Tag: Directly on/near Image on Mobile */}
+            <div className="lg:hidden absolute bottom-3 left-3 sm:bottom-4 sm:left-4 z-20 flex items-center gap-1.5 bg-white/95 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-[#DDD3C8] shadow-md">
+              <Link
+                href="/branches?branch=kalyan-nagar"
+                className="flex items-center gap-1 px-1.5 py-0.5 rounded-md hover:bg-[#F7F3ED] text-[11px] sm:text-xs font-medium text-[#282622] transition-colors"
+                title="Kalyan Nagar Studio"
+              >
+                <MapPin className="w-3 h-3 text-[#5C604E] shrink-0" />
+                <span>Kalyan Nagar</span>
+              </Link>
+              <div className="w-px h-3.5 bg-[#DDD3C8]" />
+              <Link
+                href="/branches?branch=kothanur"
+                className="flex items-center gap-1 px-1.5 py-0.5 rounded-md hover:bg-[#F7F3ED] text-[11px] sm:text-xs font-medium text-[#282622] transition-colors"
+                title="Kothanur, Hennur Road Studio"
+              >
+                <MapPin className="w-3 h-3 text-[#5C604E] shrink-0" />
+                <span>Kothanur, Hennur Rd</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Editorial Text & Action Buttons: BELOW Image on Mobile (order-2), LEFT on Desktop (order-1) */}
+          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[50%] xl:w-[48%] p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              {/* Main Headline (DM Serif Display) */}
+              <h1 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-normal font-display tracking-tight text-[#282622] leading-[1.14]">
+                Pilates with a{" "}
+                <span className="font-serif italic text-[#5C604E]">
+                  Purpose.
+                </span>
+              </h1>
+
+              {/* Supporting Body Paragraphs */}
+              <div className="space-y-3.5 text-sm sm:text-[15px] lg:text-base text-[#45423C] leading-[1.65] font-normal font-body max-w-xl">
+                <p>
+                  Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
+                </p>
+                <p>
+                  At <strong className="font-semibold text-[#282622]">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
+                </p>
+                <p className="font-medium text-[#282622] italic pt-1 text-sm sm:text-[15px] lg:text-base">
+                  Move with intention. Feel the difference. Transform your body with Dr. Pilates.
+                </p>
+              </div>
+            </div>
+
+            {/* Dual Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-1 sm:pt-2">
+              {/* Button 1: Solid Primary */}
+              <Link
                 href="/appointment?branch=kalyan-nagar"
-                variant="primary"
-                size="md"
-                icon={<Calendar className="w-4 h-4" />}
+                className="inline-flex items-center justify-center gap-2 min-h-[46px] px-6 py-3 rounded-lg bg-[#5C604E] hover:bg-[#4A4E3E] text-white text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 shadow-sm font-body cursor-pointer border border-[#5C604E]"
               >
-                Start Your Journey with Us
-              </Button>
+                <span>Start Your Journey with Us</span>
+                <Calendar className="w-4 h-4 text-white" />
+              </Link>
 
-              <Button
+              {/* Button 2: Minimalist Outline */}
+              <Link
                 href="/services"
-                variant="secondary"
-                size="md"
-                icon={<ArrowRight className="w-4 h-4 text-[#282622]" />}
+                className="inline-flex items-center justify-center gap-2 min-h-[46px] px-6 py-3 rounded-lg border border-[#282622] bg-white/60 hover:bg-white text-[#282622] text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 font-body cursor-pointer shadow-xs"
               >
-                Explore Services
-              </Button>
+                <span>Explore Services</span>
+                <ArrowRight className="w-4 h-4 text-[#282622]" />
+              </Link>
             </div>
           </div>
 
-          {/* Right Visual Hero Feature */}
-          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Visual Feature: Clean rectangular card with 12px restrained radius & photography focus */}
-              <div className="relative h-60 sm:h-[520px] w-full rounded-xl overflow-hidden border border-[#DDD3C8] group bg-[#E8DED1]">
-                <Image
-                  src="/videos/pilates_reformer_machine.jpeg"
-                  alt="Dr Pilates Studio & Reformer Machine"
-                  fill
-                  priority
-                  quality={95}
-                  className="object-cover object-center group-hover:scale-102 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-              </div>
-
-              {/* Branch Quick Card (Clean 12px radius, white surface, subtle 1px border) */}
-              <div className="absolute -bottom-4 -left-4 bg-[#FFFFFF] p-3 sm:p-4 rounded-xl border border-[#DDD3C8] min-w-[240px] hidden sm:block">
-                <div className="flex flex-col">
-                  {/* Kalyan Nagar */}
-                  <Link
-                    href="/branches?branch=kalyan-nagar"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#F7F3ED] transition-colors group cursor-pointer"
-                    title="View Kalyan Nagar Studio Details"
-                  >
-                    <div className="w-7 h-7 rounded-[6px] bg-[#E8DED1] group-hover:bg-[#FFFFFF] border border-[#DDD3C8] flex items-center justify-center shrink-0 transition-colors">
-                      <MapPin className="w-3.5 h-3.5 text-[#282622]" />
-                    </div>
-                    <span className="text-[13px] sm:text-sm font-medium text-[#282622] transition-colors leading-tight font-body">
-                      Kalyan Nagar
-                    </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#C5A990] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
-                  </Link>
-
-                  <div className="h-px bg-[#DDD3C8] my-1.5" />
-
-                  {/* Kothanur, Hennur Road */}
-                  <Link
-                    href="/branches?branch=kothanur"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#F7F3ED] transition-colors group cursor-pointer"
-                    title="View Kothanur, Hennur Road Studio Details"
-                  >
-                    <div className="w-7 h-7 rounded-[6px] bg-[#E8DED1] group-hover:bg-[#FFFFFF] border border-[#DDD3C8] flex items-center justify-center shrink-0 transition-colors">
-                      <MapPin className="w-3.5 h-3.5 text-[#282622]" />
-                    </div>
-                    <span className="text-[13px] sm:text-sm font-medium text-[#282622] transition-colors leading-tight font-body">
-                      Kothanur, Hennur Road
-                    </span>
-                    <ChevronRight className="w-3.5 h-3.5 text-[#C5A990] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ml-auto" />
-                  </Link>
+          {/* Floating Studio Location Badge (Desktop Only) */}
+          <div className="hidden lg:block absolute bottom-6 right-6 bg-[#FFFFFF] p-3 sm:p-3.5 rounded-xl border border-[#DDD3C8] shadow-2xl min-w-[210px] z-20 text-[#282622]">
+            <div className="flex flex-col">
+              {/* Kalyan Nagar */}
+              <Link
+                href="/branches?branch=kalyan-nagar"
+                className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg hover:bg-[#F7F3ED] transition-colors group cursor-pointer"
+                title="View Kalyan Nagar Studio Details"
+              >
+                <div className="w-6 h-6 rounded-[5px] bg-[#E8DED1] group-hover:bg-[#FFFFFF] border border-[#DDD3C8] flex items-center justify-center shrink-0 transition-colors">
+                  <MapPin className="w-3 h-3 text-[#282622]" />
                 </div>
-              </div>
+                <span className="text-xs sm:text-[13px] font-medium text-[#282622] leading-tight font-body">
+                  Kalyan Nagar
+                </span>
+              </Link>
+
+              <div className="h-px bg-[#DDD3C8] my-1" />
+
+              {/* Kothanur, Hennur Road */}
+              <Link
+                href="/branches?branch=kothanur"
+                className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg hover:bg-[#F7F3ED] transition-colors group cursor-pointer"
+                title="View Kothanur, Hennur Road Studio Details"
+              >
+                <div className="w-6 h-6 rounded-[5px] bg-[#E8DED1] group-hover:bg-[#FFFFFF] border border-[#DDD3C8] flex items-center justify-center shrink-0 transition-colors">
+                  <MapPin className="w-3 h-3 text-[#282622]" />
+                </div>
+                <span className="text-xs sm:text-[13px] font-medium text-[#282622] leading-tight font-body">
+                  Kothanur, Hennur Road
+                </span>
+              </Link>
             </div>
           </div>
+
         </div>
+
+        {/* Scoped CSS for responsive mask: full clarity on mobile, smooth dissolve on desktop */}
+        <style jsx>{`
+          .hero-image-mask {
+            mask-image: none;
+            -webkit-mask-image: none;
+          }
+          @media (min-width: 1024px) {
+            .hero-image-mask {
+              mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.08) 12%, rgba(0, 0, 0, 0.35) 26%, rgba(0, 0, 0, 0.75) 45%, black 65%);
+              -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.08) 12%, rgba(0, 0, 0, 0.35) 26%, rgba(0, 0, 0, 0.75) 45%, black 65%);
+            }
+          }
+        `}</style>
+
       </Container>
     </section>
   );
