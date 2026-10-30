@@ -23,6 +23,11 @@ try {
     fs.copyFileSync(sourceHero, path.join(imagesDir, "dr_pilates_hero_banner_clean.jpg"));
     fs.copyFileSync(sourceHero, path.join(imagesDir, "reformer_action_unsplash.jpg"));
   }
+
+  const demoHero = "C:\\Users\\Electrobot\\.gemini\\antigravity\\brain\\bab38876-ac06-4b52-bec0-458c53839121\\.user_uploaded\\media_1793369253171_f6cb87bf.jpg";
+  if (fs.existsSync(demoHero)) {
+    fs.copyFileSync(demoHero, path.join(imagesDir, "dr_pilates_reformer_action_demo.jpg"));
+  }
 } catch {
   // Silent fallback
 }
