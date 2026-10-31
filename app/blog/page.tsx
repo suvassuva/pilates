@@ -6,7 +6,6 @@ import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
 import BlogList from "@/components/blog/BlogList";
 import BlogFAQ from "@/components/blog/BlogFAQ";
-import { PressRecognition } from "@/components/about/PressRecognition";
 import { getAllBlogs, getFeaturedBlog, BLOG_FAQS } from "@/data/blogs";
 
 // Guarantee the bright luxury studio banner is active in public/images
@@ -81,9 +80,6 @@ export default function BlogHubPage() {
           <BlogList posts={blogs} featuredPost={featured} />
         </Container>
       </main>
-
-      {/* Press Recognition: Sunday Chronicle National Features */}
-      <PressRecognition />
 
       {/* Integrated Blog FAQ Section */}
       <BlogFAQ faqs={BLOG_FAQS} />

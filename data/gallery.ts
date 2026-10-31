@@ -171,7 +171,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: "image",
     title: "Sunday Chronicle: 'WORKOUT without weights' by Dr. Govinda Raju",
     category: "Press & Media",
-    image: "/images/dr_govind_sunday_chronicle_workout_without_weights.jpeg",
+    image: "/images/dr_govind_sunday_chronicle_workout_without_weights_clean.jpg",
     alt: "Dr. Govinda Raju S. featured in Sunday Chronicle newspaper column 'phyzzicality' demonstrating equipment-free functional workouts"
   },
   {
@@ -179,7 +179,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     type: "image",
     title: "Sunday Chronicle: 'Be toned to PARTY HARD!' by Dr. Govinda Raju",
     category: "Press & Media",
-    image: "/images/dr_govind_sunday_chronicle_be_toned_party_hard.jpeg",
+    image: "/images/dr_govind_sunday_chronicle_be_toned_party_hard_clean.jpg",
     alt: "Dr. Govinda Raju S. published in Sunday Chronicle feature on festive season core conditioning, BDNF stimulation, and movement integrity"
   }
 ];

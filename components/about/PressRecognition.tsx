@@ -17,7 +17,7 @@ interface PressArticle {
 const PRESS_ARTICLES: PressArticle[] = [
   {
     id: "workout-without-weights",
-    image: "/images/dr_govind_sunday_chronicle_workout_without_weights.jpeg",
+    image: "/images/dr_govind_sunday_chronicle_workout_without_weights_clean.jpg",
     title: "WORKOUT without weights",
     publication: "Sunday Chronicle",
     date: "Aug 4, 2019",
@@ -26,7 +26,7 @@ const PRESS_ARTICLES: PressArticle[] = [
   },
   {
     id: "be-toned-party-hard",
-    image: "/images/dr_govind_sunday_chronicle_be_toned_party_hard.jpeg",
+    image: "/images/dr_govind_sunday_chronicle_be_toned_party_hard_clean.jpg",
     title: "Be toned to PARTY HARD!",
     publication: "Sunday Chronicle",
     date: "Dec 8, 2019",

@@ -10,8 +10,8 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative pt-20 pb-10 sm:pt-24 sm:pb-12 bg-[#F7F3ED]">
       <Container className="relative z-10">
-        {/* Luxury Rounded Hero Card with Seamless Studio Grey Gradient */}
-        <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden bg-gradient-to-r from-[#46484C] via-[#6A6D74] via-45% to-[#BDC1C6] border border-white/20 shadow-2xl text-white min-h-[460px] lg:min-h-[500px] xl:min-h-[515px] flex flex-col lg:flex-row items-stretch">
+        {/* Luxury Rounded Hero Card with Warm Earthy Taupe Gradient */}
+        <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden bg-gradient-to-r from-[#68645C] via-[#7D7970] via-45% to-[#B3ADA4] border border-white/20 shadow-2xl text-white min-h-[460px] lg:min-h-[500px] xl:min-h-[515px] flex flex-col lg:flex-row items-stretch">
           
           {/* Visual Image: TOP on Mobile (order-1), FULL-BLEED on Desktop (lg:absolute lg:inset-0) */}
           <div className="order-1 lg:order-2 relative w-full lg:absolute lg:inset-0 h-76 sm:h-84 lg:h-full overflow-hidden">
@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Editorial Text & Action Buttons: BELOW Image on Mobile (order-2), OVERLAY on Desktop (order-1, relative z-10) */}
-          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-8 lg:p-9 xl:p-11 flex flex-col justify-between space-y-5 bg-[#46484C] lg:bg-transparent">
+          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-8 lg:p-9 xl:p-11 flex flex-col justify-between space-y-5 bg-[#68645C] lg:bg-transparent">
             <div className="space-y-3.5">
               {/* Main Headline (DM Serif Display) */}
               <h1 className="text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] font-normal font-display tracking-tight text-white leading-[1.15]">

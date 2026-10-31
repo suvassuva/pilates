@@ -75,7 +75,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
 
   return (
     <article className="group flex flex-col h-full rounded-xl bg-[#FFFFFF] border border-[#DDD3C8] overflow-hidden hover:border-[#C5A990] transition-colors duration-200">
-      <Link href={`/blog/${post.slug}`} className="relative h-56 w-full overflow-hidden block bg-[#282622]">
+      <Link href={`/blog/${post.slug}`} className="relative h-56 w-full overflow-hidden block bg-[#F7F3ED]">
         <Image
           src={post.coverImage}
           alt={post.title}

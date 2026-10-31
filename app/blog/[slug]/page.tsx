@@ -188,19 +188,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </Container>
         </header>
 
-        {/* Featured Image */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
-          <div className="relative h-72 sm:h-96 md:h-[460px] rounded-xl overflow-hidden border border-[#DDD3C8] bg-[#282622]">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 896px"
-            />
+        {/* Featured Image (Hidden for Sunday Chronicle articles because the full print is showcased below) */}
+        {!isSundayChronicle && (
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
+            <div className="relative h-72 sm:h-96 md:h-[460px] rounded-xl overflow-hidden border border-[#DDD3C8] bg-[#282622]">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 896px"
+              />
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Article Body Content */}
         <div className="py-14 sm:py-20">
@@ -259,7 +261,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
-                  <div className="relative w-full h-[480px] sm:h-[620px] rounded-lg overflow-hidden bg-[#282622] border border-[#DDD3C8]">
+                  <div className="relative w-full h-[480px] sm:h-[620px] rounded-lg overflow-hidden bg-[#F7F3ED] border border-[#DDD3C8]">
                     <Image
                       src={post.coverImage}
                       alt={`${post.title} - Sunday Chronicle Print`}
