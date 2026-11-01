@@ -1,30 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import fs from "node:fs";
-import path from "node:path";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
 import BlogList from "@/components/blog/BlogList";
 import BlogFAQ from "@/components/blog/BlogFAQ";
 import { getAllBlogs, getFeaturedBlog, BLOG_FAQS } from "@/data/blogs";
-
-// Guarantee the bright luxury studio banner is active in public/images
-try {
-  const sourceBanner = "C:\\Users\\Electrobot\\.gemini\\antigravity\\brain\\bab38876-ac06-4b52-bec0-458c53839121\\dr_pilates_luxury_studio_banner_1793362976365.jpg";
-  const imagesDir = path.join(process.cwd(), "public", "images");
-  const brightBanner = path.join(imagesDir, "dr_pilates_bright_studio_banner.jpg");
-  const oldDarkBanner = path.join(imagesDir, "reformer_studio_unsplash.jpg");
-
-  if (fs.existsSync(sourceBanner)) {
-    if (!fs.existsSync(imagesDir)) {
-      fs.mkdirSync(imagesDir, { recursive: true });
-    }
-    fs.copyFileSync(sourceBanner, brightBanner);
-    fs.copyFileSync(sourceBanner, oldDarkBanner);
-  }
-} catch {
-  // Silent fallback
-}
 
 export const metadata = {
   title: "Clinical Insights & Movement Articles | Dr Pilates Bengaluru Blog",
