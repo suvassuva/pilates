@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, Calendar } from "lucide-react";
 import { Button } from "../ui/Button";
@@ -44,21 +43,6 @@ export const Header: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Official Logo with Black Container Box */}
-          <Link
-            href="/"
-            className="group flex items-center px-3.5 py-1.5 rounded-lg bg-black hover:bg-[#1c1a18] transition-colors shadow-sm"
-          >
-            <Image
-              src="/logo.png"
-              alt="Dr Pilates Bengaluru"
-              width={200}
-              height={60}
-              priority
-              className="h-7 sm:h-8 w-auto object-contain transition-opacity group-hover:opacity-95"
-            />
-          </Link>
-
           {/* Desktop Nav (Clean floating editorial text links) */}
           <nav className="hidden xl:flex items-center gap-7 lg:gap-8">
             {navLinks.map((link) => {
@@ -95,7 +79,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Hamburger Menu Button */}
-          <div className="flex items-center xl:hidden">
+          <div className="flex items-center xl:hidden ml-auto">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="p-2 rounded-lg text-[#282622] bg-[#E8DED1] hover:bg-[#DDD3C8] border border-[#DDD3C8] transition-colors focus:outline-none focus:ring-2 focus:ring-[#282622] cursor-pointer"

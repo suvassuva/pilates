@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, Calendar, MapPin } from "lucide-react";
 import { Button } from "../ui/Button";
@@ -29,22 +28,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-[#F7F3ED] text-[#282622] animate-in fade-in duration-200">
       {/* Top Header inside Drawer */}
-      <div className="flex items-center justify-between px-4 py-3.5 border-b border-[#DDD3C8] bg-[#E8DED1]/60">
-        <Link
-          href="/"
-          onClick={onClose}
-          className="group flex items-center px-3 py-1.5 rounded-lg bg-black hover:bg-[#1c1a18] transition-colors shadow-sm"
-        >
-          <Image
-            src="/logo.png"
-            alt="Dr Pilates"
-            width={160}
-            height={48}
-            priority
-            className="h-7 w-auto object-contain transition-opacity group-hover:opacity-95"
-          />
-        </Link>
-
+      <div className="flex items-center justify-end px-4 py-3 border-b border-[#DDD3C8] bg-[#E8DED1]/60">
         <button
           onClick={onClose}
           className="p-2 rounded-lg text-[#282622] bg-[#FFFFFF] hover:bg-[#E8DED1] border border-[#DDD3C8] focus:outline-none focus:ring-2 focus:ring-[#282622] cursor-pointer transition-colors"

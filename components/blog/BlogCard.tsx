@@ -285,8 +285,8 @@ export default function BlogCard({ post, featured = false, layout }: BlogCardPro
                 <Image
                   src={post.coverImage}
                   alt={post.title}
-                  width={1280}
-                  height={720}
+                  width={1672}
+                  height={941}
                   className="max-h-[72vh] w-auto max-w-full object-contain rounded-md shadow-xs"
                   priority
                 />

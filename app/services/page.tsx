@@ -46,468 +46,466 @@ export default function ServicesPage() {
   return (
     <div className="pb-0 bg-[#F7F3ED]">
       {/* Hero */}
-      <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src="/images/reformer_action_unsplash.jpg"
-            alt="Dr Pilates Specialized Movement & Reformer Clinical Programs"
-            fill
-            priority
-            quality={95}
-            className="object-cover object-[center_35%]"
-            sizes="100vw"
-          />
-          {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
-        </div>
-
-        <Container className="relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-2xl sm:text-4xl lg:text-[54px] font-normal font-display tracking-tight text-white leading-tight sm:leading-[1.15]">
-              Specialized Movement &amp; <span className="font-serif italic text-[#FFFFFF]">Clinical Programs</span>
-            </h1>
+        <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[440px] sm:min-h-[500px] lg:min-h-[560px]">
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <Image
+              src="/images/reformer_action_unsplash.jpg"
+              alt="Dr Pilates Specialized Movement & Reformer Clinical Programs"
+              fill
+              priority
+              quality={95}
+              className="object-cover object-[75%_top] sm:object-[80%_top] lg:object-[85%_top]"
+              sizes="100vw"
+            />
+            {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#282622]/75 via-[#282622]/40 to-black/20" />
           </div>
-        </Container>
-      </section>
 
-      {/* Service Sections */}
-      {SERVICES.map((service, index) => {
-        const isEven = index % 2 === 0;
-        return (
-          <React.Fragment key={service.slug}>
-            {/* Main Service Presentation Card */}
-            <section
-              id={service.slug}
-              className={`py-16 sm:py-20 ${isEven ? "bg-[#F7F3ED]" : "bg-[#E8DED1]"} scroll-mt-[120px]`}
-            >
-              <Container>
-                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-stretch ${!isEven ? "lg:flex-row-reverse" : ""}`}>
-                  {/* Image Side */}
-                  <div className={`${!isEven ? "lg:col-start-8 lg:col-span-5" : "lg:col-span-5"} order-1 ${!isEven ? "lg:order-2" : "lg:order-1"}`}>
-                    <ServiceMediaSlider
-                      media={service.media}
-                      fallbackImage={service.image}
-                      title={service.title}
-                      badge={service.badge}
-                      containerClassName={`aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] rounded-xl border border-[#DDD3C8] ${
-                        service.slug === "ems-training" ? "bg-[#FFFFFF]" : "bg-[#E8DED1]"
-                      }`}
-                      sizes="(max-width: 1024px) 100vw, 45vw"
-                    />
-                  </div>
+          <Container className="relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-2xl sm:text-4xl lg:text-[54px] font-normal font-display tracking-tight text-white leading-tight sm:leading-[1.15]">
+                Specialized Movement &amp; <span className="font-serif italic text-[#FFFFFF]">Clinical Programs</span>
+              </h1>
+            </div>
+          </Container>
+        </section>
 
-                  {/* Text Side */}
-                  <div className={`${!isEven ? "lg:col-start-1 lg:col-span-7 lg:row-start-1" : "lg:col-span-7"} order-2 ${!isEven ? "lg:order-1" : "lg:order-2"} space-y-4 sm:space-y-5 flex flex-col justify-center`}>
-                    {service.slug === "reformer-pilates" ? (
-                      <>
-                        <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
-                            Reformer Pilates Systems
-                          </h2>
-                        </div>
+        {/* Service Sections */}
+        {SERVICES.map((service, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <React.Fragment key={service.slug}>
+              {/* Main Service Presentation Card */}
+              <section
+                id={service.slug}
+                className={`py-16 sm:py-20 ${isEven ? "bg-[#F7F3ED]" : "bg-[#E8DED1]"} scroll-mt-[120px]`}
+              >
+                <Container>
+                  <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-stretch ${!isEven ? "lg:flex-row-reverse" : ""}`}>
+                    {/* Image Side */}
+                    <div className={`${!isEven ? "lg:col-start-8 lg:col-span-5" : "lg:col-span-5"} order-1 ${!isEven ? "lg:order-2" : "lg:order-1"}`}>
+                      <ServiceMediaSlider
+                        media={service.media}
+                        fallbackImage={service.image}
+                        title={service.title}
+                        badge={service.badge}
+                        containerClassName={`aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[460px] rounded-xl border border-[#DDD3C8] ${service.slug === "ems-training" ? "bg-[#FFFFFF]" : "bg-[#E8DED1]"
+                          }`}
+                        sizes="(max-width: 1024px) 100vw, 45vw"
+                      />
+                    </div>
 
-                        <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
-                          Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.
-                        </p>
-
-                        {/* 4 Feature Points Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-1">
-                          {/* Point 1: Posture Restoration */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Shield className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
-                                Posture Restoration
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Corrects spinal chains and imbalances through segmental centric loading and joint de-compression.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 2: Core Optimization */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Layers className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
-                                Core Optimization
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Activating deep stabilizing musculature (transversus abdominis, multifidus) beyond superficial layers.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 3: Muscular Longevity */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <Activity className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
-                                Muscular Longevity
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Developing lean, powerful muscle fibers while maintaining joint integrity and globally restoring flexibility.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 4: Neuromuscular Logic */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                              <RotateCcw className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
-                                Neuromuscular Logic
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Refining the brain-body connection for improved spatial awareness and organic, fluid movement patterns.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="pt-2">
-                          <Button
-                            href="/appointment"
-                            variant="primary"
-                            size="sm"
-                            icon={<Calendar className="w-3.5 h-3.5" />}
-                          >
-                            Contact Us
-                          </Button>
-                        </div>
-                      </>
-                    ) : service.slug === "ems-training" ? (
-                      <>
-                        <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
-                            Electro Muscle Stimulation (EMS)
-                          </h2>
-                        </div>
-
-                        <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
-                          Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.
-                        </p>
-
-                        {/* 3 Feature Points Stack */}
-                        <div className="space-y-3.5 sm:space-y-4 pt-1">
-                          {/* Point 1: +90% Muscle Activation */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <Zap className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                +90% Muscle Activation
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Stimulating deep agonists and antagonists muscle groups simultaneously with medical-grade electric impulses.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 2: Accelerated Metabolic Rate */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <Heart className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                Accelerated Metabolic Rate
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Optimizes fat burning and EPOC (excess post-exercise oxygen consumption) response for up to 48 hours post conditioning.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 3: Joint-Safe Hypertrophy */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <Target className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                Joint-Safe Hypertrophy
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Achieves muscle contraction and growth without the mechanical stress and compression of heavy weights on joints.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="pt-2">
-                          <Button
-                            href="/appointment"
-                            variant="primary"
-                            size="md"
-                            icon={<Calendar className="w-4 h-4" />}
-                          >
-                            Contact Us
-                          </Button>
-                        </div>
-                      </>
-                    ) : service.slug === "physiotherapy" ? (
-                      <>
-                        <div>
-                          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
-                            Advanced <span className="font-serif italic text-[#282622]">Therapeutics</span>
-                          </h2>
-                        </div>
-
-                        <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
-                          Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.
-                        </p>
-
-                        {/* 3 Feature Points Stack */}
-                        <div className="space-y-3.5 sm:space-y-4 pt-1">
-                          {/* Point 1: Structural Spinal Care */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <Activity className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                Structural Spinal Care
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Specialized decompression and mobilization protocols for chronic lower back pain, neck strain, herniated discs, and scoliosis posture correction.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 2: Sports Traumatology */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <ShieldCheck className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                Sports Traumatology
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Clinical recovery protocols for joint sprains, ligament tears (ACL, meniscus), tendonitis, and shoulder impingement, assuring safe return to sport.
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Point 3: Kinetic Re-education */}
-                          <div className="flex items-start gap-3">
-                            <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
-                              <Sparkles className="w-4 h-4 text-[#282622]" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
-                                Kinetic Re-education
-                              </h3>
-                              <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
-                                Manual therapy (dry needling, myofascial release) combined with movement re-patterning to resolve long-standing postural compensation.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="pt-2">
-                          <Button
-                            href="/appointment"
-                            variant="primary"
-                            size="md"
-                            icon={<Calendar className="w-4 h-4" />}
-                          >
-                            Contact Us
-                          </Button>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="flex items-center gap-3">
-                          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0">
-                            {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#282622]" />}
-                          </div>
+                    {/* Text Side */}
+                    <div className={`${!isEven ? "lg:col-start-1 lg:col-span-7 lg:row-start-1" : "lg:col-span-7"} order-2 ${!isEven ? "lg:order-1" : "lg:order-2"} space-y-4 sm:space-y-5 flex flex-col justify-center`}>
+                      {service.slug === "reformer-pilates" ? (
+                        <>
                           <div>
                             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
-                              {service.title}
+                              Reformer Pilates Systems
                             </h2>
-                            {service.badge && (
-                              <span className="text-[10px] uppercase font-medium font-body tracking-widest px-2.5 py-1 rounded-[6px] bg-[#282622] text-white border border-[#282622]/30 mt-1 inline-block">
-                                {service.badge}
-                              </span>
-                            )}
                           </div>
-                        </div>
 
-                        <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
-                          {service.fullDescription}
-                        </p>
+                          <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
+                            Our signature program utilizes high-performance apparatus to provide resistance and support, focusing on structural alignment, core activation, and spinal decompression.
+                          </p>
 
-                        {/* Session Structure Specs (Restrained 6px badges) */}
-                        <div className="flex flex-wrap gap-2.5 sm:gap-3 pt-1">
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
-                            <Clock className="w-3.5 h-3.5 text-[#282622]" />
-                            <span>{service.sessionStructure.duration}</span>
-                          </div>
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
-                            <Flame className="w-3.5 h-3.5 text-[#282622]" />
-                            <span>{service.sessionStructure.intensity}</span>
-                          </div>
-                          <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
-                            <Users className="w-3.5 h-3.5 text-[#282622]" />
-                            <span>{service.sessionStructure.format}</span>
-                          </div>
-                        </div>
+                          {/* 4 Feature Points Grid */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-1">
+                            {/* Point 1: Posture Restoration */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                                <Shield className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
+                                  Posture Restoration
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Corrects spinal chains and imbalances through segmental centric loading and joint de-compression.
+                                </p>
+                              </div>
+                            </div>
 
-                        <div className="pt-2">
-                          <Button
-                            href="/appointment"
-                            variant="primary"
-                            size="md"
-                            icon={<Calendar className="w-4 h-4" />}
-                          >
-                            Contact Us
-                          </Button>
-                        </div>
-                      </>
-                    )}
+                            {/* Point 2: Core Optimization */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                                <Layers className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
+                                  Core Optimization
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Activating deep stabilizing musculature (transversus abdominis, multifidus) beyond superficial layers.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 3: Muscular Longevity */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                                <Activity className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
+                                  Muscular Longevity
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Developing lean, powerful muscle fibers while maintaining joint integrity and globally restoring flexibility.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 4: Neuromuscular Logic */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-xl bg-[#E8DED1] border border-[#282622]/20 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                                <RotateCcw className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-bold font-display text-[#282622] leading-snug">
+                                  Neuromuscular Logic
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Refining the brain-body connection for improved spatial awareness and organic, fluid movement patterns.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="pt-2">
+                            <Button
+                              href="/appointment"
+                              variant="primary"
+                              size="sm"
+                              icon={<Calendar className="w-3.5 h-3.5" />}
+                            >
+                              Contact Us
+                            </Button>
+                          </div>
+                        </>
+                      ) : service.slug === "ems-training" ? (
+                        <>
+                          <div>
+                            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
+                              Electro Muscle Stimulation (EMS)
+                            </h2>
+                          </div>
+
+                          <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
+                            Maximize physiological efficiency. A 20-minute session that delivers the impact of 90 minutes of traditional weight training through targeted impulse technology, activating 90% of muscle fibers.
+                          </p>
+
+                          {/* 3 Feature Points Stack */}
+                          <div className="space-y-3.5 sm:space-y-4 pt-1">
+                            {/* Point 1: +90% Muscle Activation */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <Zap className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  +90% Muscle Activation
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Stimulating deep agonists and antagonists muscle groups simultaneously with medical-grade electric impulses.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 2: Accelerated Metabolic Rate */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <Heart className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  Accelerated Metabolic Rate
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Optimizes fat burning and EPOC (excess post-exercise oxygen consumption) response for up to 48 hours post conditioning.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 3: Joint-Safe Hypertrophy */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <Target className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  Joint-Safe Hypertrophy
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Achieves muscle contraction and growth without the mechanical stress and compression of heavy weights on joints.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="pt-2">
+                            <Button
+                              href="/appointment"
+                              variant="primary"
+                              size="md"
+                              icon={<Calendar className="w-4 h-4" />}
+                            >
+                              Contact Us
+                            </Button>
+                          </div>
+                        </>
+                      ) : service.slug === "physiotherapy" ? (
+                        <>
+                          <div>
+                            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
+                              Advanced <span className="font-serif italic text-[#282622]">Therapeutics</span>
+                            </h2>
+                          </div>
+
+                          <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
+                            Evidence-based clinical intervention for restorative physical health, chronic pain relief, and athletic rehabilitation.
+                          </p>
+
+                          {/* 3 Feature Points Stack */}
+                          <div className="space-y-3.5 sm:space-y-4 pt-1">
+                            {/* Point 1: Structural Spinal Care */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <Activity className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  Structural Spinal Care
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Specialized decompression and mobilization protocols for chronic lower back pain, neck strain, herniated discs, and scoliosis posture correction.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 2: Sports Traumatology */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <ShieldCheck className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  Sports Traumatology
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Clinical recovery protocols for joint sprains, ligament tears (ACL, meniscus), tendonitis, and shoulder impingement, assuring safe return to sport.
+                                </p>
+                              </div>
+                            </div>
+
+                            {/* Point 3: Kinetic Re-education */}
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0 mt-0.5">
+                                <Sparkles className="w-4 h-4 text-[#282622]" />
+                              </div>
+                              <div>
+                                <h3 className="text-sm sm:text-[15px] font-normal font-display text-[#282622] leading-snug">
+                                  Kinetic Re-education
+                                </h3>
+                                <p className="text-xs sm:text-[13px] text-[#6E685E] leading-relaxed font-body mt-1">
+                                  Manual therapy (dry needling, myofascial release) combined with movement re-patterning to resolve long-standing postural compensation.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="pt-2">
+                            <Button
+                              href="/appointment"
+                              variant="primary"
+                              size="md"
+                              icon={<Calendar className="w-4 h-4" />}
+                            >
+                              Contact Us
+                            </Button>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="flex items-center gap-3">
+                            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0">
+                              {iconMap[service.iconName] || <Activity className="w-5 h-5 text-[#282622]" />}
+                            </div>
+                            <div>
+                              <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal font-display text-[#282622] leading-[1.2]">
+                                {service.title}
+                              </h2>
+                              {service.badge && (
+                                <span className="text-[10px] uppercase font-medium font-body tracking-widest px-2.5 py-1 rounded-[6px] bg-[#282622] text-white border border-[#282622]/30 mt-1 inline-block">
+                                  {service.badge}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+
+                          <p className="text-sm sm:text-base text-[#6E685E] leading-relaxed font-body">
+                            {service.fullDescription}
+                          </p>
+
+                          {/* Session Structure Specs (Restrained 6px badges) */}
+                          <div className="flex flex-wrap gap-2.5 sm:gap-3 pt-1">
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
+                              <Clock className="w-3.5 h-3.5 text-[#282622]" />
+                              <span>{service.sessionStructure.duration}</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
+                              <Flame className="w-3.5 h-3.5 text-[#282622]" />
+                              <span>{service.sessionStructure.intensity}</span>
+                            </div>
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-[6px] bg-[#FFFFFF] border border-[#DDD3C8] text-xs font-medium font-body text-[#282622]">
+                              <Users className="w-3.5 h-3.5 text-[#282622]" />
+                              <span>{service.sessionStructure.format}</span>
+                            </div>
+                          </div>
+
+                          <div className="pt-2">
+                            <Button
+                              href="/appointment"
+                              variant="primary"
+                              size="md"
+                              icon={<Calendar className="w-4 h-4" />}
+                            >
+                              Contact Us
+                            </Button>
+                          </div>
+                        </>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {/* Program Overview Showcase Card */}
-                {service.slug === "reformer-pilates" && (
-                  <div className="mt-12 sm:mt-16">
-                    <div className="bg-[#FFFFFF] rounded-xl border border-[#DDD3C8] overflow-hidden">
+                  {/* Program Overview Showcase Card */}
+                  {service.slug === "reformer-pilates" && (
+                    <div className="mt-12 sm:mt-16">
+                      <div className="bg-[#FFFFFF] rounded-xl border border-[#DDD3C8] overflow-hidden">
 
-                      {/* 3 Sections Grid */}
-                      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#DDD3C8] items-stretch">
-                        {/* Top Benefits */}
-                        <div className="p-6 sm:p-8 space-y-4 flex flex-col justify-start h-full">
-                          <h4 className="text-base sm:text-lg font-normal font-display text-[#282622] flex items-center gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-[#282622]" />
-                            Top Benefits
-                          </h4>
-                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
-                            {service.benefits.map((benefit, idx) => (
-                              <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
-                                <span>{benefit}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                        {/* 3 Sections Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#DDD3C8] items-stretch">
+                          {/* Top Benefits */}
+                          <div className="p-6 sm:p-8 space-y-4 flex flex-col justify-start h-full">
+                            <h4 className="text-base sm:text-lg font-normal font-display text-[#282622] flex items-center gap-2">
+                              <CheckCircle2 className="w-5 h-5 text-[#282622]" />
+                              Top Benefits
+                            </h4>
+                            <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
+                              {service.benefits.map((benefit, idx) => (
+                                <li key={idx} className="flex items-start gap-2.5">
+                                  <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
+                                  <span>{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
 
-                        {/* Suitable For */}
-                        <div className="p-6 sm:p-8 space-y-4 bg-[#F7F3ED]/50 flex flex-col justify-start h-full">
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#282622] flex items-center gap-2">
-                            <Users className="w-5 h-5 text-[#282622]" />
-                            Suitable For
-                          </h4>
-                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
-                            {service.whoItIsFor.map((item, idx) => (
-                              <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                          {/* Suitable For */}
+                          <div className="p-6 sm:p-8 space-y-4 bg-[#F7F3ED]/50 flex flex-col justify-start h-full">
+                            <h4 className="text-base sm:text-lg font-bold font-display text-[#282622] flex items-center gap-2">
+                              <Users className="w-5 h-5 text-[#282622]" />
+                              Suitable For
+                            </h4>
+                            <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
+                              {service.whoItIsFor.map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-2.5">
+                                  <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
 
-                        {/* How It Works */}
-                        <div className="p-6 sm:p-8 space-y-4 flex flex-col justify-start h-full">
-                          <h4 className="text-base sm:text-lg font-bold font-display text-[#282622] flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-[#282622]" />
-                            How It Works
-                          </h4>
-                          <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
-                            {(service.howItWorks || service.features).map((item, idx) => (
-                              <li key={idx} className="flex items-start gap-2.5">
-                                <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
+                          {/* How It Works */}
+                          <div className="p-6 sm:p-8 space-y-4 flex flex-col justify-start h-full">
+                            <h4 className="text-base sm:text-lg font-bold font-display text-[#282622] flex items-center gap-2">
+                              <Sparkles className="w-5 h-5 text-[#282622]" />
+                              How It Works
+                            </h4>
+                            <ul className="space-y-2.5 text-xs sm:text-sm text-[#6E685E] font-body">
+                              {(service.howItWorks || service.features).map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-2.5">
+                                  <span className="text-[#282622] font-bold text-base leading-tight mt-0.5">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </Container>
-            </section>
-
-            {/* Light Luxury Pillar Breakdown Section for Service */}
-            {service.slug !== "reformer-pilates" && service.slug !== "ems-training" && service.slug !== "physiotherapy" && service.pillars && service.pillars.length > 0 && (
-              <section className="py-16 sm:py-20 bg-[#E8DED1] text-[#282622] relative overflow-hidden border-y border-[#DDD3C8]">
-                <Container>
-                  {/* Section Heading */}
-                  <div className="max-w-3xl mb-10 sm:mb-12">
-                    {service.sectionNumber && (
-                      <span className="text-[11px] font-bold tracking-widest text-[#282622] uppercase block mb-2 font-mono">
-                        {service.sectionNumber}
-                      </span>
-                    )}
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#282622] tracking-tight leading-snug">
-                      {service.pillarsHeading}
-                    </h3>
-                    {service.pillarsSubheading && (
-                      <p className="text-sm sm:text-base text-[#6E685E] mt-2.5 leading-relaxed max-w-2xl font-normal">
-                        {service.pillarsSubheading}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Pillars Grid */}
-                  <div
-                    className={`grid gap-5 sm:gap-6 ${
-                      service.pillars.length === 4
-                        ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-                        : "grid-cols-1 md:grid-cols-3"
-                    }`}
-                  >
-                    {service.pillars.map((pillar, pIdx) => (
-                      <div
-                        key={pIdx}
-                        className="bg-[#FFFFFF] p-6 rounded-xl border border-[#DDD3C8] hover:border-[#C5A990] transition-colors duration-200 flex flex-col justify-between group"
-                      >
-                        <div>
-                          <div className="flex items-center justify-between gap-3 mb-4">
-                            {/* Icon box */}
-                            <div className="w-10 h-10 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0">
-                              {pillarIconMap[pillar.iconName] || <Sparkles className="w-5 h-5 text-[#282622]" />}
-                            </div>
-                            {pillar.tag && (
-                              <span className="text-[10px] font-medium font-body uppercase tracking-widest px-2.5 py-1 rounded-[6px] bg-[#E8DED1] text-[#282622] border border-[#DDD3C8]">
-                                {pillar.tag}
-                              </span>
-                            )}
-                          </div>
-
-                          <h4 className="text-base sm:text-lg font-normal font-display text-[#282622] leading-snug">
-                            {pillar.title}
-                          </h4>
-
-                          <p className="text-xs sm:text-sm text-[#6E685E] font-body mt-2.5 leading-[1.6]">
-                            {pillar.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  )}
                 </Container>
               </section>
-            )}
-          </React.Fragment>
-        );
-      })}
+
+              {/* Light Luxury Pillar Breakdown Section for Service */}
+              {service.slug !== "reformer-pilates" && service.slug !== "ems-training" && service.slug !== "physiotherapy" && service.pillars && service.pillars.length > 0 && (
+                <section className="py-16 sm:py-20 bg-[#E8DED1] text-[#282622] relative overflow-hidden border-y border-[#DDD3C8]">
+                  <Container>
+                    {/* Section Heading */}
+                    <div className="max-w-3xl mb-10 sm:mb-12">
+                      {service.sectionNumber && (
+                        <span className="text-[11px] font-bold tracking-widest text-[#282622] uppercase block mb-2 font-mono">
+                          {service.sectionNumber}
+                        </span>
+                      )}
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#282622] tracking-tight leading-snug">
+                        {service.pillarsHeading}
+                      </h3>
+                      {service.pillarsSubheading && (
+                        <p className="text-sm sm:text-base text-[#6E685E] mt-2.5 leading-relaxed max-w-2xl font-normal">
+                          {service.pillarsSubheading}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Pillars Grid */}
+                    <div
+                      className={`grid gap-5 sm:gap-6 ${service.pillars.length === 4
+                          ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                          : "grid-cols-1 md:grid-cols-3"
+                        }`}
+                    >
+                      {service.pillars.map((pillar, pIdx) => (
+                        <div
+                          key={pIdx}
+                          className="bg-[#FFFFFF] p-6 rounded-xl border border-[#DDD3C8] hover:border-[#C5A990] transition-colors duration-200 flex flex-col justify-between group"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between gap-3 mb-4">
+                              {/* Icon box */}
+                              <div className="w-10 h-10 rounded-[6px] bg-[#E8DED1] border border-[#DDD3C8] flex items-center justify-center shrink-0">
+                                {pillarIconMap[pillar.iconName] || <Sparkles className="w-5 h-5 text-[#282622]" />}
+                              </div>
+                              {pillar.tag && (
+                                <span className="text-[10px] font-medium font-body uppercase tracking-widest px-2.5 py-1 rounded-[6px] bg-[#E8DED1] text-[#282622] border border-[#DDD3C8]">
+                                  {pillar.tag}
+                                </span>
+                              )}
+                            </div>
+
+                            <h4 className="text-base sm:text-lg font-normal font-display text-[#282622] leading-snug">
+                              {pillar.title}
+                            </h4>
+
+                            <p className="text-xs sm:text-sm text-[#6E685E] font-body mt-2.5 leading-[1.6]">
+                              {pillar.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </Container>
+                </section>
+              )}
+            </React.Fragment>
+          );
+        })}
 
 
 
-      <CTASection />
+        <CTASection />
     </div>
   );
 }

@@ -99,7 +99,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "WORKOUT Without Weights: Calorie Burning & Zero-Joint Strain",
     excerpt: "Featured in Sunday Chronicle: Dr. Govinda Raju S. outlines a zero-equipment bodyweight training regimen to burn calories and build functional stamina safely without heavy joint compression.",
     category: "Clinical Physiotherapy",
-    coverImage: "/images/blog2.jpeg",
+    coverImage: "/images/blog2.png",
     newspaperScanImage: "/images/dr_govind_sunday_chronicle_workout_without_weights_clean.jpg",
     externalUrl: "https://www.deccanchronicle.com/sunday-chronicle/phyzzicality/030819/workout-without-weights.html",
     author: {
@@ -152,7 +152,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Be Toned to Party Hard: Core Stability, BDNF & Festive Posture",
     excerpt: "Featured in Sunday Chronicle: Dr. Govinda Raju S. shares essential clinical strategies to stimulate neurotrophic factors (BDNF), protect posture during long social events, and sustain holiday vitality.",
     category: "Postural Science",
-    coverImage: "/images/blog1.jpeg",
+    coverImage: "/images/blog1.png",
     newspaperScanImage: "/images/dr_govind_sunday_chronicle_be_toned_party_hard_clean.jpg",
     externalUrl: "https://www.deccanchronicle.com/sunday-chronicle/phyzzicality/071219/be-toned-to-party-hard.html",
     author: {
