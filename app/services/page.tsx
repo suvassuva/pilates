@@ -49,12 +49,12 @@ export default function ServicesPage() {
         <section className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#282622] text-white relative overflow-hidden flex items-center justify-center min-h-[440px] sm:min-h-[500px] lg:min-h-[560px]">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <Image
-              src="/images/reformer_action_unsplash.jpg"
+              src="/images/dr_govind_core_stability_posture_cover.jpg"
               alt="Dr Pilates Specialized Movement & Reformer Clinical Programs"
               fill
               priority
               quality={95}
-              className="object-cover object-[75%_top] sm:object-[80%_top] lg:object-[85%_top]"
+              className="object-cover object-center"
               sizes="100vw"
             />
             {/* Luminous airy scrim preserving daylight clarity while keeping typography crystal-clear */}
