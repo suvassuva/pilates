@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Dr Pilates Bengaluru"
   },
   description:
-    "Premium doctor-led Reformer Pilates, EMS Training, Physiotherapy and Personal Training at Dr Pilates Kalyan Nagar & Kothanur, Hennur Road, Bengaluru. Call 094810 03827 to book your 1-on-1 trial session.",
+    "Dr. Pilates offers premier Reformer Pilates in Bangalore, featuring physiotherapist guided Pilates, 1-on-1 private Pilates sessions, and specialized Pilates classes across our Kalyan Nagar and Kothanur, Hennur Road studios. Call 094810 03827 to book your trial.",
   alternates: {
     canonical: "/"
   },
@@ -43,23 +43,23 @@ export const metadata: Metadata = {
     ]
   },
   keywords: [
-    "Reformer Pilates Bengaluru",
+    "Reformer Pilates in Bangalore",
+    "Pilates Classes",
+    "Pilates Studio",
+    "Physiotherapist Guided Pilates",
+    "Private Pilates Sessions in Bangalore",
     "Pilates Kalyan Nagar",
-    "Pilates Kothanur Hennur Road",
+    "Pilates Hennur",
+    "Pilates Kothanur",
+    "Pilates Studio in Kalyan Nagar",
+    "Pilates Studio in Hennur",
+    "Pilates Studio Kothanur",
+    "Pilates Classes Kalyan Nagar",
+    "Pilates Classes Hennur",
+    "Reformer Pilates Bangalore",
     "EMS Training Bengaluru",
-    "EMS fitness Kalyan Nagar",
     "Physiotherapy HRBR Layout",
-    "Physiotherapy clinic Bengaluru",
-    "Personal Training Bengaluru",
-    "Dr Pilates",
-    "Dr Govinda Raju",
-    "Pilates studio near me",
-    "Best Pilates classes Bangalore",
-    "Pilates Kammanahalli",
-    "Pilates Banaswadi",
-    "Clinical Pilates Bangalore",
-    "Spine rehabilitation Bengaluru",
-    "Posture correction workout"
+    "Dr Pilates Bangalore"
   ],
   authors: [{ name: "Dr Pilates" }, { name: "Dr. Govinda Raju" }],
   creator: "Dr Pilates",
@@ -109,6 +109,13 @@ const jsonLdData = {
       "description":
         "Doctor-led Reformer Pilates, EMS Training, Clinical Physiotherapy, and Posture Correction studio in HRBR Layout, Kalyan Nagar, Bengaluru.",
       "telephone": "+91 94810 03827",
+      "knowsAbout": [
+        "Reformer Pilates in Bangalore",
+        "Pilates Classes",
+        "Pilates Studio in Kalyan Nagar",
+        "Physiotherapist Guided Pilates",
+        "Private Pilates Sessions in Bangalore"
+      ],
       "priceRange": "$$",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, UPI, Net Banking",
@@ -149,6 +156,14 @@ const jsonLdData = {
       "description":
         "World-class Reformer Pilates and EMS fitness studio on Hennur Bagalur Main Road, Kothanur, North Bengaluru.",
       "telephone": "+91 94810 03827",
+      "knowsAbout": [
+        "Reformer Pilates in Bangalore",
+        "Pilates Classes",
+        "Pilates Studio in Hennur",
+        "Pilates Studio Kothanur",
+        "Physiotherapist Guided Pilates",
+        "Private Pilates Sessions in Bangalore"
+      ],
       "priceRange": "$$",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, UPI, Net Banking",

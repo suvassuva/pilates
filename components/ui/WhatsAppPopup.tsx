@@ -9,7 +9,7 @@ export const WhatsAppPopup: React.FC = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
 
   return (
-    <aside aria-label="WhatsApp quick chat" className="fixed bottom-16 sm:bottom-6 right-4 sm:right-6 z-50">
+    <aside aria-label="WhatsApp quick chat" className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50">
       <a
         href={whatsappUrl}
         target="_blank"

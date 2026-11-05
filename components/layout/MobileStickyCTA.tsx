@@ -2,31 +2,74 @@
 
 import React from "react";
 import Link from "next/link";
-import { Phone, Calendar } from "lucide-react";
-import { BRANCHES } from "@/data/branches";
+import { usePathname } from "next/navigation";
+import { Home, Sparkles, Layers, MapPin, BookOpen, Camera } from "lucide-react";
+
+interface NavItem {
+  label: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const NAV_ITEMS: NavItem[] = [
+  { label: "Home", href: "/", icon: Home },
+  { label: "About", href: "/about", icon: Sparkles },
+  { label: "Services", href: "/services", icon: Layers },
+  { label: "Studios", href: "/branches", icon: MapPin },
+  { label: "Blog", href: "/blog", icon: BookOpen },
+  { label: "Gallery", href: "/gallery", icon: Camera }
+];
 
 export const MobileStickyCTA: React.FC = () => {
-  const mainBranch = BRANCHES[0];
+  const pathname = usePathname();
 
   return (
-    <aside aria-label="Mobile quick actions" className="fixed bottom-0 left-0 right-0 z-40 lg:hidden p-2.5 bg-[#F7F3ED] border-t border-[#DDD3C8]">
-      <div className="grid grid-cols-2 gap-2.5 max-w-sm mx-auto">
-        <a
-          href={`tel:${mainBranch.rawPhone}`}
-          className="min-h-[46px] flex items-center justify-center gap-2 px-4 py-3 bg-[#F7F3ED] text-[#282622] border border-[#282622] rounded-[6px] text-xs sm:text-sm font-medium font-body hover:bg-[#E8DED1] active:scale-[0.99] transition-colors"
-        >
-          <Phone className="w-4 h-4 text-[#282622] shrink-0" />
-          <span>Call Us</span>
-        </a>
+    <aside
+      aria-label="Mobile App Navigation"
+      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[#F7F3ED]/95 backdrop-blur-md border-t border-[#DDD3C8] shadow-[0_-4px_20px_rgba(40,38,34,0.06)] pb-[max(0.35rem,env(safe-area-inset-bottom))]"
+    >
+      <nav className="grid grid-cols-6 items-center max-w-md mx-auto pt-1 pb-0.5 px-1">
+        {NAV_ITEMS.map((item) => {
+          const Icon = item.icon;
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname === item.href || pathname.startsWith(`${item.href}/`);
 
-        <Link
-          href="/appointment?branch=kalyan-nagar"
-          className="min-h-[46px] flex items-center justify-center gap-2 px-4 py-3 bg-[#5C604E] text-[#FFFFFF] rounded-[6px] text-xs sm:text-sm font-medium font-body hover:bg-[#4A4E3E] active:scale-[0.99] transition-colors shadow-xs"
-        >
-          <Calendar className="w-4 h-4 text-white shrink-0" />
-          <span>Book Now</span>
-        </Link>
-      </div>
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex flex-col items-center justify-center py-1 px-0.5 rounded-lg active:scale-95 transition-all duration-150 group ${
+                isActive ? "text-[#5C604E]" : "text-[#786D62] hover:text-[#282622]"
+              }`}
+            >
+              <div
+                className={`w-9 h-7 rounded-full flex items-center justify-center transition-colors ${
+                  isActive
+                    ? "bg-[#5C604E]/12 text-[#5C604E]"
+                    : "text-[#786D62] group-hover:text-[#282622]"
+                }`}
+              >
+                <Icon
+                  className={`w-4 h-4 ${
+                    isActive ? "stroke-[2.25] text-[#5C604E]" : "stroke-[1.75]"
+                  }`}
+                />
+              </div>
+              <span
+                className={`text-[10px] sm:text-[11px] font-body tracking-tight mt-0.5 leading-none transition-colors ${
+                  isActive
+                    ? "font-semibold text-[#5C604E]"
+                    : "font-medium text-[#786D62]"
+                }`}
+              >
+                {item.label}
+              </span>
+            </Link>
+          );
+        })}
+      </nav>
     </aside>
   );
 };

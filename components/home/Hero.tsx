@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
             <div className="relative w-full h-full hero-image-mask">
               <Image
                 src="/images/Taupe Gradient Pilates Studio Workout.png"
-                alt="Dr. Pilates Studio Movement Sanctuary"
+                alt="Dr. Pilates - Premier Reformer Pilates Studio in Bangalore (Kalyan Nagar & Hennur, Kothanur)"
                 fill
                 priority
                 quality={95}
@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
                   Every Pilates session is an opportunity to move better, feel stronger, and build a healthier body. Lasting results come from more than simply completing the exercises—they come from precise technique, proper alignment, and consciously engaging the right muscles.
                 </p>
                 <p>
-                  At <strong className="font-medium text-white">Dr. Pilates</strong>, we take a science-informed approach to teaching Pilates. Our expert guidance helps you activate your muscles effectively, improve movement patterns, and perform each exercise with greater precision. Through personalized instruction and mindful movement, our sessions are designed to support strength, flexibility, posture, mobility, and overall well-being.
+                  At <strong className="font-medium text-white">Dr. Pilates</strong>, we specialize in <strong className="font-medium text-white">physiotherapist guided Pilates</strong> and <strong className="font-medium text-white">private Pilates sessions in Bangalore</strong>. Whether you are joining our signature <strong className="font-medium text-white">Reformer Pilates classes</strong> or visiting our dedicated <strong className="font-medium text-white">Pilates studio</strong> in <strong className="font-medium text-white">Kalyan Nagar</strong> or <strong className="font-medium text-white">Kothanur, Hennur Road</strong>, our science-informed guidance helps you activate muscles effectively, align your posture, and build lasting functional strength.
                 </p>
                 <p className="font-medium text-white italic pt-1 text-[13px] sm:text-[14px] lg:text-[14.5px]">
                   Move with intention. Feel the difference. Transform your body with Dr. Pilates.

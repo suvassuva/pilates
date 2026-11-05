@@ -14,33 +14,35 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Reformer Pilates, EMS Training & Physiotherapy Services | Dr Pilates Bengaluru",
+  title: "Pilates Classes & Reformer Pilates in Bangalore | Dr Pilates Services",
   description:
-    "Explore our doctor-led movement programs: Reformer Pilates, EMS 20-minute metabolic training, and clinical Physiotherapy in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru.",
+    "Explore specialized Pilates classes: Reformer Pilates in Bangalore, EMS training, and physiotherapist guided Pilates for back pain and spinal rehabilitation in Kalyan Nagar & Hennur.",
   alternates: {
     canonical: "/services"
   },
   keywords: [
-    "Reformer Pilates classes Bangalore",
-    "EMS fitness training Bangalore",
-    "Physiotherapy HRBR Layout",
-    "Clinical Pilates Kalyan Nagar",
-    "Spine rehabilitation Bengaluru",
-    "Postural correction",
-    "Cadillac trapeze Pilates",
-    "EMS workout studio Bengaluru"
+    "Reformer Pilates in Bangalore",
+    "Pilates Classes",
+    "Pilates Studio",
+    "Physiotherapist Guided Pilates",
+    "Private Pilates Sessions in Bangalore",
+    "Pilates Classes Kalyan Nagar",
+    "Pilates Classes Hennur",
+    "Pilates Classes Kothanur",
+    "EMS training Bangalore",
+    "Physiotherapy HRBR Layout"
   ],
   openGraph: {
-    title: "Reformer Pilates, EMS Training & Physiotherapy Services | Dr Pilates Bengaluru",
+    title: "Pilates Classes & Reformer Pilates in Bangalore | Dr Pilates Services",
     description:
-      "Explore our doctor-led movement programs: Reformer Pilates, EMS 20-minute metabolic training, and clinical Physiotherapy in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru.",
+      "Explore specialized Pilates classes: Reformer Pilates in Bangalore, EMS training, and physiotherapist guided Pilates for back pain and spinal rehabilitation in Kalyan Nagar & Hennur.",
     url: "https://drpilates.in/services",
     images: [
       {
         url: "/images/dr_govind_core_stability_posture_cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Dr Pilates Specialized Movement & Clinical Programs"
+        alt: "Dr Pilates Reformer Pilates Classes & Specialized Programs"
       }
     ]
   }

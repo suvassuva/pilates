@@ -7,33 +7,36 @@ import { TestimonialsPreview } from "@/components/home/TestimonialsPreview";
 import { CTASection } from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
-  title: "Dr Pilates | Best Reformer Pilates & EMS Studio in Bengaluru",
+  title: "Dr Pilates | Reformer Pilates in Bangalore | Studios in Kalyan Nagar & Hennur",
   description:
-    "Doctor-guided Reformer Pilates, EMS Training, Clinical Physiotherapy & Postural Alignment in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru. Book your 1-on-1 trial session.",
+    "Top-rated Pilates studio in Kalyan Nagar and Hennur, Kothanur. Experience physiotherapist guided Pilates, world-class Reformer Pilates classes, and 1-on-1 private Pilates sessions in Bangalore.",
   alternates: {
     canonical: "/"
   },
   keywords: [
-    "Reformer Pilates Bangalore",
-    "Pilates studio Kalyan Nagar",
-    "Pilates classes Hennur Road",
-    "Best Pilates in North Bangalore",
-    "EMS training Bangalore",
-    "Physiotherapy HRBR Layout",
-    "Pilates near Kammanahalli",
-    "Dr Pilates"
+    "Reformer Pilates in Bangalore",
+    "Pilates Classes",
+    "Pilates Studio",
+    "Physiotherapist Guided Pilates",
+    "Private Pilates Sessions in Bangalore",
+    "Pilates Studio in Kalyan Nagar",
+    "Pilates Studio in Hennur",
+    "Pilates Classes Kalyan Nagar",
+    "Pilates Classes Hennur",
+    "Pilates Kothanur",
+    "Dr Pilates Bangalore"
   ],
   openGraph: {
-    title: "Dr Pilates | Best Reformer Pilates & EMS Studio in Bengaluru",
+    title: "Dr Pilates | Reformer Pilates in Bangalore | Studios in Kalyan Nagar & Hennur",
     description:
-      "Doctor-guided Reformer Pilates, EMS Training, Clinical Physiotherapy & Postural Alignment in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru.",
+      "Top-rated Pilates studio in Kalyan Nagar and Hennur, Kothanur. Experience physiotherapist guided Pilates, world-class Reformer Pilates classes, and 1-on-1 private Pilates sessions in Bangalore.",
     url: "https://drpilates.in",
     images: [
       {
         url: "/images/Taupe Gradient Pilates Studio Workout.png",
         width: 1200,
         height: 630,
-        alt: "Dr Pilates - Reformer Pilates & EMS Studio Bengaluru"
+        alt: "Dr Pilates - Reformer Pilates in Bangalore & Pilates Studio Kalyan Nagar, Hennur"
       }
     ]
   }

@@ -6,8 +6,8 @@ export const TrustSection: React.FC = () => {
   const stats = [
     {
       value: "4.9 ★",
-      label: "Top Rated Pilates",
-      subtext: "Kalyan Nagar & Kothanur, Hennur Rd",
+      label: "Top Rated Pilates Studio",
+      subtext: "Kalyan Nagar & Hennur, Kothanur",
       icon: <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#282622] fill-[#282622]" />,
       href: "https://www.google.com/maps/search/Dr.+Pilates+Kalyan+Nagar"
     },
@@ -20,7 +20,7 @@ export const TrustSection: React.FC = () => {
     },
     {
       value: "2",
-      label: "Bengaluru Studios",
+      label: "Bangalore Studios",
       subtext: "Kalyan Nagar & Kothanur, Hennur Rd",
       icon: <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#282622]" />
     },

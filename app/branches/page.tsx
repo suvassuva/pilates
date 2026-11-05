@@ -6,19 +6,21 @@ import { BranchSelector } from "@/components/branches/BranchSelector";
 import { CTASection } from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
-  title: "Pilates Studios in Kalyan Nagar & Kothanur, Bengaluru | Dr Pilates Locations",
+  title: "Pilates Studio in Kalyan Nagar & Kothanur, Hennur | Dr Pilates Locations",
   description:
-    "Visit Dr Pilates at Y4 Heights, HRBR Layout, Kalyan Nagar, or Hennur Bagalur Main Road, Kothanur. Call 094810 03827 for studio timings, directions & trials.",
+    "Visit our state-of-the-art Pilates studio locations in Kalyan Nagar (HRBR Layout) and Kothanur, Hennur Road. Book trial Pilates classes and private reformer sessions in Bangalore.",
   alternates: {
     canonical: "/branches"
   },
   keywords: [
-    "Pilates studio Kalyan Nagar",
-    "Pilates studio Kothanur",
-    "Pilates near Kammanahalli",
-    "Pilates studio Hennur Road",
-    "Reformer Pilates HRBR Layout",
-    "Pilates classes Banaswadi",
+    "Pilates Studio",
+    "Pilates Studio in Kalyan Nagar",
+    "Pilates Studio in Hennur",
+    "Pilates Studio Kothanur",
+    "Reformer Pilates in Bangalore",
+    "Pilates Classes",
+    "Physiotherapist Guided Pilates",
+    "Private Pilates Sessions in Bangalore",
     "Dr Pilates Bengaluru locations"
   ],
   openGraph: {

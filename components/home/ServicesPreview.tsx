@@ -54,9 +54,9 @@ export const ServicesPreview: React.FC = () => {
     <section className="py-10 sm:py-20 bg-[#F7F3ED] relative overflow-hidden">
       <Container>
         <SectionTitle
-          subtitle="Our Services"
-          title="Tailored Movement &amp; Wellness Offerings"
-          description="Explore our specialized clinical and conditioning programs designed to optimize core strength, accelerate fat loss, relieve pain, and restore vital mobility."
+          subtitle="Physiotherapist Guided Pilates"
+          title="Reformer Pilates Classes &amp; Studio Offerings in Bangalore"
+          description="Experience 1-on-1 private Pilates sessions in Bangalore, tailored across our Kalyan Nagar and Hennur, Kothanur studios with clinical oversight for posture, core strength, and injury rehabilitation."
           align="center"
           className="mb-6 sm:mb-12"
         />

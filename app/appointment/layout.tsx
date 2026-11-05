@@ -1,31 +1,33 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book a 1-on-1 Pilates or EMS Consultation | Dr Pilates Bengaluru",
+  title: "Book Private Pilates Sessions in Bangalore | Kalyan Nagar & Hennur Studios",
   description:
-    "Schedule your private Reformer Pilates assessment or EMS trial session at Dr Pilates Kalyan Nagar or Kothanur, Hennur Road. Call 094810 03827.",
+    "Book your 1-on-1 private Pilates sessions in Bangalore. Physiotherapist guided Pilates assessment and trial Reformer Pilates classes at our Kalyan Nagar and Hennur, Kothanur studios. Call 094810 03827.",
   alternates: {
     canonical: "/appointment"
   },
   keywords: [
-    "Book Reformer Pilates trial Kalyan Nagar",
-    "Pilates consultation Bangalore",
-    "EMS fitness trial appointment",
-    "Physiotherapy appointment HRBR Layout",
-    "Dr Pilates booking",
-    "Pilates classes Hennur Road booking"
+    "Private Pilates Sessions in Bangalore",
+    "Physiotherapist Guided Pilates",
+    "Reformer Pilates in Bangalore",
+    "Pilates Classes Kalyan Nagar",
+    "Pilates Classes Hennur",
+    "Pilates Studio in Kalyan Nagar",
+    "Pilates Studio in Hennur",
+    "Dr Pilates booking"
   ],
   openGraph: {
-    title: "Book a 1-on-1 Pilates or EMS Consultation | Dr Pilates Bengaluru",
+    title: "Book Private Pilates Sessions in Bangalore | Kalyan Nagar & Hennur Studios",
     description:
-      "Schedule your private Reformer Pilates assessment or EMS trial session at Dr Pilates Kalyan Nagar or Kothanur, Hennur Road. Call 094810 03827.",
+      "Book your 1-on-1 private Pilates sessions in Bangalore. Physiotherapist guided Pilates assessment and trial Reformer Pilates classes at our Kalyan Nagar and Hennur, Kothanur studios. Call 094810 03827.",
     url: "https://drpilates.in/appointment",
     images: [
       {
         url: "/images/hero_appointment_luminous.jpg",
         width: 1200,
         height: 630,
-        alt: "Book a Consultation at Dr Pilates Bengaluru"
+        alt: "Book Private Pilates Sessions in Bangalore at Dr Pilates"
       }
     ]
   }
@@ -38,4 +40,3 @@ export default function AppointmentLayout({
 }) {
   return <>{children}</>;
 }
-

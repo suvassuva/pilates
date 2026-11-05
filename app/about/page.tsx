@@ -6,19 +6,20 @@ import { CTASection } from "@/components/home/CTASection";
 import { Heart, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Dr. Pilates & Dr. Govinda Raju | Medical-Grade Pilates in Bengaluru",
+  title: "Physiotherapist Guided Pilates in Bangalore | About Dr. Govinda Raju",
   description:
-    "Learn about Dr. Pilates' science-informed approach founded by Dr. Govinda Raju S. and Vivek Victor. Decades of clinical expertise in posture, rehab, and core conditioning in Bengaluru.",
+    "Learn about our clinical approach to physiotherapist guided Pilates in Bangalore, led by Dr. Govinda Raju. Over a decade of excellence in spinal rehab, Reformer Pilates classes, and posture correction in Kalyan Nagar & Hennur.",
   alternates: {
     canonical: "/about"
   },
   keywords: [
-    "About Dr Pilates",
+    "Physiotherapist Guided Pilates",
+    "Reformer Pilates in Bangalore",
+    "Pilates Studio in Kalyan Nagar",
+    "Pilates Studio in Hennur",
+    "Private Pilates Sessions in Bangalore",
     "Dr Govinda Raju physiotherapist",
-    "Vivek Victor Dr Pilates",
-    "Clinical Pilates Bengaluru founders",
-    "Medical grade Pilates Bangalore",
-    "Physiotherapy rehabilitation specialists"
+    "Clinical Pilates Bangalore"
   ],
   openGraph: {
     title: "About Dr. Pilates & Dr. Govinda Raju | Medical-Grade Pilates in Bengaluru",
