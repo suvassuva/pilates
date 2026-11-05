@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
@@ -6,18 +7,37 @@ import BlogList from "@/components/blog/BlogList";
 import BlogFAQ from "@/components/blog/BlogFAQ";
 import { getAllBlogs, getFeaturedBlog, BLOG_FAQS } from "@/data/blogs";
 
-export const metadata = {
-  title: "Clinical Insights & Movement Articles | Dr Pilates Bengaluru Blog",
+export const metadata: Metadata = {
+  title: "Clinical Insights, Movement Science & Press Articles | Dr Pilates Blog",
   description:
-    "Expert articles on Reformer Pilates, physiotherapy rehabilitation, desk-work posture correction, and EMS training by Dr. Govinda Raju S. and Dr Pilates Bengaluru specialists.",
+    "Read clinical insights on Reformer Pilates for spinal health, bodyweight conditioning from Sunday Chronicle, and whole-body EMS training by Dr. Govinda Raju S. in Bengaluru.",
+  alternates: {
+    canonical: "/blog"
+  },
+  keywords: [
+    "Pilates blog Bangalore",
+    "Reformer Pilates back pain science",
+    "Postural alignment articles",
+    "EMS training research",
+    "Dr Govinda Raju Sunday Chronicle articles",
+    "Bodyweight exercises joint health"
+  ],
   openGraph: {
-    title: "Clinical Insights & Movement Articles | Dr Pilates Bengaluru Blog",
+    title: "Clinical Insights, Movement Science & Press Articles | Dr Pilates Blog",
     description:
-      "Expert articles on Reformer Pilates, physiotherapy rehabilitation, desk-work posture correction, and EMS training by Dr. Govinda Raju S.",
+      "Read clinical insights on Reformer Pilates for spinal health, bodyweight conditioning from Sunday Chronicle, and whole-body EMS training by Dr. Govinda Raju S. in Bengaluru.",
     url: "https://drpilates.in/blog",
     siteName: "Dr Pilates Bengaluru",
     type: "website",
-  },
+    images: [
+      {
+        url: "/images/dr_pilates_bright_studio_banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Pilates Bengaluru Movement Science Blog"
+      }
+    ]
+  }
 };
 
 export default function BlogHubPage() {

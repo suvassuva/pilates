@@ -1,13 +1,40 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { BranchSelector } from "@/components/branches/BranchSelector";
 import { CTASection } from "@/components/home/CTASection";
 
-export const metadata = {
-  title: "Dr Pilates Locations & Branches in Bengaluru | Kalyan Nagar & Kothanur, Hennur Road",
+export const metadata: Metadata = {
+  title: "Pilates Studios in Kalyan Nagar & Kothanur, Bengaluru | Dr Pilates Locations",
   description:
-    "View Dr Pilates branch details, addresses, phone numbers, opening hours, directions, and available services for Kalyan Nagar and Kothanur, Hennur Road in Bengaluru."
+    "Visit Dr Pilates at Y4 Heights, HRBR Layout, Kalyan Nagar, or Hennur Bagalur Main Road, Kothanur. Call 094810 03827 for studio timings, directions & trials.",
+  alternates: {
+    canonical: "/branches"
+  },
+  keywords: [
+    "Pilates studio Kalyan Nagar",
+    "Pilates studio Kothanur",
+    "Pilates near Kammanahalli",
+    "Pilates studio Hennur Road",
+    "Reformer Pilates HRBR Layout",
+    "Pilates classes Banaswadi",
+    "Dr Pilates Bengaluru locations"
+  ],
+  openGraph: {
+    title: "Pilates Studios in Kalyan Nagar & Kothanur, Bengaluru | Dr Pilates Locations",
+    description:
+      "Visit Dr Pilates at Y4 Heights, HRBR Layout, Kalyan Nagar, or Hennur Bagalur Main Road, Kothanur. Call 094810 03827 for studio timings, directions & trials.",
+    url: "https://drpilates.in/branches",
+    images: [
+      {
+        url: "/images/hero_branches_luminous.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Pilates Studios in Kalyan Nagar & Kothanur Bengaluru"
+      }
+    ]
+  }
 };
 
 export default function BranchesPage() {

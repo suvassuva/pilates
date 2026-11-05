@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SERVICES } from "@/data/services";
 import { Container } from "@/components/ui/Container";
@@ -12,10 +13,37 @@ import {
   CheckCircle2, Clock, Users, Calendar, RotateCcw, Heart
 } from "lucide-react";
 
-export const metadata = {
-  title: "Services | Reformer Pilates, EMS, Physiotherapy & More | Dr Pilates Bengaluru",
+export const metadata: Metadata = {
+  title: "Reformer Pilates, EMS Training & Physiotherapy Services | Dr Pilates Bengaluru",
   description:
-    "Explore Dr Pilates services: Reformer Pilates, EMS 20-minute training, and clinical Physiotherapy at Kalyan Nagar & Kothanur, Hennur Road, Bengaluru."
+    "Explore our doctor-led movement programs: Reformer Pilates, EMS 20-minute metabolic training, and clinical Physiotherapy in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru.",
+  alternates: {
+    canonical: "/services"
+  },
+  keywords: [
+    "Reformer Pilates classes Bangalore",
+    "EMS fitness training Bangalore",
+    "Physiotherapy HRBR Layout",
+    "Clinical Pilates Kalyan Nagar",
+    "Spine rehabilitation Bengaluru",
+    "Postural correction",
+    "Cadillac trapeze Pilates",
+    "EMS workout studio Bengaluru"
+  ],
+  openGraph: {
+    title: "Reformer Pilates, EMS Training & Physiotherapy Services | Dr Pilates Bengaluru",
+    description:
+      "Explore our doctor-led movement programs: Reformer Pilates, EMS 20-minute metabolic training, and clinical Physiotherapy in Kalyan Nagar & Kothanur, Hennur Road, Bengaluru.",
+    url: "https://drpilates.in/services",
+    images: [
+      {
+        url: "/images/dr_govind_core_stability_posture_cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Pilates Specialized Movement & Clinical Programs"
+      }
+    ]
+  }
 };
 
 const iconMap: Record<string, React.ReactNode> = {

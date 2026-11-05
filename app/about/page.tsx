@@ -1,13 +1,39 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/home/CTASection";
 import { Heart, Zap } from "lucide-react";
 
-export const metadata = {
-  title: "About Founders Dr. Govinda Raju S. & Vivek Victor | Dr Pilates Bengaluru",
+export const metadata: Metadata = {
+  title: "About Dr. Pilates & Dr. Govinda Raju | Medical-Grade Pilates in Bengaluru",
   description:
-    "Learn about founders Dr. Govinda Raju S. (Founder and Program Director) and Vivek Victor (Co-Founder and Operations Director) of Dr Pilates Bengaluru."
+    "Learn about Dr. Pilates' science-informed approach founded by Dr. Govinda Raju S. and Vivek Victor. Decades of clinical expertise in posture, rehab, and core conditioning in Bengaluru.",
+  alternates: {
+    canonical: "/about"
+  },
+  keywords: [
+    "About Dr Pilates",
+    "Dr Govinda Raju physiotherapist",
+    "Vivek Victor Dr Pilates",
+    "Clinical Pilates Bengaluru founders",
+    "Medical grade Pilates Bangalore",
+    "Physiotherapy rehabilitation specialists"
+  ],
+  openGraph: {
+    title: "About Dr. Pilates & Dr. Govinda Raju | Medical-Grade Pilates in Bengaluru",
+    description:
+      "Learn about Dr. Pilates' science-informed approach founded by Dr. Govinda Raju S. and Vivek Victor. Decades of clinical expertise in posture, rehab, and core conditioning in Bengaluru.",
+    url: "https://drpilates.in/about",
+    images: [
+      {
+        url: "/images/hero_about_luminous.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Dr Pilates Founders & Philosophy"
+      }
+    ]
+  }
 };
 
 export default function AboutPage() {
