@@ -47,14 +47,14 @@ export const Header: React.FC = () => {
           className="flex items-center xl:hidden focus:outline-none py-0.5"
           aria-label="Dr. Pilates Home"
         >
-          <div className="bg-[#68645C] px-2.5 py-1 rounded-[6px] flex items-center justify-center shadow-xs">
+          <div className="bg-[#68645C] px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg flex items-center justify-center shadow-sm">
             <Image
               src="/logo-white.png"
               alt="Dr. Pilates"
-              width={100}
-              height={28}
+              width={150}
+              height={45}
               priority
-              className="h-6 sm:h-7 w-auto object-contain"
+              className="h-9 sm:h-10 w-auto object-contain"
             />
           </div>
         </Link>
