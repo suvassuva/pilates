@@ -11,19 +11,19 @@ export const Hero: React.FC = () => {
     <section className="relative pt-20 pb-10 sm:pt-24 sm:pb-12 bg-[#F7F3ED]">
       <Container className="relative z-10">
         {/* Luxury Rounded Hero Card with Warm Earthy Taupe Gradient */}
-        <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden bg-gradient-to-r from-[#68645C] via-[#7D7970] via-45% to-[#B3ADA4] border border-white/20 shadow-2xl text-white min-h-[460px] md:min-h-[580px] lg:min-h-[720px] xl:min-h-[780px] flex flex-col lg:flex-row items-stretch">
+        <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden bg-gradient-to-r from-[#68645C] via-[#786D62] via-40% to-[#8E8172] border border-white/20 shadow-2xl text-white min-h-[420px] md:min-h-[440px] lg:min-h-[460px] xl:min-h-[475px] flex flex-col lg:flex-row items-stretch">
           
           {/* Visual Image: TOP on Mobile (order-1), FULL-BLEED on Desktop (lg:absolute lg:inset-0) */}
           <div className="order-1 lg:order-2 relative w-full lg:absolute lg:inset-0 h-76 sm:h-84 lg:h-full overflow-hidden">
             {/* Image Container with Responsive Alpha Mask (Full Card Width on Desktop for 100% Zero-Line Dissolve) */}
             <div className="relative w-full h-full hero-image-mask">
               <Image
-                src="/images/dr_pilates_hero_amanda_style.jpg"
-                alt="Dr. Pilates Aspirational Movement Sanctuary"
+                src="/images/Taupe Gradient Pilates Studio Workout.png"
+                alt="Dr. Pilates Studio Movement Sanctuary"
                 fill
                 priority
                 quality={95}
-                className="object-cover object-[75%_top] sm:object-[78%_top] lg:object-[right_top] hero-image-target"
+                className="object-cover object-[80%_center] sm:object-[82%_center] lg:object-right hero-image-target"
                 sizes="(max-width: 1024px) 100vw, 100vw"
               />
             </div>
@@ -51,22 +51,22 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Editorial Text & Action Buttons: BELOW Image on Mobile (order-2), OVERLAY on Desktop (order-1, relative z-10) */}
-          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-8 lg:p-12 xl:p-16 flex flex-col justify-between lg:justify-center space-y-7 lg:space-y-8 bg-[#68645C] lg:bg-transparent">
-            <div className="space-y-3.5 sm:space-y-4">
+          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-7 lg:p-9 xl:p-11 flex flex-col justify-between lg:justify-center space-y-5 lg:space-y-6 bg-[#68645C] lg:bg-transparent">
+            <div className="space-y-3 sm:space-y-3.5">
               {/* Brand Logo: White Script & Signature Red Heart */}
-              <div className="inline-block pb-1 sm:pb-1.5">
+              <div className="inline-block pb-0.5 sm:pb-1">
                 <Image
                   src="/logo-white.png"
                   alt="Dr. Pilates"
                   width={220}
                   height={70}
                   priority
-                  className="h-9 sm:h-10 lg:h-12 w-auto object-contain"
+                  className="h-8 sm:h-9 lg:h-10 w-auto object-contain"
                 />
               </div>
 
               {/* Main Headline (DM Serif Display) */}
-              <h1 className="text-2xl sm:text-3xl lg:text-[38px] xl:text-[42px] font-normal font-display tracking-tight text-white leading-[1.15]">
+              <h1 className="text-2xl sm:text-3xl lg:text-[34px] xl:text-[37px] font-normal font-display tracking-tight text-white leading-[1.15]">
                 Pilates with a{" "}
                 <span className="font-serif italic text-[#F7F3ED]">
                   Purpose.
@@ -110,7 +110,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Floating Studio Location Badge (Desktop Only) */}
-          <div className="hidden lg:block absolute lg:bottom-8 lg:right-8 xl:bottom-10 xl:right-10 bg-[#FFFFFF] p-3 sm:p-3.5 rounded-xl border border-[#DDD3C8] shadow-2xl min-w-[215px] z-20 text-[#282622]">
+          <div className="hidden lg:block absolute lg:bottom-5 lg:right-5 xl:bottom-6 xl:right-6 bg-[#FFFFFF] p-2.5 sm:p-3 rounded-xl border border-[#DDD3C8] shadow-2xl min-w-[200px] z-20 text-[#282622]">
             <div className="flex flex-col">
               {/* Kalyan Nagar */}
               <Link
@@ -150,7 +150,7 @@ export const Hero: React.FC = () => {
         <style jsx>{`
           .hero-image-target {
             object-fit: cover;
-            object-position: 75% top !important;
+            object-position: 80% center !important;
           }
           .hero-image-mask {
             mask-image: none;
@@ -158,7 +158,7 @@ export const Hero: React.FC = () => {
           }
           @media (min-width: 1024px) {
             .hero-image-target {
-              object-position: right top !important;
+              object-position: right center !important;
             }
             .hero-image-mask {
               mask-image: linear-gradient(
