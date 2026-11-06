@@ -150,27 +150,19 @@ function AppointmentFormContent() {
               <label className="block text-xs font-medium font-body uppercase tracking-wider text-[#282622] mb-2">
                 Select Studio Branch <span className="text-[#282622]">*</span>
               </label>
-              <div className="grid grid-cols-2 gap-3">
-                {BRANCHES.map((b) => {
-                  const isSelected = selectedBranchId === b.id;
-                  return (
-                    <button
-                      type="button"
-                      key={b.id}
-                      onClick={() => setSelectedBranchId(b.id)}
-                      className={`min-h-[46px] p-3.5 rounded-[6px] border text-left font-medium font-body text-xs sm:text-sm transition-colors cursor-pointer ${
-                        isSelected
-                          ? "bg-[#5C604E] text-white border-[#5C604E] shadow-xs"
-                          : "bg-[#F7F3ED] text-[#282622] border-[#DDD3C8] hover:border-[#5C604E]"
-                      }`}
-                    >
-                      <span className="block">{b.shortName}</span>
-                      <span className="text-[11px] font-normal opacity-80">
-                        {b.address.area}
-                      </span>
-                    </button>
-                  );
-                })}
+              <div className="relative">
+                <select
+                  value={selectedBranchId}
+                  onChange={(e) => setSelectedBranchId(e.target.value)}
+                  className="w-full min-h-[46px] px-4 pr-10 rounded-[6px] bg-[#F7F3ED] border border-[#DDD3C8] text-sm font-body text-[#282622] focus:outline-none focus:ring-2 focus:ring-[#282622] focus:bg-[#FFFFFF] appearance-none cursor-pointer transition-colors"
+                >
+                  {BRANCHES.map((b) => (
+                    <option key={b.id} value={b.id}>
+                      {b.shortName === "Kalyan Nagar" ? "Kalyan Nagar Studio (HRBR Layout)" : "Kothanur Studio (Hennur Road)"}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-[#282622] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 

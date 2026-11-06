@@ -51,10 +51,10 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Editorial Text & Action Buttons: BELOW Image on Mobile (order-2), OVERLAY on Desktop (order-1, relative z-10) */}
-          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-7 lg:p-9 xl:p-11 flex flex-col justify-between lg:justify-center space-y-5 lg:space-y-6 bg-[#68645C] lg:bg-transparent">
+          <div className="order-2 lg:order-1 relative z-10 w-full lg:w-[54%] xl:w-[50%] p-6 sm:p-7 lg:p-9 xl:p-11 flex flex-col justify-between lg:justify-center space-y-5 lg:space-y-6 bg-gradient-to-r from-[#68645C] via-[#786D62] via-40% to-[#8E8172] lg:bg-none lg:bg-transparent">
             <div className="space-y-3 sm:space-y-3.5">
-              {/* Brand Logo: White Script & Signature Red Heart */}
-              <div className="inline-block pb-0.5 sm:pb-1">
+              {/* Brand Logo: White Script & Signature Red Heart (Hidden on mobile where navbar already displays the logo) */}
+              <div className="hidden lg:inline-block pb-0.5 sm:pb-1">
                 <Image
                   src="/logo-white.png"
                   alt="Dr. Pilates"
